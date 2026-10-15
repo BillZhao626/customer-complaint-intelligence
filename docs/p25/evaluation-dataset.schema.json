@@ -1,0 +1,414 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "ContentReference": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "approved"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "facts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Facts",
+          "type": "array"
+        },
+        "forbidden": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Forbidden",
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Constraints",
+          "type": "array"
+        },
+        "alternatives": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        }
+      },
+      "title": "ContentReference",
+      "type": "object"
+    },
+    "ExpectedSeven": {
+      "additionalProperties": false,
+      "properties": {
+        "sentiment": {
+          "anyOf": [
+            {
+              "enum": [
+                "positive",
+                "neutral",
+                "negative",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Sentiment"
+        },
+        "urgency": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Urgency"
+        },
+        "is_complaint": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is Complaint"
+        },
+        "store_location": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Store Location"
+        },
+        "product_category": {
+          "anyOf": [
+            {
+              "enum": [
+                "Beauty/Personal Care",
+                "Clothing",
+                "Electronics",
+                "Food/Beverage",
+                "Furniture",
+                "Home Appliances",
+                "Service/Other",
+                "Sports/Outdoor",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Product Category"
+        },
+        "complaint_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "product quality",
+                "delivery delay",
+                "customer service",
+                "wrong item",
+                "after-sales service",
+                "health or safety issue",
+                "refund request",
+                "none",
+                "other",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Complaint Reason"
+        },
+        "source_attribution": {
+          "anyOf": [
+            {
+              "enum": [
+                "product issue",
+                "store service issue",
+                "delivery/logistics issue",
+                "customer service response issue",
+                "refund/exchange process issue",
+                "unclear",
+                "none",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Attribution"
+        }
+      },
+      "required": [
+        "sentiment",
+        "urgency",
+        "is_complaint",
+        "store_location",
+        "product_category",
+        "complaint_reason",
+        "source_attribution"
+      ],
+      "title": "ExpectedSeven",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "template_synthetic",
+            "developer_synthetic",
+            "human_authored",
+            "real_consumer"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "independent": {
+          "default": false,
+          "title": "Independent",
+          "type": "boolean"
+        },
+        "source_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Hash"
+        },
+        "exposure": {
+          "default": "development_exposed",
+          "title": "Exposure",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "source"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    }
+  },
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "additionalProperties": false,
+    "properties": {
+      "dataset_id": {
+        "minLength": 1,
+        "title": "Dataset Id",
+        "type": "string"
+      },
+      "sample_id": {
+        "minLength": 1,
+        "title": "Sample Id",
+        "type": "string"
+      },
+      "split": {
+        "enum": [
+          "development",
+          "holdout_candidate",
+          "holdout"
+        ],
+        "title": "Split",
+        "type": "string"
+      },
+      "provenance": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "template_group": {
+        "minLength": 1,
+        "title": "Template Group",
+        "type": "string"
+      },
+      "semantic_group": {
+        "minLength": 1,
+        "title": "Semantic Group",
+        "type": "string"
+      },
+      "subject": {
+        "title": "Subject",
+        "type": "string"
+      },
+      "email_body": {
+        "title": "Email Body",
+        "type": "string"
+      },
+      "input_hash": {
+        "pattern": "^[a-f0-9]{64}$",
+        "title": "Input Hash",
+        "type": "string"
+      },
+      "input_schema_version": {
+        "const": "email-input-v1",
+        "title": "Input Schema Version",
+        "type": "string"
+      },
+      "taxonomy_version": {
+        "const": "research-products-v2",
+        "title": "Taxonomy Version",
+        "type": "string"
+      },
+      "annotation_version": {
+        "minLength": 1,
+        "title": "Annotation Version",
+        "type": "string"
+      },
+      "expected": {
+        "$ref": "#/$defs/ExpectedSeven"
+      },
+      "reference_status": {
+        "enum": [
+          "template_reference",
+          "developer_reference",
+          "human_pending",
+          "human_gold"
+        ],
+        "title": "Reference Status",
+        "type": "string"
+      },
+      "summary_reference": {
+        "$ref": "#/$defs/ContentReference"
+      },
+      "reply_reference": {
+        "$ref": "#/$defs/ContentReference"
+      },
+      "attribution_reference": {
+        "$ref": "#/$defs/ContentReference"
+      },
+      "applicable_checks": {
+        "items": {
+          "enum": [
+            "seven_fields",
+            "summary",
+            "reply",
+            "aggregate",
+            "traceability"
+          ],
+          "type": "string"
+        },
+        "title": "Applicable Checks",
+        "type": "array"
+      },
+      "exclusions": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Exclusions",
+        "type": "object"
+      },
+      "reviewer": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Reviewer",
+        "type": "array"
+      },
+      "adjudication": {
+        "default": "pending",
+        "enum": [
+          "pending",
+          "accepted"
+        ],
+        "title": "Adjudication",
+        "type": "string"
+      },
+      "freeze_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Freeze Id"
+      },
+      "scenarios": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Scenarios",
+        "type": "array"
+      }
+    },
+    "required": [
+      "dataset_id",
+      "sample_id",
+      "split",
+      "provenance",
+      "template_group",
+      "semantic_group",
+      "subject",
+      "email_body",
+      "input_hash",
+      "input_schema_version",
+      "taxonomy_version",
+      "annotation_version",
+      "expected",
+      "reference_status",
+      "summary_reference",
+      "reply_reference",
+      "attribution_reference",
+      "applicable_checks"
+    ],
+    "title": "Sample",
+    "type": "object"
+  }
+}

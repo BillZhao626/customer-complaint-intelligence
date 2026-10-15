@@ -43,7 +43,10 @@ def audit(event,args):
         for value in args[:2]:
             check_path(value)
 sys.addaudithook(audit)
-suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
+if len(sys.argv)>1 and sys.argv[1]=='--portable':
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25'])
+else:
+    suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
 def flatten(suite):
     for item in suite:
         if isinstance(item,unittest.TestSuite):
@@ -58,7 +61,8 @@ if len(sys.argv)==1:
                   passed=result.testsRun-len(result.failures)-len(result.errors)-len(result.skipped),elapsed_seconds=time.perf_counter()-started,
                   network='socket connections blocked',asset_writes='audit hook blocked',test_ids=ids,
                   failure_ids=[t.id() for t,_ in result.failures+result.errors])
-    evidence_dir=ROOT/'docs/p2/evidence'
-    evidence_dir.mkdir(parents=True,exist_ok=True)
+    # New phase evidence must never overwrite frozen P1/P2 reports.
+    evidence_dir=ROOT/'docs/p25/local-evidence'/time.strftime('%Y%m%dT%H%M%S')
+    evidence_dir.mkdir(parents=True,exist_ok=False)
     (evidence_dir/'test-results.json').write_text(json.dumps(evidence,indent=2),encoding='utf-8')
 sys.exit(not result.wasSuccessful())

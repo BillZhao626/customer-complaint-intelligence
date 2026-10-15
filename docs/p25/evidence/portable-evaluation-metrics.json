@@ -1,0 +1,423 @@
+{
+  "protocol": "e2e-evaluation-v1",
+  "mode": "offline_service",
+  "dataset_id": "p25-portable-engineering-v1",
+  "dataset_hash": "b3d808ab05fe48a13841f703517df9af0a8da0105a2210e81bf3a8622c1c4915",
+  "provenance": {
+    "kind": "developer_synthetic",
+    "source": "Explicit token protocol fixtures; not NLP evaluation",
+    "independent": false,
+    "source_hash": null,
+    "exposure": "development_exposed"
+  },
+  "reference_statuses": {
+    "developer_reference": 5
+  },
+  "config": {
+    "backend": "offline_fake",
+    "model_id": "fixture-fake-v1",
+    "prompt_version": "offline-demo-v1",
+    "schema_version": "analysis-v2",
+    "taxonomy_version": "research-products-v2",
+    "prompt_hash": null,
+    "parameters": null
+  },
+  "cohort_id": "c75d2e4c5fc15b04ff2f8dafda61cdaa0c25917b9a8a6316810fee3b045ad64f",
+  "counts": {
+    "eligible": 5,
+    "attempted": 5,
+    "succeeded": 4,
+    "failed": 1,
+    "uncertain": 0,
+    "fallback": 0,
+    "missing": 0,
+    "evaluated": 5,
+    "pending": 0
+  },
+  "structure": {
+    "accepted": {
+      "numerator": 4,
+      "denominator": 5,
+      "rate": 0.8
+    },
+    "json": {
+      "numerator": 4,
+      "denominator": 5,
+      "rate": 0.8
+    },
+    "schema": {
+      "numerator": 4,
+      "denominator": 5,
+      "rate": 0.8
+    },
+    "attempt_records": 5,
+    "provider_dispatch_records": 0,
+    "retries": 0,
+    "errors": {
+      "analyzer_error": 1
+    },
+    "fallback": 0,
+    "warnings": 0
+  },
+  "fields": {
+    "sentiment": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.8888888888888888,
+      "confusion_matrix": {
+        "negative": {
+          "negative": 1,
+          "<failed>": 1
+        },
+        "positive": {
+          "positive": 1
+        },
+        "neutral": {
+          "neutral": 2
+        }
+      },
+      "per_class": {
+        "negative": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "positive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    },
+    "urgency": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.8333333333333333,
+      "confusion_matrix": {
+        "medium": {
+          "medium": 1,
+          "<failed>": 1
+        },
+        "low": {
+          "low": 3
+        }
+      },
+      "per_class": {
+        "low": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "medium": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    },
+    "is_complaint": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.8333333333333333,
+      "confusion_matrix": {
+        "True": {
+          "True": 1,
+          "<failed>": 1
+        },
+        "False": {
+          "False": 3
+        }
+      },
+      "per_class": {
+        "False": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "True": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    },
+    "store_location": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.8888888888888888,
+      "confusion_matrix": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 1
+        },
+        "unknown": {
+          "unknown": 1,
+          "<failed>": 1
+        }
+      },
+      "per_class": {
+        "A": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "unknown": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    },
+    "product_category": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.888888888888889,
+      "confusion_matrix": {
+        "Electronics": {
+          "Electronics": 4,
+          "<failed>": 1
+        }
+      },
+      "per_class": {
+        "Electronics": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889,
+          "support": 5
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    },
+    "complaint_reason": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.8333333333333333,
+      "confusion_matrix": {
+        "product quality": {
+          "product quality": 1,
+          "<failed>": 1
+        },
+        "none": {
+          "none": 3
+        }
+      },
+      "per_class": {
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "product quality": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    },
+    "source_attribution": {
+      "correct": 4,
+      "denominator": 5,
+      "accuracy": 0.8,
+      "macro_f1": 0.8333333333333333,
+      "confusion_matrix": {
+        "product issue": {
+          "product issue": 1,
+          "<failed>": 1
+        },
+        "none": {
+          "none": 3
+        }
+      },
+      "per_class": {
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "product issue": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        }
+      },
+      "eligible": 5,
+      "excluded": {}
+    }
+  },
+  "overall_fields": {
+    "numerator": 28,
+    "denominator": 35,
+    "rate": 0.8
+  },
+  "all_seven": {
+    "numerator": 4,
+    "denominator": 5,
+    "rate": 0.8
+  },
+  "independent_accuracy": null,
+  "independent_certification": "INDEPENDENT_HOLDOUT_PENDING",
+  "summary": {
+    "status": "PENDING",
+    "eligible": 5,
+    "evaluated": 0,
+    "pending": 5,
+    "passed": {
+      "numerator": 0,
+      "denominator": 5,
+      "rate": 0.0
+    },
+    "rubric": {
+      "key_facts": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "main_issue": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "no_hallucination": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "entities_and_request": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      }
+    },
+    "critical_error_count": 0
+  },
+  "reply": {
+    "status": "PENDING",
+    "eligible": 5,
+    "evaluated": 0,
+    "pending": 5,
+    "passed": {
+      "numerator": 0,
+      "denominator": 5,
+      "rate": 0.0
+    },
+    "rubric": {
+      "factuality": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "issue_coverage": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "no_unsupported_commitment": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "politeness_and_clarity": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "edit_readiness": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      }
+    },
+    "critical_error_count": 0,
+    "ready_to_send": false,
+    "reason": "P4 approval and sending not implemented"
+  },
+  "aggregate_verification": {
+    "passed": true,
+    "groups_checked": 4,
+    "scope": "Product arithmetic and members against saved predictions; not semantic attribution correctness",
+    "failed_excluded": 1,
+    "uncertain_excluded": 0,
+    "missing_excluded": 0,
+    "fallback_excluded": 0,
+    "unknown_product": 0,
+    "unknown_store": 1,
+    "source_attribution_query": "NOT_IMPLEMENTED_IN_NEW_SQLITE_UI"
+  },
+  "usage": {
+    "input_tokens": {
+      "known_attempts": 0,
+      "total_attempts": 5,
+      "known_subtotal": 0,
+      "total": null
+    },
+    "output_tokens": {
+      "known_attempts": 0,
+      "total_attempts": 5,
+      "known_subtotal": 0,
+      "total": null
+    },
+    "total_tokens": {
+      "known_attempts": 0,
+      "total_attempts": 5,
+      "known_subtotal": 0,
+      "total": null
+    }
+  },
+  "cost": {
+    "known_attempts": 0,
+    "total_attempts": 5,
+    "estimated_cny": null,
+    "actual_cny": null
+  },
+  "latency_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+  },
+  "browser_e2e_verified": false,
+  "ui_status": "Separate AppTest evidence required; this evaluator does not exercise a browser",
+  "system_quality": "Persistence/idempotency/version/failure/UI covered by separate named engineering tests; no composite quality score"
+}

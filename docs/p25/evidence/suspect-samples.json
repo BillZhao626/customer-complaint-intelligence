@@ -1,0 +1,1209 @@
+[
+  {
+    "sample_id": "F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F006",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F008",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_03"
+  },
+  {
+    "sample_id": "F011",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F015",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_05"
+  },
+  {
+    "sample_id": "F016",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F021",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F022",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_02"
+  },
+  {
+    "sample_id": "F024",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_04"
+  },
+  {
+    "sample_id": "F026",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F029",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_04"
+  },
+  {
+    "sample_id": "F031",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F032",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_02"
+  },
+  {
+    "sample_id": "F036",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F040",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_05"
+  },
+  {
+    "sample_id": "F041",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F043",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_03"
+  },
+  {
+    "sample_id": "F046",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_01"
+  },
+  {
+    "sample_id": "F048",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_03"
+  },
+  {
+    "sample_id": "F050",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_product_quality_05"
+  },
+  {
+    "sample_id": "F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F056",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F058",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_03"
+  },
+  {
+    "sample_id": "F061",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F065",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_05"
+  },
+  {
+    "sample_id": "F066",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F071",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F072",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_02"
+  },
+  {
+    "sample_id": "F076",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F079",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_04"
+  },
+  {
+    "sample_id": "F081",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F086",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F091",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_01"
+  },
+  {
+    "sample_id": "F093",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_delivery_delay_03"
+  },
+  {
+    "sample_id": "F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F097",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F101",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F102",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F103",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_03"
+  },
+  {
+    "sample_id": "F106",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F107",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F110",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_05"
+  },
+  {
+    "sample_id": "F111",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F112",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F116",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F117",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F121",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F122",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F124",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_04"
+  },
+  {
+    "sample_id": "F126",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F127",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F131",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F132",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F136",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_01"
+  },
+  {
+    "sample_id": "F137",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_02"
+  },
+  {
+    "sample_id": "F138",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_customer_service_03"
+  },
+  {
+    "sample_id": "F141",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F143",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F146",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F148",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F151",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F153",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F155",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_05"
+  },
+  {
+    "sample_id": "F156",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F158",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F161",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F162",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_02"
+  },
+  {
+    "sample_id": "F163",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F166",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F168",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F169",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_04"
+  },
+  {
+    "sample_id": "F171",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_01"
+  },
+  {
+    "sample_id": "F173",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_refund_request_03"
+  },
+  {
+    "sample_id": "F176",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F181",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F183",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_03"
+  },
+  {
+    "sample_id": "F186",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F190",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_05"
+  },
+  {
+    "sample_id": "F191",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F196",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F197",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_02"
+  },
+  {
+    "sample_id": "F201",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F204",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_04"
+  },
+  {
+    "sample_id": "F206",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_after_sales_01"
+  },
+  {
+    "sample_id": "F211",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_01"
+  },
+  {
+    "sample_id": "F213",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_03"
+  },
+  {
+    "sample_id": "F214",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_04"
+  },
+  {
+    "sample_id": "F215",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_05"
+  },
+  {
+    "sample_id": "F216",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "service_object_physical_issue_requires_review",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_01"
+  },
+  {
+    "sample_id": "F218",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_03"
+  },
+  {
+    "sample_id": "F219",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_04"
+  },
+  {
+    "sample_id": "F220",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_05"
+  },
+  {
+    "sample_id": "F221",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_01"
+  },
+  {
+    "sample_id": "F223",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_03"
+  },
+  {
+    "sample_id": "F224",
+    "flags": [
+      "service_object_physical_issue_requires_review",
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_04"
+  },
+  {
+    "sample_id": "F225",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_05"
+  },
+  {
+    "sample_id": "F226",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_01"
+  },
+  {
+    "sample_id": "F228",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_03"
+  },
+  {
+    "sample_id": "F229",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_04"
+  },
+  {
+    "sample_id": "F230",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_05"
+  },
+  {
+    "sample_id": "F231",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_01"
+  },
+  {
+    "sample_id": "F232",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_02"
+  },
+  {
+    "sample_id": "F233",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_03"
+  },
+  {
+    "sample_id": "F234",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_04"
+  },
+  {
+    "sample_id": "F235",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_wrong_item_05"
+  },
+  {
+    "sample_id": "F236",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_safety_health_01"
+  },
+  {
+    "sample_id": "F240",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_safety_health_05"
+  },
+  {
+    "sample_id": "F243",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_safety_health_03"
+  },
+  {
+    "sample_id": "F248",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_safety_health_03"
+  },
+  {
+    "sample_id": "F250",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_safety_health_05"
+  },
+  {
+    "sample_id": "F251",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_unclear_responsibility_01"
+  },
+  {
+    "sample_id": "F253",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_unclear_responsibility_03"
+  },
+  {
+    "sample_id": "F256",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_unclear_responsibility_01"
+  },
+  {
+    "sample_id": "F258",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_negative_unclear_responsibility_03"
+  },
+  {
+    "sample_id": "F332",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F333",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F337",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F338",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F342",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F343",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F347",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F348",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F352",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F353",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F357",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F358",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F362",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F363",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F367",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F368",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F372",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F373",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F377",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_02"
+  },
+  {
+    "sample_id": "F378",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_inquiry_03"
+  },
+  {
+    "sample_id": "F381",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_01"
+  },
+  {
+    "sample_id": "F382",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_02"
+  },
+  {
+    "sample_id": "F385",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_05"
+  },
+  {
+    "sample_id": "F386",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_01"
+  },
+  {
+    "sample_id": "F387",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_02"
+  },
+  {
+    "sample_id": "F390",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_05"
+  },
+  {
+    "sample_id": "F391",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_01"
+  },
+  {
+    "sample_id": "F392",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_02"
+  },
+  {
+    "sample_id": "F395",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_05"
+  },
+  {
+    "sample_id": "F396",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_01"
+  },
+  {
+    "sample_id": "F397",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_02"
+  },
+  {
+    "sample_id": "F400",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ],
+    "empty_columns": [],
+    "template": "i4b_neutral_service_question_05"
+  }
+]

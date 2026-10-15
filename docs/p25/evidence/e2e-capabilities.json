@@ -1,0 +1,93 @@
+[
+  {
+    "id": "A",
+    "capability": "input",
+    "implementation": "src/app/offline_slice.py;src/domain/contracts.py",
+    "automated_tests": "test_contracts;test_streamlit;test_p25",
+    "real_evidence": "12 P2 input hashes; 1 AppTest live input",
+    "gap": "browser upload/download pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "B",
+    "capability": "provider",
+    "implementation": "src/infrastructure/deepseek.py;src/application/live_execution.py",
+    "automated_tests": "test_live;test_p25",
+    "real_evidence": "12 saved live successes",
+    "gap": "new prompt real validation pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "C",
+    "capability": "seven_fields",
+    "implementation": "src/domain/contracts.py;src/evaluation/e2e.py",
+    "automated_tests": "test_contracts;test_p25",
+    "real_evidence": "83/84 developer-reference fields",
+    "gap": "independent semantic evaluation pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "D",
+    "capability": "summary",
+    "implementation": "src/domain/contracts.py;src/app/offline_slice.py",
+    "automated_tests": "test_contracts;test_p25",
+    "real_evidence": "12 saved generated summaries",
+    "gap": "human semantic review pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "E",
+    "capability": "reply",
+    "implementation": "src/domain/contracts.py;src/app/offline_slice.py",
+    "automated_tests": "test_contracts;test_p25",
+    "real_evidence": "12 saved unsent drafts",
+    "gap": "human approval and P4 sending absent",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "F",
+    "capability": "persistence",
+    "implementation": "src/infrastructure/repository.py",
+    "automated_tests": "test_service;test_live;test_streamlit",
+    "real_evidence": "saved P2 SQLite and reload",
+    "gap": "production scale/recovery pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "G",
+    "capability": "statistics",
+    "implementation": "src/application/analysis_service.py;src/dataset/build_i5c_deepseek_prediction_dashboard_stats_v1.py",
+    "automated_tests": "test_service;test_evaluation;test_p25",
+    "real_evidence": "saved runs only; no new live aggregate experiment",
+    "gap": "SQLite source attribution query remains P3",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "H",
+    "capability": "traceability",
+    "implementation": "src/app/offline_slice.py;src/evaluation/e2e.py",
+    "automated_tests": "test_streamlit;test_p25",
+    "real_evidence": "12 preserved raw run records",
+    "gap": "full browser member path pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "I",
+    "capability": "failures_unknown",
+    "implementation": "src/application/live_execution.py;src/evaluation/e2e.py",
+    "automated_tests": "test_live;test_p25",
+    "real_evidence": "0 real failures in P2; fault evidence offline",
+    "gap": "unknown/failed/fallback full P3 UI pending",
+    "status": "implemented_with_limits"
+  },
+  {
+    "id": "P4",
+    "capability": "approval_simulated_send",
+    "status": "not_implemented"
+  },
+  {
+    "id": "browser",
+    "capability": "browser_e2e",
+    "status": "not_verified"
+  }
+]

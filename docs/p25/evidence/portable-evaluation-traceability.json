@@ -1,0 +1,42 @@
+[
+  {
+    "sample_id": "smoke-negative",
+    "input_hash": "cbec33b60cb4682058e11ffc70da0857ed3ec206796ccca9e2a0d9ae66290599",
+    "reference_hash": "08185922134c42e8349ef300a3d471f312d1372045139e3f15deeda187d78c31",
+    "run_id": "8894c866-445e-4787-b87f-ec1f3867233e",
+    "output_hash": "ff1ae867e514cd1d42c72cc6e8b6e0b17ba78516dbb5f32650efd2c3727ac651",
+    "run_record_hash": "7563491acdf2107238f28c5142fd1707e3e3481bf055d37886d437dbfd7e7fe4"
+  },
+  {
+    "sample_id": "smoke-positive",
+    "input_hash": "5a158fe990c495153a81a3ef8036cd2dddd4e7098f9e50b8018fce3716425d89",
+    "reference_hash": "e6c4ce240a10ed9fd6894cc1998f98bcfa34e0ed62a38ec9f1820eeb3749c09f",
+    "run_id": "6a40fac2-92fe-439e-bdc0-d5e0d24bf6e5",
+    "output_hash": "9aafe5cee5c45c91f1741ddeda75da7badfd29215c6b2be822d9ee4e7256c14d",
+    "run_record_hash": "0d8e388ce68b064da379e0e3ae2f765311fa4a55a4e9576bffaca0a69ddc4ed7"
+  },
+  {
+    "sample_id": "smoke-neutral",
+    "input_hash": "c3b83c4be30d9f4a52444bb4e4daa12c184c2a7da040c278bd24df083dda5ef6",
+    "reference_hash": "a7282aa0ba96ea59a94fdc31c507d1c6c10439d7add0f76f67fc4d8b5be48a37",
+    "run_id": "23b400e1-d9f0-4bf1-bcf8-16b72aea986f",
+    "output_hash": "e0f9ce31614dd947b159df9e3643b508ec2ee834afb2fb6717a6ccdc8e1e5d7d",
+    "run_record_hash": "bed7d66575a7e7ed4d9502f23f586a1e8f19cdcf80d896c579329596da4f938d"
+  },
+  {
+    "sample_id": "smoke-unknown",
+    "input_hash": "b0f22be5f62aa7de758f2922c7b678bc00e798148b7ab31b3d00fbd78e17be25",
+    "reference_hash": "2e99e51d161991e3fbc0b6976c30c02d9bd0397815570fe074051ed682fc15bb",
+    "run_id": "a0774a16-4436-4111-8bdf-e7f63b0f686d",
+    "output_hash": "98b1b17235e77c349083b2969291fd93d94910fcdd902ddbfbcdde480354f541",
+    "run_record_hash": "0910ffb156c91bbf46d61cfaf6b7f36edfbb4eb4a2aa1a5f533f9c456e591e0d"
+  },
+  {
+    "sample_id": "smoke-failure",
+    "input_hash": "cf316c2693dd11badac73df3106adaa6303467b7c4d49d2c96195ba00de0a727",
+    "reference_hash": "4199c07c56bc55320d076ad64387e54771e14686166a283c10c63ec4a624852c",
+    "run_id": "dab0e2c4-4c77-413b-a08d-6e50f868d5b9",
+    "output_hash": null,
+    "run_record_hash": "047e69e6109d36ec2986f1941ca73e56d6ad20d43a808ec47b4cbeb21e1db94e"
+  }
+]

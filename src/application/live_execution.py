@@ -6,7 +6,6 @@ from hashlib import sha256
 from datetime import datetime, timedelta, timezone
 from pydantic import ValidationError
 from src.application.analysis_service import now
-from src.application.live_prompt import messages
 from src.domain.contracts import AnalysisAttempt,AnalysisResult,ErrorDTO,business_warnings
 from src.infrastructure.deepseek import LiveError,classify
 from src.infrastructure.pilot_budget import estimate_cost,PRICE_SOURCE,PRICE_DATE
@@ -47,9 +46,9 @@ async def _execute(service,email):
                 error=None,stage='prepared',metadata={'dispatch':'not_sent','retry_kind':'json_repair' if repair else 'network' if number>1 else 'initial',
                     'resolved_model':None,'model_snapshot':'unavailable','request_id':None,'finish_reason':None,
                     'input_tokens':None,'output_tokens':None,'total_tokens':None,'cost_cny':None,
-                    'actual_system_prompt_sha256':sha256(messages(email,repair)[0][1].encode('utf-8')).hexdigest()})
+                    'actual_system_prompt_sha256':sha256(analyzer.messages(email,repair)[0][1].encode('utf-8')).hexdigest()})
             repo.put_attempt(run.run_id,attempt)
-            bound=budget.reserve(run.run_id,number,email.input_hash,messages(email,repair),analyzer.settings.max_tokens)
+            bound=budget.reserve(run.run_id,number,email.input_hash,analyzer.messages(email,repair),analyzer.settings.max_tokens)
             attempt=attempt.model_copy(update={'stage':'request','metadata':dict(attempt.metadata,dispatch='started_or_unknown',reserved_upper_cny=bound)})
             repo.put_attempt(run.run_id,attempt)
             call_start=time.perf_counter();kind=None

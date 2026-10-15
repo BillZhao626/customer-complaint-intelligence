@@ -38,11 +38,18 @@ class LiveSettings:
 class DeepSeekAnalyzer:
     backend='deepseek_live'
     model_id='deepseek-flash'
-    def __init__(self,settings,provider=None):
+    def __init__(self,settings,provider=None,prompt_profile='p2-frozen'):
         settings.validate()
         self.settings=settings
         self.provider=provider
-        self.config=RunConfig(backend=self.backend,model_id=self.model_id,prompt_version=PROMPT_VERSION,prompt_hash=PROMPT_HASH,
+        if prompt_profile=='p2-frozen':
+            self.messages=messages;version=PROMPT_VERSION;prompt_hash=PROMPT_HASH
+        elif prompt_profile=='service-boundary-v1':
+            from src.application import service_boundary_prompt as candidate
+            self.messages=candidate.messages;version=candidate.PROMPT_VERSION;prompt_hash=candidate.PROMPT_HASH
+        else:
+            raise LiveError('configuration_error')
+        self.config=RunConfig(backend=self.backend,model_id=self.model_id,prompt_version=version,prompt_hash=prompt_hash,
             parameters=dict(temperature=0,thinking='disabled',response_format='json_object',max_tokens=settings.max_tokens,
                             sdk_max_retries=0,http_timeout=settings.http_timeout,deadline=settings.deadline,max_attempts=settings.max_attempts,
                             endpoint=settings.endpoint+'/chat/completions'))
@@ -66,7 +73,7 @@ class DeepSeekAnalyzer:
 
     async def request(self,email,repair,remaining):
         self.settings.validate()
-        payload=messages(email,repair)
+        payload=self.messages(email,repair)
         if self.provider is not None:
             return await asyncio.wait_for(self.provider(payload,min(self.settings.http_timeout,remaining)),timeout=remaining)
         from langsmith import tracing_context

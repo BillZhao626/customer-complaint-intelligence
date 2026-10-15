@@ -1,3 +1,26 @@
+# HANDOFF — P2.5 评价基础与安全Git交付
+
+2026-10-15（Asia/Shanghai）。本轮完成工程实现与离线验证；人工/模型语义门槛保持pending。以下P1/P2原交接按历史原文保留，其中无Git提交等描述只适用于当时。
+
+- 完整P2基线提交：5ffa9a9a6899dd2bd0fb4b402781fac273888dad。P2.5工程提交和Private仓库最终核验见docs/p25/GIT_AND_GITHUB_REPORT.md及本机最终receipt，不根据下方历史Git段落推断当前状态。
+- 108/108离线通过（原77+portable2+P2.5新增29）；portable入口覆盖28项。数据400/400、55模板、11场景族、10保守泄漏分量；146条触发至少一项疑点，未改原参考。
+- 130候选：110旧模板代表+20新复杂开发案例。人工标注队列：.local/p25/annotations-v2/，两位reviewer和仲裁均未签署；HUMAN_GOLD_PENDING。20个holdout_candidate只是隔离候选，全部已暴露，INDEPENDENT_HOLDOUT_PENDING。
+- 新统一Schema/框架见src/evaluation/e2e_schema.py、e2e.py、gold.py、dataset_audit.py；scripts/p25.py仅offline/replay，无付费模式。新结果与参考用sample/input/run/output/reference/config哈希追溯；来源/版本拒绝混合，失败保持分母。
+- 旧P2十二条只读run JSON重放，83/84和11/12不变。摘要/回复人工评价PENDING；fake/AppTest不替代模型语义/浏览器E2E。
+- 服务边界新Prompt complaint-v2-service-boundary-1以可选profile接入正式service，默认P2冻结Prompt不变。BADCASE_RULE_REGRESSION_VERIFIED / REAL_MODEL_FIX_PENDING；只确认规范冲突，不声称解释模型内部原因。
+- 原262项及本轮342项保护资产哈希全不变，.env、P2预算和运行库未修改；恢复快照位置在.local/p25/recovery.json。真实.env旧开关启用，因此不要直接运行历史API脚本；普通测试强制关闭API并阻断socket。
+
+下一轮先读docs/p25/VERIFICATION.md、E2E_COVERAGE_MATRIX.md、EVALUATION_PROTOCOL.md、HUMAN_GOLD_PROTOCOL.md、BADCASE_REVIEW.md。P3可以基于已有工程基线推进离线统计和证据下钻；先定source/unknown/failed/fallback、别名与版本口径。任何新付费调用需独立明确授权和新预算目录，绝不重建P2账本。P4审批/发送仍未实现。
+
+```powershell
+python -B scripts/run_portable.py
+# 本机有历史资产时：
+python -B tests/run_offline.py
+python -B scripts/p25.py offline --dataset tests/fixtures/p25_portable_v1.json --out .local/p25/new-run
+```
+
+---
+
 # HANDOFF — P2真实DeepSeek集成与受控试点完成
 
 2026-10-15（Asia/Shanghai）；状态：**P2_ENGINEERING_VERIFIED / REAL_MODEL_PILOT_VERIFIED**。

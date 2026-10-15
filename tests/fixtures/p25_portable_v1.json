@@ -1,0 +1,332 @@
+[
+  {
+    "dataset_id": "p25-portable-engineering-v1",
+    "sample_id": "smoke-negative",
+    "split": "development",
+    "provenance": {
+      "kind": "developer_synthetic",
+      "source": "Explicit token protocol fixtures; not NLP evaluation",
+      "independent": false,
+      "source_hash": null,
+      "exposure": "development_exposed"
+    },
+    "template_group": "smoke-negative",
+    "semantic_group": "smoke-negative",
+    "subject": "Synthetic smoke",
+    "email_body": "[store:A] [negative] Synthetic broken headphones.",
+    "input_hash": "cbec33b60cb4682058e11ffc70da0857ed3ec206796ccca9e2a0d9ae66290599",
+    "input_schema_version": "email-input-v1",
+    "taxonomy_version": "research-products-v2",
+    "annotation_version": "pending-v1",
+    "expected": {
+      "sentiment": "negative",
+      "urgency": "medium",
+      "is_complaint": true,
+      "store_location": "A",
+      "product_category": "Electronics",
+      "complaint_reason": "product quality",
+      "source_attribution": "product issue"
+    },
+    "reference_status": "developer_reference",
+    "summary_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "reply_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "attribution_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "applicable_checks": [
+      "seven_fields",
+      "summary",
+      "reply",
+      "aggregate",
+      "traceability"
+    ],
+    "exclusions": {},
+    "reviewer": [],
+    "adjudication": "pending",
+    "freeze_id": null,
+    "scenarios": []
+  },
+  {
+    "dataset_id": "p25-portable-engineering-v1",
+    "sample_id": "smoke-positive",
+    "split": "development",
+    "provenance": {
+      "kind": "developer_synthetic",
+      "source": "Explicit token protocol fixtures; not NLP evaluation",
+      "independent": false,
+      "source_hash": null,
+      "exposure": "development_exposed"
+    },
+    "template_group": "smoke-positive",
+    "semantic_group": "smoke-positive",
+    "subject": "Synthetic smoke",
+    "email_body": "[store:A] [positive] Synthetic thank you.",
+    "input_hash": "5a158fe990c495153a81a3ef8036cd2dddd4e7098f9e50b8018fce3716425d89",
+    "input_schema_version": "email-input-v1",
+    "taxonomy_version": "research-products-v2",
+    "annotation_version": "pending-v1",
+    "expected": {
+      "sentiment": "positive",
+      "urgency": "low",
+      "is_complaint": false,
+      "store_location": "A",
+      "product_category": "Electronics",
+      "complaint_reason": "none",
+      "source_attribution": "none"
+    },
+    "reference_status": "developer_reference",
+    "summary_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "reply_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "attribution_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "applicable_checks": [
+      "seven_fields",
+      "summary",
+      "reply",
+      "aggregate",
+      "traceability"
+    ],
+    "exclusions": {},
+    "reviewer": [],
+    "adjudication": "pending",
+    "freeze_id": null,
+    "scenarios": []
+  },
+  {
+    "dataset_id": "p25-portable-engineering-v1",
+    "sample_id": "smoke-neutral",
+    "split": "development",
+    "provenance": {
+      "kind": "developer_synthetic",
+      "source": "Explicit token protocol fixtures; not NLP evaluation",
+      "independent": false,
+      "source_hash": null,
+      "exposure": "development_exposed"
+    },
+    "template_group": "smoke-neutral",
+    "semantic_group": "smoke-neutral",
+    "subject": "Synthetic smoke",
+    "email_body": "[store:B] [neutral] Synthetic inquiry.",
+    "input_hash": "c3b83c4be30d9f4a52444bb4e4daa12c184c2a7da040c278bd24df083dda5ef6",
+    "input_schema_version": "email-input-v1",
+    "taxonomy_version": "research-products-v2",
+    "annotation_version": "pending-v1",
+    "expected": {
+      "sentiment": "neutral",
+      "urgency": "low",
+      "is_complaint": false,
+      "store_location": "B",
+      "product_category": "Electronics",
+      "complaint_reason": "none",
+      "source_attribution": "none"
+    },
+    "reference_status": "developer_reference",
+    "summary_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "reply_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "attribution_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "applicable_checks": [
+      "seven_fields",
+      "summary",
+      "reply",
+      "aggregate",
+      "traceability"
+    ],
+    "exclusions": {},
+    "reviewer": [],
+    "adjudication": "pending",
+    "freeze_id": null,
+    "scenarios": []
+  },
+  {
+    "dataset_id": "p25-portable-engineering-v1",
+    "sample_id": "smoke-unknown",
+    "split": "development",
+    "provenance": {
+      "kind": "developer_synthetic",
+      "source": "Explicit token protocol fixtures; not NLP evaluation",
+      "independent": false,
+      "source_hash": null,
+      "exposure": "development_exposed"
+    },
+    "template_group": "smoke-unknown",
+    "semantic_group": "smoke-unknown",
+    "subject": "Synthetic smoke",
+    "email_body": "[neutral] Synthetic no store.",
+    "input_hash": "b0f22be5f62aa7de758f2922c7b678bc00e798148b7ab31b3d00fbd78e17be25",
+    "input_schema_version": "email-input-v1",
+    "taxonomy_version": "research-products-v2",
+    "annotation_version": "pending-v1",
+    "expected": {
+      "sentiment": "neutral",
+      "urgency": "low",
+      "is_complaint": false,
+      "store_location": "unknown",
+      "product_category": "Electronics",
+      "complaint_reason": "none",
+      "source_attribution": "none"
+    },
+    "reference_status": "developer_reference",
+    "summary_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "reply_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "attribution_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "applicable_checks": [
+      "seven_fields",
+      "summary",
+      "reply",
+      "aggregate",
+      "traceability"
+    ],
+    "exclusions": {},
+    "reviewer": [],
+    "adjudication": "pending",
+    "freeze_id": null,
+    "scenarios": []
+  },
+  {
+    "dataset_id": "p25-portable-engineering-v1",
+    "sample_id": "smoke-failure",
+    "split": "development",
+    "provenance": {
+      "kind": "developer_synthetic",
+      "source": "Explicit token protocol fixtures; not NLP evaluation",
+      "independent": false,
+      "source_hash": null,
+      "exposure": "development_exposed"
+    },
+    "template_group": "smoke-failure",
+    "semantic_group": "smoke-failure",
+    "subject": "Synthetic smoke",
+    "email_body": "[fail] [negative] Synthetic failure injection.",
+    "input_hash": "cf316c2693dd11badac73df3106adaa6303467b7c4d49d2c96195ba00de0a727",
+    "input_schema_version": "email-input-v1",
+    "taxonomy_version": "research-products-v2",
+    "annotation_version": "pending-v1",
+    "expected": {
+      "sentiment": "negative",
+      "urgency": "medium",
+      "is_complaint": true,
+      "store_location": "unknown",
+      "product_category": "Electronics",
+      "complaint_reason": "product quality",
+      "source_attribution": "product issue"
+    },
+    "reference_status": "developer_reference",
+    "summary_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "reply_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "attribution_reference": {
+      "status": "pending",
+      "facts": [],
+      "forbidden": [],
+      "constraints": [],
+      "alternatives": [],
+      "reviewer": null
+    },
+    "applicable_checks": [
+      "seven_fields",
+      "summary",
+      "reply",
+      "aggregate",
+      "traceability"
+    ],
+    "exclusions": {},
+    "reviewer": [],
+    "adjudication": "pending",
+    "freeze_id": null,
+    "scenarios": []
+  }
+]

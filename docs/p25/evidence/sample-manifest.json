@@ -1,0 +1,4333 @@
+[
+  {
+    "sample_id": "F001",
+    "input_hash": "54de5b2be0e8219721847ed70f375e59ceb1644a98cd22f81374f76d0c67a4fb",
+    "body_chars": 200,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F002",
+    "input_hash": "f0c3bdc618fd3d0b45dceb8c39a2928d84702423c6e662f7e656a1a0f41668d3",
+    "body_chars": 207,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F003",
+    "input_hash": "72a520824d29a737b5cd2e4def9199cd38453dbd5951b7dfb48930aa5acabae2",
+    "body_chars": 190,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F004",
+    "input_hash": "84a431ad62c2d9578a5659d7f51a0fa028fda5d2b357c15b2f91b0cf2cc353c8",
+    "body_chars": 197,
+    "body_words": 31,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F005",
+    "input_hash": "07c0a12051f896bb03ccb2b14bb4c18dcf7aa0fa040593b8b720aa4968791370",
+    "body_chars": 206,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F006",
+    "input_hash": "77829bac7352a9b11f408fb2eec82fad288dd02e966712868ac6bab5c5cd922c",
+    "body_chars": 206,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F007",
+    "input_hash": "b349a9855e4c05aaad3c9ce80f693c58b9e27aed7090d0ba6fed9214742c6344",
+    "body_chars": 196,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F008",
+    "input_hash": "e31513c5a7a15c86f950c62001980446c80414c76d99043dcedca17ca3e2c376",
+    "body_chars": 209,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F009",
+    "input_hash": "5164d6b9d10923b4fc447b8fbef6388f549efecd89cf186f4468e957880c182b",
+    "body_chars": 188,
+    "body_words": 30,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F010",
+    "input_hash": "1a7dc1293dac3971c658390e3d217905bdfdf25adfa0453a7a46c1d0d4802f47",
+    "body_chars": 213,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F011",
+    "input_hash": "078c447b318adca11bed4841f43cb1a02be5be3af1ad02e316dd9708bdac0cc5",
+    "body_chars": 193,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F012",
+    "input_hash": "3307176f25f9c641b9317abd46be345aefcbf146fa9c2ee3538270cae3b578d8",
+    "body_chars": 207,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F013",
+    "input_hash": "2a36cd8cc5b6d59af10b6c59e44270ef5f78882656a312dc446e4dd115619c67",
+    "body_chars": 200,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F014",
+    "input_hash": "979fcb36eaacec4eb16b9eb2eba77bd624fa70d8060a228987ae0b3e1aa0775b",
+    "body_chars": 203,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F015",
+    "input_hash": "332bec70778666dd4262bba68a752bf9910749308242b1e348df3642d9b36a66",
+    "body_chars": 206,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F016",
+    "input_hash": "dba366b6f86fa3d300051f28d7e9bac096ecb3ccd4fd8e87a5a0e7746a04c6b0",
+    "body_chars": 208,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F017",
+    "input_hash": "bea12cf14ba1482434c9bd469b77578b7f8ee6b74d490292d199dbe8df8dfaaf",
+    "body_chars": 197,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F018",
+    "input_hash": "1214a123b321b813f2568ae6049a6fb6f117f27f1e50e36befa273a39468b62c",
+    "body_chars": 203,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F019",
+    "input_hash": "04d955773d864a332462940e7193659c5b4ef26f3c2e11e8f12396623c6fbcd5",
+    "body_chars": 191,
+    "body_words": 30,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F020",
+    "input_hash": "7fa0b7ad238d71872a3d0bc4141dc17a5332746e50b31be5f201491f28f63894",
+    "body_chars": 212,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F021",
+    "input_hash": "8689b6741783ed04773f1189c1fb9579a573c68e0a94a5568f7b03d65f04fb74",
+    "body_chars": 191,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F022",
+    "input_hash": "d983f28ae37625f129d41d72f1023eddb155f19857f001d7b577598f80c74034",
+    "body_chars": 204,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F023",
+    "input_hash": "35ef8da3eaf32f2edbbf25a8b3845b41155ecfb4aa67c01bbd7f832ed9873190",
+    "body_chars": 193,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F024",
+    "input_hash": "8afbfd759246519aff18b31cabefce4a13f1dcbf09bfc6b8bc80d523466bcaea",
+    "body_chars": 209,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F025",
+    "input_hash": "cb6d59078634198830dba9ca73f4434c9c60ae3fb2c944f4e48bb2fe5eb438dc",
+    "body_chars": 201,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F026",
+    "input_hash": "50a04947180b0892225eacdadbd1097b31937e5022ea93bd00614a4fe1b4d56f",
+    "body_chars": 207,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F027",
+    "input_hash": "9f9fe1a976dfa935d9036faaefb67d88079bc38cf5833196ce3f2de452793e67",
+    "body_chars": 194,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F028",
+    "input_hash": "a716a401ab5be0fc8d35a7765af9fbed178469747b82846df2e10351237e5310",
+    "body_chars": 194,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F029",
+    "input_hash": "362d87e7fdd9976d1436d895ec4b5f0f2dd1db33afc52357645504d6093a659e",
+    "body_chars": 192,
+    "body_words": 31,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F030",
+    "input_hash": "b1e70870cbf9385d2922209c3d44403e84bf7aba5dc5a376c3c040960d2e5857",
+    "body_chars": 215,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F031",
+    "input_hash": "c371e3a1d2474a4b925d8da21a7ec4e7f7dc192c61c504fbf89d48326d3858bb",
+    "body_chars": 196,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F032",
+    "input_hash": "4c9aea6a4c619d6cc4a9bed7cdf370ce9b753e08ee100908860ee225f834a4ad",
+    "body_chars": 205,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F033",
+    "input_hash": "833e2b356ac8418a2cdc1bbd473961fa0b0130f03d662839bdf244c54b35e10f",
+    "body_chars": 189,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F034",
+    "input_hash": "d082432e927112473c09febf44517d4126b21b2e95900c23763215a5e8a1435f",
+    "body_chars": 198,
+    "body_words": 31,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F035",
+    "input_hash": "6a79b24bc1ee015531012131b05d65afdc445d88c29ad61bad301f934c724337",
+    "body_chars": 209,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F036",
+    "input_hash": "18ce20086e5a778f323e27553ee6fa1c3f9e597958807008df85a276a602d2e2",
+    "body_chars": 201,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F037",
+    "input_hash": "95b49da11bc6e53cbd5b77fe443296ce4a5caf5d27f96c047faff88d6e4e359f",
+    "body_chars": 190,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F038",
+    "input_hash": "c9cc55adad2d2eb9cfe045824d654f1ab8eb098b2d628660ee6f7c3d4cea5d95",
+    "body_chars": 202,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F039",
+    "input_hash": "57fd4276f10d22d50e492088c50701a72228de97560b536664dd7d3e4a5a5cfd",
+    "body_chars": 198,
+    "body_words": 31,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F040",
+    "input_hash": "85114edeeaea09ad9de1d01f8e792d02c1182b76408be3c3795c444ecba29167",
+    "body_chars": 217,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F041",
+    "input_hash": "0858419461f231cf48ed482448fd2a56bfb449b7d29a1870eb072f517c14523e",
+    "body_chars": 200,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F042",
+    "input_hash": "71019048d02747d4ef8f494b6bd3718a71f03f4b0200a0b1fe321d95f53089a4",
+    "body_chars": 207,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F043",
+    "input_hash": "c5e1494002675dffd43452e3a70b247a93e3a0a82ff45ca6f73865e0db491b2f",
+    "body_chars": 190,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F044",
+    "input_hash": "682056c0a917e6013ee3a63651aacef18efc3ad9795841b117924438dc9d7bb5",
+    "body_chars": 197,
+    "body_words": 31,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F045",
+    "input_hash": "6ee62a66835b02c41718dce87b99bea32f3c4efe9ce576b36599192747730a29",
+    "body_chars": 206,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F046",
+    "input_hash": "0ea60f66b674563f7eddbc1a1f54d885ea5a054c7e34aef99dc24f7e79d037fe",
+    "body_chars": 206,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_01",
+    "semantic_group": "group-F001",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F047",
+    "input_hash": "cb216bab36af0c719cffacc0ba7c8c8834e1dcd6e4e1c2df92ce613668caf3bc",
+    "body_chars": 196,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_02",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F048",
+    "input_hash": "d49735880d0c22fb6e5f170d113b2f1e49e9474b0cca480a39cafe31f8b13c7d",
+    "body_chars": 209,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_03",
+    "semantic_group": "group-F001",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F049",
+    "input_hash": "cd4f355079863e384b7bdbb492f1a08e26dc8bba5a82790088ba9c535a1bd315",
+    "body_chars": 188,
+    "body_words": 30,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_04",
+    "semantic_group": "group-F001",
+    "flags": []
+  },
+  {
+    "sample_id": "F050",
+    "input_hash": "54ec809a92b124f15165dfbe44f5ae3ce0d6dab5ccaa24ea87fcf8a5cff92607",
+    "body_chars": 213,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_product_quality_05",
+    "semantic_group": "group-F001",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F051",
+    "input_hash": "437d4a7b2e7590b3835434b25c19734b8e2557fdeb730abe0c4ef975cd380f1f",
+    "body_chars": 222,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F052",
+    "input_hash": "ce48a6efa42f2c598a16492b5c6ee653c58abc34d7c14f7c04948bc9a05faa69",
+    "body_chars": 226,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F053",
+    "input_hash": "35e8528c2050e22087e449e1189d73df8b2f8936feb58c720a15ff3051f7026f",
+    "body_chars": 232,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F054",
+    "input_hash": "d4cd0f72a7b276d3c1adad0ef348f543032b6a7a6d4c37c0423499557af4fcfe",
+    "body_chars": 209,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F055",
+    "input_hash": "c8760466243883bc45076248c8c6bab457cefd6581eb60bc803bafdd531e8ccf",
+    "body_chars": 223,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F056",
+    "input_hash": "c3a0766e98f93f6b4f6573d9225349c6e67b807ab89571ea5261be88e002e10f",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F057",
+    "input_hash": "c6c5b02e4d12cea409910b5035c759b927af8cfc5d5cfe52757109c4282f8af8",
+    "body_chars": 232,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F058",
+    "input_hash": "b8016eec27e4518e85538d806bff14223f1baa2ee92694c73b3661c971c0fc3d",
+    "body_chars": 219,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F059",
+    "input_hash": "34d9274028cce01f31eababf31c0e8de7243e493e777e96d60cade7547dd0806",
+    "body_chars": 213,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F060",
+    "input_hash": "9b64d6390f539d52a0613616d613bd4b0d269571516beaf6d90c29a5d5240db7",
+    "body_chars": 213,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F061",
+    "input_hash": "f0446a554db446ff7f97f902300cf773599fed64332b58a408ae5d665648e705",
+    "body_chars": 220,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F062",
+    "input_hash": "77410d3f807dbf3ea86d9daa9dd330302e5b506a4f4f3419f1b70e3c2593f1ab",
+    "body_chars": 223,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F063",
+    "input_hash": "8c52b9353dff61c23856f1ae12f2a899e7c90051c7f0bd1a8a5e3c1205b49166",
+    "body_chars": 225,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F064",
+    "input_hash": "d550bb0298ac3bf9172591b75e1dbb431b15cd4405b5429f99d8d8d7c2673f91",
+    "body_chars": 215,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F065",
+    "input_hash": "744baf1f81d10f357bf3d74b3d9ffbce6a9c899b621ae4e0777e1ef108b4a9b8",
+    "body_chars": 218,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F066",
+    "input_hash": "d56e98f57ddb2854c57c85b94914e58ce58921252dc4540519ac7bb743f4b167",
+    "body_chars": 220,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F067",
+    "input_hash": "23f554bfb0d084d5dbcb28821ccba0721c52543bac474a1b57c3d17fa82e52b8",
+    "body_chars": 229,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F068",
+    "input_hash": "40ce947e0fd08943d51acf9a4afa7690a46842ce21a363774190f13ae5833ccd",
+    "body_chars": 210,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F069",
+    "input_hash": "dfdc550b813c4da5cd81df3df34fbdf69df181b96f1bc3e3a6fdf6bbd611a6e3",
+    "body_chars": 214,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F070",
+    "input_hash": "f616e8ccb9c2f5542a305d0ff04d05a25498306a111963c140b917e5fc32e496",
+    "body_chars": 216,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F071",
+    "input_hash": "ffb58f529a4b70ab9b0dfbe5e9275f11e8728e0c1fe185366b2bc9972e2dbfb2",
+    "body_chars": 225,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F072",
+    "input_hash": "c75c806d0788529dde9e02fea80fc80743500f660664891bb8398ecc52bc0284",
+    "body_chars": 224,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F073",
+    "input_hash": "f4dc3cca4a0947514a142627f7eb34eaa2705556830b272a9e8794733639354f",
+    "body_chars": 221,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F074",
+    "input_hash": "cbabea5da4e19ee43de9ab7020631177422e9e3fd17d1757826ba6c9414f4924",
+    "body_chars": 204,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F075",
+    "input_hash": "deb65e42bf20ada7b1c4f5c5f0d2f94762bf9a843a9453ddd11aa84d01333978",
+    "body_chars": 226,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F076",
+    "input_hash": "0ccccd944603756cb7c340e744cbf018e00c7b64fde8c015b288ef076ee595d1",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F077",
+    "input_hash": "7b04e2aa9d2ccc06baeb0584fabcdab014e18906e23b6c7727526390bfb5a4ae",
+    "body_chars": 225,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F078",
+    "input_hash": "2159e73d4371ae6eb8bd6371b8e52f0c305576e1910704f31ef618a5ae57cd7f",
+    "body_chars": 218,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F079",
+    "input_hash": "6dfbd7e63f1233410886c158d968b8f62be59641cfb3477ca3f78102ce0939d3",
+    "body_chars": 220,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F080",
+    "input_hash": "2d6457ba4a3a445f3948c81bfeecba695eb6bb98d8d09e08fb09cbf87b88ff49",
+    "body_chars": 218,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F081",
+    "input_hash": "cb08bfc6690c99f0b925aadb1cb263b20082173983c78149321afb26798c4048",
+    "body_chars": 229,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F082",
+    "input_hash": "5a00c7827e28ff5359934ed3928a8c928d4772ec5535711560ffca8dae0ebcd4",
+    "body_chars": 226,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F083",
+    "input_hash": "7a8032daba886573488ae485f55b3aca30a116015ce3a9d2f27041f7cdd10fa9",
+    "body_chars": 222,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F084",
+    "input_hash": "abed0c44d6a771df198bfb2951a783cbf0cfcdc3df9ad1477cb2e4559233a58e",
+    "body_chars": 203,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F085",
+    "input_hash": "43ffd067a9849a2dae8fbb508a8eaec7ea39c9b6c92181c8dde14b69c2e72f5d",
+    "body_chars": 223,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F086",
+    "input_hash": "830f4abe6aca450eed9045fb65eb052b24d0cf1efa3ca5421c52ba2f2125f4e7",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F087",
+    "input_hash": "e4f8e2646b088db71a971f43b226118411b3d80d2e35a959c1fc7fcb6608f79c",
+    "body_chars": 231,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F088",
+    "input_hash": "9d7db710047d820bcef037496a08ad3a8b13779bae9df1317be4d782fc870c61",
+    "body_chars": 225,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F089",
+    "input_hash": "10fe3397eb294e4d0a1b0a346cc5f24241b3f52ee4a195cf9addfcbc1ece3db1",
+    "body_chars": 210,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F090",
+    "input_hash": "86431f1d0df5ae7160e33d3dc31e5788f50a4ccfaec3fd65992dc5caeae162d7",
+    "body_chars": 214,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F091",
+    "input_hash": "084a4223591b9882008a738574fc2693a9e31fd949fece335b03990bb5a9219e",
+    "body_chars": 222,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_01",
+    "semantic_group": "group-F051",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F092",
+    "input_hash": "9a07329b4865ac464b2177bd947830fd6bc1aadefca2c3d8c87b5732ff507ab2",
+    "body_chars": 226,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_02",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F093",
+    "input_hash": "8b9bace50e9d92946b6bd6adfa03bfd74c388f82d4e8cb198fbcd604ad4fa4ab",
+    "body_chars": 232,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_03",
+    "semantic_group": "group-F051",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F094",
+    "input_hash": "766d6148485a8324a5b1078ff6fffe0d36e4872c293d59ba1eca434bb900ff34",
+    "body_chars": 209,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_04",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F095",
+    "input_hash": "98160727ae9ddf803910738696b8e800ea8ffa7ac11a3a1aacffd47d63096716",
+    "body_chars": 223,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_delivery_delay_05",
+    "semantic_group": "group-F051",
+    "flags": []
+  },
+  {
+    "sample_id": "F096",
+    "input_hash": "dee4fc41afc43d9ce566c8fb18c30a91bf18060d566eb134c954b1118b3d8d3a",
+    "body_chars": 213,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F097",
+    "input_hash": "8b129d64f2e09e9d755ce1a3987cb9dc6b0260feb14e42564121ac2ef5c2d4d5",
+    "body_chars": 209,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F098",
+    "input_hash": "6b90f085727dcae28cf595cbff8217123b60eb6bfc81a2d1834c1f8551b45f66",
+    "body_chars": 211,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F099",
+    "input_hash": "9c639d520ad377df54971f02d3f559a2883f7771c04e8b02f0c87ca7365ca9a4",
+    "body_chars": 190,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F100",
+    "input_hash": "ec292f24c5879fc658d54fc2190993c064d627348095f0d9a36d8c5851efec10",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F101",
+    "input_hash": "e6a8cf723fb73cf35a771e79b3809bb5855d2bd39ddbb52f49000289bd1527c1",
+    "body_chars": 200,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F102",
+    "input_hash": "b15ae5c2e205db0d3f6aa7ab4abacf331a1f9f758a585cbe5bc252cc6dff4dec",
+    "body_chars": 212,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F103",
+    "input_hash": "f596b29eaeb4563372684414606b0e6598ae620db27c37f8d9256ad85e2d58e6",
+    "body_chars": 205,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F104",
+    "input_hash": "c32f9fc956a4071b0d1e970135835383fc3d3a73b7bb9b99be558c4fc0d8ce84",
+    "body_chars": 204,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F105",
+    "input_hash": "1802a0b877d41396697ba334727916b9f2381d57035e873f5958eb3a99a057e8",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F106",
+    "input_hash": "94bf21952a8e2d0f277c4a50c6b67d43c397ad03eabe9fd7a76c4266a17a2009",
+    "body_chars": 212,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F107",
+    "input_hash": "44d53736a4761bd3a010dfb2d7f5afe1575069c0d991e90c77f7a9a6fcffda31",
+    "body_chars": 206,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F108",
+    "input_hash": "877cb1e9a688180e4bd5caa845bf224eba7db41ae8e7406c3249302a082c888c",
+    "body_chars": 202,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F109",
+    "input_hash": "395d61c62497eca9f113e890df8977bee22a40ad4664d5b2b063fb52a39510f5",
+    "body_chars": 191,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F110",
+    "input_hash": "fdd7fb89fae74907f3508569658ad3dd11405f071dfdeec253e2ea23e3530f3d",
+    "body_chars": 224,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F111",
+    "input_hash": "e6e70638d05599b64941aa5aad687b00833b57f50a271dc0badc4bd0d67c0e1a",
+    "body_chars": 205,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F112",
+    "input_hash": "3f5b4cac18919d82154e4767aef974b6d99c4e84deb47ea1ff61fa65691b29d2",
+    "body_chars": 213,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F113",
+    "input_hash": "7f5e3e3bf5dd3de198bc509b2ebdc1a19dc174a21ebfba7e1c9bd4a47b57602c",
+    "body_chars": 201,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F114",
+    "input_hash": "57100b1c9fdbfe465d4f430278368332e3d2ebb1b978eacd2ca7416b71fea73b",
+    "body_chars": 193,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F115",
+    "input_hash": "47e4ab3a5adc933cc783c28ad97c0c34dd5957ef385b3b29b0f1753a72d01237",
+    "body_chars": 222,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F116",
+    "input_hash": "9132be56a729eb40db8d5c9b9be5837bd889258a8dc18d059f7ac60015475326",
+    "body_chars": 206,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F117",
+    "input_hash": "605dd95bbed0130a8cd84d0a9ff748c2d1d8c02b16917fc19c3baa8405529e04",
+    "body_chars": 202,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F118",
+    "input_hash": "247cba6c70c25a3708034bdac80ec389eef75cba9e6c89cf4747c4de79e6d2aa",
+    "body_chars": 210,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F119",
+    "input_hash": "05a5a63b18acd84b3f4c375c0589c64554bd3d53cc32d80f5f9e39fcbcd6af8b",
+    "body_chars": 197,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F120",
+    "input_hash": "bbc93639f22e9b10442345dfc87f3f122f3c33deae7298ce1e479f248662dfaf",
+    "body_chars": 226,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F121",
+    "input_hash": "01d67a68fa7c4f8472ff6cacd09d7e54a12e0d93a7aecb98a010686a1c67bb09",
+    "body_chars": 209,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F122",
+    "input_hash": "1777bc7e2b72a735159f5d5108ffe462d6f3d613d485c448929f139c8ba0daea",
+    "body_chars": 215,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F123",
+    "input_hash": "c458e1bb7a9dd2409a7003c33ce21c5381480f92946dd5bda1e2f8f7b7f1adf9",
+    "body_chars": 202,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F124",
+    "input_hash": "9d0f8b71f7394e3a320e169e7b43e6bb6cfb42aa55779e1c092761a007ea4f78",
+    "body_chars": 192,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F125",
+    "input_hash": "89885d89c1e56520642fd71c5475cd94efe99c7c1359c2b668c4fc7d05a434e8",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F126",
+    "input_hash": "71c6bc3ebeeaf4df5bca9248147eb9a2a1acb8a5698ac09a61a71e660ba6b929",
+    "body_chars": 211,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F127",
+    "input_hash": "2a0872b98fc78ab01418869d5c4e906687ae7da4d4eda5dc8fc7192ec6324cdf",
+    "body_chars": 208,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F128",
+    "input_hash": "3a2c37592b780ee76e187d9a082beb19e1f5fc8b780e954e11f6978c29b9cd67",
+    "body_chars": 217,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F129",
+    "input_hash": "177464eecadcf4a18589d57da2fb2038516b2097cd8d0bcadf96709aac6b3ecf",
+    "body_chars": 187,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F130",
+    "input_hash": "b2c0639c5a0d1c43deab70d4cadeef330b1ca8c6472ef96b25e33eb8ae1330c2",
+    "body_chars": 222,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F131",
+    "input_hash": "3aa6dc9e800fc658442ddc3a9936fee599064de84354f9e45008eeb38c583749",
+    "body_chars": 202,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F132",
+    "input_hash": "282d877dbb87cd3f7a835a8e495ec5902baddc7637874fb8984075d754089d95",
+    "body_chars": 215,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F133",
+    "input_hash": "5c14ad16be219ce2fcbdea0618c3dcc43e4d7188cf42c10667a7d8967ea05c81",
+    "body_chars": 212,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F134",
+    "input_hash": "2222faeee9b387e932f36145ae555711746fd32200c3d71ea523fddd6d283a68",
+    "body_chars": 198,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F135",
+    "input_hash": "fb38c98cf97e4abec81078b9464b9431b1cff2f492b58caafc848be654071153",
+    "body_chars": 219,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F136",
+    "input_hash": "936e77acbbce3fe6dc651418d7f8e217c77e9778c55269ebfad3fdaba53a0483",
+    "body_chars": 213,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_01",
+    "semantic_group": "group-F096",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F137",
+    "input_hash": "a004343bb4eed327c48ab66ed5c86a1659784b1e5aceb690a20230771cff76d9",
+    "body_chars": 209,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_02",
+    "semantic_group": "group-F096",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F138",
+    "input_hash": "1d4ad08ada8ca393b19b6d30b366b47f3ae0abb81670cb177134a231bf69774b",
+    "body_chars": 211,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_03",
+    "semantic_group": "group-F096",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F139",
+    "input_hash": "5d97523be5c0220f61a4f2823cd490386c441dbe09cc2ee856083b00fe37f816",
+    "body_chars": 190,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_04",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F140",
+    "input_hash": "d3c41a62759653fc6cc112375ddcb9f013722af84905a70cae34158395dab7fc",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_customer_service_05",
+    "semantic_group": "group-F096",
+    "flags": []
+  },
+  {
+    "sample_id": "F141",
+    "input_hash": "ea159efbe6b857529e6e6988df6dce99b0adfd65faee73c500821e068ecd102d",
+    "body_chars": 214,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F142",
+    "input_hash": "54e2cbb2250dab29ce4e64748c117d0ee7a74b59e634504c9fb93703e6344c20",
+    "body_chars": 231,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F143",
+    "input_hash": "6840a93d531f2b158d43e0eb5ba3d56a0cf3a4023ae413e7773009f2e2b5c612",
+    "body_chars": 221,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F144",
+    "input_hash": "c148d9a7e0b03b3767a63a326f5f95f6e556ad4c3524010f5f7174639b1ae88a",
+    "body_chars": 229,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F145",
+    "input_hash": "b173b58595173abc4497ec6ca7eca82e9464259c2c911c3c4ef46b64f2e0505c",
+    "body_chars": 213,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F146",
+    "input_hash": "7ddfa757e909ef586496cfb0be3f1884ff02e3aaa051b6e103d31481a2b00f0d",
+    "body_chars": 230,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F147",
+    "input_hash": "abf04b009cc5a129fa0a22469dd6bec99cb03efe9999e715f7aa940859076dd7",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F148",
+    "input_hash": "5824b8562d293e06cf0217039f371e692d5817ccbf8c68c41a145bb68e58ca05",
+    "body_chars": 222,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F149",
+    "input_hash": "5bf50520588dfb4117f6f8258ee07a97881eb42a6662ea6685558703bcca794e",
+    "body_chars": 212,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F150",
+    "input_hash": "20db33214a82226f3c14063d49707fbc085a4d1fc960dc347e03fb82fc28f5cc",
+    "body_chars": 227,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F151",
+    "input_hash": "e4b63b964b9340bfe2c51500bd4a75dbe0d502eee55f66ece746b78c627f8055",
+    "body_chars": 219,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F152",
+    "input_hash": "0a1257a189e226748efac85757139e9883c363e660e5d650f5000ac1c18cd93f",
+    "body_chars": 232,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F153",
+    "input_hash": "b20a77ffcb4b03c142b8db4bbc6167a849816d7f98307d3ebed77578a40b4edc",
+    "body_chars": 217,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F154",
+    "input_hash": "c79f7262bf0c34002c69f530f1ac8a6d8564654749f348b69c620243a1e6cf70",
+    "body_chars": 218,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F155",
+    "input_hash": "cf5e8cef488d603c9819234a7a52470a8133df0e157912030c88a26b67ff549a",
+    "body_chars": 221,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F156",
+    "input_hash": "87b8bd3c7bbcb9ce5ef735b86d4566be3b0ef8962ac984edc185bb25892e5e4a",
+    "body_chars": 224,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F157",
+    "input_hash": "f8cf7c3f0ac468c6d8ae0650eece2f709bff8660fd9c5a939f613ab2b1e5b4c1",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F158",
+    "input_hash": "b8909b3719f11848f2bb193d1fa13da50e0b5164394718750c18790c7bba5f79",
+    "body_chars": 230,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F159",
+    "input_hash": "18c2153833e24f1f0262dce80a75b2599be2e7fcceff7846878239c84698e6b4",
+    "body_chars": 218,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F160",
+    "input_hash": "93e51f12e1943ef2e2307020f5248178238bcfe9433091d6076245a6bc7f148d",
+    "body_chars": 229,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F161",
+    "input_hash": "1f6f0703ffe1066d79dda681e6358a9d9027ec920db8cc52ee960a6a02d4bc3a",
+    "body_chars": 223,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F162",
+    "input_hash": "30347a6f5af658f9a116aa285ae0d59c993ba37ed75438d950ef3ed7dca6467d",
+    "body_chars": 234,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F163",
+    "input_hash": "b6c8df613a7ee6c88c04693f7fd217eaa6f1e40b85819795faf50c47f2cf87e6",
+    "body_chars": 218,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F164",
+    "input_hash": "190f00b9d3c9d155c6e60cd4a8da738f09a1e6613282684fa6d87871c8229d37",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F165",
+    "input_hash": "74c929adc970de41ff0c62aeb785498ed097706cb8127e34ff9489fd8d4dbaca",
+    "body_chars": 218,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F166",
+    "input_hash": "115234322c46af59acdfc19b24e934bcbf9a26b0694564f270c961cb98ce12d7",
+    "body_chars": 229,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F167",
+    "input_hash": "db7eb401b0a79b5901a899792e24573128a50dde911f4e9b7c4df88669a3e930",
+    "body_chars": 223,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F168",
+    "input_hash": "262368a2a40301f812c5106795a5b466ca18a694c8231a325d20d6ae1b45e6f0",
+    "body_chars": 237,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F169",
+    "input_hash": "66316e383a3dcab480b936bbed0af51c58a38296bbfddb428838912ceaeb1dae",
+    "body_chars": 208,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F170",
+    "input_hash": "5af4a2a6adca976c2a33004b0a95f11beb0d486c13c130370cb6dcf30f589f24",
+    "body_chars": 225,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F171",
+    "input_hash": "f521254bf1ad3716d1a80ba7695acd3e7e2a96ea3f93f43b3030e04fbb95682c",
+    "body_chars": 216,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_01",
+    "semantic_group": "group-F141",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F172",
+    "input_hash": "d60bf6cd32a1df0e6a00f96a35b2cf30096ea522b7a9095ed9d30208e7a25a1c",
+    "body_chars": 234,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_02",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F173",
+    "input_hash": "d66fa00fff3c74403cbac00996154d7a26eb7908539df0a770c6a0eb3aa65109",
+    "body_chars": 228,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_03",
+    "semantic_group": "group-F141",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F174",
+    "input_hash": "d2391f8ded22c5603ff265883fac8b8260478990138136a96c98448621a16465",
+    "body_chars": 223,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_04",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F175",
+    "input_hash": "266fffd84cd994b9816871decdc173d5b63d1dad49bd3ea922f65920d717c365",
+    "body_chars": 218,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_refund_request_05",
+    "semantic_group": "group-F141",
+    "flags": []
+  },
+  {
+    "sample_id": "F176",
+    "input_hash": "df660a805bad1df9ce8fd87f6a6f293fff9d22edfdb840a9f824a8d20a8eeca1",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F177",
+    "input_hash": "45080b8affca01e5c1dbf836f87047ffa5b84f0a9650ab3f61ef850986b8ccef",
+    "body_chars": 200,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F178",
+    "input_hash": "6f35bb83f46272328cd4a0324a0dfeca6984558648c6879ee7d4b565dabd0a03",
+    "body_chars": 220,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F179",
+    "input_hash": "a0b09f0a0a44c111bc6196ef4fb6057d61145c85300ba192a9c0eeda68dc27d2",
+    "body_chars": 204,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F180",
+    "input_hash": "42b1a3b348e7770ad040355e8d6a3cba06341543c9226b3eb564146668846ec0",
+    "body_chars": 216,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F181",
+    "input_hash": "dbc2e2974f2afe0e6884a5b4afcfe05694d3d55c7446c0e752c54b0e520b6545",
+    "body_chars": 208,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F182",
+    "input_hash": "4e3133e7bc3957c83db9f02048045d436e2945ccdf29f3d68eb2b560c876594d",
+    "body_chars": 203,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F183",
+    "input_hash": "94027d86f500bbdf33d3f23dccc1ca9c3323e2226ce21dce2dc4495e6b3494bf",
+    "body_chars": 214,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F184",
+    "input_hash": "c8370b8c7d5426fea37c83eb2a5a1896fefda33eca448edcf793ff128e8c9506",
+    "body_chars": 218,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F185",
+    "input_hash": "48fe49e1c66853cd3f252c29c0bb967805c0c6d08db54d83ddfc351bde959ec8",
+    "body_chars": 209,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F186",
+    "input_hash": "a9cf60ce10254828b520adf9fa25dc81af3114eee008c9c656869d9406e691a0",
+    "body_chars": 220,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F187",
+    "input_hash": "4c551b8dd78e2454f68ac9be45878f96248611800170c3c7fd4f270d609ce3c8",
+    "body_chars": 197,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F188",
+    "input_hash": "a8254c30374f466c92294302a8eeb059822e3463d0a7da11aedb0a94122b0189",
+    "body_chars": 211,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F189",
+    "input_hash": "1d0d8ce9ad4bcf0fb7fbfc155e5a08a43fe442438d4f67d0aedc535815f99a14",
+    "body_chars": 205,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F190",
+    "input_hash": "a0af456e0e89a76e1cd322acf350084742cc58da13ee441ec63123e81765a0e5",
+    "body_chars": 219,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F191",
+    "input_hash": "3e7aa057c003a4a257cee950a4a36f2f01c0e922b266e1694c67424c7b1a6153",
+    "body_chars": 213,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F192",
+    "input_hash": "c2b0f4bf4c44ec8ea1511c056b6a9da1c93560e250f31452c359febe98c0282f",
+    "body_chars": 204,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F193",
+    "input_hash": "f958d2c712f0476111592eb0499431ffd3903c040761f9ce116b9ce4cda04fa9",
+    "body_chars": 210,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F194",
+    "input_hash": "0300395677af82cf7f8b6768dc6c1a59edebe16d86dfc4b42f2a4c39e99270ac",
+    "body_chars": 207,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F195",
+    "input_hash": "848bdfc78d0a0eb890c940b194179425cb94923d850d47973f7ab06d5ae9287d",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F196",
+    "input_hash": "fe5c967c88eb043ea8f1b9d458adf8e81aec45a179c8ccd2129af8227e013409",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F197",
+    "input_hash": "0668279fe2cf965fc97728345b228be38192e809e567313966c13faf1f148083",
+    "body_chars": 193,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F198",
+    "input_hash": "5fd88e8c8b0b35040e886e626164453d89beabb966c52f57d41f00f705e686a2",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F199",
+    "input_hash": "e008f2b6c483e916025662ecc29da68d3d718f47df2aab058eb85153eb04347f",
+    "body_chars": 211,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F200",
+    "input_hash": "d6b8346f81234626960f9d5ff877e3a3ce01b9cb9aeb134fc3f6c6c7d67da441",
+    "body_chars": 221,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F201",
+    "input_hash": "6461fedeb460e3084d87d027d78de68c8975aefd3f1396031595488766a5af2e",
+    "body_chars": 217,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F202",
+    "input_hash": "3356ba36fee3fca03bfbb5db8b54fa05028a8bb552d10c2d75bea6ae3f84fb4d",
+    "body_chars": 206,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F203",
+    "input_hash": "a8226a85cb6a9f815d8cdd28f949a3240c6e197079799fb04aacb9cab211a741",
+    "body_chars": 211,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F204",
+    "input_hash": "32cb47cd32b6d46edbd2e50c961835bfa0c518d600370b1a73e425cba050880f",
+    "body_chars": 206,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F205",
+    "input_hash": "42158ced3bd02e26195b2ac42c16ac0b68d4e4c9081f30c987783f8b57871879",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F206",
+    "input_hash": "2c2837ed8346c3c90ba5a1ac0fe2341a54d78782beea57edd78abd19596dc751",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_01",
+    "semantic_group": "group-F176",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F207",
+    "input_hash": "5f7100b14689e3e0b827f9fc9fd16e57183e0fe99ebcbccfbcc15d03fbe91695",
+    "body_chars": 199,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_02",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F208",
+    "input_hash": "a159e87eba59432435241da70ad6b0be6d5bdc471ef05c4be53f48b4b545d746",
+    "body_chars": 226,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_03",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F209",
+    "input_hash": "7862940df4ba8c6a22e5a6db6651da8bae2b96b4bcfb1de7468280b882767fd5",
+    "body_chars": 201,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_04",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F210",
+    "input_hash": "06d61356106745eb051bf8926eedee683428a4365b0e52d1a7c6dd8c0151adac",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_after_sales_05",
+    "semantic_group": "group-F176",
+    "flags": []
+  },
+  {
+    "sample_id": "F211",
+    "input_hash": "d2ceabb97dc37fdf9f7321339b22aaa0c5483e09165f14715ebc550adfea2a65",
+    "body_chars": 216,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_01",
+    "semantic_group": "group-F211",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F212",
+    "input_hash": "5b360d1283a3e68eb4878f202a62f67a254db0348bb83620ef53765eb738a19e",
+    "body_chars": 233,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_02",
+    "semantic_group": "group-F211",
+    "flags": []
+  },
+  {
+    "sample_id": "F213",
+    "input_hash": "bc0763cd58c146fe4b180699e11dcd41719c3834e1f6aaff7523fc0bfc1d630e",
+    "body_chars": 245,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_03",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F214",
+    "input_hash": "a42f1520fe0968e17d38698f5ca1974f88060dfe1da957891307637e9b597652",
+    "body_chars": 200,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_04",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F215",
+    "input_hash": "2366e8d26e271430ebfecae83f8ba38c2f4d934b4101996e4122809927e001d0",
+    "body_chars": 231,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_05",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F216",
+    "input_hash": "2a97aa92f0ac5fc7a0d30d40d419d13770a4afccdfde9bb0c0264ed9888baa2b",
+    "body_chars": 215,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_01",
+    "semantic_group": "group-F211",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "service_object_physical_issue_requires_review",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F217",
+    "input_hash": "b34e1c212fcbeb75469fe7798545492dbb143bbfc12c47ce9571e849cd13a490",
+    "body_chars": 239,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_02",
+    "semantic_group": "group-F211",
+    "flags": []
+  },
+  {
+    "sample_id": "F218",
+    "input_hash": "e6c693b099f059dc75b4f66110304d23435e6badd31d962ce5488f20519bcdbf",
+    "body_chars": 232,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_03",
+    "semantic_group": "group-F211",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F219",
+    "input_hash": "5ef7c1569c3c0eebe7952a02c100581e561f17bbf4e63a2ea7296c7320788f81",
+    "body_chars": 204,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_04",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F220",
+    "input_hash": "d125dc7cd07793e9ed162301cada6fdea3a9590c758d801b952b27cc1a363882",
+    "body_chars": 221,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_05",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F221",
+    "input_hash": "e876a74736cb67bc944e54c61905faf2942c7b12b3de22122b99d97a3f9f261f",
+    "body_chars": 214,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_01",
+    "semantic_group": "group-F211",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F222",
+    "input_hash": "89fe474c6de17f8c69ef43df518bc9b0631704dfbf47334b99394986aa81fec8",
+    "body_chars": 230,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_02",
+    "semantic_group": "group-F211",
+    "flags": []
+  },
+  {
+    "sample_id": "F223",
+    "input_hash": "e06091a7151bd66a3a334627eff2e72cd021278638989465c812f81d78c35987",
+    "body_chars": 238,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_03",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F224",
+    "input_hash": "4ff7b576b0cada1a20d33f868361c1ffee1c128729f07c5f452306fe509c8a3d",
+    "body_chars": 206,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_04",
+    "semantic_group": "group-F211",
+    "flags": [
+      "service_object_physical_issue_requires_review",
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F225",
+    "input_hash": "2ef09c0e51827f7e0f301b5b384a85a617903b67c7b83f71b1af30418f0e13be",
+    "body_chars": 226,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_05",
+    "semantic_group": "group-F211",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F226",
+    "input_hash": "9e005f21fc6a29111cbbbebfad3503a6a9755fc94dc46a6acee144bb0dfc24a0",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_01",
+    "semantic_group": "group-F211",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F227",
+    "input_hash": "3cf640a9431f7fa35297161dbbc0e072c48de09f0048bb0ffb9c139cbf4f7986",
+    "body_chars": 236,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_02",
+    "semantic_group": "group-F211",
+    "flags": []
+  },
+  {
+    "sample_id": "F228",
+    "input_hash": "48dfd024b9a8a24efdc8c9cd18e7a19865a68708644e8d65b9500f149aef830d",
+    "body_chars": 223,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_03",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F229",
+    "input_hash": "3918a4a8a8a239101d02e91fcdb63e4d819627328bce089c522a34ff8d1a5143",
+    "body_chars": 205,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_04",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F230",
+    "input_hash": "f37b2f8572415a7709b48e5a09504ba157cc9622b56e83b8f7078864398d3264",
+    "body_chars": 224,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_05",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F231",
+    "input_hash": "94ea61886c84c6a1b40dd11829d722d5377a516f8d9e1c88fb33699cfa642b19",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_01",
+    "semantic_group": "group-F211",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence",
+      "store_attribution_not_explicit_in_wrong_item_text",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F232",
+    "input_hash": "9ee936f46725d5afde2ee8ea5511a6c696e04ab25ad8ea569b0384646735af2a",
+    "body_chars": 231,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_02",
+    "semantic_group": "group-F211",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F233",
+    "input_hash": "4a31e3e824088771af747ff223073bc4af3e90e8b41f13a2d2dbb24ea66027ac",
+    "body_chars": 234,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_03",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F234",
+    "input_hash": "fd14be2f16b8fa7e855f5006596ba78aa943251a71f642bf828721e2e4a2ba7a",
+    "body_chars": 195,
+    "body_words": 31,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_04",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F235",
+    "input_hash": "de8a05d2679caf4f9ec3a159a58457755d2f645ef90cfd87d271db34be85c944",
+    "body_chars": 234,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_wrong_item_05",
+    "semantic_group": "group-F211",
+    "flags": [
+      "store_attribution_not_explicit_in_wrong_item_text"
+    ]
+  },
+  {
+    "sample_id": "F236",
+    "input_hash": "9bd9d0d10f2191068bc1da983d088499a950ed0188d1c0e541652f838b38661b",
+    "body_chars": 195,
+    "body_words": 32,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_01",
+    "semantic_group": "group-F236",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F237",
+    "input_hash": "4d7e93e6601fb6d7e4cd5cee0c98940b5cfb60fbc554bcc80dd436bd48fce94e",
+    "body_chars": 191,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_02",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F238",
+    "input_hash": "fa12b61c745d3910dbe6636c2a3d5ff05608b28f012547285ee013050b76d1f3",
+    "body_chars": 200,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_03",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F239",
+    "input_hash": "46e66a158bd155060ffcb978df71110feefe33c7ba81b4482e4638a7eb40ccfb",
+    "body_chars": 216,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_04",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F240",
+    "input_hash": "174e77f06b7ae730becd4c2b7b2a55e79d92875ac5de3bc0259c846aedec3b70",
+    "body_chars": 221,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_05",
+    "semantic_group": "group-F236",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F241",
+    "input_hash": "21ed88a5e4c33cb6c2a70369f4f2bed30afcd297ebe0852f3659c9316a9cd5a4",
+    "body_chars": 198,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_01",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F242",
+    "input_hash": "8132ce655be3c439cdfd99ff38d0ea6993d95a0d9a26e8dc14279562ffb825d3",
+    "body_chars": 204,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_02",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F243",
+    "input_hash": "f75834244576b058106fe7184ea53ead1c164cdbff07b739a41e9c041894595b",
+    "body_chars": 192,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_03",
+    "semantic_group": "group-F236",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F244",
+    "input_hash": "eb4738a47aa7b03c764f43187021a70489dbbba1303ecbe5150d2c9ed86a69c1",
+    "body_chars": 211,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_04",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F245",
+    "input_hash": "592c4d6b0319e9847686d6967737c80e9730d17685751cf7c1b8964eb859aef5",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_05",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F246",
+    "input_hash": "5fcb9bc4cacb7fd6f1fa15e352c0ba13890169ef6bb0b91ccfce7192a1b5f3a5",
+    "body_chars": 200,
+    "body_words": 33,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_01",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F247",
+    "input_hash": "2ae43076829d43617a353d25bdfe90aee3459dd1a0c30ab333d79e64695a7a0f",
+    "body_chars": 197,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_02",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F248",
+    "input_hash": "3ff1c29240dd2592a6ae07c22dc1b77a1829975858707919d2ac8de3729a6032",
+    "body_chars": 207,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_03",
+    "semantic_group": "group-F236",
+    "flags": [
+      "service_object_physical_issue_requires_review"
+    ]
+  },
+  {
+    "sample_id": "F249",
+    "input_hash": "2a2ed4c61a94ae0b1c67c0ba6ea251f9e34f0a8398d6f9238d82510c0b236e56",
+    "body_chars": 206,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_04",
+    "semantic_group": "group-F236",
+    "flags": []
+  },
+  {
+    "sample_id": "F250",
+    "input_hash": "7c630da6422977837cfdecc8cfc4695556a639e8b805df5d10f5743f2cee28bb",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_safety_health_05",
+    "semantic_group": "group-F236",
+    "flags": [
+      "mixed_tag_without_praise_in_body"
+    ]
+  },
+  {
+    "sample_id": "F251",
+    "input_hash": "05a565b859a4a7569a7eeaf5ab8646ed0aa46d517bf9452720a17c49d3e39e06",
+    "body_chars": 232,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_01",
+    "semantic_group": "group-F251",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F252",
+    "input_hash": "1baf59d22707ce43281ef6eb973c86ce64c3ce9638fa638999263925d13afda6",
+    "body_chars": 239,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_02",
+    "semantic_group": "group-F251",
+    "flags": []
+  },
+  {
+    "sample_id": "F253",
+    "input_hash": "f145108becd6147b02c7a6466be80fb54c66ce0d8a96d5a6987038ed1b2d6220",
+    "body_chars": 231,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_03",
+    "semantic_group": "group-F251",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F254",
+    "input_hash": "016231a52bf1daeff08b56e41cbf67b28b37bc61d56f69773fd824f5271f4914",
+    "body_chars": 228,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_04",
+    "semantic_group": "group-F251",
+    "flags": []
+  },
+  {
+    "sample_id": "F255",
+    "input_hash": "7544eeaff62b63d158b8ca6343015c1ddb3fefe282bf174eb502c5c32b007c59",
+    "body_chars": 226,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_05",
+    "semantic_group": "group-F251",
+    "flags": []
+  },
+  {
+    "sample_id": "F256",
+    "input_hash": "5a08938cc01458271cabc036a0f095f796b2e8256aba21c64ed7da25e771239a",
+    "body_chars": 231,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_01",
+    "semantic_group": "group-F251",
+    "flags": [
+      "high_urgency_without_explicit_text_evidence"
+    ]
+  },
+  {
+    "sample_id": "F257",
+    "input_hash": "743f57ba8533307d0aca72950b167281c3de05f44029dde2b6274245439f4c8f",
+    "body_chars": 245,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_02",
+    "semantic_group": "group-F251",
+    "flags": []
+  },
+  {
+    "sample_id": "F258",
+    "input_hash": "a77dedb7f2abd8682a8325c394c90daed944133f644378a18849ade0b0859c7b",
+    "body_chars": 218,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_03",
+    "semantic_group": "group-F251",
+    "flags": [
+      "mixed_tag_without_praise_in_body",
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F259",
+    "input_hash": "f8acb5a74b7d5fafad4ce2d8f812eb92f15773e045a29b8888581472a3a365e5",
+    "body_chars": 232,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_04",
+    "semantic_group": "group-F251",
+    "flags": []
+  },
+  {
+    "sample_id": "F260",
+    "input_hash": "52b2d293a627a0e1bba9ae8d6fb83866573c807fc1fae7c8f79950cdec653b45",
+    "body_chars": 216,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_negative_unclear_responsibility_05",
+    "semantic_group": "group-F251",
+    "flags": []
+  },
+  {
+    "sample_id": "F261",
+    "input_hash": "c6a80146cdb33f8cfe3a1086f238e62618feb22c9c1d621dd31ce75a94eb8677",
+    "body_chars": 224,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F262",
+    "input_hash": "6a35562b1b55cd0fe0ee4576f619a986a5ff6d2fac27947d725edb958177d157",
+    "body_chars": 254,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F263",
+    "input_hash": "bcff6a02fe66d00678c95de4336ebf1a2eff076fd3cba9dc3b8028b84e72c867",
+    "body_chars": 241,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F264",
+    "input_hash": "a593b7ee8b94a3a1a854c653b9dca22a7449492117ccf7d915aa26e79d567d8b",
+    "body_chars": 243,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F265",
+    "input_hash": "0d23b17d6445dd66f5fa3bc8c8e2d5f1d0016c67e4e14153c294855841d9c8fc",
+    "body_chars": 248,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F266",
+    "input_hash": "3a87aacadeb9475877e194687bed637b63931b801b3eca00fcf994699b1c206f",
+    "body_chars": 240,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F267",
+    "input_hash": "c6d888c9a29f66290639f7eb964e7f0dfd5597464a497657504170117c9b8deb",
+    "body_chars": 244,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F268",
+    "input_hash": "3edf20661a635bfeb8aec4deb301bfe6369f51069e872cfd68ced6171c424a48",
+    "body_chars": 242,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F269",
+    "input_hash": "52bb0f8b3bedce7089dc534191f1db9cb82dd78bedd3ec1ead69c1b1d20af9b6",
+    "body_chars": 226,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F270",
+    "input_hash": "cd094e876b93d1e66c192c71bed17d6b49c9a699bdc88b1d59cdabac2bec2f27",
+    "body_chars": 262,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F271",
+    "input_hash": "b11cd7abce7bdc5a2e3dc725c077d901630ffe27e791dfde0fc1e505d0b647aa",
+    "body_chars": 229,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F272",
+    "input_hash": "00808870cda8b1bf6f1ea1d5223124d058bc6c31dbe3d7f744ad6ca1be445e93",
+    "body_chars": 255,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F273",
+    "input_hash": "efe91a2b0a61380fcc1b74145d0e11c1306d7deb28c3b295acba442de47866d5",
+    "body_chars": 237,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F274",
+    "input_hash": "28210a1952dc29623b279b9d1cc96a917bd1aab31a526dbcc213451e6555c64e",
+    "body_chars": 232,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F275",
+    "input_hash": "164723796c392f6067c57d617630a844b6f51de1b4e73c767d168d40e40d2a52",
+    "body_chars": 256,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F276",
+    "input_hash": "395deb55df3515dd1b47e892dd0c82114ebb8399248cf0b40aa504f843934e61",
+    "body_chars": 234,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F277",
+    "input_hash": "f9cf70d3f9eb4c63c7264d0b31042b1e7f1dd302f7530d53d103695a9cc43b2d",
+    "body_chars": 240,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F278",
+    "input_hash": "a089b16161fe146a502005a7544d6ee6490d953b3dc80c1d825ff64338afd0f7",
+    "body_chars": 250,
+    "body_words": 45,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F279",
+    "input_hash": "33cb2bc39e999e1a1279a45bb623e54a98db031d08cc1424ce6867462bb1a9ce",
+    "body_chars": 232,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F280",
+    "input_hash": "ae245d534ba6d1fd7c4cbbe84f23bcffecd190de19ed619745017af785aca4e8",
+    "body_chars": 264,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F281",
+    "input_hash": "d72c74bf21ad500b87a79ab9e185ae80384c5e108ca4b8ba0813b9a0883a65e7",
+    "body_chars": 233,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F282",
+    "input_hash": "e650e0f858c8038bf383969546ea367865a8caa0835ee5c9c4b3bfdf991cf102",
+    "body_chars": 257,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F283",
+    "input_hash": "2939fbce8a5d9ef92304ba1415cb015e3bde6be3a968d5b3c98bd5d800e2065b",
+    "body_chars": 238,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F284",
+    "input_hash": "f05a11d385d9c2026f9d589d69439e903abe37fe44225e9b5fdf6d408663e0b4",
+    "body_chars": 231,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F285",
+    "input_hash": "dbc390802338a292aa39c09ea83c6a1a2bcb7cdb3e6bdf229bfc5e7fcd41edcd",
+    "body_chars": 253,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F286",
+    "input_hash": "8e9f0bdfb27efe4a543c7933ccd21db71199ad06d3b4563d00c1ec9c3900e2dc",
+    "body_chars": 239,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F287",
+    "input_hash": "3c4605f82e7240a3c88dd22e54125a521246529505a2ace0ac33807d20658b6f",
+    "body_chars": 246,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F288",
+    "input_hash": "123dbbad4522388b19084f81f6500c6f5a82ac2043590194bf2d8853d021083e",
+    "body_chars": 257,
+    "body_words": 45,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F289",
+    "input_hash": "1e94f7ea7bd09d72759605f2d07ad9e46a38905e3f005576f03217944ee64965",
+    "body_chars": 222,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F290",
+    "input_hash": "915b2d4002ec43f1946d7676e775bce50ff4fe4d2f627e0de748acc57976fd08",
+    "body_chars": 260,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F291",
+    "input_hash": "a800b6b581474217e6388e542f05c50bbbd4b28526501bdd5b4f404926e2f8d4",
+    "body_chars": 226,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F292",
+    "input_hash": "58cbbf714ee364aedd75f7eb71a034ebe930a59ec1c55292c532723b60bacd9f",
+    "body_chars": 257,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F293",
+    "input_hash": "85bd19c31a9da3adb71fd5ddfc2872e0796205e7c8f880a4806e64f1f385d70d",
+    "body_chars": 248,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F294",
+    "input_hash": "ea506da6f923121937e96dbc6c8b38b60cca88d599d9fcf89a008b6cfe37b068",
+    "body_chars": 237,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F295",
+    "input_hash": "2a681a5bdb9b4cd881379b666457f60dc2de15d53e851312772ed67f1e771cf6",
+    "body_chars": 253,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F296",
+    "input_hash": "b7a282f50ee92e5d8bbafd10378d817cdbe073fd84dbc15775223950ebb7f23a",
+    "body_chars": 241,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F297",
+    "input_hash": "33358a2b5f09342d7d90b9806444696a58d464408765b66abc317064a7d00841",
+    "body_chars": 247,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F298",
+    "input_hash": "e700e69b36406d16377328440feaf57944d3da3952d906070a325acfe92044b5",
+    "body_chars": 251,
+    "body_words": 45,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F299",
+    "input_hash": "499ae5b0176cd1bda0d39629ccc14fcda23ce8f817a89c98b208d70dd1975b4d",
+    "body_chars": 225,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F300",
+    "input_hash": "b81640d3ef953f722a18d9941fdcd6656c806834cb55b70ecfd7bcc307e46618",
+    "body_chars": 259,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F301",
+    "input_hash": "9edbada6bb7b7e02d0116edf445ae1bbda14be02d72ae54442ffc859aa962156",
+    "body_chars": 224,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F302",
+    "input_hash": "c09cca533f9dd644f3fb6adda4db910c80810fb1206509b577f305f7b132f727",
+    "body_chars": 254,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F303",
+    "input_hash": "94c271766e628e0d72b270ebace30b1ad7f3d1af11da3f812bbcc2dec0167d36",
+    "body_chars": 241,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F304",
+    "input_hash": "1ed782603023a22a793a7cfff59139bb95036f14f0dd54c9568999a14bae35ba",
+    "body_chars": 243,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F305",
+    "input_hash": "84f07114a1b8ec9713a991ca6a2e7138209fb950f8ad1d0764ce914ca4501848",
+    "body_chars": 248,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F306",
+    "input_hash": "ca1709a31d74e88291d96399e801457fe5e3074469c72b2cb29262a9d0092cc5",
+    "body_chars": 240,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F307",
+    "input_hash": "02a3b74022a5034d10e02803027368ce19af61aac1a5e4a6f46cdb6809977105",
+    "body_chars": 244,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F308",
+    "input_hash": "31581c701e545545b77cefff4c115dd46c4102a8023473134e4b5d10f019a056",
+    "body_chars": 242,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F309",
+    "input_hash": "59ead6af3a1049a1587c1a96582f96165e90a0f088fe32af9bd6f958e9194acb",
+    "body_chars": 226,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F310",
+    "input_hash": "de7db47aa024a07f25bd8e2d12a964fec019d974f04fe28f3a4b6107ae54a9c3",
+    "body_chars": 262,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F311",
+    "input_hash": "66220d539c86d9f7fbe8705c6ec2c5da9511d55bf734fa384eb38c73d3bcd7b0",
+    "body_chars": 229,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F312",
+    "input_hash": "33414e517d7a8d705fae51275abaf293554061355d99fc012c9e06513bd88660",
+    "body_chars": 255,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F313",
+    "input_hash": "09133a5e5c672261cc63df8ae8cdd0a38f47948b2547749b01a6ba4e1c3de2c6",
+    "body_chars": 237,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F314",
+    "input_hash": "81e744a08811731ca9d0ee331f87f002ce0050ca36cd85425f87fa29c15c6eff",
+    "body_chars": 232,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F315",
+    "input_hash": "b9b3920e0ac8311a7bcd006c3f51826a2336d4b4c61a25255675050f963ea3cc",
+    "body_chars": 256,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F316",
+    "input_hash": "64cc7021d67fcc3fa6c3ea666de2449037a464d4ecc4a41383e17c03ca51b802",
+    "body_chars": 234,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F317",
+    "input_hash": "cc633288aa7f5aaa41b62d9115af53fbc14f7b5bbb138c70a4744b1494ec93ba",
+    "body_chars": 240,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F318",
+    "input_hash": "f35e280aba0aa4ff763bf8831290df61b69a122cb30e9c2dafe80f2269a88e96",
+    "body_chars": 250,
+    "body_words": 45,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F319",
+    "input_hash": "938dc522ce391f6479ee51e5deb331e8626e9f1de7a997126a8d3dff0c80c2cf",
+    "body_chars": 232,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F320",
+    "input_hash": "f4a0150afab36db61a122c77c64e481b10afdcd68b932c16799f24641e9489a6",
+    "body_chars": 264,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F321",
+    "input_hash": "4c2c8bd3edfea926f6e8e38f0dfe79648211cde01df9c7b733edb7aad16561d0",
+    "body_chars": 233,
+    "body_words": 40,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F322",
+    "input_hash": "2de91299bf17792d40dd0680f89d7280c282d2cc2e32f0aeaa7fe6115d033775",
+    "body_chars": 257,
+    "body_words": 43,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F323",
+    "input_hash": "1604bb581fec79082ed741e4f77d45754c1aedcb9e41335d11c6e7be9c91e175",
+    "body_chars": 238,
+    "body_words": 44,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F324",
+    "input_hash": "89cafbe4271b8f8aa4154fed506aa7f83b4bf62ea91a4292f80cec454e25bfd2",
+    "body_chars": 231,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F325",
+    "input_hash": "4b8ec46c64da0261977b26e0a6eba288f2d3d57ee61fda7a344a8c7199665fbd",
+    "body_chars": 253,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F326",
+    "input_hash": "61096479dc822d76898328bc9763a27c7ce7b4abbf233446aca1615fd4974876",
+    "body_chars": 239,
+    "body_words": 41,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_01",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F327",
+    "input_hash": "f9ef04f31bb75c8455678919c546df5c2e0371daa5ae610fae2817db5ab67c90",
+    "body_chars": 246,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_02",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F328",
+    "input_hash": "cce40904081d395b2c6e1ae1cc68e273df8fc0a5883d343c8964b1a1380c14d2",
+    "body_chars": 257,
+    "body_words": 45,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_03",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F329",
+    "input_hash": "5d4c80b26ea8b857ccbbd1c8f57fc0c9d1c27d3f93b56699a45a08b28539913f",
+    "body_chars": 222,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_04",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F330",
+    "input_hash": "6906f7ec24ab3e34558973f16370a3d8d0627724bd49615cb68b5b2191bd9afc",
+    "body_chars": 260,
+    "body_words": 42,
+    "language_proxy": "English_template",
+    "template_group": "i4b_positive_praise_05",
+    "semantic_group": "group-F261",
+    "flags": []
+  },
+  {
+    "sample_id": "F331",
+    "input_hash": "ba725d4d24fdc675dda8265ba58ed43e3771525ff3722b84d2e5dd3334c6fae0",
+    "body_chars": 229,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F332",
+    "input_hash": "fb121051c26a1fe231f40f9af9ca4495f82e37587f2fc13a3192d70bedf7aeb1",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F333",
+    "input_hash": "e701fc6e67f1dd7e87b0811b5d19e5c4b2eb251700f906f04def0b14a4d5fde8",
+    "body_chars": 223,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F334",
+    "input_hash": "c480f55e67ac2a6d64deba9e578a5f9cf997d0aafca9099fa7a5d302d8ebbf08",
+    "body_chars": 215,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F335",
+    "input_hash": "ecc2df8e8f909a35c2bc200eea03d99dc5e5e2e3772e893a1278ec1f59c3705c",
+    "body_chars": 221,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F336",
+    "input_hash": "d819f374ab008a73690399ec3ed125d0f561574d87bc532c85a7c01414b2b3b1",
+    "body_chars": 228,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F337",
+    "input_hash": "e0d4d039ffdb41e94d194a4bd56f88734d8edf71b09593d45a316d12612da002",
+    "body_chars": 223,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F338",
+    "input_hash": "da2609589f4f3eaee8310a8d229e76d125265f7b43ea22efc320df195174b1f5",
+    "body_chars": 210,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F339",
+    "input_hash": "0320a34bb5ee90d563d107af4f7d72f482c903cdf3e26a8e9ffab79a1ae4ca1a",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F340",
+    "input_hash": "1467facf8a2b5d6de67542f4a9e57cfb0f5de02c70717150c6551e045879a49a",
+    "body_chars": 211,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F341",
+    "input_hash": "da4fd4a444d7d9dc66694c2b85e49eed29eb333c0ee7445847100c4eda53337a",
+    "body_chars": 227,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F342",
+    "input_hash": "18cd1519796eddf9bda92d546e7b45d2bfb9503cd90bfb1c1336e66fb4352e0a",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F343",
+    "input_hash": "b5dcbf4ba9b4c7c36428f6291a86443127fca8e3a2e29e41c0432eca1dc36fba",
+    "body_chars": 216,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F344",
+    "input_hash": "3ce0ff17b9b22303ef0da92297a03d65156134449d08e1974056cc2ddc8385c9",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F345",
+    "input_hash": "e86e05ef16f4a15a6f3d93fe587fcdddad57e84e628200e1790922db00070d0e",
+    "body_chars": 216,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F346",
+    "input_hash": "288a7c3c99ae89325446e6b993fef04bc361544d2f6a2889a386aae56b9e25de",
+    "body_chars": 227,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F347",
+    "input_hash": "c4856aca8e738c4cd0a1f531464e0e9b5f8a05b51e7efcc1146eb7ab084ad1a2",
+    "body_chars": 220,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F348",
+    "input_hash": "0d3c5e30e2cc287718df5fd98866ded16a0f4d458b008d25db123106de18c408",
+    "body_chars": 201,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F349",
+    "input_hash": "356d490a9deed6ab3830365fd111e976be8820251c15e3bdd859ebc9d9f75930",
+    "body_chars": 220,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F350",
+    "input_hash": "97a3ae44bb75e208c7e26a78bc3d0639fad1ebf9f11b71ff5f5f8056ebed4303",
+    "body_chars": 214,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F351",
+    "input_hash": "72e1bd8ad200996493a4965ee93d518b3ae83f1a0ec9c5ca193546d1cf853b7d",
+    "body_chars": 232,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F352",
+    "input_hash": "2df98fd787c6ac947ba02e43ed39396994fe8a18b70c073fdbf44f5885969920",
+    "body_chars": 215,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F353",
+    "input_hash": "64388d4b6a9c77753ff0077a17ac162a4e988298d47e9b34fd892acfb4258d75",
+    "body_chars": 212,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F354",
+    "input_hash": "9cd7c912707727a45c19c210e68a20bc87a6f99e44b32c65b87f6b483db875b9",
+    "body_chars": 210,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F355",
+    "input_hash": "fa62b143d7f3f4853cd5057253cf784d66e397044fe08ba7512c3ea4ad8f2f80",
+    "body_chars": 224,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F356",
+    "input_hash": "aafd441d6f1bcae0797103c456d9734f1dbf6a6691fef6d181229097431523cb",
+    "body_chars": 221,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F357",
+    "input_hash": "e08030328baf26f31b7eab9efaf9e589c704630cb77f7b84599229fbc3c3f1b3",
+    "body_chars": 216,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F358",
+    "input_hash": "87384c0812a6f5a5db675c3b4fbf654e74553f1c414367af2c48d0e849019a92",
+    "body_chars": 209,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F359",
+    "input_hash": "b10b856c6e48a000898df95aad888f67592dded952f0829aafce9b4d3d3b3c40",
+    "body_chars": 226,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F360",
+    "input_hash": "712fedb3569547c77d99056493ee7f564aba81d1a1d00c2e85c2a10270c51332",
+    "body_chars": 216,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F361",
+    "input_hash": "edae3730901a58f717f491fcade1debc3c1fc33ef3f3d4d7f4f3d9932183ef81",
+    "body_chars": 236,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F362",
+    "input_hash": "3fd46596dbad7befe8cf0cac3e1d0a47686076da94135cacb1eb2d4e9606240a",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F363",
+    "input_hash": "496a05abdaf9be76d110a340feae6e4dc78a330d5ac6dabf238083b58d1804bf",
+    "body_chars": 213,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F364",
+    "input_hash": "87399241f2a3c7a73f7f4720d29e2569fa8d9f8c7947aac7dae0f20726cf547f",
+    "body_chars": 209,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F365",
+    "input_hash": "a4b91effb4d27ca62fbc50f5518d36c589b3b5dcaec7e61675ff5f95ceec7dfe",
+    "body_chars": 221,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F366",
+    "input_hash": "d6eebf4f2f0ec6b4dc893d3985765fd2fabad94f0175d89e86a9a93a8a9a4501",
+    "body_chars": 226,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F367",
+    "input_hash": "42c08b3c07d1a7ee0b80b98095bbd43e9b092acd695fb97b6f8405f3a2858bbb",
+    "body_chars": 222,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F368",
+    "input_hash": "5ee3fb7dd414236b7eff90b093708cd380e4a689c28421cd6c53aa6c5569d207",
+    "body_chars": 216,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F369",
+    "input_hash": "e6ed0c9b93691baf13762f82bbc6ed41d5475cb841b00eed167a9de644e2d8b9",
+    "body_chars": 216,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F370",
+    "input_hash": "2da022af435c51675cdcb7461c82af49ffcb778ea9eeca7377176198fbcca5fd",
+    "body_chars": 212,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F371",
+    "input_hash": "0f257adda45ab6c8f0a1311799c8714737ca8df84e7eedd5271e9728595d8586",
+    "body_chars": 229,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F372",
+    "input_hash": "68bd59adbed495c689c1047649cec261deedd7f8d74403c4870dd42d97df3d46",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F373",
+    "input_hash": "41ebee694d67bc51e1739ddaf4672efb3c3654cdb486cc3457d45f5211f21eda",
+    "body_chars": 223,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F374",
+    "input_hash": "0fd603b100d3b5fef9983672b6f3e302d3376f1a3348ca8c1949bc7fdc746f3c",
+    "body_chars": 215,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F375",
+    "input_hash": "6833adf1ba91e057e76c59ce6cc68b9101f6de96688550a1ecbb06936bfa0a44",
+    "body_chars": 221,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F376",
+    "input_hash": "801cd036261add2aa64b37f31f5630ca13f62c19ad83fa54a77dec8dea5c626c",
+    "body_chars": 228,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_01",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F377",
+    "input_hash": "ab963cccdeaabf5261e92c15281691288524a3d6c29ccaa1f054b2ebe5dc0602",
+    "body_chars": 223,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F378",
+    "input_hash": "b09646aa7f02e28011312efa892631d27eb34d2e87798590df9ae2dba46a02a6",
+    "body_chars": 210,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_03",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F379",
+    "input_hash": "e7cb9e6ecac07c7197afc5dab00c71d65e31a11a89dba081bf9b0311be813634",
+    "body_chars": 219,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F380",
+    "input_hash": "312e63c497e5ff46ad6dea4902251285aa1e60315be8ab841a9ba5fcfc8bf5b5",
+    "body_chars": 211,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_inquiry_05",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F381",
+    "input_hash": "071e517fa34e9a50af75083b88004e4a4615842a663df062bf6da7c82468d7ff",
+    "body_chars": 219,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_01",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F382",
+    "input_hash": "1870cab28a97975dc09dd5c19a60f71100cab37c49a2a1e734b9721acb75a532",
+    "body_chars": 221,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F383",
+    "input_hash": "237051c5cf099fa0903c8b38c8ec07588a282e88273abe02177b1d458096da82",
+    "body_chars": 214,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_03",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F384",
+    "input_hash": "da42ad60e26e4c9b66ff89dd9a84b87c4c3ee2483baab5e5ac39950ee4c83120",
+    "body_chars": 228,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F385",
+    "input_hash": "e5f586db230f7e8b7742252b4dd4e8cda2a017bff925984225f129f141c92f02",
+    "body_chars": 204,
+    "body_words": 34,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_05",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F386",
+    "input_hash": "5ee215b9739cff05ab4b93e61dafd6a66e233150fdfe4c224527783eacd1b30f",
+    "body_chars": 235,
+    "body_words": 39,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_01",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F387",
+    "input_hash": "a26f9aef65a1ee250f64a8cc4c5fd8802fa5a56a01d674711fa0a833dce2e6ba",
+    "body_chars": 211,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F388",
+    "input_hash": "f7078c18e0cb4c01ce9bb2513ddde557bf079772094c5dbcfc993714cf1ef16b",
+    "body_chars": 215,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_03",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F389",
+    "input_hash": "34b17e4f231de728ba9729aaafa7b85acf6636896374bb7304dbaace1db56eea",
+    "body_chars": 211,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F390",
+    "input_hash": "fe5e61e0751c89ec2e2411832540611ff6bfa9b341cab1a02d60553fed7759c5",
+    "body_chars": 218,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_05",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F391",
+    "input_hash": "f4371eb446bd566f89447c29ca06e59a81ab1ed40dd736b52ca33ecee9cd237a",
+    "body_chars": 224,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_01",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F392",
+    "input_hash": "9c230985676ff84075a62a9772bcb0843b3737ab623a56864a133334701c3e79",
+    "body_chars": 222,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F393",
+    "input_hash": "24af315ff124aa583147b685e1e0fca4b75a3727ef89b1f9f7086a4c3b78447b",
+    "body_chars": 210,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_03",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F394",
+    "input_hash": "d3287f48d3165fbb29970ee431c36cecd836bd8023c62579cc6d112d44e2e733",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F395",
+    "input_hash": "858ce5107ec0b399ffed66e581dacbf04d9b6b7a02ccb4d3a2f62e9cf833ea95",
+    "body_chars": 212,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_05",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F396",
+    "input_hash": "933d6911ba9fee3b39ad376129ac061b5ffbb3a59ac22cf476da6c839d136c89",
+    "body_chars": 229,
+    "body_words": 38,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_01",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F397",
+    "input_hash": "f306e974985507c3578ed5872c486d57d8a21c38a2e11b0e7b6f1f8da9e71f82",
+    "body_chars": 207,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_02",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  },
+  {
+    "sample_id": "F398",
+    "input_hash": "d448c7305c7b60cf73d582e35c9b81808bac29505e9572cb2d02e699ea0f0f5c",
+    "body_chars": 223,
+    "body_words": 37,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_03",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F399",
+    "input_hash": "5eafafce6aa8fba22d524627e6f2d2e50866793e2981b26e99268dc0f67ddb93",
+    "body_chars": 217,
+    "body_words": 35,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_04",
+    "semantic_group": "group-F331",
+    "flags": []
+  },
+  {
+    "sample_id": "F400",
+    "input_hash": "38a5091e081f0250ca93492c76ad12c89c0aaae685f22ef9f6ffcc3d1547afa2",
+    "body_chars": 220,
+    "body_words": 36,
+    "language_proxy": "English_template",
+    "template_group": "i4b_neutral_service_question_05",
+    "semantic_group": "group-F331",
+    "flags": [
+      "template_grammar_or_subject_anomaly"
+    ]
+  }
+]

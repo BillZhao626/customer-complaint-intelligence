@@ -1,0 +1,559 @@
+{
+  "protocol": "e2e-evaluation-v1",
+  "mode": "recorded_replay",
+  "dataset_id": "p2-developer-pilot-v1",
+  "dataset_hash": "e1f92ba3dd4566a955aa139b9776e5d77c1a6cf2ec90a1a8ef223b00b672fe84",
+  "provenance": {
+    "kind": "developer_synthetic",
+    "source": "Frozen P2 developer reference; not Human Gold",
+    "independent": false,
+    "source_hash": null,
+    "exposure": "development_exposed"
+  },
+  "reference_statuses": {
+    "developer_reference": 12
+  },
+  "config": {
+    "backend": "deepseek_live",
+    "model_id": "deepseek-flash",
+    "prompt_version": "complaint-v2-pilot-1",
+    "schema_version": "analysis-v2",
+    "taxonomy_version": "research-products-v2",
+    "prompt_hash": "c0b72907c1fce9fc191352882502910e6c154c109577559d8e4aad1fbfbe8b23",
+    "parameters": {
+      "temperature": 0,
+      "thinking": "disabled",
+      "response_format": "json_object",
+      "max_tokens": 1800,
+      "sdk_max_retries": 0,
+      "http_timeout": 45.0,
+      "deadline": 90.0,
+      "max_attempts": 2,
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    }
+  },
+  "cohort_id": "bc8829ab20f79aa3651aa3abbb06980e7c99502d9419262eb45e279e5e33400d",
+  "counts": {
+    "eligible": 12,
+    "attempted": 12,
+    "succeeded": 12,
+    "failed": 0,
+    "uncertain": 0,
+    "fallback": 0,
+    "missing": 0,
+    "evaluated": 12,
+    "pending": 0
+  },
+  "structure": {
+    "accepted": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "json": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "schema": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "attempt_records": 12,
+    "provider_dispatch_records": 12,
+    "retries": 0,
+    "errors": {},
+    "fallback": 0,
+    "warnings": 0
+  },
+  "fields": {
+    "sentiment": {
+      "correct": 12,
+      "denominator": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "negative": {
+          "negative": 8
+        },
+        "positive": {
+          "positive": 1
+        },
+        "neutral": {
+          "neutral": 3
+        }
+      },
+      "per_class": {
+        "negative": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "positive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    },
+    "urgency": {
+      "correct": 12,
+      "denominator": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "medium": {
+          "medium": 7
+        },
+        "low": {
+          "low": 4
+        },
+        "high": {
+          "high": 1
+        }
+      },
+      "per_class": {
+        "high": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "low": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "medium": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 7
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    },
+    "is_complaint": {
+      "correct": 12,
+      "denominator": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "True": {
+          "True": 8
+        },
+        "False": {
+          "False": 4
+        }
+      },
+      "per_class": {
+        "False": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "True": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    },
+    "store_location": {
+      "correct": 12,
+      "denominator": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "Maple Store": {
+          "Maple Store": 4
+        },
+        "Cedar Store": {
+          "Cedar Store": 3
+        },
+        "Birch Store": {
+          "Birch Store": 3
+        },
+        "unknown": {
+          "unknown": 2
+        }
+      },
+      "per_class": {
+        "Birch Store": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "Cedar Store": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "Maple Store": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "unknown": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    },
+    "product_category": {
+      "correct": 11,
+      "denominator": 12,
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666667,
+      "confusion_matrix": {
+        "Electronics": {
+          "Electronics": 2
+        },
+        "Clothing": {
+          "Clothing": 1
+        },
+        "Service/Other": {
+          "unknown": 1
+        },
+        "Home Appliances": {
+          "Home Appliances": 2
+        },
+        "Furniture": {
+          "Furniture": 1
+        },
+        "unknown": {
+          "unknown": 2
+        },
+        "Sports/Outdoor": {
+          "Sports/Outdoor": 1
+        },
+        "Beauty/Personal Care": {
+          "Beauty/Personal Care": 1
+        },
+        "Food/Beverage": {
+          "Food/Beverage": 1
+        }
+      },
+      "per_class": {
+        "Beauty/Personal Care": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "Clothing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "Electronics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "Food/Beverage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "Furniture": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "Home Appliances": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "Service/Other": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "support": 1
+        },
+        "Sports/Outdoor": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "unknown": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 2
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    },
+    "complaint_reason": {
+      "correct": 12,
+      "denominator": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "product quality": {
+          "product quality": 5
+        },
+        "none": {
+          "none": 4
+        },
+        "customer service": {
+          "customer service": 1
+        },
+        "health or safety issue": {
+          "health or safety issue": 1
+        },
+        "delivery delay": {
+          "delivery delay": 1
+        }
+      },
+      "per_class": {
+        "customer service": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "delivery delay": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "health or safety issue": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "product quality": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 5
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    },
+    "source_attribution": {
+      "correct": 12,
+      "denominator": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "product issue": {
+          "product issue": 6
+        },
+        "none": {
+          "none": 4
+        },
+        "store service issue": {
+          "store service issue": 1
+        },
+        "delivery/logistics issue": {
+          "delivery/logistics issue": 1
+        }
+      },
+      "per_class": {
+        "delivery/logistics issue": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "product issue": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 6
+        },
+        "store service issue": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "eligible": 12,
+      "excluded": {}
+    }
+  },
+  "overall_fields": {
+    "numerator": 83,
+    "denominator": 84,
+    "rate": 0.9880952380952381
+  },
+  "all_seven": {
+    "numerator": 11,
+    "denominator": 12,
+    "rate": 0.9166666666666666
+  },
+  "independent_accuracy": null,
+  "independent_certification": "INDEPENDENT_HOLDOUT_PENDING",
+  "summary": {
+    "status": "PENDING",
+    "eligible": 12,
+    "evaluated": 0,
+    "pending": 12,
+    "passed": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "rubric": {
+      "key_facts": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "main_issue": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "no_hallucination": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "entities_and_request": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      }
+    },
+    "critical_error_count": 0
+  },
+  "reply": {
+    "status": "PENDING",
+    "eligible": 12,
+    "evaluated": 0,
+    "pending": 12,
+    "passed": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "rubric": {
+      "factuality": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "issue_coverage": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "no_unsupported_commitment": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "politeness_and_clarity": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      },
+      "edit_readiness": {
+        "score_sum": 0,
+        "reviewed": 0,
+        "maximum_per_review": 2
+      }
+    },
+    "critical_error_count": 0,
+    "ready_to_send": false,
+    "reason": "P4 approval and sending not implemented"
+  },
+  "aggregate_verification": {
+    "passed": true,
+    "groups_checked": 12,
+    "scope": "Product arithmetic and members against saved predictions; not semantic attribution correctness",
+    "failed_excluded": 0,
+    "uncertain_excluded": 0,
+    "missing_excluded": 0,
+    "fallback_excluded": 0,
+    "unknown_product": 3,
+    "unknown_store": 2,
+    "source_attribution_query": "NOT_IMPLEMENTED_IN_NEW_SQLITE_UI"
+  },
+  "usage": {
+    "input_tokens": {
+      "known_attempts": 12,
+      "total_attempts": 12,
+      "known_subtotal": 13242,
+      "total": 13242
+    },
+    "output_tokens": {
+      "known_attempts": 12,
+      "total_attempts": 12,
+      "known_subtotal": 2209,
+      "total": 2209
+    },
+    "total_tokens": {
+      "known_attempts": 12,
+      "total_attempts": 12,
+      "known_subtotal": 15451,
+      "total": 15451
+    }
+  },
+  "cost": {
+    "known_attempts": 12,
+    "total_attempts": 12,
+    "estimated_cny": 0.044156,
+    "actual_cny": null
+  },
+  "latency_ms": {
+    "n": 12,
+    "p50": 2019.7830500037526,
+    "p95": 7975.221839996811
+  },
+  "browser_e2e_verified": false,
+  "ui_status": "Separate AppTest evidence required; this evaluator does not exercise a browser",
+  "system_quality": "Persistence/idempotency/version/failure/UI covered by separate named engineering tests; no composite quality score"
+}

@@ -1,0 +1,1566 @@
+{
+  "status": "HUMAN_GOLD_PENDING",
+  "independent_holdout": false,
+  "candidates": [
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F176",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_01",
+      "semantic_group": "group-F176",
+      "input_hash": "df660a805bad1df9ce8fd87f6a6f293fff9d22edfdb840a9f824a8d20a8eeca1",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F181",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_01",
+      "semantic_group": "group-F176",
+      "input_hash": "dbc2e2974f2afe0e6884a5b4afcfe05694d3d55c7446c0e752c54b0e520b6545",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F177",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_02",
+      "semantic_group": "group-F176",
+      "input_hash": "45080b8affca01e5c1dbf836f87047ffa5b84f0a9650ab3f61ef850986b8ccef",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F182",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_02",
+      "semantic_group": "group-F176",
+      "input_hash": "4e3133e7bc3957c83db9f02048045d436e2945ccdf29f3d68eb2b560c876594d",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F178",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_03",
+      "semantic_group": "group-F176",
+      "input_hash": "6f35bb83f46272328cd4a0324a0dfeca6984558648c6879ee7d4b565dabd0a03",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F183",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_03",
+      "semantic_group": "group-F176",
+      "input_hash": "94027d86f500bbdf33d3f23dccc1ca9c3323e2226ce21dce2dc4495e6b3494bf",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F179",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_04",
+      "semantic_group": "group-F176",
+      "input_hash": "a0b09f0a0a44c111bc6196ef4fb6057d61145c85300ba192a9c0eeda68dc27d2",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F184",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_04",
+      "semantic_group": "group-F176",
+      "input_hash": "c8370b8c7d5426fea37c83eb2a5a1896fefda33eca448edcf793ff128e8c9506",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F180",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_05",
+      "semantic_group": "group-F176",
+      "input_hash": "42b1a3b348e7770ad040355e8d6a3cba06341543c9226b3eb564146668846ec0",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F185",
+      "split": "development",
+      "template_group": "i4b_negative_after_sales_05",
+      "semantic_group": "group-F176",
+      "input_hash": "48fe49e1c66853cd3f252c29c0bb967805c0c6d08db54d83ddfc351bde959ec8",
+      "scenarios": [
+        "negative_after_sales"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F096",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_01",
+      "semantic_group": "group-F096",
+      "input_hash": "dee4fc41afc43d9ce566c8fb18c30a91bf18060d566eb134c954b1118b3d8d3a",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F101",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_01",
+      "semantic_group": "group-F096",
+      "input_hash": "e6a8cf723fb73cf35a771e79b3809bb5855d2bd39ddbb52f49000289bd1527c1",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F097",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_02",
+      "semantic_group": "group-F096",
+      "input_hash": "8b129d64f2e09e9d755ce1a3987cb9dc6b0260feb14e42564121ac2ef5c2d4d5",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F102",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_02",
+      "semantic_group": "group-F096",
+      "input_hash": "b15ae5c2e205db0d3f6aa7ab4abacf331a1f9f758a585cbe5bc252cc6dff4dec",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F098",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_03",
+      "semantic_group": "group-F096",
+      "input_hash": "6b90f085727dcae28cf595cbff8217123b60eb6bfc81a2d1834c1f8551b45f66",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F103",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_03",
+      "semantic_group": "group-F096",
+      "input_hash": "f596b29eaeb4563372684414606b0e6598ae620db27c37f8d9256ad85e2d58e6",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F099",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_04",
+      "semantic_group": "group-F096",
+      "input_hash": "9c639d520ad377df54971f02d3f559a2883f7771c04e8b02f0c87ca7365ca9a4",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F104",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_04",
+      "semantic_group": "group-F096",
+      "input_hash": "c32f9fc956a4071b0d1e970135835383fc3d3a73b7bb9b99be558c4fc0d8ce84",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F100",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_05",
+      "semantic_group": "group-F096",
+      "input_hash": "ec292f24c5879fc658d54fc2190993c064d627348095f0d9a36d8c5851efec10",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F105",
+      "split": "development",
+      "template_group": "i4b_negative_customer_service_05",
+      "semantic_group": "group-F096",
+      "input_hash": "1802a0b877d41396697ba334727916b9f2381d57035e873f5958eb3a99a057e8",
+      "scenarios": [
+        "negative_customer_service"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F051",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_01",
+      "semantic_group": "group-F051",
+      "input_hash": "437d4a7b2e7590b3835434b25c19734b8e2557fdeb730abe0c4ef975cd380f1f",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F056",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_01",
+      "semantic_group": "group-F051",
+      "input_hash": "c3a0766e98f93f6b4f6573d9225349c6e67b807ab89571ea5261be88e002e10f",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F052",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_02",
+      "semantic_group": "group-F051",
+      "input_hash": "ce48a6efa42f2c598a16492b5c6ee653c58abc34d7c14f7c04948bc9a05faa69",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F057",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_02",
+      "semantic_group": "group-F051",
+      "input_hash": "c6c5b02e4d12cea409910b5035c759b927af8cfc5d5cfe52757109c4282f8af8",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F053",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_03",
+      "semantic_group": "group-F051",
+      "input_hash": "35e8528c2050e22087e449e1189d73df8b2f8936feb58c720a15ff3051f7026f",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F058",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_03",
+      "semantic_group": "group-F051",
+      "input_hash": "b8016eec27e4518e85538d806bff14223f1baa2ee92694c73b3661c971c0fc3d",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F054",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_04",
+      "semantic_group": "group-F051",
+      "input_hash": "d4cd0f72a7b276d3c1adad0ef348f543032b6a7a6d4c37c0423499557af4fcfe",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F059",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_04",
+      "semantic_group": "group-F051",
+      "input_hash": "34d9274028cce01f31eababf31c0e8de7243e493e777e96d60cade7547dd0806",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F055",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_05",
+      "semantic_group": "group-F051",
+      "input_hash": "c8760466243883bc45076248c8c6bab457cefd6581eb60bc803bafdd531e8ccf",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F060",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_delivery_delay_05",
+      "semantic_group": "group-F051",
+      "input_hash": "9b64d6390f539d52a0613616d613bd4b0d269571516beaf6d90c29a5d5240db7",
+      "scenarios": [
+        "negative_delivery_delay"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F001",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_01",
+      "semantic_group": "group-F001",
+      "input_hash": "54de5b2be0e8219721847ed70f375e59ceb1644a98cd22f81374f76d0c67a4fb",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F006",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_01",
+      "semantic_group": "group-F001",
+      "input_hash": "77829bac7352a9b11f408fb2eec82fad288dd02e966712868ac6bab5c5cd922c",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F002",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_02",
+      "semantic_group": "group-F001",
+      "input_hash": "f0c3bdc618fd3d0b45dceb8c39a2928d84702423c6e662f7e656a1a0f41668d3",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F007",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_02",
+      "semantic_group": "group-F001",
+      "input_hash": "b349a9855e4c05aaad3c9ce80f693c58b9e27aed7090d0ba6fed9214742c6344",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F003",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_03",
+      "semantic_group": "group-F001",
+      "input_hash": "72a520824d29a737b5cd2e4def9199cd38453dbd5951b7dfb48930aa5acabae2",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F008",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_03",
+      "semantic_group": "group-F001",
+      "input_hash": "e31513c5a7a15c86f950c62001980446c80414c76d99043dcedca17ca3e2c376",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F004",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_04",
+      "semantic_group": "group-F001",
+      "input_hash": "84a431ad62c2d9578a5659d7f51a0fa028fda5d2b357c15b2f91b0cf2cc353c8",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F009",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_04",
+      "semantic_group": "group-F001",
+      "input_hash": "5164d6b9d10923b4fc447b8fbef6388f549efecd89cf186f4468e957880c182b",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F005",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_05",
+      "semantic_group": "group-F001",
+      "input_hash": "07c0a12051f896bb03ccb2b14bb4c18dcf7aa0fa040593b8b720aa4968791370",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F010",
+      "split": "development",
+      "template_group": "i4b_negative_product_quality_05",
+      "semantic_group": "group-F001",
+      "input_hash": "1a7dc1293dac3971c658390e3d217905bdfdf25adfa0453a7a46c1d0d4802f47",
+      "scenarios": [
+        "negative_product_quality"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F141",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_01",
+      "semantic_group": "group-F141",
+      "input_hash": "ea159efbe6b857529e6e6988df6dce99b0adfd65faee73c500821e068ecd102d",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F146",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_01",
+      "semantic_group": "group-F141",
+      "input_hash": "7ddfa757e909ef586496cfb0be3f1884ff02e3aaa051b6e103d31481a2b00f0d",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F142",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_02",
+      "semantic_group": "group-F141",
+      "input_hash": "54e2cbb2250dab29ce4e64748c117d0ee7a74b59e634504c9fb93703e6344c20",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F147",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_02",
+      "semantic_group": "group-F141",
+      "input_hash": "abf04b009cc5a129fa0a22469dd6bec99cb03efe9999e715f7aa940859076dd7",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F143",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_03",
+      "semantic_group": "group-F141",
+      "input_hash": "6840a93d531f2b158d43e0eb5ba3d56a0cf3a4023ae413e7773009f2e2b5c612",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F148",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_03",
+      "semantic_group": "group-F141",
+      "input_hash": "5824b8562d293e06cf0217039f371e692d5817ccbf8c68c41a145bb68e58ca05",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F144",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_04",
+      "semantic_group": "group-F141",
+      "input_hash": "c148d9a7e0b03b3767a63a326f5f95f6e556ad4c3524010f5f7174639b1ae88a",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F149",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_04",
+      "semantic_group": "group-F141",
+      "input_hash": "5bf50520588dfb4117f6f8258ee07a97881eb42a6662ea6685558703bcca794e",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F145",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_05",
+      "semantic_group": "group-F141",
+      "input_hash": "b173b58595173abc4497ec6ca7eca82e9464259c2c911c3c4ef46b64f2e0505c",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F150",
+      "split": "development",
+      "template_group": "i4b_negative_refund_request_05",
+      "semantic_group": "group-F141",
+      "input_hash": "20db33214a82226f3c14063d49707fbc085a4d1fc960dc347e03fb82fc28f5cc",
+      "scenarios": [
+        "negative_refund_request"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F236",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_01",
+      "semantic_group": "group-F236",
+      "input_hash": "9bd9d0d10f2191068bc1da983d088499a950ed0188d1c0e541652f838b38661b",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F241",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_01",
+      "semantic_group": "group-F236",
+      "input_hash": "21ed88a5e4c33cb6c2a70369f4f2bed30afcd297ebe0852f3659c9316a9cd5a4",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F237",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_02",
+      "semantic_group": "group-F236",
+      "input_hash": "4d7e93e6601fb6d7e4cd5cee0c98940b5cfb60fbc554bcc80dd436bd48fce94e",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F242",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_02",
+      "semantic_group": "group-F236",
+      "input_hash": "8132ce655be3c439cdfd99ff38d0ea6993d95a0d9a26e8dc14279562ffb825d3",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F238",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_03",
+      "semantic_group": "group-F236",
+      "input_hash": "fa12b61c745d3910dbe6636c2a3d5ff05608b28f012547285ee013050b76d1f3",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F243",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_03",
+      "semantic_group": "group-F236",
+      "input_hash": "f75834244576b058106fe7184ea53ead1c164cdbff07b739a41e9c041894595b",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F239",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_04",
+      "semantic_group": "group-F236",
+      "input_hash": "46e66a158bd155060ffcb978df71110feefe33c7ba81b4482e4638a7eb40ccfb",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F244",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_04",
+      "semantic_group": "group-F236",
+      "input_hash": "eb4738a47aa7b03c764f43187021a70489dbbba1303ecbe5150d2c9ed86a69c1",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F240",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_05",
+      "semantic_group": "group-F236",
+      "input_hash": "174e77f06b7ae730becd4c2b7b2a55e79d92875ac5de3bc0259c846aedec3b70",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F245",
+      "split": "development",
+      "template_group": "i4b_negative_safety_health_05",
+      "semantic_group": "group-F236",
+      "input_hash": "592c4d6b0319e9847686d6967737c80e9730d17685751cf7c1b8964eb859aef5",
+      "scenarios": [
+        "negative_safety_health"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F251",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_01",
+      "semantic_group": "group-F251",
+      "input_hash": "05a565b859a4a7569a7eeaf5ab8646ed0aa46d517bf9452720a17c49d3e39e06",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F256",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_01",
+      "semantic_group": "group-F251",
+      "input_hash": "5a08938cc01458271cabc036a0f095f796b2e8256aba21c64ed7da25e771239a",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F252",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_02",
+      "semantic_group": "group-F251",
+      "input_hash": "1baf59d22707ce43281ef6eb973c86ce64c3ce9638fa638999263925d13afda6",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F257",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_02",
+      "semantic_group": "group-F251",
+      "input_hash": "743f57ba8533307d0aca72950b167281c3de05f44029dde2b6274245439f4c8f",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F253",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_03",
+      "semantic_group": "group-F251",
+      "input_hash": "f145108becd6147b02c7a6466be80fb54c66ce0d8a96d5a6987038ed1b2d6220",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F258",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_03",
+      "semantic_group": "group-F251",
+      "input_hash": "a77dedb7f2abd8682a8325c394c90daed944133f644378a18849ade0b0859c7b",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F254",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_04",
+      "semantic_group": "group-F251",
+      "input_hash": "016231a52bf1daeff08b56e41cbf67b28b37bc61d56f69773fd824f5271f4914",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F259",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_04",
+      "semantic_group": "group-F251",
+      "input_hash": "f8acb5a74b7d5fafad4ce2d8f812eb92f15773e045a29b8888581472a3a365e5",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F255",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_05",
+      "semantic_group": "group-F251",
+      "input_hash": "7544eeaff62b63d158b8ca6343015c1ddb3fefe282bf174eb502c5c32b007c59",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F260",
+      "split": "development",
+      "template_group": "i4b_negative_unclear_responsibility_05",
+      "semantic_group": "group-F251",
+      "input_hash": "52b2d293a627a0e1bba9ae8d6fb83866573c807fc1fae7c8f79950cdec653b45",
+      "scenarios": [
+        "negative_unclear_responsibility"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F211",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_01",
+      "semantic_group": "group-F211",
+      "input_hash": "d2ceabb97dc37fdf9f7321339b22aaa0c5483e09165f14715ebc550adfea2a65",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F216",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_01",
+      "semantic_group": "group-F211",
+      "input_hash": "2a97aa92f0ac5fc7a0d30d40d419d13770a4afccdfde9bb0c0264ed9888baa2b",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F212",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_02",
+      "semantic_group": "group-F211",
+      "input_hash": "5b360d1283a3e68eb4878f202a62f67a254db0348bb83620ef53765eb738a19e",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F217",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_02",
+      "semantic_group": "group-F211",
+      "input_hash": "b34e1c212fcbeb75469fe7798545492dbb143bbfc12c47ce9571e849cd13a490",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F213",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_03",
+      "semantic_group": "group-F211",
+      "input_hash": "bc0763cd58c146fe4b180699e11dcd41719c3834e1f6aaff7523fc0bfc1d630e",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F218",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_03",
+      "semantic_group": "group-F211",
+      "input_hash": "e6c693b099f059dc75b4f66110304d23435e6badd31d962ce5488f20519bcdbf",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F214",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_04",
+      "semantic_group": "group-F211",
+      "input_hash": "a42f1520fe0968e17d38698f5ca1974f88060dfe1da957891307637e9b597652",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F219",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_04",
+      "semantic_group": "group-F211",
+      "input_hash": "5ef7c1569c3c0eebe7952a02c100581e561f17bbf4e63a2ea7296c7320788f81",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F215",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_05",
+      "semantic_group": "group-F211",
+      "input_hash": "2366e8d26e271430ebfecae83f8ba38c2f4d934b4101996e4122809927e001d0",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F220",
+      "split": "holdout_candidate",
+      "template_group": "i4b_negative_wrong_item_05",
+      "semantic_group": "group-F211",
+      "input_hash": "d125dc7cd07793e9ed162301cada6fdea3a9590c758d801b952b27cc1a363882",
+      "scenarios": [
+        "negative_wrong_item"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F331",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_01",
+      "semantic_group": "group-F331",
+      "input_hash": "ba725d4d24fdc675dda8265ba58ed43e3771525ff3722b84d2e5dd3334c6fae0",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F336",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_01",
+      "semantic_group": "group-F331",
+      "input_hash": "d819f374ab008a73690399ec3ed125d0f561574d87bc532c85a7c01414b2b3b1",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F332",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_02",
+      "semantic_group": "group-F331",
+      "input_hash": "fb121051c26a1fe231f40f9af9ca4495f82e37587f2fc13a3192d70bedf7aeb1",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F337",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_02",
+      "semantic_group": "group-F331",
+      "input_hash": "e0d4d039ffdb41e94d194a4bd56f88734d8edf71b09593d45a316d12612da002",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F333",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_03",
+      "semantic_group": "group-F331",
+      "input_hash": "e701fc6e67f1dd7e87b0811b5d19e5c4b2eb251700f906f04def0b14a4d5fde8",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F338",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_03",
+      "semantic_group": "group-F331",
+      "input_hash": "da2609589f4f3eaee8310a8d229e76d125265f7b43ea22efc320df195174b1f5",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F334",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_04",
+      "semantic_group": "group-F331",
+      "input_hash": "c480f55e67ac2a6d64deba9e578a5f9cf997d0aafca9099fa7a5d302d8ebbf08",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F339",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_04",
+      "semantic_group": "group-F331",
+      "input_hash": "0320a34bb5ee90d563d107af4f7d72f482c903cdf3e26a8e9ffab79a1ae4ca1a",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F335",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_05",
+      "semantic_group": "group-F331",
+      "input_hash": "ecc2df8e8f909a35c2bc200eea03d99dc5e5e2e3772e893a1278ec1f59c3705c",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F340",
+      "split": "development",
+      "template_group": "i4b_neutral_inquiry_05",
+      "semantic_group": "group-F331",
+      "input_hash": "1467facf8a2b5d6de67542f4a9e57cfb0f5de02c70717150c6551e045879a49a",
+      "scenarios": [
+        "neutral_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F381",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_01",
+      "semantic_group": "group-F331",
+      "input_hash": "071e517fa34e9a50af75083b88004e4a4615842a663df062bf6da7c82468d7ff",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F386",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_01",
+      "semantic_group": "group-F331",
+      "input_hash": "5ee215b9739cff05ab4b93e61dafd6a66e233150fdfe4c224527783eacd1b30f",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F382",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_02",
+      "semantic_group": "group-F331",
+      "input_hash": "1870cab28a97975dc09dd5c19a60f71100cab37c49a2a1e734b9721acb75a532",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F387",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_02",
+      "semantic_group": "group-F331",
+      "input_hash": "a26f9aef65a1ee250f64a8cc4c5fd8802fa5a56a01d674711fa0a833dce2e6ba",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F383",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_03",
+      "semantic_group": "group-F331",
+      "input_hash": "237051c5cf099fa0903c8b38c8ec07588a282e88273abe02177b1d458096da82",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F388",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_03",
+      "semantic_group": "group-F331",
+      "input_hash": "f7078c18e0cb4c01ce9bb2513ddde557bf079772094c5dbcfc993714cf1ef16b",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F384",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_04",
+      "semantic_group": "group-F331",
+      "input_hash": "da42ad60e26e4c9b66ff89dd9a84b87c4c3ee2483baab5e5ac39950ee4c83120",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F389",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_04",
+      "semantic_group": "group-F331",
+      "input_hash": "34b17e4f231de728ba9729aaafa7b85acf6636896374bb7304dbaace1db56eea",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F385",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_05",
+      "semantic_group": "group-F331",
+      "input_hash": "e5f586db230f7e8b7742252b4dd4e8cda2a017bff925984225f129f141c92f02",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F390",
+      "split": "development",
+      "template_group": "i4b_neutral_service_question_05",
+      "semantic_group": "group-F331",
+      "input_hash": "fe5e61e0751c89ec2e2411832540611ff6bfa9b341cab1a02d60553fed7759c5",
+      "scenarios": [
+        "neutral_service_question"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F261",
+      "split": "development",
+      "template_group": "i4b_positive_praise_01",
+      "semantic_group": "group-F261",
+      "input_hash": "c6a80146cdb33f8cfe3a1086f238e62618feb22c9c1d621dd31ce75a94eb8677",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F266",
+      "split": "development",
+      "template_group": "i4b_positive_praise_01",
+      "semantic_group": "group-F261",
+      "input_hash": "3a87aacadeb9475877e194687bed637b63931b801b3eca00fcf994699b1c206f",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F262",
+      "split": "development",
+      "template_group": "i4b_positive_praise_02",
+      "semantic_group": "group-F261",
+      "input_hash": "6a35562b1b55cd0fe0ee4576f619a986a5ff6d2fac27947d725edb958177d157",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F267",
+      "split": "development",
+      "template_group": "i4b_positive_praise_02",
+      "semantic_group": "group-F261",
+      "input_hash": "c6d888c9a29f66290639f7eb964e7f0dfd5597464a497657504170117c9b8deb",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F263",
+      "split": "development",
+      "template_group": "i4b_positive_praise_03",
+      "semantic_group": "group-F261",
+      "input_hash": "bcff6a02fe66d00678c95de4336ebf1a2eff076fd3cba9dc3b8028b84e72c867",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F268",
+      "split": "development",
+      "template_group": "i4b_positive_praise_03",
+      "semantic_group": "group-F261",
+      "input_hash": "3edf20661a635bfeb8aec4deb301bfe6369f51069e872cfd68ced6171c424a48",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F264",
+      "split": "development",
+      "template_group": "i4b_positive_praise_04",
+      "semantic_group": "group-F261",
+      "input_hash": "a593b7ee8b94a3a1a854c653b9dca22a7449492117ccf7d915aa26e79d567d8b",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F269",
+      "split": "development",
+      "template_group": "i4b_positive_praise_04",
+      "semantic_group": "group-F261",
+      "input_hash": "52bb0f8b3bedce7089dc534191f1db9cb82dd78bedd3ec1ead69c1b1d20af9b6",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F265",
+      "split": "development",
+      "template_group": "i4b_positive_praise_05",
+      "semantic_group": "group-F261",
+      "input_hash": "0d23b17d6445dd66f5fa3bc8c8e2d5f1d0016c67e4e14153c294855841d9c8fc",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-legacy-candidates-v1",
+      "sample_id": "F270",
+      "split": "development",
+      "template_group": "i4b_positive_praise_05",
+      "semantic_group": "group-F261",
+      "input_hash": "cd094e876b93d1e66c192c71bed17d6b49c9a699bdc88b1d59cdabac2bec2f27",
+      "scenarios": [
+        "positive_praise"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-fitting",
+      "split": "development",
+      "template_group": "complex-service_boundary",
+      "semantic_group": "complex-service_boundary",
+      "input_hash": "b777652fb868fbb0891e6631e8a166150eb8efd028915f1e253c0907cb7d1374",
+      "scenarios": [
+        "service_boundary"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-repair",
+      "split": "development",
+      "template_group": "complex-service_boundary",
+      "semantic_group": "complex-service_boundary",
+      "input_hash": "eccb013559ac8c15f25c4bf19dd77aab63a519d66fd1fabf18a620dfd316f48d",
+      "scenarios": [
+        "service_boundary"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-installation",
+      "split": "development",
+      "template_group": "complex-service_boundary",
+      "semantic_group": "complex-service_boundary",
+      "input_hash": "122583c84d005aadb3deecb3423cc38e3980396f3d45395517f0eb4b6f74aa83",
+      "scenarios": [
+        "service_boundary"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-hours",
+      "split": "development",
+      "template_group": "complex-service_boundary",
+      "semantic_group": "complex-service_boundary",
+      "input_hash": "a983b47049b4c84bfb1912c45dbd72ab591bd0c9e0d8792475850f8a5cc91b1e",
+      "scenarios": [
+        "service_boundary"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-after_sales",
+      "split": "development",
+      "template_group": "complex-service_boundary",
+      "semantic_group": "complex-service_boundary",
+      "input_hash": "52d947c3e7368f0d6ddd471aaa503cd9101ee5890d1020286c6f1b4aafe0fc0c",
+      "scenarios": [
+        "service_boundary"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-staff",
+      "split": "development",
+      "template_group": "complex-service_boundary",
+      "semantic_group": "complex-service_boundary",
+      "input_hash": "29995215a62eaf5d78989cf81e48129783468240fe63a8397f5db27f26c9d53f",
+      "scenarios": [
+        "service_boundary"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-product",
+      "split": "development",
+      "template_group": "complex-product_inquiry",
+      "semantic_group": "complex-product_inquiry",
+      "input_hash": "220cdf92a86a536a814a2e27c0754ac83a8cbc858e44947e7bf7c79b518e2d07",
+      "scenarios": [
+        "product_inquiry"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-no_object",
+      "split": "development",
+      "template_group": "complex-missing_object",
+      "semantic_group": "complex-missing_object",
+      "input_hash": "9f00f4b16c6e6d3a0e9a9f3a7b466773c17a2b62fa07495e02c5eb163f91783a",
+      "scenarios": [
+        "missing_object"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-mixed_primary",
+      "split": "development",
+      "template_group": "complex-mixed_safety",
+      "semantic_group": "complex-mixed_safety",
+      "input_hash": "4df49834a668f1a29f70a9524ace8689721459b9411923bcaa6c5c4694a9eddb",
+      "scenarios": [
+        "mixed_safety"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-mixed_ambiguous",
+      "split": "development",
+      "template_group": "complex-multiple_equal_issues",
+      "semantic_group": "complex-multiple_equal_issues",
+      "input_hash": "e71fce95dbe4eefb8bd3c2b5e9afdda89c772d351452cdeb3d102cacab216d24",
+      "scenarios": [
+        "multiple_equal_issues"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-no_store",
+      "split": "development",
+      "template_group": "complex-missing_store_safety",
+      "semantic_group": "complex-missing_store_safety",
+      "input_hash": "cd5d547442f73f739a61d85d576ef620a5e55efbdf5555246f3971d423c6690f",
+      "scenarios": [
+        "missing_store_safety"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-negation",
+      "split": "development",
+      "template_group": "complex-negation",
+      "semantic_group": "complex-negation",
+      "input_hash": "edf17ecb4fedbb0a18bd4df46e9d33681ec7ae09074e9a3272f3069d8dee2fe0",
+      "scenarios": [
+        "negation"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-sarcasm",
+      "split": "development",
+      "template_group": "complex-sarcasm",
+      "semantic_group": "complex-sarcasm",
+      "input_hash": "60a05062658f1fc165f52386cc56a721850b6199da3ddf89c577bf6c0a3f3bdd",
+      "scenarios": [
+        "sarcasm"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-injection",
+      "split": "development",
+      "template_group": "complex-injection",
+      "semantic_group": "complex-injection",
+      "input_hash": "676cff368c9b9c8a7754bd546da857b60265b0ee4966e3007868dea50af85814",
+      "scenarios": [
+        "injection"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-commitment",
+      "split": "development",
+      "template_group": "complex-unsupported_commitment",
+      "semantic_group": "complex-unsupported_commitment",
+      "input_hash": "65cb7ae9883896c8fc048b6ba7521c75bdf38188338cd7e61282fa879275304b",
+      "scenarios": [
+        "unsupported_commitment"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-resolved",
+      "split": "development",
+      "template_group": "complex-resolved_negation",
+      "semantic_group": "complex-resolved_negation",
+      "input_hash": "63d675383bfb6d41fd3574f1e0a9e558299d9b0ea2e4766cb2d0e043ced5e93a",
+      "scenarios": [
+        "resolved_negation"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-uncertain",
+      "split": "development",
+      "template_group": "complex-attribution_uncertainty",
+      "semantic_group": "complex-attribution_uncertainty",
+      "input_hash": "a0a60f5c8d05a477bf998d48bc72e43588fce9bc00cf1d32fba3359942f97207",
+      "scenarios": [
+        "attribution_uncertainty"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-chinese",
+      "split": "development",
+      "template_group": "complex-non_english_safety",
+      "semantic_group": "complex-non_english_safety",
+      "input_hash": "516bd63eaff94f9593c4e2a81a2d0cf579adb7840d7d8be026dbc9cb9b28cad8",
+      "scenarios": [
+        "non_english_safety"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-typo",
+      "split": "development",
+      "template_group": "complex-informal_typos",
+      "semantic_group": "complex-informal_typos",
+      "input_hash": "7aa7a584ee9da7c80bb546f390fca1bf9f459fac58a68eaaecdbe5d7de39f4cd",
+      "scenarios": [
+        "informal_typos"
+      ],
+      "reference_status": "human_pending"
+    },
+    {
+      "dataset_id": "p25-complex-development-v1",
+      "sample_id": "p25-long_request",
+      "split": "development",
+      "template_group": "complex-entity_primary_issue",
+      "semantic_group": "complex-entity_primary_issue",
+      "input_hash": "1d9a6f23b89edbb277d14ac8a9b44fb78418e2089cc82be11df78881df9ac8a7",
+      "scenarios": [
+        "entity_primary_issue"
+      ],
+      "reference_status": "human_pending"
+    }
+  ]
+}
