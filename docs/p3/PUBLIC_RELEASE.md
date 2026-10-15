@@ -21,3 +21,11 @@ README包含原型定位、模块与运行方法、合成来源、98.81%的12×7
 已于执行前核查 [GitHub CLI官方参数](https://cli.github.com/manual/gh_repo_edit) 和 [可见性影响](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility)：公开后代码及历史可被任何人查看/复制，Actions历史和日志可见，fork关系与安全功能可能变化。只在邮箱、许可、完整历史与CI门槛通过后执行 `gh repo edit ... --visibility public --accept-visibility-change-consequences`。
 
 当前操作结果将由本文件后续验收段和 `evidence/github-final.json` 记录；准备通过不自动等于PUBLIC_VERIFIED。
+
+## 已执行结果
+
+**PUBLIC_VERIFIED**。GitHub已返回PUBLIC，识别MIT，main工程SHA为 `7ad569e9ac532a0be64248d11420185e8c904a0b`。该提交172个文件逐路径与blob匹配；4个完整提交历史一致，无Tag/Release、无其它远程分支。GitHub Ubuntu CI [38701715722](https://github.com/BillZhao626/customer-complaint-intelligence/actions/runs/38701715722)成功：全新安装、pip check、40项离线测试及demo均通过；公开前CI日志经过密钥扫描。
+
+可见性切换前已核实本人邮箱/许可证授权、全部4个commit/53个tree/183个blob安全检查和审阅，切换后重新核验PUBLIC/main/README/LICENSE/CI/文件清单。没有将本机refs/codex或研究资料上传。推送网络曾连接重置，随后按系统已有代理进行单次命令级连接成功，没有更改全局配置。
+
+机器receipt见 [github-final.json](evidence/github-final.json)，包含受测工程SHA及远程文件清单；后续仅文档receipt提交的最终SHA通过Git记录和本机 `.local/p3/github-final-receipt.json` 查询，避免自引用hash。所有原保护资产再次核验不变。

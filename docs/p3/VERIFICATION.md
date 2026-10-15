@@ -40,3 +40,7 @@ Dashboard → P3 versioned attribution：选SQLite绑定manifest或P2已保存JS
 P4进入条件：P3工程基线已具备；下轮明确授权回复编辑、真实人工角色及政策边界、版本绑定审批/撤销/幂等的模拟发送状态机。不得直接接真实SMTP。P5进入条件：P4闭环离线验收、真人审定Gold、隔离holdout、单独模型/数据/调用次数/预算授权，补全浏览器上传到审核模拟发送链路及真实质量评价；不要求技术栈重写。
 
 保护资产结果见 [asset-protection.json](evidence/asset-protection.json)；公开与Git最终结果见 [PUBLIC_RELEASE.md](PUBLIC_RELEASE.md)。本轮新增真实模型调用 **0**，没有发送邮件、Tag、Release或历史重写。
+
+## 公开远程复验
+
+工程commit 7ad569e9ac532a0be64248d11420185e8c904a0b公开后重新clone，确认不含.env/data/outputs/.local；使用本轮新建环境运行portable 40/40通过。GitHub Ubuntu也完成全新安装、pip check、40项测试和demo。远程文件树及历史与本地一致；安全清单由commit audit保存，原未跟踪资料保留本机。

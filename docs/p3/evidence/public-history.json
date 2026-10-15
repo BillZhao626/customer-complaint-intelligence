@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "commits": [
+    "7ad569e9ac532a0be64248d11420185e8c904a0b",
+    "385dc501e4fb1b8793896bc3b6ae3c7c2a71795a",
+    "7e3f5153654174aac79781e9744086ba3a5795b2",
+    "5ffa9a9a6899dd2bd0fb4b402781fac273888dad"
+  ],
+  "object_counts": {
+    "commit": 4,
+    "tree": 53,
+    "blob": 183
+  },
+  "issues": [],
+  "git_identity_domains": [
+    "qq.com"
+  ],
+  "git_identity_count": 1,
+  "scope": "All heads/tags/remote refs, every tree, deleted historical blobs, commit/tag metadata",
+  "limitation": "Pattern and exact local-secret scan plus manual candidate review; cannot certify unknown secrets or legal ownership.",
+  "reviewed_candidates": "Absolute project/temp paths only; license and scanner markers reviewed; user consent covers historical Git email."
+}
