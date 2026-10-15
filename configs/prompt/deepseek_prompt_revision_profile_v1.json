@@ -1,0 +1,30 @@
+{
+  "version": "v1",
+  "stage": "I-3.4A",
+  "active": false,
+  "purpose": "Structured profile for a future DeepSeek prompt revision. This is a draft-only planning artifact and is not applied to the active LangChain chain.",
+  "based_on": [
+    "configs/taxonomy/label_taxonomy_rules_v1.json",
+    "outputs/deepseek_manual_review_decision_summary_v1.md",
+    "docs/prompt_revision_draft_v1.md"
+  ],
+  "field_instruction_summary": {
+    "sentiment": "Use positive for praise without unresolved problem, neutral for inquiry or non-problem mixed wording, and negative for complaint, unresolved issue, service failure, delivery failure, product defect, refund/exchange request caused by a problem, or safety/health concern.",
+    "urgency": "Use high only for strong cues such as health/safety risk, urgent wording, repeated long-term no response, severe disruption, or escalation; use medium for standard unresolved complaints and refund/exchange/delivery issues without severe cues.",
+    "store_location": "Extract the complete store name from subject or body whenever present; use unknown only when no store location is stated or reasonably inferable.",
+    "complaint_reason": "Prioritize explicit refund wording as refund request, exchange/warranty/return/replacement/repair as after-sales service, no response or failed communication as customer service, and confusing delivery update as delivery delay.",
+    "source_attribution": "Use business-source priority rules to distinguish product issue, delivery/logistics issue, customer service response issue, store service issue, refund/exchange process issue, none, and unclear."
+  },
+  "prompt_patch_status": "draft_only_not_applied",
+  "recommended_next_stage": "I-3.4B",
+  "evaluation_after_patch": [
+    "rerun_50_case_full_pilot",
+    "compare_against_I_3_1_1_metrics",
+    "inspect_mismatch_delta_by_field"
+  ],
+  "safety_notes": [
+    "no_api_call_in_I_3_4A",
+    "no_chain_patch_in_I_3_4A",
+    "no_golden_label_overwrite_in_I_3_4A"
+  ]
+}

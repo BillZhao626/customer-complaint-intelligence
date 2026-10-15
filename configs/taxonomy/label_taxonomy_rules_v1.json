@@ -1,0 +1,268 @@
+{
+  "version": "v1",
+  "stage": "I-3.3",
+  "purpose": "Planning and reference rules for targeted normalization and taxonomy refinement after the 50-case DeepSeek pilot error analysis. This file documents intended label decisions before changing prompts, model code, golden labels, or evaluation logic.",
+  "allowed_values": {
+    "sentiment": [
+      "positive",
+      "neutral",
+      "negative"
+    ],
+    "urgency": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "is_complaint": [
+      true,
+      false
+    ],
+    "store_location": [
+      "Hangzhou West Lake Store",
+      "Shanghai Pudong Store",
+      "Beijing Chaoyang Store",
+      "Shenzhen Nanshan Store",
+      "Guangzhou Tianhe Store",
+      "Chengdu Chunxi Road Store",
+      "Nanjing Xinjiekou Store",
+      "unknown"
+    ],
+    "product_category": [
+      "Electronics",
+      "Home Appliances",
+      "Clothing",
+      "Furniture",
+      "Beauty Products",
+      "Sportswear",
+      "Service",
+      "Other"
+    ],
+    "complaint_reason": [
+      "product quality",
+      "delivery delay",
+      "customer service",
+      "wrong item",
+      "after-sales service",
+      "health or safety issue",
+      "refund request",
+      "none",
+      "other"
+    ],
+    "source_attribution": [
+      "product issue",
+      "store service issue",
+      "delivery/logistics issue",
+      "customer service response issue",
+      "refund/exchange process issue",
+      "unclear",
+      "none"
+    ]
+  },
+  "field_level_decision_rules": {
+    "store_location": [
+      "Extract the complete store name from the subject or body whenever it appears explicitly.",
+      "Prefer the full branch name, for example Hangzhou West Lake Store rather than Hangzhou or West Lake.",
+      "Use unknown only when no store location is explicitly stated and no store location is reasonably inferable.",
+      "If the model predicts a city-only or branch-only name, normalize it to the full known store name when the mapping is unambiguous."
+    ],
+    "sentiment": [
+      "Use positive for praise or satisfaction without an unresolved problem.",
+      "Use neutral for information requests, general inquiries, or mixed wording without a clear complaint or unresolved issue.",
+      "Use negative for explicit complaints, unresolved issues, refund or exchange requests caused by a problem, product defects, service failures, delivery failures, or safety and health concerns.",
+      "If an email contains praise but also asks for help with an unresolved issue, default to negative unless the issue is only a minor neutral inquiry."
+    ],
+    "urgency": [
+      "Use high only for safety or health concern, urgent or ASAP language, immediate action requests, repeated long-term no response, severe disruption, or strong escalation language.",
+      "Use medium for unresolved refund or exchange requests, delivery delay, repeated contact without severe urgency cues, and standard complaints needing follow-up.",
+      "Use low for praise, neutral inquiry, or minor issue without time pressure."
+    ],
+    "is_complaint": [
+      "Use true when the email contains an explicit complaint, unresolved issue, refund/exchange request caused by a problem, product defect, service failure, delivery failure, or safety/health concern.",
+      "Use false for praise, neutral inquiry, or general information request without an unresolved problem.",
+      "If sentiment is negative because of a customer problem, is_complaint should usually be true."
+    ],
+    "product_category": [
+      "Use the closest allowed product category from the project taxonomy.",
+      "Do not invent new product category labels during evaluation.",
+      "Use Other only when the product cannot reasonably fit Electronics, Home Appliances, Clothing, Furniture, Beauty Products, Sportswear, or Service."
+    ],
+    "complaint_reason": [
+      "Use refund request if the customer explicitly requests refund, refund me, money back, or direct reimbursement.",
+      "Use after-sales service if the issue is exchange, warranty, return policy, replacement, repair, or post-purchase handling.",
+      "Use customer service if the issue is no support response, poor support communication, call/email/chat not followed up, or service team communication failure.",
+      "Use delivery delay if shipment is delayed, delivery update is confusing, delivery status is wrong, or logistics handling is the main issue.",
+      "Use product quality if the main issue is defect, malfunction, damaged product, missing part, or general product quality.",
+      "Use health or safety issue when the product creates a health, safety, irritation, injury, or risk concern.",
+      "Use none for praise or neutral inquiry without complaint.",
+      "Use other only when none of the defined categories can reasonably apply."
+    ],
+    "source_attribution": [
+      "Identify the main business source of the complaint, not legal liability.",
+      "Use one primary label unless a future schema adds multi-label attribution.",
+      "Use none for non-complaint praise or neutral inquiry.",
+      "Use unclear only when the business source cannot be identified from the email."
+    ]
+  },
+  "source_attribution_priority_rules": [
+    {
+      "priority": 1,
+      "label": "product issue",
+      "use_when": "The root cause is product quality, product defect, missing part, malfunction, damaged product, or safety-related product problem."
+    },
+    {
+      "priority": 2,
+      "label": "delivery/logistics issue",
+      "use_when": "The issue is late delivery, confusing delivery update, missing shipment, wrong delivery status, or logistics handling."
+    },
+    {
+      "priority": 3,
+      "label": "customer service response issue",
+      "use_when": "The issue is no reply, no follow-up, delayed support response, phone/email/chat support failure, or service team communication failure."
+    },
+    {
+      "priority": 4,
+      "label": "store service issue",
+      "use_when": "The issue happened in a physical store or with in-store staff handling, and the core problem is staff or store process behavior rather than refund/exchange policy."
+    },
+    {
+      "priority": 5,
+      "label": "refund/exchange process issue",
+      "use_when": "The core user request is refund, exchange, return, warranty, replacement, repair, or policy/process handling."
+    },
+    {
+      "priority": 6,
+      "label": "none",
+      "use_when": "The email is positive praise or a neutral inquiry without a complaint."
+    },
+    {
+      "priority": 7,
+      "label": "unclear",
+      "use_when": "The source cannot be identified from the email."
+    }
+  ],
+  "complaint_reason_priority_rules": [
+    {
+      "priority": 1,
+      "label": "health or safety issue",
+      "use_when": "The customer reports health, safety, injury, irritation, risk, burning smell, overheating, or other safety-related harm."
+    },
+    {
+      "priority": 2,
+      "label": "refund request",
+      "use_when": "The customer explicitly requests refund, refund me, money back, or direct reimbursement."
+    },
+    {
+      "priority": 3,
+      "label": "wrong item",
+      "use_when": "The delivered or received item is different from what the customer ordered."
+    },
+    {
+      "priority": 4,
+      "label": "delivery delay",
+      "use_when": "The shipment is delayed, the delivery update is confusing, or delivery/logistics status is the central problem."
+    },
+    {
+      "priority": 5,
+      "label": "product quality",
+      "use_when": "The product is defective, damaged, malfunctioning, missing parts, or has poor quality."
+    },
+    {
+      "priority": 6,
+      "label": "customer service",
+      "use_when": "The main issue is no support response, poor communication, or missing phone/email/chat follow-up."
+    },
+    {
+      "priority": 7,
+      "label": "after-sales service",
+      "use_when": "The issue is exchange, warranty, return policy, replacement, repair, or post-purchase handling without an explicit refund request."
+    },
+    {
+      "priority": 8,
+      "label": "none",
+      "use_when": "There is no complaint."
+    },
+    {
+      "priority": 9,
+      "label": "other",
+      "use_when": "No defined complaint reason can reasonably apply."
+    }
+  ],
+  "sentiment_mixed_feedback_rule": {
+    "positive": "Praise or satisfaction without unresolved problem.",
+    "neutral": "Information request, general inquiry, or mixed wording without clear complaint or unresolved issue.",
+    "negative": "Explicit complaint, unresolved issue, refund/exchange request caused by a problem, product defect, service failure, delivery failure, or safety/health concern.",
+    "default_for_praise_plus_unresolved_issue": "negative unless the issue is only a minor neutral inquiry"
+  },
+  "urgency_threshold_rule": {
+    "high": [
+      "safety or health concern",
+      "urgent, ASAP, immediately, or equivalent wording",
+      "repeated long-term no response",
+      "severe disruption",
+      "strong escalation language"
+    ],
+    "medium": [
+      "unresolved refund or exchange request",
+      "delivery delay",
+      "repeated contact without severe urgency cues",
+      "standard complaint needing follow-up"
+    ],
+    "low": [
+      "praise",
+      "neutral inquiry",
+      "minor issue without time pressure"
+    ]
+  },
+  "store_location_extraction_rule": {
+    "primary_rule": "Extract the complete store name from subject or body whenever present.",
+    "unknown_rule": "Use unknown only when no store location is explicitly or reasonably inferable.",
+    "normalization_examples": [
+      {
+        "input": "Hangzhou West Lake",
+        "normalized": "Hangzhou West Lake Store"
+      },
+      {
+        "input": "Shanghai Pudong store",
+        "normalized": "Shanghai Pudong Store"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "email_id": "P007",
+      "observed_issue": "The email explicitly asks for a refund because an issue remains unresolved. DeepSeek predicted after-sales service and customer service response issue, while golden labels used refund request and refund/exchange process issue.",
+      "rule_decision": "Prefer complaint_reason=refund request and source_attribution=refund/exchange process issue when the core user request is refund or money back.",
+      "review_note": "Urgency medium is reasonable unless the text includes urgent, ASAP, safety, or repeated long-term no-response cues."
+    },
+    {
+      "email_id": "P015",
+      "observed_issue": "The full store name Hangzhou West Lake Store appears in the body, but prediction used unknown. The issue involves no follow-up after contacting the service desk.",
+      "rule_decision": "Extract full store name when present. Use source_attribution=customer service response issue for no follow-up or no response.",
+      "review_note": "Urgency high requires stronger cue than two contacts unless the project treats repeated no follow-up as escalation."
+    },
+    {
+      "email_id": "P028",
+      "observed_issue": "The body mentions Nanjing Xinjiekou Store and a desk lamp, but prediction returned unknown store and Electronics category.",
+      "rule_decision": "Normalize complete store location from text and keep desk lamp as Furniture. Staff not recording a complaint may be store service or customer service depending on annotation policy.",
+      "review_note": "This is a boundary case between store staff handling and customer service response."
+    },
+    {
+      "email_id": "P046",
+      "observed_issue": "The email praises the rice cooker but asks for help because the delivery update was confusing. Prediction used neutral and delivery/logistics issue, while golden labels used negative and unclear.",
+      "rule_decision": "For praise plus unresolved issue, default sentiment to negative unless it is only a minor inquiry. Delivery update confusion should generally map to delivery delay or delivery/logistics issue unless the source is genuinely unclear.",
+      "review_note": "This case should be manually reviewed because it exposes golden-label boundary tension."
+    },
+    {
+      "email_id": "P050",
+      "observed_issue": "The email praises the product fit but still needs help because exchange policy was unclearly explained by staff.",
+      "rule_decision": "Use negative for praise plus unresolved issue. Prefer complaint_reason=after-sales service and source_attribution=refund/exchange process issue when exchange policy is central.",
+      "review_note": "If the focus is staff explanation rather than policy handling, store service issue may also be plausible."
+    }
+  ],
+  "implementation_notes": [
+    "This config is a planning/reference artifact and is not yet automatically enforced by the model chain.",
+    "Do not change existing golden labels automatically based on this file.",
+    "Use this file to guide later prompt revision, output normalization, and golden-label review.",
+    "The current schema remains single-label for complaint_reason and source_attribution, so mixed cases require a primary-label decision."
+  ]
+}

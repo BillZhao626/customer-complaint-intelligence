@@ -1,0 +1,123 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "store_location": {
+      "minLength": 1,
+      "title": "Store Location",
+      "type": "string"
+    },
+    "product_name": {
+      "minLength": 1,
+      "title": "Product Name",
+      "type": "string"
+    },
+    "product_category": {
+      "enum": [
+        "Beauty/Personal Care",
+        "Clothing",
+        "Electronics",
+        "Food/Beverage",
+        "Furniture",
+        "Home Appliances",
+        "Service/Other",
+        "Sports/Outdoor",
+        "unknown"
+      ],
+      "title": "Product Category",
+      "type": "string"
+    },
+    "sentiment": {
+      "enum": [
+        "positive",
+        "neutral",
+        "negative",
+        "unknown"
+      ],
+      "title": "Sentiment",
+      "type": "string"
+    },
+    "urgency": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ],
+      "title": "Urgency",
+      "type": "string"
+    },
+    "is_complaint": {
+      "title": "Is Complaint",
+      "type": "boolean"
+    },
+    "complaint_reason": {
+      "enum": [
+        "product quality",
+        "delivery delay",
+        "customer service",
+        "wrong item",
+        "after-sales service",
+        "health or safety issue",
+        "refund request",
+        "none",
+        "other",
+        "unknown"
+      ],
+      "title": "Complaint Reason",
+      "type": "string"
+    },
+    "source_attribution": {
+      "enum": [
+        "product issue",
+        "store service issue",
+        "delivery/logistics issue",
+        "customer service response issue",
+        "refund/exchange process issue",
+        "unclear",
+        "none",
+        "unknown"
+      ],
+      "title": "Source Attribution",
+      "type": "string"
+    },
+    "key_information": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Key Information",
+      "type": "array"
+    },
+    "summary": {
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "suggested_reply": {
+      "minLength": 1,
+      "title": "Suggested Reply",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_location",
+    "product_name",
+    "product_category",
+    "sentiment",
+    "urgency",
+    "is_complaint",
+    "complaint_reason",
+    "source_attribution",
+    "key_information",
+    "summary",
+    "suggested_reply",
+    "confidence"
+  ],
+  "title": "AnalysisResult",
+  "type": "object"
+}
