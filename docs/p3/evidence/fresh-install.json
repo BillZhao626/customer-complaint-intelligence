@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "python": "3.12",
+  "installation_exit": 0,
+  "pip_check_exit": 0,
+  "portable_tests": 40,
+  "portable_failures": 0,
+  "portable_errors": 0,
+  "portable_elapsed_seconds": 17.964,
+  "scope": "Fresh venv plus reviewed candidate export; direct requirements pinned, transitive resolution recorded",
+  "prior_failure": "One Streamlit import error while installation still running; retained separately and superseded only after complete installation and full rerun"
+}

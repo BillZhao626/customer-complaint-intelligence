@@ -1,3 +1,18 @@
+# HANDOFF — P3 归因 Dashboard 与 Public 发布
+
+2026-10-15（Asia/Shanghai）。P3_ATTRIBUTION_IMPLEMENTED / P3_DASHBOARD_VERIFIED / OFFLINE_REGRESSION_VERIFIED。原108 + 新12 = 120/120离线通过；新环境portable 40/40。BROWSER_E2E_VERIFIED仅指P3离线筛选、原文下钻、已存P2结果读取/下载、fake提交重读与版本隔离，不代表全产品上传/审批/发送E2E。
+
+先读 docs/p3/VERIFICATION.md、DESIGN.md、PUBLIC_RELEASE.md 与 evidence；远程最终可见性/SHA以 github-final.json 和 git/gh实际状态为准。用户明确授权QQ历史邮箱公开及自有源码MIT；不得扩大到学校/第三方/历史研究数据。仅main推送，不推送本机refs/codex快照。
+
+- Dashboard → P3 versioned attribution；SQLite可选 COMPLAINT_DATASET_MANIFEST，未注册来源明确warning。P2只读JSON，不打开预算或历史数据库。旧三模式在Historical dashboards。
+- 四类明确分母、unknown/unclear/none/unavailable及failed/fallback、最新邮件修订版、成员input/output/reference hash；不等于因果或法律责任。联系渠道在v2缺失，显示unavailable；原Prompt/契约未改。
+- 新安全demo：python -B scripts/p3_demo.py --out .local/NEW_DIRECTORY；API和trace关，见README。已有本机演示在.local/p3/demo-v1；浏览器额外保存一个独立offline-demo cohort，原fixture仍10条。
+- 真人24条校准包：.local/p3/calibration-v1/START_HERE.md；20复杂+4不同模板，双评审/仲裁留空。HUMAN_GOLD_PENDING / REAL_MODEL_FIX_PENDING / INDEPENDENT_HOLDOUT_PENDING。
+- 本轮新模型调用0；原实验与.env/预算哈希不变；恢复副本、全部日志在.local/p3。完整回归 python -B tests/run_offline.py；公开检出 python -B scripts/run_portable.py。
+- P4需下一轮授权回复版本与人工审批/模拟发送、确认政策和角色；P5需该闭环通过、独立Gold/holdout、单独真实评测预算。无真实发送、Tag或Release。
+
+---
+
 # HANDOFF — P2.5 评价基础与安全Git交付
 
 2026-10-15（Asia/Shanghai）。本轮完成工程实现与离线验证；人工/模型语义门槛保持pending。以下P1/P2原交接按历史原文保留，其中无Git提交等描述只适用于当时。

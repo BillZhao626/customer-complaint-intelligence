@@ -1,3 +1,9 @@
+# 2026-10-15 P3 状态更新
+
+P3已实际实施并离线验收，见 ../p3/VERIFICATION.md、DESIGN.md、PUBLIC_RELEASE.md。下面历史路线中的P3 PROPOSED字样只代表历史时点；P4/P5仍未实施。下一轮进入条件与研究pending边界见P3验证文档，不将浏览器离线切片等同全产品E2E。
+
+---
+
 # Phased Roadmap：从可信基线到可审核业务闭环
 
 批次2026-10-14，2026-10-15完成。路线更新于2026-10-15：**P1_ENGINEERING_VERIFIED**；P1已按批准的A方案实施，P2已于2026-10-15完成工程与真实小样本试点（见docs/p2/VERIFICATION.md）；P3–P6仍为PROPOSED。下方P0历史说明保留。

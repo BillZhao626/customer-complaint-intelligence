@@ -1,43 +1,70 @@
 # Customer Complaint Intelligence
 
-Streamlit 客户投诉分析研究原型。当前为 P2 + P2.5 评价基础版本：单封邮件校验、显式 fake/mock/DeepSeek 分析、结构化结果、摘要与未审核回复草稿、SQLite 运行保存及重读、按版本隔离的门店/产品统计与原文下钻。历史批量和三类 Dashboard 页面保留。
+客户投诉分析研究原型，使用 Streamlit + Python Application Service + SQLite。提供显式 Offline Fake / Legacy Mock / DeepSeek 分析、七字段分类、摘要、未审核回复草稿、版本化保存、来源归属 Dashboard 和原文追溯。
 
-P2 真实试点是 12 条开发者合成案例：83/84 字段匹配、11/12 邮件七字段全对；不是独立人工准确率或泛化证明。摘要与回复未获独立人工认证。AppTest 不是浏览器 E2E。P3 完整归因 Dashboard、P4 审核和模拟发送尚未实施。
+**研究边界：** P2 的 12 条是开发者合成案例，83/84 = **98.81% 字段参考匹配率**（12封 × 7字段），11/12 邮件七字段全对；不是独立人工泛化准确率。旧 400 条由固定模板程序生成，不能支持真实市场或门店排名。Human Gold 仍为 **HUMAN_GOLD_PENDING**，摘要/回复人工审核未完成；没有批准或发送流程。服务类别新 Prompt 只有离线规则证据，**REAL_MODEL_FIX_PENDING**。
 
-## 离线运行
+P3 已实现来源/模型/Prompt/schema/taxonomy 隔离、时间和门店/产品/情绪/运行状态筛选、投诉/负面/归属分布、门店×产品交叉统计、unknown/unclear/none/unavailable/failed/fallback 区分，以及统计成员→原文/分析详情下钻。业务来源归属不是已证实因果或法律责任；原因描述投诉内容，渠道描述联系途径，三者不能互换。v2 未保存联系渠道，显示 unavailable。
 
-使用 Python 3.12（本机验证 3.12.8）及 requirements.txt。依赖未锁定，干净检出验证使用本机现有依赖，不代表全新依赖安装验证。
+## 安装与安全离线 Demo
+
+Python 3.12；直接依赖固定为验收版本。建议新建虚拟环境。安装依赖需要访问包仓库，测试与 demo 不请求模型。
 
 ```powershell
-python -m pip install -r requirements.txt
-python -B scripts/run_portable.py
-$env:COMPLAINT_ENABLE_LIVE = 'false'
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -B scripts/run_portable.py
+# --out 必须不存在，不覆盖任何旧运行
+.\.venv\Scripts\python.exe -B scripts/p3_demo.py --out .local/p3-demo-v1
 $env:LLM_ENABLE_API = 'false'
-python -m streamlit run app.py
+$env:COMPLAINT_ENABLE_LIVE = 'false'
+$env:LANGSMITH_TRACING = 'false'
+$env:LANGCHAIN_TRACING_V2 = 'false'
+$env:LANGCHAIN_TRACING = 'false'
+$env:COMPLAINT_DB_PATH = '.local/p3-demo-v1/runs.sqlite3'
+$env:COMPLAINT_DATASET_MANIFEST = '.local/p3-demo-v1/dataset.json'
+.\.venv\Scripts\python.exe -m streamlit run app.py --browser.gatherUsageStats false
 ```
 
-默认 Offline Fake 使用显式演示 token，不是自然语言模型。回复是草稿，未发送。历史 API runner 有固定路径及付费副作用，不要当普通测试运行。新模型调用需要独立预算授权。
+打开 **Dashboard → P3 versioned attribution → Configured SQLite runs**。选择模型/实验版本，再选门店、产品、情绪和时间。选择 Breakdown 查看类别或交叉表；在 Statistic to inspect 选择统计项、Numerator/Denominator 成员，再点 Open original and analysis。Download statistics and member IDs 导出绑定版本、分母和成员ID的 JSON。原三个历史模式仍在 Historical dashboards。
 
-## 本机历史资产与测试
+10条公开 demo 是 `src/evaluation/p3_fixture.py` 的显式合成验收表：7成功、1失败、1fallback、1不确定；含一个故意设置的归属差异，用于验证比较器。它不是模型质量实验或人工 Gold。原文、P2.5 Sample manifest、input hash、run ID、版本和输出 hash 写入新目录。CLI 无付费模式。普通 Single Analysis 的 Offline Fake 只识别演示 token，不是自然语言模型。绑定 demo manifest 时只接受其样本；分析其他邮件请使用另一个新数据库并取消该 manifest 设置。
 
-Git 只保存经过审核的工程文件及安全 fixture。data/raw、data/synthetic、data/golden、outputs、docs/dissertation、.local、原始模型返回和预算数据库保留本机，不随仓库上传。没有确认对历史研究材料的外部披露权属，Private 不替代审核。
+本机拥有 P2 结果时可选 **P2 saved synthetic DeepSeek results**；该入口只读 `.local/p2-pilot-v1/run-*.json`，不打开旧 SQLite、重跑模型或重建账本。远程干净检出没有这些研究资产，会显示不可用。不要为了查看 P2 把可写 Single Analysis 数据库指向历史库。
 
-完整历史回归需要原始 400 邮件、18 条 smoke、旧 80 参考/预测、14 张 Dashboard 表，以及本机 docs/p1/evidence 和 docs/p2/evidence。完整资产范围由本机冻结 hash 清单定义。缺资产时不宣称完整历史测试通过；可移植 smoke 仅用 tests 内自带合成 fixture。
+## 统计解释
+
+计数单位是同一 cohort、时间区间内每个 `email_id + input_hash` 的最新运行，即邮件修订版。重试不会重复计入；修改正文会形成不同修订版，不等同于独立消费者数。
+
+|分母|适用指标|
+|---|---|
+|全部所选邮件修订版|邮件数量、成功数、投诉/负面全邮件比例、失败与fallback状态|
+|成功且无fallback|投诉/负面成功比例、门店/产品/交叉分布、unknown桶|
+|投诉邮件|主要原因、来源归属分布、有效归属覆盖|
+|有效业务归属|投诉中五个具体业务类别的分布，不含unknown/unclear/none|
+
+每项携带分子、分母名称、过滤条件和双方成员ID。零分母为 null / unavailable。业务字段筛选会排除没有结果的邮件；界面同时展示筛选前状态和排除数量。没有 manifest 的数据库明确标记 unregistered，不能被当成已核实研究数据集。门店按保存值精确分组，无未经审定的别名合并。
+
+## 代码与验证
+
+|目录/入口|用途|
+|---|---|
+|app.py、src/app/|四tab界面、P3过滤与下钻|
+|src/application/|分析服务、确定性 AttributionService|
+|src/domain/contracts.py|冻结 analysis-v2 / research-products-v2|
+|src/infrastructure/|provider、SQLite、只读数据适配器|
+|src/evaluation/|统一分层评价、P3参考差异、人工协议|
+|scripts/p3_demo.py|新目录离线fixture与评价|
+|scripts/p3_calibration.py|本机24条双人独立校准包|
+|tests/、.github/workflows/offline.yml|阻断外部socket的便携工程CI|
+
+完整本机回归包含历史资产复算；公开检出只运行自包含 portable 套件，不伪称拥有原始研究数据。P3 浏览器范围为离线 Dashboard 筛选、失败/空分母、下钻和保存结果读取/下载；完整上传→模型→审批→发送链路未验证，AppTest 不替代浏览器。
 
 ```powershell
-# 显式 pattern 避免旧 runner 重写历史 P2 报告
-python -B tests/run_offline.py "test_*.py"
-```
-
-历史累计 README 的本机副本保存在 .local/p25/README.pre-p25.md 及修改前恢复快照。工程契约见 docs/p1/CONTRACT_SPEC.md，P2 调用边界见 docs/p2/RELIABILITY.md；后续工作从 HANDOFF.md 开始。没有发布许可声明；第三方依赖遵循各自许可。
-
-## P2.5 评价基础
-
-已完成400条模板合成数据审计、统一端到端评价Schema、离线Application Service/历史run重放、七字段与生成内容/业务统计分层指标、130条人工标注候选、双评审/仲裁/冻结工具，以及独立版本的服务类别Prompt候选。完整108项离线测试通过；可移植套件包含28项，无需历史资产。人工Gold、摘要/回复人工评价、新Prompt真实模型验证、独立holdout和浏览器E2E仍pending。
-
-```powershell
+# 仅原本机具有完整历史资产时
 python -B tests/run_offline.py
-python -B scripts/p25.py offline --dataset tests/fixtures/p25_portable_v1.json --out .local/my-new-evaluation
 ```
 
-详见[本轮验证](docs/p25/VERIFICATION.md)、[400条数据审计](docs/p25/DATASET_QUALITY_AUDIT.md)、[端到端能力矩阵](docs/p25/E2E_COVERAGE_MATRIX.md)、[评价协议](docs/p25/EVALUATION_PROTOCOL.md)、[人工标注指南](docs/p25/ANNOTATION_GUIDE.md)和[Git/GitHub审核](docs/p25/GIT_AND_GITHUB_REPORT.md)。所有新报告写新目录；旧P2原始证据保留本机。
+`data/`、`outputs/`、`.local/`、论文/学校材料、原始模型返回、预算库、真实 `.env` 不上传。旧历史 API runner 可能付费且使用固定输出位置，不能当测试运行。新付费调用需单独授权。
+
+自有源码采用 [MIT](LICENSE)，第三方依赖保留其各自许可；[许可范围](docs/p3/LICENSING.md)。工程及研究状态见 [P3 验证](docs/p3/VERIFICATION.md)、[公开审计](docs/p3/PUBLIC_RELEASE.md)、[语义与分母](docs/p3/DESIGN.md)、[P2.5 人工指南](docs/p25/ANNOTATION_GUIDE.md)；下一轮从 [HANDOFF](HANDOFF.md) 恢复。

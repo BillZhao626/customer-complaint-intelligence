@@ -1,0 +1,25 @@
+{
+  "status": "BROWSER_E2E_VERIFIED",
+  "scope": "P3 offline browser slice only; no paid calls",
+  "cases": [
+    "B + Service/Other + negative -> one member -> original",
+    "failed + business filters -> zero denominator NULL",
+    "P2 saved JSON -> 12 emails -> original -> statistics download",
+    "single offline_fake submission -> saved run -> reload same run",
+    "two cohorts isolated: 10 fixture and 1 offline-demo"
+  ],
+  "offline_submitted_run_id": "8cc48310-2a75-458f-aa5a-6ccce0287f37",
+  "limitations": [
+    "no batch upload browser verification",
+    "no live provider browser call",
+    "no P4 review or send"
+  ],
+  "evidence_hashes": {
+    "browser-download-verification.json": "0b5d3de16480dcdcb6136f6f98276d79f7a3ceb76a0df166a2c0514b84dcbecf",
+    "browser-empty.txt": "0baf6a211029b1adfab5305069d4f502f5174e25b4c102e8d6c555a97d573dea",
+    "browser-filter-trace.txt": "177ff3c8261e06517fcfa7709b7af82a9b86c4f173adbbde37ab91fee9b0104b",
+    "browser-p2-readonly.txt": "775b8430eb56cbef6d317d8c3fe741d328ccbf64062080014e6d21da416cbe7b",
+    "browser-reload.txt": "74ed105813f1e5ac07a96700fd0575e15b5b8f967de5581270923704eed8d3de",
+    "browser-version-isolation.txt": "8a63ccd606eb7c48073fca20a9c2a02c891cc84311b9eb624fd459393cc64590"
+  }
+}

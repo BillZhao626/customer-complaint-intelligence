@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "baseline_files": 619,
+  "protected_files": 611,
+  "mismatches": [],
+  "real_model_calls": 0,
+  "scope": "All baseline files except explicit authorized engineering/doc allowlist; includes data, outputs, thesis, P1/P2/P2.5 evidence, frozen prompts, .env, P2 budget and runs",
+  "allowlist": [
+    ".env.example",
+    "HANDOFF.md",
+    "README.md",
+    "app.py",
+    "docs/plans/PHASED_ROADMAP.md",
+    "requirements.txt",
+    "src/evaluation/e2e.py",
+    "tests/run_offline.py"
+  ]
+}

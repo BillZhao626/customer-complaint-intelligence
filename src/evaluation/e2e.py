@@ -163,7 +163,9 @@ def evaluate(samples,runs,reviews=(),mode='recorded_replay',freeze_manifest=None
             expected=expected_groups,predicted=predicted_groups,
             deltas={key:dict(denominator=predicted_groups.get(key,{}).get('denominator',0)-expected_groups.get(key,{}).get('denominator',0),
                 numerator=predicted_groups.get(key,{}).get('numerator',0)-expected_groups.get(key,{}).get('numerator',0)) for key in sorted(set(expected_groups)|set(predicted_groups))},
-            source='evaluation_only_reference_comparison; source attribution UI query remains P3')
+            source='evaluation_only_reference_comparison; product P3 evidence reported separately')
+    from src.evaluation.p3_business import verify_business
+    p3_business=verify_business(samples,runs) if runs else None
     return dict(protocol='e2e-evaluation-v1',mode=mode,dataset_id=samples[0].dataset_id,dataset_hash=dataset_hash(samples),
         provenance=samples[0].provenance.model_dump(),reference_statuses=dict(Counter(s.reference_status for s in samples)),
         config=runs[0].config.model_dump() if runs else None,cohort_id=runs[0].cohort_id if runs else None,
@@ -182,7 +184,8 @@ def evaluate(samples,runs,reviews=(),mode='recorded_replay',freeze_manifest=None
             failed_excluded=counts['failed'],uncertain_excluded=counts['uncertain'],missing_excluded=counts['missing'],
             fallback_excluded=sum(bool(r.metadata.get('fallback')) for r in runs),
             unknown_product=sum(r.result.product_category=='unknown' for r in succeeded),unknown_store=sum(r.result.store_location=='unknown' for r in succeeded),
-            source_attribution_query='NOT_IMPLEMENTED_IN_NEW_SQLITE_UI'),
+            source_attribution_query='P3_READONLY_ATTRIBUTION_SERVICE'),
+        p3_business=p3_business,
         traceability=[dict(sample_id=s.sample_id,input_hash=s.input_hash,reference_hash=digest(s.model_dump()),
             run_id=by_id[s.sample_id].run_id if s.sample_id in by_id else None,output_hash=output_hash(by_id[s.sample_id]) if s.sample_id in by_id else None,
             run_record_hash=digest(by_id[s.sample_id].model_dump()) if s.sample_id in by_id else None) for s in samples],

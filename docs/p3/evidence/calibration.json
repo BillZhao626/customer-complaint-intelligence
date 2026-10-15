@@ -1,0 +1,12 @@
+{
+  "count": 24,
+  "exact_duplicate_bodies": 0,
+  "maximum_raw_sequence_similarity": [
+    0.7695852534562212,
+    "F176",
+    "F096"
+  ],
+  "pairs_ge_092": [],
+  "status": "HUMAN_GOLD_PENDING",
+  "scope": "lexical and template de-duplication; human semantic review pending"
+}

@@ -436,7 +436,14 @@ def render_batch_analysis_tab() -> None:
 
 def render_dashboard_tab() -> None:
     st.subheader("Dashboard")
-    render_i4f_dashboard()
+    view = st.radio('Dashboard view', ['Historical dashboards', 'P3 versioned attribution'], key='dashboard_view')
+    if view == 'P3 versioned attribution':
+        from src.app.attribution_dashboard import render_attribution_dashboard
+        render_attribution_dashboard(ROOT_DIR)
+        return
+    else:
+        st.caption('Historical-only: original 400-row synthetic data and definitions; not real market rankings.')
+        render_i4f_dashboard()
 
     st.divider()
     st.subheader("Current Session Analysis Results")
