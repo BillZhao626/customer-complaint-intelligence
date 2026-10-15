@@ -50,11 +50,17 @@ class DeepSeekAnalyzer:
         elif prompt_profile=='multi-issue-v3':
             from src.application import v3_prompt as candidate
             self.messages=candidate.messages;version=candidate.PROMPT_VERSION;prompt_hash=candidate.PROMPT_HASH
+        elif prompt_profile=='multi-issue-v3-pilot-2':
+            from src.application import v3_pilot_prompt as candidate
+            self.messages=candidate.messages;version=candidate.PROMPT_VERSION;prompt_hash=candidate.PROMPT_HASH
+        elif prompt_profile=='multi-issue-v3-pilot-3':
+            from src.application import v3_pilot_prompt3 as candidate
+            self.messages=candidate.messages;version=candidate.PROMPT_VERSION;prompt_hash=candidate.PROMPT_HASH
         else:
             raise LiveError('configuration_error')
         self.config=RunConfig(backend=self.backend,model_id=self.model_id,prompt_version=version,prompt_hash=prompt_hash,
-            schema_version='analysis-v3' if prompt_profile=='multi-issue-v3' else 'analysis-v2',
-            taxonomy_version='complaint-issues-v3' if prompt_profile=='multi-issue-v3' else 'research-products-v2',
+            schema_version='analysis-v3' if prompt_profile in ('multi-issue-v3','multi-issue-v3-pilot-2','multi-issue-v3-pilot-3') else 'analysis-v2',
+            taxonomy_version='complaint-issues-v3' if prompt_profile in ('multi-issue-v3','multi-issue-v3-pilot-2','multi-issue-v3-pilot-3') else 'research-products-v2',
             parameters=dict(temperature=0,thinking='disabled',response_format='json_object',max_tokens=settings.max_tokens,
                             sdk_max_retries=0,http_timeout=settings.http_timeout,deadline=settings.deadline,max_attempts=settings.max_attempts,
                             endpoint=settings.endpoint+'/chat/completions'))

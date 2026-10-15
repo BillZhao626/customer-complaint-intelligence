@@ -1,3 +1,24 @@
+# HANDOFF — P3.6 真实v3开发试点
+
+2026-10-15（Asia/Shanghai）。先读 `docs/p36/VERIFICATION.md`、`DESIGN.md`、`REPRODUCE.md` 及Git交付；完整研究证据仅本机 `.local/p36/PILOT_REPORT.md`。
+
+- ENGINEERING_VERIFIED：165/165完整离线、78/78 portable，原154保留；新增独立DevelopmentBudget、版本化Prompt、真实普通文本入口及待审包，保留原架构、v2和历史Dashboard。
+- REAL_MODEL_PILOT_VERIFIED：40次正式AnalysisService/LangChain/DeepSeek请求，40收到内容、32接受、8失败、0自动重试/fallback；包含8次跨版本复验。账本`.local/p36/budget.sqlite3`已halted=authorization_limit，不可重建/借旧额度；预留上界2.435422元。实际tokens158609；高峰缓存未命中估算0.457978元，实际账单未知。
+- 三独立cohort：baseline-v1=0/4接受；catalog-v2=3/4；draft-v3=29/32。同4冒烟0→3→4仅工程改善，不宣称总体语义提升。最终24开发题全部尝试，8新候选已运行，4新候选预算未运行。各版本Prompt、返回、SQLite和报告均保留，不混算。
+- DEVELOPMENT_SEMANTIC_EVALUATED仅七字段冻结开发参考：最终143/168字段、17/24全对，缺预测2保留分母；排除原已标记F176的23题为143/161、17/23。不是独立Gold/Holdout；未改24题裁决。问题级、证据语义、摘要回复HUMAN_CONTENT_REVIEW_PENDING，独立Holdout仍pending。
+- 新160 eligible自动复核、原12隔离保留，32代表覆盖16类各2条，中文审核在`.local/p36/CANDIDATE_REVIEW_32_ZH-v2.md`。真人签名留空。完整逐题比较、语义待审包、版本Bad Case与本地保护hash见完整报告链接。
+- 最终“无法保证明天付款”被旧gate误拒，已修复紧邻否定并用保留真实raw离线复验；原run/成绩不改，未新增付费复验。旧未绑定gate哈希manifest只读，新实验要新身份；其余错路由/优先级/模糊归属/重复问题是待审风险，未声称修复。
+- `.env`仍LLM_ENABLE_API=true，未修改；默认离线入口。真实UI要求服务器开关、显式checkbox、白名单与独立账本，费用/身份可见；本轮账本已停，仍可重开保存结果。无实际发送或P4实现。
+- 初始1705文件逐字hash留存；旧资产、P2账本/运行库、24题、原Prompt与既存未跟踪资料保留。正常Git交付仅源码及脱敏文档，不含本机研究原文/Gold/账本/API Key。
+
+```powershell
+python -B tests/run_offline.py
+python -B scripts/run_portable.py
+python -B scripts/p36.py report --experiment draft-v3
+```
+
+---
+
 # HANDOFF — P3.5 多问题契约、开发裁决与离线评测
 
 2026-10-15（Asia/Shanghai）。先读 `docs/p35/VERIFICATION.md`、`CONTRACT_COMPAT.md`、`CALIBRATION.md`、`DATASET_AUDIT.md`、`EVALUATION.md`；Git实际交付见 `docs/p35/GIT_DELIVERY.md` 及本机收据。下方P3及更早交接按历史时点保留。

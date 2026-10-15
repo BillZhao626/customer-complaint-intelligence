@@ -11,17 +11,28 @@ def show_v3(run):
     st.caption('Customer importance and suggested handling order are separate. Routing is not verified responsibility. Draft is unsent and unreviewed.')
     st.write(f'Complaint: {value.complaint_status} · Sentiment: {value.sentiment} · Urgency: {value.urgency}')
     st.caption(f'Store: {value.mentioned_store} ({value.store_verification}) · Contact: {value.contact_channel} · Purchase: {value.purchase_channel}')
-    for issue in value.issues:
+    st.write('Summary');st.text(value.summary)
+    for issue in sorted(value.issues,key=lambda i:i.handling_priority or 999):
         with st.expander(f'{issue.issue_id}: {issue.object_name}',expanded=True):
             st.write(f'Customer importance: {issue.customer_importance} · Suggested handling order: {issue.handling_priority or "unspecified"}')
             st.write(f'{issue.reason} · {issue.sentiment} · {issue.urgency} · {issue.resolution}')
-            st.caption(f'Route to: {issue.routing_team} · Responsibility: {issue.responsibility}')
+            st.caption(f'Process: {issue.business_process} · Route to: {issue.routing_team} · Attribution: {issue.attribution_certainty} · Responsibility: {issue.responsibility}')
+            if issue.customer_requests:st.write('Customer requests: '+'; '.join(issue.customer_requests))
+            if issue.missing_evidence:st.caption('Needs verification: '+'; '.join(issue.missing_evidence))
             if issue.priority_rationale:st.text(issue.priority_rationale)
-            for e in issue.evidence:st.text(f'{e.field}[{e.start}:{e.end}]: {e.quote}')
-            st.json(issue.model_dump(),expanded=False)
-    st.write('Issue relations');st.json([r.model_dump() for r in value.relations],expanded=False)
-    st.write('Unsent reply draft');st.text(value.suggested_reply)
-    st.warning('Compatibility projection: '+'; '.join(run.metadata['compatibility_diagnostics']))
+            for e in issue.evidence:st.text('Evidence: '+e.quote)
+            for e in issue.importance_evidence:st.caption('Customer importance evidence: '+e.quote)
+    if value.relations:
+        st.write('Issue relations')
+        for relation in value.relations:st.write(f'{relation.from_issue} ↔ {relation.to_issue}: {relation.kind}')
+    st.warning('Unreviewed reply · 未审核、未发送；无人工批准记录。')
+    st.text(value.suggested_reply)
+    with st.expander('Technical provenance / compatibility'):
+        st.json({'run_id':run.run_id,'backend':run.config.backend,'model':run.config.model_id,
+                 'resolved_model':run.metadata.get('resolved_model'),'prompt':run.config.prompt_version,
+                 'cohort':run.cohort_id,'cost_cny_estimate':run.metadata.get('cost_cny'),
+                 'input_hash':run.input_hash,'output_hash':run.metadata.get('analysis_v3_hash'),
+                 'compatibility':run.metadata['compatibility_diagnostics']},expanded=False)
 
 
 def render_v3_demo(root):
@@ -30,6 +41,7 @@ def render_v3_demo(root):
     from src.infrastructure.repository import Repository
     from src.infrastructure.dashboard_sources import ReadOnlyRepository
     render_candidate_review(root)
+    render_v3_live(root)
     with st.expander('P3.5 multi-issue offline workspace'):
         st.caption('Explicit synthetic fixture, no language-model quality claim. New v3 runs use a separate local database.')
         st.text(DEMO_EMAIL.subject);st.text(DEMO_EMAIL.body)
@@ -90,3 +102,81 @@ def render_candidate_review(root):
         packet=dict(protocol='p35-candidate-human-review-v1',reviewer=None,human_declaration=False,dataset_hash=dataset_hash(rows),
                     items=[dict(sample_id=r.sample_id,input_hash=r.input_hash,status='pending',notes=notes)])
         st.download_button('Download pending review draft',json.dumps(packet,ensure_ascii=False,indent=2),f'{selected}-pending-review.json','application/json',key='v3_review_download')
+
+
+def render_v3_live(root):
+    """Opt-in ordinary text entry. Reads only until the explicit paid submit."""
+    import json
+    from pathlib import Path
+    from src.domain.contracts import EmailInput
+    from src.infrastructure.dashboard_sources import ReadOnlyRepository
+    from src.infrastructure.p36_budget import DevelopmentBudget
+    space=root/'.local/p36'
+    with st.expander('P3.6 real Analysis-v3 · 真实模型开发入口'):
+        st.caption('普通邮件文本输入，区别于下方预设演示结果。仅允许已登记白名单的虚构开发样本。人工参考与模型预测分开，所有回复仍待审核。')
+        experiment=st.text_input('Frozen experiment identity',value=os.getenv('COMPLAINT_P36_EXPERIMENT','draft-v3'),key='p36_experiment')
+        # Experiment identifiers are local directory names, never paths.
+        if not experiment or Path(experiment).name!=experiment or experiment in ('.','..') or '/' in experiment or '\\' in experiment:
+            st.error('Invalid experiment identity');return
+        manifest_path=space/experiment/'manifest.json'
+        if not manifest_path.is_file() or not (space/'inputs-v1.json').is_file():
+            st.info('尚未初始化本机独立试点。参见 docs/p36 的准备步骤；默认不会调用模型。');return
+        try:
+            manifest=json.loads(manifest_path.read_text(encoding='utf8'))
+            budget=DevelopmentBudget(space/'budget.sqlite3');state=budget.summary()
+            inputs=json.loads((space/'inputs-v1.json').read_text(encoding='utf8'))['inputs']
+        except (OSError,ValueError):
+            st.error('Pilot configuration unavailable');return
+        config=manifest['config']
+        st.write(f'Real model: {config["model_id"]} · Prompt: {config["prompt_version"]} · Experiment: {experiment}')
+        st.caption(f'已预留请求 {state["reserved_attempts"]}/40 · 保守费用预留 ¥{state["reserved_upper_cny"]:.6f}/15（实际扣账未知；失败也占预算）')
+        st.caption(f'Budget state: {state["halted"] or "available"} · Frozen cohort/config bound in persistent ledger')
+        email_id=st.text_input('V3 email ID',key='p36_email_id')
+        subject=st.text_input('V3 subject',key='p36_subject')
+        body=st.text_area('V3 original email',key='p36_body')
+        enabled=st.checkbox('Explicitly enable paid real-model analysis for this fictional input',value=False,key='p36_enable')
+        server_enabled=os.getenv('COMPLAINT_ENABLE_LIVE','false')=='true'
+        allowed=False
+        try:
+            email=EmailInput(email_id=email_id,subject=subject,body=body)
+            allowed=any(x['input_hash']==email.input_hash and x['email']['email_id']==email.email_id for x in inputs)
+        except ValueError:email=None
+        if body and not allowed:st.warning('输入未匹配冻结白名单，无法外发。新虚构输入需先建立独立冻结实验。')
+        if not server_enabled:st.caption('服务器真实模式未启用（COMPLAINT_ENABLE_LIVE）；可读取已有结果。')
+        if st.button('Analyze real v3 and save · 付费提交',key='p36_analyze',disabled=not (server_enabled and enabled and allowed and not state['halted'] and not state['active_lease'])):
+            try:
+                from scripts.p36 import frozen_service
+                service=frozen_service(experiment)
+                # Do not resubmit failed/unknown inputs from UI; review the retained attempt.
+                previous=[r for r in service.repository.list_runs() if r.email==email]
+                run=previous[0] if previous else service.analyze(email)
+                st.session_state['p36_run_id']=run.run_id
+            except Exception as exc:st.error(f'Analysis unavailable ({type(exc).__name__}); inspect retained attempt and ledger.')
+        lookup=st.text_input('Real v3 saved run ID',key='p36_lookup')
+        if st.button('Load real v3 result',key='p36_load'):st.session_state['p36_run_id']=lookup.strip()
+        path=space/experiment/'runs.sqlite3'
+        run_id=st.session_state.get('p36_run_id')
+        if not run_id or not path.exists():return
+        try:run=ReadOnlyRepository(path).get(run_id)
+        except ValueError:st.error('Stored result binding failed');return
+        if not run:st.info('Run not found in this experiment');return
+        st.write(f'真实模型预测 · {run.status} · Run {run.run_id}')
+        st.text(run.email.subject);st.text(run.email.body)
+        st.caption(f'Tokens: {sum(a.metadata.get("total_tokens") or 0 for a in run.attempts)} · Peak cost estimate: {run.metadata.get("cost_cny")} CNY')
+        if run.result:show_v3(run)
+        else:st.warning('模型输出未通过正式契约或调用失败；无可用预测，不能作为正确分析。')
+        packet=dict(sample_id=run.email.email_id,run_id=run.run_id,input_hash=run.input_hash,
+                    cohort_id=run.cohort_id,output_hash=run.metadata.get('analysis_v3_hash'),
+                    input=run.email.model_dump(),prediction=run.metadata.get('analysis_v3'),
+                    status='pending',reviewer=None,human_declaration=False,rubric_version='p36-semantic-content-v1',
+                    review_dimensions=['问题数量/漏识别/重复','对象与原因','情绪/解决状态','处理顺序/归属不确定性',
+                                       '证据语义支持（区别于跨度合法）','摘要重要事实/编造','回复诉求/安全/虚构退款赔偿承诺'],
+                    scores=None,evidence_notes=[],critical_errors=[])
+        st.download_button('Download pending content / evidence review · 待审入口',json.dumps(packet,ensure_ascii=False,indent=2),
+                           f'{run.run_id}-pending-review.json','application/json',key='p36_review_download')
+        item=next((x for x in inputs if x['input_hash']==run.input_hash),None)
+        with st.expander('人工开发参考（独立于模型预测）'):
+            if item and item['expected']:
+                st.caption('研究者冻结的七字段开发裁决；问题级、摘要和回复人工评价仍待审。')
+                st.json(item['expected'],expanded=False)
+            else:st.caption('无审核参考，仅展示真实输出与待审状态。')
