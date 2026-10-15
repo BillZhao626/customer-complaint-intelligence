@@ -23,4 +23,19 @@
 
 完整本机108项离线通过；干净检出不包含历史研究资产，不能运行全量历史回归并声称通过。`scripts/run_portable.py`使用安全自包含fixture运行28项工程与评价门禁，实际app.py通过AppTest保存/重读，默认禁用API。完整历史资产依赖和缺失边界已写入README。依赖使用已验证的本机venv，未做全新联网pip安装或依赖锁定验证。
 
-目标仓库：[BillZhao626/customer-complaint-intelligence](https://github.com/BillZhao626/customer-complaint-intelligence)，仅允许Private。创建/推送前须再次核实无同名仓库冲突、origin和全部提交树；不force、不Tag、不Release、不公开。实际远程SHA、可见性、文件集合与干净检出测试证据将在完成推送后补录，避免先写成功再执行。
+目标仓库：[BillZhao626/customer-complaint-intelligence](https://github.com/BillZhao626/customer-complaint-intelligence)，仅允许Private。创建/推送前须再次核实无同名仓库冲突、origin和全部提交树；不force、不Tag、不Release、不公开。实际验证结果见下方；证据是执行后记录。
+
+
+## 已执行的远程核验
+
+**LOCAL_GIT_BASELINE_VERIFIED / PRIVATE_GITHUB_PUSH_VERIFIED**。
+
+- 仓库URL：https://github.com/BillZhao626/customer-complaint-intelligence；GitHub API返回isPrivate=true。
+- 第一笔P2完整工程基线：5ffa9a9a6899dd2bd0fb4b402781fac273888dad。
+- 第二笔P2.5工程：7e3f5153654174aac79781e9744086ba3a5795b2。推送后local HEAD、origin/main、git ls-remote均一致。
+- GitHub Git Trees API返回150个blob，未截断；路径与每个Git blob SHA均与本地该commit完全一致。两个commit的全部文件均重新扫描，0禁传文件、0已知密钥/模式命中。逐文件SHA-256安全清单与远程核验见[evidence/github-verified-tree.json](evidence/github-verified-tree.json)。
+- 从远程新clone到本机空临时目录，确认没有.env、data、outputs、.local、论文资产；28/28 portable测试通过（8.301秒），实际app.py AppTest可运行；offline evaluator另外执行成功，5样本/4成功/1预期故障，28/35计分。没有运行缺资产的完整历史测试并误报成功。
+- 为保留事后证据，另作一笔仅文档/证据的提交；工程受测SHA保持上面的7e3f515。该文档提交的最终SHA由git log与本机.local/p25/github-final-receipt.json记录，避免自引用hash问题。最终推送后继续核对HEAD与远程及完整文件集合，不force、不Tag、不Release。
+- 本机原未跟踪历史资产仍存在；tracked工程无未提交修改。不能把“不上传这些资产”解释成已删除它们。
+
+干净检出复验只使用已有venv，不是一次全新依赖解析安装；AppTest不是浏览器E2E。原始日志和clone位置保存在.local/p25/，不上传。原P2预算/运行库和.env保持原hash；全轮新模型调用0。

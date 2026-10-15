@@ -24,3 +24,5 @@
 | 浏览器完整E2E | PENDING；AppTest不能替代 |
 
 后续真实独立评价最小输入：真人审核的冻结数据及完整Gold manifest、未暴露holdout与访问记录、审定taxonomy/服务对象优先级、已冻结Prompt/config、单独新预算目录、明确模型/数据范围/最大请求数/费用授权。先做新开发集小规模验证，再按预注册方案只运行封存holdout；本轮没有消耗剩余P2预算或增加付费Judge。
+
+远程干净检出：工程commit 7e3f5153654174aac79781e9744086ba3a5795b2，28/28 portable通过、离线评价CLI通过；GitHub Private与150个文件逐blob一致。最终仅文档核验提交另行推送，完整过程见GIT_AND_GITHUB_REPORT.md。新开发预算已独立创建并halted，调用计数0。

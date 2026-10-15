@@ -2,7 +2,7 @@
 
 2026-10-15（Asia/Shanghai）。本轮完成工程实现与离线验证；人工/模型语义门槛保持pending。以下P1/P2原交接按历史原文保留，其中无Git提交等描述只适用于当时。
 
-- 完整P2基线提交：5ffa9a9a6899dd2bd0fb4b402781fac273888dad。P2.5工程提交和Private仓库最终核验见docs/p25/GIT_AND_GITHUB_REPORT.md及本机最终receipt，不根据下方历史Git段落推断当前状态。
+- 完整P2基线提交：5ffa9a9a6899dd2bd0fb4b402781fac273888dad。P2.5工程提交7e3f5153654174aac79781e9744086ba3a5795b2已推送Private；远程干净检出28/28通过。最终文档核验提交见docs/p25/GIT_AND_GITHUB_REPORT.md及本机最终receipt，不根据下方历史Git段落推断当前状态。
 - 108/108离线通过（原77+portable2+P2.5新增29）；portable入口覆盖28项。数据400/400、55模板、11场景族、10保守泄漏分量；146条触发至少一项疑点，未改原参考。
 - 130候选：110旧模板代表+20新复杂开发案例。人工标注队列：.local/p25/annotations-v2/，两位reviewer和仲裁均未签署；HUMAN_GOLD_PENDING。20个holdout_candidate只是隔离候选，全部已暴露，INDEPENDENT_HOLDOUT_PENDING。
 - 新统一Schema/框架见src/evaluation/e2e_schema.py、e2e.py、gold.py、dataset_audit.py；scripts/p25.py仅offline/replay，无付费模式。新结果与参考用sample/input/run/output/reference/config哈希追溯；来源/版本拒绝混合，失败保持分母。

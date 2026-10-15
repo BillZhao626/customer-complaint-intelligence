@@ -22,3 +22,5 @@ P2 `p2-inquiry`，run `104c892c-f289-4400-9d82-da7795f25945`，输入hash `9c64d
 测试先行：初始P2.5测试15项缺模块错误留存于本机red日志；规则正反例、新旧Prompt隔离、fake provider实际service链和新预算配置绑定已覆盖。开发回归入口：`python -B tests/run_offline.py test_p25.py`。其临时ledger与provider注入不触发外部调用；真实实验必须另获样本/模型/次数/费用授权，再用新目录创建带config/input whitelist的PilotBudget，禁止复用或重建P2账本。
 
 状态：**BADCASE_CAUSE_VERIFIED（规范冲突证据） / BADCASE_RULE_REGRESSION_VERIFIED / REAL_MODEL_FIX_PENDING**。没有新DeepSeek验证，不宣称实际模型已经修好。
+
+独立开发账本已实际准备在`.local/p25/boundary-development-v1/`：包含12条新开发候选的input whitelist、独立Prompt/config manifest及budget.sqlite3。reserved_attempts=0、reserved_upper_cny=0，halted=awaiting_explicit_model_budget_authorization。没有复制、删除或重建P2账本。可执行离线回归仍是`python -B tests/run_offline.py test_p25.py`，该入口使用临时独立账本和注入provider。新持久账本不是付费授权，不提供本轮自动解锁/请求动作。
