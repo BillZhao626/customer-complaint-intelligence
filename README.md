@@ -1,5 +1,7 @@
 # Customer Complaint Intelligence
 
+P3.5已新增向后兼容的Analysis-v3多问题契约、明确有损的v2投影、问题/邮件分母分离及离线评测。Single Analysis中的P3.5工作区可运行公开双问题fixture；本地候选审核入口读取`COMPLAINT_V3_CANDIDATES`。完整验证和限制见[本轮交接](docs/p35/VERIFICATION.md)：本机154/154、portable67/67；真实v3模型质量仍pending。24条最终开发裁决及172条候选记录（160适用、12隔离）保存在本地，不随仓库公开。
+
 客户投诉分析研究原型，使用 Streamlit + Python Application Service + SQLite。提供显式 Offline Fake / Legacy Mock / DeepSeek 分析、七字段分类、摘要、未审核回复草稿、版本化保存、来源归属 Dashboard 和原文追溯。
 
 **研究边界：** P2 的 12 条是开发者合成案例，83/84 = **98.81% 字段参考匹配率**（12封 × 7字段），11/12 邮件七字段全对；不是独立人工泛化准确率。旧 400 条由固定模板程序生成，不能支持真实市场或门店排名。Human Gold 仍为 **HUMAN_GOLD_PENDING**，摘要/回复人工审核未完成；没有批准或发送流程。服务类别新 Prompt 只有离线规则证据，**REAL_MODEL_FIX_PENDING**。

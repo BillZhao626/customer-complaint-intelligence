@@ -18,6 +18,9 @@ def show_run(run):
         label={'offline_fake':'Offline Fake / Demo','legacy_mock':'Legacy Mock / Rules Baseline','deepseek_live':'DeepSeek Live'}[run.config.backend]
         st.success(f'{label} saved successfully.')
         st.json(run.result.model_dump())
+        if run.config.schema_version=='analysis-v3':
+            from src.app.v3_view import show_v3
+            show_v3(run)
     elif run.status in ('running','interrupted_or_unknown'):
         st.warning('Running or interrupted / unknown: do not repeat a paid request. Inspect the saved attempts first.')
     else:
@@ -32,6 +35,8 @@ def show_run(run):
 
 def render_offline_slice(root):
     st.subheader('Single Email Analysis')
+    from src.app.v3_view import render_v3_demo
+    render_v3_demo(root)
     st.info('Default: Offline Fake / Demo. DeepSeek Live requires server authorization and a frozen synthetic pilot input.')
     backend=st.selectbox('Analyzer', ['offline_fake','legacy_mock','deepseek_live'], key='offline_backend')
     if backend=='deepseek_live':

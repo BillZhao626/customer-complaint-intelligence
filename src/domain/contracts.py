@@ -8,7 +8,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 ProductCategory = Literal['Beauty/Personal Care','Clothing','Electronics','Food/Beverage','Furniture','Home Appliances','Service/Other','Sports/Outdoor','unknown']
 PRODUCT_CATEGORIES = get_args(ProductCategory)
-TaxonomyVersion = Literal['research-products-v2']
+TaxonomyVersion = Literal['research-products-v2','complaint-issues-v3']
 RunStatus = Literal['succeeded','failed','running','interrupted_or_unknown']
 
 

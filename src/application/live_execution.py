@@ -64,8 +64,12 @@ async def _execute(service,email):
                 try: data=strict_json(raw)
                 except (ValueError,TypeError): raise LiveError('invalid_json') from None
                 attempt=attempt.model_copy(update={'parse_status':'passed','parsed_output':data,'contract_status':'failed','stage':'raw_schema'})
-                try: result=AnalysisResult.model_validate(data)
-                except (ValidationError,TypeError): raise LiveError('raw_schema_invalid') from None
+                try:
+                    result,extra=service.validate_result(data,email)
+                    metadata.update(extra)
+                    if service.config.schema_version=='analysis-v3':
+                        metadata['resolved_model']=provider_meta.get('resolved_model')
+                except (ValueError,TypeError): raise LiveError('raw_schema_invalid') from None
                 attempt=attempt.model_copy(update={'contract_status':'passed','normalization_status':'failed','stage':'normalization'})
                 try: result=AnalysisResult.model_validate(result.model_dump())
                 except Exception: raise LiveError('normalization_failed') from None

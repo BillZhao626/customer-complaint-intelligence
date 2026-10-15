@@ -74,6 +74,9 @@ class Repository:
 
     def save(self,run: AnalysisRun):
         from src.domain.contracts import digest, idempotency_key
+        if run.config.schema_version=='analysis-v3' and run.result:
+            from src.domain.analysis_v3 import stored_analysis
+            stored_analysis(run)
         if (run.status=='succeeded') != (run.result is not None):
             raise ValueError('Run status/result mismatch')
         if run.input_hash!=run.email.input_hash or run.cohort_id!=run.config.cohort_id or run.idempotency_key!=idempotency_key(run.email,run.config):
@@ -86,6 +89,7 @@ class Repository:
                 conn.execute('BEGIN IMMEDIATE')
                 conn.execute('INSERT OR IGNORE INTO emails VALUES(?,?,?,?,?)',(input_id,run.email.email_id,run.input_hash,run.email.subject,run.email.body))
                 conn.execute('INSERT INTO runs(run_id,input_id,idempotency_key,cohort_id,config_json,status,created_at) VALUES(?,?,?,?,?,?,?)',(run.run_id,input_id,run.idempotency_key,run.cohort_id,run.config.model_dump_json(),run.status,run.created_at))
+                conn.execute('UPDATE runs SET metadata_json=? WHERE run_id=?',(json.dumps(run.metadata,ensure_ascii=False),run.run_id))
                 if run.result:
                     conn.execute('INSERT INTO results VALUES(?,?)',(run.run_id,run.result.model_dump_json()))
                 for attempt in run.attempts:
@@ -104,10 +108,14 @@ class Repository:
                 return None
             result=conn.execute('SELECT normalized_json FROM results WHERE run_id=?',(run_id,)).fetchone()
             attempts=conn.execute('SELECT detail_json FROM attempts WHERE run_id=? ORDER BY attempt_no',(run_id,)).fetchall()
-        return AnalysisRun.model_validate(dict(run_id=row['run_id'],idempotency_key=row['idempotency_key'],
+        run=AnalysisRun.model_validate(dict(run_id=row['run_id'],idempotency_key=row['idempotency_key'],
             email=dict(email_id=row['email_id'],subject=row['subject'],body=row['body']),input_hash=row['input_hash'],
             config=json.loads(row['config_json']),cohort_id=row['cohort_id'],status=row['execution_state'] or row['status'],created_at=row['created_at'],metadata=json.loads(row['metadata_json']),
             result=json.loads(result[0]) if result else None,attempts=[json.loads(a[0]) for a in attempts]))
+        if run.config.schema_version=='analysis-v3' and run.result:
+            from src.domain.analysis_v3 import stored_analysis
+            stored_analysis(run)
+        return run
 
     def list_runs(self,cohort_id=None,status=None,store=None,product=None):
         with self.connect() as conn:
@@ -144,6 +152,10 @@ class Repository:
     def finish_live(self,run_id,status,result,metadata):
         if status not in ('succeeded','failed','interrupted_or_unknown') or (status=='succeeded')!=(result is not None):
             raise ValueError('Invalid terminal state')
+        current=self.get(run_id)
+        if current and current.config.schema_version=='analysis-v3' and result:
+            from src.domain.analysis_v3 import stored_analysis
+            stored_analysis(current.model_copy(update={'status':status,'result':result,'metadata':metadata}))
         with self.connect() as conn:
             conn.execute('BEGIN IMMEDIATE')
             if result:

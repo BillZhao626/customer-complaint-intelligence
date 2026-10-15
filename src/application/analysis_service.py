@@ -21,8 +21,21 @@ class AnalysisService:
             raise ValueError('Analyzer identity must match requested configuration')
         if analyzer.backend=='deepseek_live' and self.config!=analyzer.config:
             raise ValueError('Live prompt/parameters must match analyzer configuration')
-        if self.config.schema_version!='analysis-v2':
+        if (self.config.schema_version,self.config.taxonomy_version) not in (('analysis-v2','research-products-v2'),('analysis-v3','complaint-issues-v3')):
             raise ValueError('Unsupported schema version')
+
+    def validate_result(self,data,email):
+        if self.config.schema_version=='analysis-v3':
+            from src.domain.analysis_v3 import AnalysisV3,to_v2
+            from src.domain.contracts import digest
+            from src.application.v3_safety import check_reply
+            value=AnalysisV3.model_validate(data).validate_input(email)
+            if value.compatibility_origin is not None:
+                raise ValueError('Providers must produce native v3 output')
+            check_reply(value)
+            result,diagnostics=to_v2(value,(self.config.parameters or {}).get('projection_policy','customer-primary-v1'))
+            return result,dict(analysis_v3=value.model_dump(),analysis_v3_hash=digest(value.model_dump()),compatibility_diagnostics=diagnostics)
+        return AnalysisResult.model_validate(data),{}
 
     def analyze(self,email: EmailInput) -> AnalysisRun:
         email=EmailInput.model_validate(email)
@@ -33,7 +46,7 @@ class AnalysisService:
         existing=self.repository.successful(key)
         if existing:
             return existing
-        started=now();raw=None;result=None;error=None;warnings=[]
+        started=now();raw=None;result=None;error=None;warnings=[];metadata={}
         parse=contract=normalization=business='not_run'
         try:
             response=self.analyzer.analyze(email)
@@ -41,7 +54,8 @@ class AnalysisService:
                 raise TypeError('Analyzer must return raw JSON text')
             raw=response
             parse='failed'
-            data=json.loads(raw)
+            from src.application.live_execution import strict_json
+            data=strict_json(raw)
             parse='passed';contract='failed'
             if self.config.backend=='legacy_mock':
                 # Validate original mock shape before adding an explicitly unavailable field.
@@ -61,7 +75,7 @@ class AnalysisService:
                 result=AnalysisResult.model_validate(normalized)
                 normalization='incompatible'
             else:
-                result=AnalysisResult.model_validate(data)
+                result,metadata=self.validate_result(data,email)
                 normalization='identity'
             contract='passed'
             warnings+=business_warnings(result)
@@ -74,7 +88,7 @@ class AnalysisService:
         attempt=AnalysisAttempt(attempt_no=1,started_at=started,finished_at=now(),parse_status=parse,
             contract_status=contract,normalization_status=normalization,business_status=business,warnings=warnings,raw_output=raw,error=error)
         run=AnalysisRun(run_id=str(uuid4()),idempotency_key=key,email=email,input_hash=email.input_hash,config=self.config,
-            cohort_id=self.config.cohort_id,status='succeeded' if result else 'failed',created_at=started,result=result,attempts=[attempt])
+            cohort_id=self.config.cohort_id,status='succeeded' if result else 'failed',created_at=started,result=result,attempts=[attempt],metadata=metadata)
         # Persistence failures propagate: the UI must never display a success receipt.
         return self.repository.save(run)
 

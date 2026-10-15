@@ -1,3 +1,24 @@
+# HANDOFF — P3.5 多问题契约、开发裁决与离线评测
+
+2026-10-15（Asia/Shanghai）。先读 `docs/p35/VERIFICATION.md`、`CONTRACT_COMPAT.md`、`CALIBRATION.md`、`DATASET_AUDIT.md`、`EVALUATION.md`；Git实际交付见 `docs/p35/GIT_DELIVERY.md` 及本机收据。下方P3及更早交接按历史时点保留。
+
+- CALIBRATION_OWNER_DECISION_SNAPSHOT_VERIFIED：补充包及用户最终确认后的24题冻结为 `.local/p35/calibration-decision-v1.1/snapshot.json`。v1保留，v1.1通过前版hash关联。专家结论一致由研究者确认；独立原始专家表未提供，Kappa=null，不伪造签署或Gold。
+- V3_CONTRACT_AND_COMPAT_VERIFIED：原文EmailInput不变；AnalysisV3包含Issue[]、证据跨度、客户重要性、业务顺序、团队、未核实责任。完整v3及投影诊断存在SQLite原metadata_json列；v2数据不迁移/重算。题10默认customer-primary-v1保守投影；显式owner-operational-v1可复现有损夹克选择，v3仍equal。
+- DATASET_CANDIDATE_AUDIT_VERIFIED：`.local/p35/dataset-candidate-v2/`共172保留记录，160 eligible、12编辑质量隔离并补充；v1不覆盖。160 eligible语言78英文/70中文/12混合，全部开发暴露、人工语义参考pending。REVIEW.md、reviewer-blank.json和Single Analysis的candidate review是人工入口。
+- E2E_OFFLINE_V3_VERIFIED：原120+新增34=154/154；portable67/67。正式service→临时SQLite→replay；160/160仅占位fake工程通过，非语义质量。浏览器验证双issue、equal/顺序1/2、1邮件/2问题、幂等、重启重读和下载审核草稿，范围受限。
+- HUMAN_GOLD_PENDING / INDEPENDENT_HOLDOUT_PENDING / REAL_MODEL_V3_QUALITY_PENDING。24题无需再次研究者确认；新候选审核、内容Rubric及真正独立评测仍需真实人类过程。
+- 314项保护hash不变；旧400、80参考、P2十二次调用及账本、论文和冻结Prompt保留。新增真实调用0、API费用0元。真实.env仍LLM_ENABLE_API=true；必须使用离线入口，不能直接运行历史API脚本。
+
+```powershell
+python -B tests/run_offline.py
+python -B scripts/run_portable.py
+python -B scripts/p35.py offline --dataset .local/p35/dataset-candidate-v2/candidates.json --out .local/p35/NEW_RUN
+```
+
+保留Streamlit/LangChain/DeepSeek/应用服务/SQLite。v3 DeepSeek profile为multi-issue-v3，只有fake与模拟HTTP证据；本轮生成用60次/15元授权未使用，不能延伸为真实模型质量实验授权。P4发送/审批状态机未实现。继续工作时先核对Git HEAD、现有变更和本机不可公开资产，不把旧计划中的PROPOSED当成现有功能。
+
+---
+
 # HANDOFF — P3 归因 Dashboard 与 Public 发布
 
 2026-10-15（Asia/Shanghai）。P3_ATTRIBUTION_IMPLEMENTED / P3_DASHBOARD_VERIFIED / OFFLINE_REGRESSION_VERIFIED。原108 + 新12 = 120/120离线通过；新环境portable 40/40。BROWSER_E2E_VERIFIED仅指P3离线筛选、原文下钻、已存P2结果读取/下载、fake提交重读与版本隔离，不代表全产品上传/审批/发送E2E。

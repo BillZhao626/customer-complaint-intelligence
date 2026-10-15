@@ -1,0 +1,26 @@
+{
+  "protocol": "e2e-v3-1",
+  "dataset_id": "p35-narrative-candidates-v2",
+  "dataset_hash": "c05cc8fae7b65f002847ad685d7fc4adbaac31d4c616031f2f9da5fbcb8b56b3",
+  "cohort_id": "2ee194af3af2caa00a97f3a3a0d1f10fd4971afe9d3dc7cd671c231acc8cf6de",
+  "eligible": 160,
+  "attempted": 160,
+  "succeeded": 160,
+  "failed": 0,
+  "pending": 0,
+  "excluded": 12,
+  "reference_pending": 160,
+  "structure": {
+    "attempts": 160,
+    "parse_passed": 160,
+    "contract_passed": 160,
+    "retries": 0,
+    "dispatch_started": 0,
+    "api_availability": null,
+    "evidence_matching": "exact original substring validation only; not semantic entailment"
+  },
+  "independent_accuracy": null,
+  "real_model_quality": "PENDING",
+  "human_gold": "PENDING",
+  "holdout": "PENDING"
+}

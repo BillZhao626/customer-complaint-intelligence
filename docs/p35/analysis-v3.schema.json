@@ -1,0 +1,728 @@
+{
+  "$defs": {
+    "AnalysisResult": {
+      "additionalProperties": false,
+      "properties": {
+        "store_location": {
+          "minLength": 1,
+          "title": "Store Location",
+          "type": "string"
+        },
+        "product_name": {
+          "minLength": 1,
+          "title": "Product Name",
+          "type": "string"
+        },
+        "product_category": {
+          "enum": [
+            "Beauty/Personal Care",
+            "Clothing",
+            "Electronics",
+            "Food/Beverage",
+            "Furniture",
+            "Home Appliances",
+            "Service/Other",
+            "Sports/Outdoor",
+            "unknown"
+          ],
+          "title": "Product Category",
+          "type": "string"
+        },
+        "sentiment": {
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "unknown"
+          ],
+          "title": "Sentiment",
+          "type": "string"
+        },
+        "urgency": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ],
+          "title": "Urgency",
+          "type": "string"
+        },
+        "is_complaint": {
+          "title": "Is Complaint",
+          "type": "boolean"
+        },
+        "complaint_reason": {
+          "enum": [
+            "product quality",
+            "delivery delay",
+            "customer service",
+            "wrong item",
+            "after-sales service",
+            "health or safety issue",
+            "refund request",
+            "none",
+            "other",
+            "unknown"
+          ],
+          "title": "Complaint Reason",
+          "type": "string"
+        },
+        "source_attribution": {
+          "enum": [
+            "product issue",
+            "store service issue",
+            "delivery/logistics issue",
+            "customer service response issue",
+            "refund/exchange process issue",
+            "unclear",
+            "none",
+            "unknown"
+          ],
+          "title": "Source Attribution",
+          "type": "string"
+        },
+        "key_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Key Information",
+          "type": "array"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "suggested_reply": {
+          "minLength": 1,
+          "title": "Suggested Reply",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        }
+      },
+      "required": [
+        "store_location",
+        "product_name",
+        "product_category",
+        "sentiment",
+        "urgency",
+        "is_complaint",
+        "complaint_reason",
+        "source_attribution",
+        "key_information",
+        "summary",
+        "suggested_reply",
+        "confidence"
+      ],
+      "title": "AnalysisResult",
+      "type": "object"
+    },
+    "AnalysisV3": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "analysis-v3",
+          "default": "analysis-v3",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "taxonomy_version": {
+          "const": "complaint-issues-v3",
+          "default": "complaint-issues-v3",
+          "title": "Taxonomy Version",
+          "type": "string"
+        },
+        "sentiment": {
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unknown"
+          ],
+          "title": "Sentiment",
+          "type": "string"
+        },
+        "urgency": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ],
+          "title": "Urgency",
+          "type": "string"
+        },
+        "request_types": {
+          "items": {
+            "enum": [
+              "information",
+              "repair",
+              "replacement",
+              "refund",
+              "investigation",
+              "acknowledgement",
+              "other",
+              "unknown"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Request Types",
+          "type": "array"
+        },
+        "complaint_status": {
+          "enum": [
+            "current_unresolved",
+            "resolved",
+            "no_complaint",
+            "unknown"
+          ],
+          "title": "Complaint Status",
+          "type": "string"
+        },
+        "mentioned_store": {
+          "minLength": 1,
+          "title": "Mentioned Store",
+          "type": "string"
+        },
+        "store_verification": {
+          "enum": [
+            "mentioned_only",
+            "uncertain_mention",
+            "unknown",
+            "unavailable"
+          ],
+          "title": "Store Verification",
+          "type": "string"
+        },
+        "contact_channel": {
+          "enum": [
+            "email",
+            "phone",
+            "chat",
+            "in_person",
+            "other",
+            "unknown",
+            "unavailable"
+          ],
+          "title": "Contact Channel",
+          "type": "string"
+        },
+        "purchase_channel": {
+          "enum": [
+            "online",
+            "physical_store",
+            "phone",
+            "other",
+            "unknown",
+            "unavailable"
+          ],
+          "title": "Purchase Channel",
+          "type": "string"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "suggested_reply": {
+          "minLength": 1,
+          "title": "Suggested Reply",
+          "type": "string"
+        },
+        "issues": {
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Issues",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/Relation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "compatibility_origin": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AnalysisResult"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "sentiment",
+        "urgency",
+        "request_types",
+        "complaint_status",
+        "mentioned_store",
+        "store_verification",
+        "contact_channel",
+        "purchase_channel",
+        "summary",
+        "suggested_reply",
+        "issues"
+      ],
+      "title": "AnalysisV3",
+      "type": "object"
+    },
+    "EmailInput": {
+      "additionalProperties": false,
+      "properties": {
+        "email_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Email Id",
+          "type": "string"
+        },
+        "subject": {
+          "maxLength": 2000,
+          "title": "Subject",
+          "type": "string"
+        },
+        "body": {
+          "maxLength": 100000,
+          "minLength": 1,
+          "title": "Body",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_id",
+        "subject",
+        "body"
+      ],
+      "title": "EmailInput",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "subject",
+            "body"
+          ],
+          "title": "Field",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Issue": {
+      "additionalProperties": false,
+      "properties": {
+        "issue_id": {
+          "minLength": 1,
+          "title": "Issue Id",
+          "type": "string"
+        },
+        "object_type": {
+          "enum": [
+            "product",
+            "service",
+            "unknown"
+          ],
+          "title": "Object Type",
+          "type": "string"
+        },
+        "object_name": {
+          "minLength": 1,
+          "title": "Object Name",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "Beauty/Personal Care",
+            "Clothing",
+            "Electronics",
+            "Food/Beverage",
+            "Furniture",
+            "Home Appliances",
+            "Service/Other",
+            "Sports/Outdoor",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "issue_kind": {
+          "enum": [
+            "complaint",
+            "inquiry",
+            "praise",
+            "other",
+            "unknown"
+          ],
+          "title": "Issue Kind",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "product quality",
+            "delivery delay",
+            "customer service",
+            "wrong item",
+            "after-sales service",
+            "health or safety issue",
+            "refund request",
+            "size/fit issue",
+            "none",
+            "other",
+            "unknown"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "sentiment": {
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unknown"
+          ],
+          "title": "Sentiment",
+          "type": "string"
+        },
+        "urgency": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ],
+          "title": "Urgency",
+          "type": "string"
+        },
+        "resolution": {
+          "enum": [
+            "unresolved",
+            "resolved",
+            "not_applicable",
+            "unknown"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "business_process": {
+          "enum": [
+            "product issue",
+            "store service issue",
+            "delivery/logistics issue",
+            "customer service response issue",
+            "refund/exchange process issue",
+            "unclear",
+            "none",
+            "unknown"
+          ],
+          "title": "Business Process",
+          "type": "string"
+        },
+        "routing_team": {
+          "enum": [
+            "product_support",
+            "store_operations",
+            "customer_support",
+            "logistics",
+            "refunds",
+            "unassigned",
+            "none"
+          ],
+          "title": "Routing Team",
+          "type": "string"
+        },
+        "attribution_certainty": {
+          "enum": [
+            "reported",
+            "inferred",
+            "unclear",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Attribution Certainty",
+          "type": "string"
+        },
+        "missing_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Evidence",
+          "type": "array"
+        },
+        "responsibility": {
+          "const": "unverified",
+          "default": "unverified",
+          "title": "Responsibility",
+          "type": "string"
+        },
+        "customer_requests": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Customer Requests",
+          "type": "array"
+        },
+        "customer_importance": {
+          "enum": [
+            "primary",
+            "secondary",
+            "equal",
+            "unspecified"
+          ],
+          "title": "Customer Importance",
+          "type": "string"
+        },
+        "importance_evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Importance Evidence",
+          "type": "array"
+        },
+        "handling_priority": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Handling Priority"
+        },
+        "priority_rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Priority Rationale"
+        },
+        "extraction_basis": {
+          "default": "native",
+          "enum": [
+            "native",
+            "v2_projection"
+          ],
+          "title": "Extraction Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "issue_id",
+        "object_type",
+        "object_name",
+        "category",
+        "issue_kind",
+        "reason",
+        "sentiment",
+        "urgency",
+        "resolution",
+        "evidence",
+        "business_process",
+        "routing_team",
+        "attribution_certainty",
+        "missing_evidence",
+        "customer_requests",
+        "customer_importance",
+        "importance_evidence"
+      ],
+      "title": "Issue",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "from_issue": {
+          "title": "From Issue",
+          "type": "string"
+        },
+        "to_issue": {
+          "title": "To Issue",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "equal_importance",
+            "reported_dependency"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "from_issue",
+        "to_issue",
+        "kind",
+        "evidence"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "RunConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "default": "offline_fake",
+          "enum": [
+            "offline_fake",
+            "legacy_mock",
+            "deepseek_live"
+          ],
+          "title": "Backend",
+          "type": "string"
+        },
+        "model_id": {
+          "default": "fixture-fake-v1",
+          "minLength": 1,
+          "title": "Model Id",
+          "type": "string"
+        },
+        "prompt_version": {
+          "default": "offline-demo-v1",
+          "minLength": 1,
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "analysis-v2",
+          "minLength": 1,
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "taxonomy_version": {
+          "default": "research-products-v2",
+          "enum": [
+            "research-products-v2",
+            "complaint-issues-v3"
+          ],
+          "title": "Taxonomy Version",
+          "type": "string"
+        },
+        "prompt_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Hash"
+        },
+        "parameters": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parameters"
+        }
+      },
+      "title": "RunConfig",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Portable typed envelope; AnalysisRun additionally carries attempts/status.",
+  "properties": {
+    "email": {
+      "$ref": "#/$defs/EmailInput"
+    },
+    "input_hash": {
+      "title": "Input Hash",
+      "type": "string"
+    },
+    "config": {
+      "$ref": "#/$defs/RunConfig"
+    },
+    "analysis": {
+      "$ref": "#/$defs/AnalysisV3"
+    },
+    "resolved_model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Resolved Model"
+    }
+  },
+  "required": [
+    "email",
+    "input_hash",
+    "config",
+    "analysis"
+  ],
+  "title": "EmailAnalysis",
+  "type": "object"
+}

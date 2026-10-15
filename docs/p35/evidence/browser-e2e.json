@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED_OFFLINE_V3_SLICE",
+  "run_id": "252699bd-8888-4fab-a305-c3d6c802dd8f",
+  "steps": [
+    "Browser submit explicit two-issue fixture",
+    "Repeat submit retains one run",
+    "Restart Streamlit process and reload same URL/run",
+    "Reopen by run ID",
+    "Customer importance equal for both; handling order 1 and 2; responsibility unverified",
+    "1 email revision / 2 issues",
+    "Download statistics and verify counts and stored run",
+    "Select Chinese long candidate P35-148 in v1 pool",
+    "Download pending review draft; no reviewer or approval fabricated",
+    "Final candidate v2 P35-172 opened; downloaded pending review bound to final dataset hash"
+  ],
+  "limitations": [
+    "Fixture only, not model quality",
+    "Candidate browser check used v1 before editorial quarantine; final v2 retains it excluded",
+    "No P4 approval/sending",
+    "Not a complete batch/live-product browser E2E"
+  ],
+  "statistics_download_sha256": "e350b4730b8480824c0a9f449f656a0051a703129d9b19b004d9ebbf02b7fad5",
+  "review_download_sha256": "713d297678361795b5ac5e8c59a4d6b1d454bb68538d19e686b69eadb7d3b26e",
+  "local_screenshots": [
+    ".local/p35/browser-v3-details.png",
+    ".local/p35/browser-equal-priorities.png",
+    ".local/p35/browser-equal-priorities-final.png"
+  ],
+  "final_candidate_dataset_hash": "c05cc8fae7b65f002847ad685d7fc4adbaac31d4c616031f2f9da5fbcb8b56b3"
+}
