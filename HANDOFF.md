@@ -1,3 +1,17 @@
+# HANDOFF — P3.9-v2 通用紧急度审计与上下文候选待确认
+
+2026-10-16（Asia/Shanghai）。先读`docs/p39/URGENCY_CONTEXT_REVIEW.md`，本机`.local/p39/v2/REPORT.md`及`DECISION_REQUIRED.md`。用户批准新64+原失败1=65计划，明确占1复验余量、剩7不得自动消耗，总上限仍72/¥10；授权条件是契约及比较口径不变，否则先完成离线差异并确认。
+
+- 原枚举other/unknown可表达普通具体咨询low；首真实raw的业务判断可合理，错误是general_help，不能改正确low迎合basis。原raw/SQLite/failed/Prompt/预算全部保留；旧验证器源码不改，首次失败在新候选下仍因不适用basis拒绝，不伪装成功。
+- 审计证实通用刚性问题：引用紧迫词误触邮件级high、重复失败固定medium压过必要期限或不着急。独立`urgency-context-evidence-v1`候选按原文上下文审核basis，保持severe强制high、跨度、关系、状态、发票、语言及完整身份校验；有限程序不是完整语义证明。
+- wire仍analysis-v3.1，字段/枚举/Schema hash不变、SQLite仍2；**接受语义/比较口径改变**，不冒称完全兼容。新profile只在显式离线service/repository使用；旧service/存储/读取/Policy-v2/Prompt及所有原有测试expected保持。付费路径未启用，待研究者确认差异后再接正式付费编排并复验。
+- 28个跨产品/中英文/语境反例＋6类无事实basis负例；全套277/277，17个新增测试方法；64步明确placeholder fake保存/只读重读/幂等成功，语义质量null。A/B共同上下文基础完全相同，B仅追加原获批业务规则，无当前题ID/门店/hash例外。
+- prepared-v2 manifest `9793a27e9b81239e193650de88988f6de295dd840c3164c47d5e74e4ac033100`；新Prompt/hash、政策/源码/用户条件授权/输入白名单均新版本。共享envelope继承旧1次/¥0.041494，不解锁旧账本，当前新reserve0；新64上界¥2.74736，合计¥2.788854，payload最大22303字节。
+- 本轮新增真实模型0次，累计仍1；没有新版8次冒烟或smoke pass、人类批准。NEW_SEMANTIC_HUMAN_JUDGMENT_PENDING / INDEPENDENT_HOLDOUT_PENDING。旧P3.6 243文件/40请求/锁账/24题v1.1与143/168、17/24、29/32保持。.env未改，无邮件发送。
+- 上轮c77ebdc已正常推送，CI38882302276成功；本轮新交付及CI见本机最终Git收据。不得自动创建比较口径批准或新版冒烟内容安全批准。
+
+---
+
 # HANDOFF — P3.9 真实A/B预检与首请求失败停止
 
 2026-10-16（Asia/Shanghai）。先读`docs/p39/VERIFICATION.md`、`REPRODUCE.md`，完整本机`.local/p39/REPORT.md`。本轮明确72次/10元授权，64计划+8非自动复验余量；不能复用/重置旧账本。
