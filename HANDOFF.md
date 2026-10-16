@@ -1,3 +1,16 @@
+# HANDOFF — P3.9 真实A/B预检与首请求失败停止
+
+2026-10-16（Asia/Shanghai）。先读`docs/p39/VERIFICATION.md`、`REPRODUCE.md`，完整本机`.local/p39/REPORT.md`。本轮明确72次/10元授权，64计划+8非自动复验余量；不能复用/重置旧账本。
+
+- CONTENT_POLICY_OWNER_APPROVED / CONTENT_DEV_EXPERT_ADJUDICATED：附件22成功×18维/2失败/6规则与本机run/input/output、正文/摘要/回复逐项核验；独立`content-adjudication-v1`归档。身份是研究者批准政策+助手专家应用，非真人盲标/独立Gold。
+- AB_PREFLIGHT_VERIFIED：P3.8 final-v4固定32输入/64交错步骤不变；P3.9新manifest/配置/源码/依赖/Prompt/tokenizer/用户授权hash。A逐字保留迁移版A，B追加六项通用内容规则；同analysis-v3.1和正式处理链。官网当前deepseek-flash、DeepSeek-V4.1-Flash、高峰未命中¥2/¥8每百万token留存。64预留上界¥2.704864，最大payload20535字节。
+- AB_SMOKE_STOPPED_BEFORE_GATE：首A请求`p25-product`收到内容，但low+general_help跨字段矛盾，被原契约拒绝；真实账本1次、halted=failure_requires_review。合法JSON/Schema形状与三处原文跨度均通过，不能当作语义/契约接受。raw、SQLite和failed不改；内存诊断basis=other可过原链路，仅定位根因。
+- 实际3427+649=4076 tokens；估算¥0.012046、保守预留¥0.041494、实际账单null；无重试/fallback/复验。没有smoke pass或真人批准，剩余63个计划请求未尝试（7冒烟+56remaining）。失败审核包含原邮件、raw分析/摘要/回复/证据及新18维AI候选；`stop-receipt-v1.json`不能批准remaining。
+- AB_REMAINING_PENDING / NEW_SEMANTIC_HUMAN_JUDGMENT_PENDING / INDEPENDENT_HOLDOUT_PENDING。若继续须研究者明确复验或新版范围；新版本仍累计本轮72/10，不能新账本重置预算。AI不得代签4对内容安全批准。
+- 离线259/259+新增失败回归1/1；portable165/165+同新增1/1；旧247/153保持。P3.6全部40次、24题v1.1、143/168、17/24、29/32及旧资产hash不变；.env未改。未发送真实邮件。Git交付仅源码/测试/脱敏说明，见本机最终收据。
+
+---
+
 # HANDOFF — P3.8 Research Policy v2 / v3.1 / Dataset Adoption
 
 2026-10-16（Asia/Shanghai）。先读 `docs/p38/VERIFICATION.md`、`COMPATIBILITY.md`、`AB_PLAN.md`、`REPRODUCE.md`。完整研究材料在 `.local/p38/REPORT.md`；本轮新真实模型请求0次、费用0元。
