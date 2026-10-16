@@ -3,7 +3,7 @@ import asyncio
 import os
 from dataclasses import dataclass, field
 from src.application.live_prompt import PROMPT_HASH, PROMPT_VERSION, messages
-from src.domain.contracts import RunConfig
+from src.domain.contracts import RunConfig,RunConfigV31
 
 class LiveError(Exception):
     def __init__(self,kind):
@@ -56,14 +56,26 @@ class DeepSeekAnalyzer:
         elif prompt_profile=='multi-issue-v3-pilot-3':
             from src.application import v3_pilot_prompt3 as candidate
             self.messages=candidate.messages;version=candidate.PROMPT_VERSION;prompt_hash=candidate.PROMPT_HASH
+        elif prompt_profile in ('multi-issue-v31-A','multi-issue-v31-B'):
+            from src.application import v31_prompt
+            arm=prompt_profile[-1]
+            self.messages=lambda email,repair=False:v31_prompt.messages(email,arm,repair)
+            version='complaint-v31-'+arm+'-1';prompt_hash=v31_prompt.prompt_hash(arm)
         else:
             raise LiveError('configuration_error')
-        self.config=RunConfig(backend=self.backend,model_id=self.model_id,prompt_version=version,prompt_hash=prompt_hash,
-            schema_version='analysis-v3' if prompt_profile in ('multi-issue-v3','multi-issue-v3-pilot-2','multi-issue-v3-pilot-3') else 'analysis-v2',
-            taxonomy_version='complaint-issues-v3' if prompt_profile in ('multi-issue-v3','multi-issue-v3-pilot-2','multi-issue-v3-pilot-3') else 'research-products-v2',
+        Config=RunConfigV31 if prompt_profile.startswith('multi-issue-v31-') else RunConfig
+        self.config=Config(backend=self.backend,model_id=self.model_id,prompt_version=version,prompt_hash=prompt_hash,
+            schema_version='analysis-v3.1' if prompt_profile.startswith('multi-issue-v31-') else 'analysis-v3' if prompt_profile in ('multi-issue-v3','multi-issue-v3-pilot-2','multi-issue-v3-pilot-3') else 'analysis-v2',
+            taxonomy_version='complaint-issues-v3.1' if prompt_profile.startswith('multi-issue-v31-') else 'complaint-issues-v3' if prompt_profile in ('multi-issue-v3','multi-issue-v3-pilot-2','multi-issue-v3-pilot-3') else 'research-products-v2',
             parameters=dict(temperature=0,thinking='disabled',response_format='json_object',max_tokens=settings.max_tokens,
                             sdk_max_retries=0,http_timeout=settings.http_timeout,deadline=settings.deadline,max_attempts=settings.max_attempts,
                             endpoint=settings.endpoint+'/chat/completions'))
+
+        if prompt_profile.startswith('multi-issue-v31-'):
+            from src.domain.analysis_v31 import POLICY,PROJECTION
+            from src.application.reply_review import VERSION
+            self.config=self.config.model_copy(update={'parameters':dict(self.config.parameters,
+                policy_version=POLICY,projection_policy=PROJECTION,reply_gate_version=VERSION)})
 
     def make_client(self,timeout):
         import httpx

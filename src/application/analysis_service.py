@@ -21,10 +21,24 @@ class AnalysisService:
             raise ValueError('Analyzer identity must match requested configuration')
         if analyzer.backend=='deepseek_live' and self.config!=analyzer.config:
             raise ValueError('Live prompt/parameters must match analyzer configuration')
-        if (self.config.schema_version,self.config.taxonomy_version) not in (('analysis-v2','research-products-v2'),('analysis-v3','complaint-issues-v3')):
+        if (self.config.schema_version,self.config.taxonomy_version) not in (('analysis-v2','research-products-v2'),('analysis-v3','complaint-issues-v3'),('analysis-v3.1','complaint-issues-v3.1')):
             raise ValueError('Unsupported schema version')
 
     def validate_result(self,data,email):
+        if self.config.schema_version=='analysis-v3.1':
+            from src.domain.analysis_v31 import AnalysisV31,to_v2,POLICY,PROJECTION
+            from src.domain.contracts import digest
+            from src.application.reply_review import check,VERSION
+            params=self.config.parameters or {}
+            if params.get('policy_version')!=POLICY or params.get('projection_policy')!=PROJECTION or params.get('reply_gate_version')!=VERSION:
+                raise ValueError('Explicit v3.1 policy/projection/gate required')
+            value=AnalysisV31.model_validate(data).validate_input(email)
+            check(value)
+            result,diagnostics=to_v2(value,params['projection_policy'])
+            return result,dict(analysis_v31=value.model_dump(),analysis_v31_hash=digest(value.model_dump()),
+                prediction_kind='raw_provider_prediction',compatibility_diagnostics=diagnostics,
+                projection_kind='deterministic_lossy_projection',projection_hash=digest(result.model_dump()),
+                reply_status='unreviewed_unsent')
         if self.config.schema_version=='analysis-v3':
             from src.domain.analysis_v3 import AnalysisV3,to_v2
             from src.domain.contracts import digest

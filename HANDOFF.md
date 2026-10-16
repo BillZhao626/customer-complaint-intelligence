@@ -1,3 +1,26 @@
+# HANDOFF — P3.8 Research Policy v2 / v3.1 / Dataset Adoption
+
+2026-10-16（Asia/Shanghai）。先读 `docs/p38/VERIFICATION.md`、`COMPATIBILITY.md`、`AB_PLAN.md`、`REPRODUCE.md`。完整研究材料在 `.local/p38/REPORT.md`；本轮新真实模型请求0次、费用0元。
+
+- POLICY_V2_OWNER_APPROVED / SCHEMA_EVOLUTION_VERIFIED：研究者八项未来政策已冻结；analysis-v3.1 / complaint-issues-v3.1使用独立RunConfigV31，原v3源码、严格安全规则和导出Schema不变。严重潜在伤害high，普通抽屉碰撞可medium；风险/紧急度证据、客户主次/业务顺序分离，发票客服协调与有损投影有诊断。
+- DATASET_ADOPTION_VERIFIED：最终 `.local/p38/prepared-final-v4/`，183历史版本、172当前，159自然/1对抗/12质量隔离，11旧文superseded保留；20保留、11获批改写、P35-073隔离，32回执，128自然质量待审。所有159自然候选逐项人工语义审核pending；质量采用不是Gold。原12隔离和11旧文均可读。
+- E2E_OFFLINE_VERIFIED：最终247/247本机、153/153 portable，旧200/110测试ID保留；64/64明确fake流程演练，正式service→SQLite→重读，实际浏览器验证1邮件/3Issue、风险medium、发票customer_support、未核实责任、刷新/幂等、隔离队列和unsigned下载。fake不证明模型理解正确。
+- HUMAN_CONTENT_REVIEW_PENDING：22成功×18维AI意见及引用、2失败单列。审核入口Single Analysis→P3.8；本机 `CONTENT_REVIEW24_V2.md`、`prepared-final-v4/semantic-review-v2.json`，真人分数/关键错误确认仍null。11改写逐条语义比较在 `ADOPTION11.md`，不继承旧参考或预测。
+- 原P3.6 40次原始JSON/SQLite/Prompt/input/config/output/预算只读复验；锁止authorization_limit，143/168、17/24、29/32及24题v1.1不变。.env原LLM_ENABLE_API=true仍在，必须显式离线入口；历史资产hash保护报告在本机。
+- REAL_MODEL_AB_PENDING：采用同v3.1方案二。A由旧draft-v3最小迁移，B追加业务检查，A不是旧冻结Prompt。32输入/64交错步骤、新白名单/配置/处理链hash、零授权预检可执行。未来72次/10元只是建议，必须新明确授权、官方价格/模型核查、独立P3.8账本、4对冒烟及研究者内容安全复核；未知发送/用量费用异常/身份漂移立即停。不能复用旧40次账本。
+- INDEPENDENT_HOLDOUT_PENDING：207节点保守泄漏图5组件，冻结题与候选448主题重合边，不等于已证实同源；精确/近重复/直接来源匹配未发现不能证明独立。全部开发暴露，未登记翻译同源仍需人审。
+
+```powershell
+.\.venv\Scripts\python.exe -B tests/run_offline.py
+.\.venv\Scripts\python.exe -B scripts/run_portable.py
+.\.venv\Scripts\python.exe -B scripts/p38.py prepare --out .local/p38/NEW_PREPARATION
+.\.venv\Scripts\python.exe -B scripts/p38.py preflight --manifest .local/p38/prepared-final-v4/ab-manifest.json
+```
+
+后续待审仅为内容/新版问题参考、128条质量、独立Holdout与另行付费授权，不重问八项政策或冻结24题。没有真实邮件发送、CRM扩建、强推、Tag或Release。普通Git只交付源码/测试/脱敏文档；实际SHA与远端/CI收据见本机Git记录。
+
+---
+
 # HANDOFF — P3.7 语义审核准备与定向修复
 
 2026-10-16（Asia/Shanghai）。先读`docs/p37/VERIFICATION.md`、`COMPATIBILITY.md`、`NEXT_AB_PLAN.md`及Git收据。本机总入口`.local/p37/REPORT.md`；当前任务新增DeepSeek请求0次、0元。

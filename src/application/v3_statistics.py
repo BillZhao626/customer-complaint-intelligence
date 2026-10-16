@@ -1,6 +1,6 @@
 """Separate email-revision and issue denominators, with original-run membership."""
 from collections import Counter
-from src.domain.analysis_v3 import stored_analysis
+from src.domain.versioned_analysis import stored_analysis,output_hash
 from src.domain.contracts import digest,idempotency_key
 
 
@@ -38,5 +38,5 @@ def snapshot(runs,cohort_id,dataset_id):
         current_complaints=metric([r.run_id for r,a in good if a.complaint_status=='current_unresolved'],email_ids,'email_revisions'),
         issue_groups=groups,store_groups=stores,
         members=[dict(run_id=r.run_id,email_id=r.email.email_id,input_hash=r.input_hash,cohort_id=r.cohort_id,
-                      output_hash=r.metadata.get('analysis_v3_hash'),subject=r.email.subject,body=r.email.body) for r in rows],
+                      output_hash=output_hash(r),subject=r.email.subject,body=r.email.body) for r in rows],
         superseded_run_ids=[r.run_id for r in selected if r.run_id not in email_ids])

@@ -74,8 +74,8 @@ class Repository:
 
     def save(self,run: AnalysisRun):
         from src.domain.contracts import digest, idempotency_key
-        if run.config.schema_version=='analysis-v3' and run.result:
-            from src.domain.analysis_v3 import stored_analysis
+        if run.config.schema_version in ('analysis-v3','analysis-v3.1') and run.result:
+            from src.domain.versioned_analysis import stored_analysis
             stored_analysis(run)
         if (run.status=='succeeded') != (run.result is not None):
             raise ValueError('Run status/result mismatch')
@@ -112,8 +112,8 @@ class Repository:
             email=dict(email_id=row['email_id'],subject=row['subject'],body=row['body']),input_hash=row['input_hash'],
             config=json.loads(row['config_json']),cohort_id=row['cohort_id'],status=row['execution_state'] or row['status'],created_at=row['created_at'],metadata=json.loads(row['metadata_json']),
             result=json.loads(result[0]) if result else None,attempts=[json.loads(a[0]) for a in attempts]))
-        if run.config.schema_version=='analysis-v3' and run.result:
-            from src.domain.analysis_v3 import stored_analysis
+        if run.config.schema_version in ('analysis-v3','analysis-v3.1') and run.result:
+            from src.domain.versioned_analysis import stored_analysis
             stored_analysis(run)
         return run
 
@@ -153,8 +153,8 @@ class Repository:
         if status not in ('succeeded','failed','interrupted_or_unknown') or (status=='succeeded')!=(result is not None):
             raise ValueError('Invalid terminal state')
         current=self.get(run_id)
-        if current and current.config.schema_version=='analysis-v3' and result:
-            from src.domain.analysis_v3 import stored_analysis
+        if current and current.config.schema_version in ('analysis-v3','analysis-v3.1') and result:
+            from src.domain.versioned_analysis import stored_analysis
             stored_analysis(current.model_copy(update={'status':status,'result':result,'metadata':metadata}))
         with self.connect() as conn:
             conn.execute('BEGIN IMMEDIATE')

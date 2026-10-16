@@ -1,0 +1,529 @@
+{
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "subject",
+            "body"
+          ],
+          "title": "Field",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "IssueV31": {
+      "additionalProperties": false,
+      "properties": {
+        "issue_id": {
+          "minLength": 1,
+          "title": "Issue Id",
+          "type": "string"
+        },
+        "object_type": {
+          "enum": [
+            "product",
+            "service",
+            "unknown"
+          ],
+          "title": "Object Type",
+          "type": "string"
+        },
+        "object_name": {
+          "minLength": 1,
+          "title": "Object Name",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "Beauty/Personal Care",
+            "Clothing",
+            "Electronics",
+            "Food/Beverage",
+            "Furniture",
+            "Home Appliances",
+            "Service/Other",
+            "Sports/Outdoor",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "issue_kind": {
+          "enum": [
+            "complaint",
+            "inquiry",
+            "praise",
+            "other",
+            "unknown"
+          ],
+          "title": "Issue Kind",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "product quality",
+            "delivery delay",
+            "customer service",
+            "wrong item",
+            "after-sales service",
+            "health or safety issue",
+            "refund request",
+            "size/fit issue",
+            "none",
+            "other",
+            "unknown",
+            "billing/invoice issue"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "sentiment": {
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unknown"
+          ],
+          "title": "Sentiment",
+          "type": "string"
+        },
+        "urgency": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ],
+          "title": "Urgency",
+          "type": "string"
+        },
+        "resolution": {
+          "enum": [
+            "unresolved",
+            "resolved",
+            "not_applicable",
+            "unknown"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "business_process": {
+          "enum": [
+            "product issue",
+            "store service issue",
+            "delivery/logistics issue",
+            "customer service response issue",
+            "refund/exchange process issue",
+            "unclear",
+            "none",
+            "unknown",
+            "billing/invoice issue"
+          ],
+          "title": "Business Process",
+          "type": "string"
+        },
+        "routing_team": {
+          "enum": [
+            "product_support",
+            "store_operations",
+            "customer_support",
+            "logistics",
+            "refunds",
+            "unassigned",
+            "none"
+          ],
+          "title": "Routing Team",
+          "type": "string"
+        },
+        "attribution_certainty": {
+          "enum": [
+            "reported",
+            "inferred",
+            "unclear",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Attribution Certainty",
+          "type": "string"
+        },
+        "missing_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Evidence",
+          "type": "array"
+        },
+        "responsibility": {
+          "const": "unverified",
+          "default": "unverified",
+          "title": "Responsibility",
+          "type": "string"
+        },
+        "customer_requests": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Customer Requests",
+          "type": "array"
+        },
+        "customer_importance": {
+          "enum": [
+            "primary",
+            "secondary",
+            "equal",
+            "unspecified"
+          ],
+          "title": "Customer Importance",
+          "type": "string"
+        },
+        "importance_evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Importance Evidence",
+          "type": "array"
+        },
+        "handling_priority": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Handling Priority"
+        },
+        "priority_rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Priority Rationale"
+        },
+        "extraction_basis": {
+          "default": "native",
+          "enum": [
+            "native",
+            "v2_projection"
+          ],
+          "title": "Extraction Basis",
+          "type": "string"
+        },
+        "risk_level": {
+          "enum": [
+            "severe",
+            "minor",
+            "none",
+            "unknown"
+          ],
+          "title": "Risk Level",
+          "type": "string"
+        },
+        "risk_evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Risk Evidence",
+          "type": "array"
+        },
+        "risk_rationale": {
+          "minLength": 1,
+          "title": "Risk Rationale",
+          "type": "string"
+        },
+        "urgency_basis": {
+          "enum": [
+            "general_help",
+            "explicit_urgent",
+            "explicit_relaxed",
+            "repeated_failure",
+            "safety",
+            "other",
+            "unknown"
+          ],
+          "title": "Urgency Basis",
+          "type": "string"
+        },
+        "urgency_evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Urgency Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "issue_id",
+        "object_type",
+        "object_name",
+        "category",
+        "issue_kind",
+        "reason",
+        "sentiment",
+        "urgency",
+        "resolution",
+        "evidence",
+        "business_process",
+        "routing_team",
+        "attribution_certainty",
+        "missing_evidence",
+        "customer_requests",
+        "customer_importance",
+        "importance_evidence",
+        "risk_level",
+        "risk_evidence",
+        "risk_rationale",
+        "urgency_basis",
+        "urgency_evidence"
+      ],
+      "title": "IssueV31",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "from_issue": {
+          "title": "From Issue",
+          "type": "string"
+        },
+        "to_issue": {
+          "title": "To Issue",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "equal_importance",
+            "reported_dependency"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "from_issue",
+        "to_issue",
+        "kind",
+        "evidence"
+      ],
+      "title": "Relation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "analysis-v3.1",
+      "default": "analysis-v3.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "taxonomy_version": {
+      "const": "complaint-issues-v3.1",
+      "default": "complaint-issues-v3.1",
+      "title": "Taxonomy Version",
+      "type": "string"
+    },
+    "sentiment": {
+      "enum": [
+        "positive",
+        "neutral",
+        "negative",
+        "mixed",
+        "unknown"
+      ],
+      "title": "Sentiment",
+      "type": "string"
+    },
+    "urgency": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ],
+      "title": "Urgency",
+      "type": "string"
+    },
+    "request_types": {
+      "items": {
+        "enum": [
+          "information",
+          "repair",
+          "replacement",
+          "refund",
+          "investigation",
+          "acknowledgement",
+          "other",
+          "unknown"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Request Types",
+      "type": "array"
+    },
+    "complaint_status": {
+      "enum": [
+        "current_unresolved",
+        "resolved",
+        "no_complaint",
+        "unknown"
+      ],
+      "title": "Complaint Status",
+      "type": "string"
+    },
+    "mentioned_store": {
+      "minLength": 1,
+      "title": "Mentioned Store",
+      "type": "string"
+    },
+    "store_verification": {
+      "enum": [
+        "mentioned_only",
+        "uncertain_mention",
+        "unknown",
+        "unavailable"
+      ],
+      "title": "Store Verification",
+      "type": "string"
+    },
+    "contact_channel": {
+      "enum": [
+        "email",
+        "phone",
+        "chat",
+        "in_person",
+        "other",
+        "unknown",
+        "unavailable"
+      ],
+      "title": "Contact Channel",
+      "type": "string"
+    },
+    "purchase_channel": {
+      "enum": [
+        "online",
+        "physical_store",
+        "phone",
+        "other",
+        "unknown",
+        "unavailable"
+      ],
+      "title": "Purchase Channel",
+      "type": "string"
+    },
+    "summary": {
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "suggested_reply": {
+      "minLength": 1,
+      "title": "Suggested Reply",
+      "type": "string"
+    },
+    "issues": {
+      "items": {
+        "$ref": "#/$defs/IssueV31"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Issues",
+      "type": "array"
+    },
+    "relations": {
+      "items": {
+        "$ref": "#/$defs/Relation"
+      },
+      "title": "Relations",
+      "type": "array"
+    },
+    "compatibility_origin": {
+      "default": null,
+      "title": "Compatibility Origin",
+      "type": "null"
+    },
+    "policy_version": {
+      "const": "research-owner-policy-v2",
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "reply_language": {
+      "enum": [
+        "en",
+        "zh",
+        "bilingual",
+        "unknown"
+      ],
+      "title": "Reply Language",
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "urgency",
+    "request_types",
+    "complaint_status",
+    "mentioned_store",
+    "store_verification",
+    "contact_channel",
+    "purchase_channel",
+    "summary",
+    "suggested_reply",
+    "issues",
+    "policy_version",
+    "reply_language"
+  ],
+  "title": "AnalysisV31",
+  "type": "object"
+}

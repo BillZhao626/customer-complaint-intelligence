@@ -6,6 +6,9 @@ from src.application.v3_statistics import snapshot
 
 
 def show_v3(run,key_prefix='v3'):
+    if run.config.schema_version=='analysis-v3.1':
+        from src.app.v31_workspace import show_v31
+        return show_v31(run,key_prefix)
     value=stored_analysis(run)
     st.subheader('Analysis-v3: issue details')
     st.caption('Customer importance and suggested handling order are separate. Routing is not verified responsibility. Draft is unsent and unreviewed.')
@@ -68,6 +71,8 @@ def render_v3_demo(root):
     from src.application.analysis_service import AnalysisService
     from src.infrastructure.repository import Repository
     from src.infrastructure.dashboard_sources import ReadOnlyRepository
+    from src.app.v31_workspace import render
+    render(root)
     render_candidate_review(root)
     from src.app.semantic_workspace import render_semantic_workspace
     render_semantic_workspace(root)

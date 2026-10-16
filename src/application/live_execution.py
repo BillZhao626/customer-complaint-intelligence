@@ -37,6 +37,9 @@ async def _execute(service,email):
         analyzer.settings.validate()
         if budget is None: raise LiveError('configuration_error')
         budget.verify_config(service.config)
+        if hasattr(budget,'pricing'):
+            pricing=budget.pricing()
+            metadata.update(price_source=pricing['price_source'],price_checked_at=pricing['prices_verified_at'],prices=pricing['prices'])
         budget.acquire(run.run_id,email.input_hash);acquired=True
         for number in range(1,analyzer.settings.max_attempts+1):
             remaining=analyzer.settings.deadline-(time.perf_counter()-start)
@@ -57,8 +60,8 @@ async def _execute(service,email):
                 elapsed=(time.perf_counter()-call_start)*1000
                 attempt=attempt.model_copy(update={'raw_output':raw if isinstance(raw,str) else None,'elapsed_ms':elapsed,
                     'metadata':dict(attempt.metadata,**provider_meta,dispatch='response_received'),'stage':'parse'})
-                cost=estimate_cost(provider_meta);costs.append(cost)
-                attempt=attempt.model_copy(update={'metadata':dict(attempt.metadata,cost_cny=cost,price_source=PRICE_SOURCE)})
+                cost=budget.estimate_cost(provider_meta) if hasattr(budget,'estimate_cost') else estimate_cost(provider_meta);costs.append(cost)
+                attempt=attempt.model_copy(update={'metadata':dict(attempt.metadata,cost_cny=cost,price_source=metadata['price_source'],price_checked_at=metadata['price_checked_at'])})
                 if not isinstance(raw,str) or not raw.strip(): raise LiveError('empty_response')
                 attempt=attempt.model_copy(update={'parse_status':'failed'})
                 try: data=strict_json(raw)
@@ -67,7 +70,7 @@ async def _execute(service,email):
                 try:
                     result,extra=service.validate_result(data,email)
                     metadata.update(extra)
-                    if service.config.schema_version=='analysis-v3':
+                    if service.config.schema_version in ('analysis-v3','analysis-v3.1'):
                         metadata['resolved_model']=provider_meta.get('resolved_model')
                 except (ValueError,TypeError): raise LiveError('raw_schema_invalid') from None
                 attempt=attempt.model_copy(update={'contract_status':'passed','normalization_status':'failed','stage':'normalization'})

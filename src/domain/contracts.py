@@ -56,6 +56,12 @@ def idempotency_key(email: EmailInput, config: RunConfig):
     return digest(dict(email_id=email.email_id,input_hash=email.input_hash,config=config.model_dump(exclude_none=True)))
 
 
+class RunConfigV31(RunConfig):
+    """Separate subtype keeps the frozen v3 envelope JSON Schema byte-equivalent."""
+    schema_version: Literal['analysis-v3.1'] = 'analysis-v3.1'
+    taxonomy_version: Literal['complaint-issues-v3.1'] = 'complaint-issues-v3.1'
+
+
 class AnalysisResult(StrictModel):
     store_location: str = Field(min_length=1)
     product_name: str = Field(min_length=1)
@@ -106,7 +112,7 @@ class AnalysisRun(StrictModel):
     idempotency_key: str
     email: EmailInput
     input_hash: str
-    config: RunConfig
+    config: RunConfig | RunConfigV31
     cohort_id: str
     status: RunStatus
     created_at: str

@@ -18,7 +18,7 @@ def show_run(run):
         label={'offline_fake':'Offline Fake / Demo','legacy_mock':'Legacy Mock / Rules Baseline','deepseek_live':'DeepSeek Live'}[run.config.backend]
         st.success(f'{label} saved successfully.')
         st.json(run.result.model_dump())
-        if run.config.schema_version=='analysis-v3':
+        if run.config.schema_version in ('analysis-v3','analysis-v3.1'):
             from src.app.v3_view import show_v3
             show_v3(run)
     elif run.status in ('running','interrupted_or_unknown'):

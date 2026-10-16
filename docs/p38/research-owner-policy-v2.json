@@ -1,0 +1,18 @@
+{
+  "version": "research-owner-policy-v2",
+  "status": "POLICY_V2_OWNER_APPROVED",
+  "source": "Researcher explicit P3.8 task, 2026-10-16 Asia/Shanghai",
+  "scope": "Future v3.1 only; calibration-decision-v1.1 unchanged",
+  "rules": {
+    "urgency": "General help medium; explicit urgency high; relaxed low absent severe danger; repeated failure usually medium; danger overrides tone; unintelligible unknown.",
+    "events": "Missed promised callback and unanswered warranty are two independently evidenced events; paraphrase alone is one.",
+    "importance": "Follow up together is not equal importance. Drawer, collection and invoice retained; business order separate; dependency needs source.",
+    "safety": "Detached cold saucepan handle and sparks near socket during kettle use severe/high; ordinary drawer collision minor/medium; no injury does not remove severe potential harm.",
+    "billing": "billing/invoice issue -> customer_support coordination; neither refund nor proven fault; v2 other/unclear diagnostic.",
+    "reply": "Main customer language or explicit request; check repeated requests, main request, disclaimers, invented actions, material promises, safety/privacy, all issues separately; unsent/unreviewed.",
+    "adoption": "Adopt approved 11 P3.7 rewrites with new hashes and no inherited references; retain old versions and 20 representatives; 128 pending.",
+    "adversarial": "P35-073 remains adversarial development, excluded from natural email quality denominator."
+  },
+  "human_gold_approval": false,
+  "policy_hash": "c1e56e58427b0677324ef7d61eac023f331e4bfd1a270b192a7d8166c56e5123"
+}
