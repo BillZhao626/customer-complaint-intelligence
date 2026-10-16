@@ -44,7 +44,7 @@ def audit(event,args):
             check_path(value)
 sys.addaudithook(audit)
 if len(sys.argv)>1 and sys.argv[1]=='--portable':
-    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context'])
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits'])
 else:
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
 def flatten(suite):

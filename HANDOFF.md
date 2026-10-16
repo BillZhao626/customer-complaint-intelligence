@@ -1,4 +1,18 @@
-# HANDOFF — P3.9-v2 通用紧急度审计与上下文候选待确认
+# HANDOFF — P3.9-v2 获批接线，真实冒烟第3次失败即停
+
+2026-10-17（Asia/Shanghai）。研究者已明确批准候选9a0e63fb…、差异包a9117074…及urgency-context-evidence-v1接受语义。先读`docs/p39/APPROVED_LIVE_WIRING.md`，本机`.local/p39/v2/live-delivery-v1/REPORT.md`及`review/REVIEW.html`。以下旧待确认说明是历史记录，当前comparison已批准，但没有smoke内容批准。
+
+- 新工程wrapper保留所有获批候选源码/Prompt/配置/32输入/64计划不变；候选manifest仍是历史冻结身份。新增execution_chain/runtime hash绑定正式AnalysisService→原live_execution→原P39传输/SDK请求体审计→显式context验证/SQLite→只读新连接重读。旧service、验证器、存储读取与v1 raw/failed均不改。
+- 预调用全套286/286、干净导出192/192通过；一次并行portable UI30s超时留存，clean串行复验通过。实际官网人民币价输入2/输出8每百万tokens按高峰未命中预留，GET /models确认deepseek-flash可用，非推理探针。无隐藏/应用/修JSON重试。
+- **AB_SMOKE_STOPPED_BEFORE_GATE**：新版仅3次真实请求，2接受/1失败，1完整对；第三条A原文证据/JSON形状通过，context source因repeated_failure依据未匹配拒绝。另发现together→equal、一次服务失约→重复失败、自然不急同义句词汇覆盖边界、回复渠道/联系承诺问题。没有修改规则/Prompt绕过，也未重发。
+- 首对A/B保留neutral/low/no_complaint并正确使用other，旧验证器也接受这两条，不能把成功单独归功于新接受语义；1对不足以证明B更好。全部18维是AI候选，failed仅raw诊断，人工分数/Issue Gold/语义胜负null；新profile仍是有界检查，不是语义证明。
+- 唯一既有`.local/p39/v2/shared-envelope.sqlite3`只追加comparison批准、发送身份/锁、3次经济预留、停止及4条累计usage收据；root、旧失败1次/预留不重建、不重置。现在累计4/72，保守预留¥0.170360；累计19472 tokens、高峰未命中估算¥0.060874，实际账单null。硬剩68请求，计划未尝试61，其他7复验槽不自动使用。
+- 封套halted=failure_requires_review，全部3次已收到响应，未知发送0，lease已结但halt不解除；没有8输出smoke receipt、没有内容批准、没有remaining调用。stop receipt b931cc5322b3c5893f90ddeb662dc092742ff5577467b17bdda0c91305dc48c6不能授权remaining。恢复必须研究者明确决定失败处置/新版差异或有记录复验。
+- 新增7项正式接线测试+4项中英文通用观察限制回归；最终全套290/290，干净导出最终结果及Git/CI见本机REPORT。P3.6整个243文件、旧24题v1.1、143/168、17/24、29/32，P3.9-v1和所有旧候选/报告保留；.env未改，无真实邮件发送。INDEPENDENT_HOLDOUT_PENDING / NEW_SEMANTIC_HUMAN_JUDGMENT_PENDING / AB_REMAINING_PENDING。
+
+---
+
+# HANDOFF — P3.9-v2 通用紧急度审计与上下文候选待确认（历史）
 
 2026-10-16（Asia/Shanghai）。先读`docs/p39/URGENCY_CONTEXT_REVIEW.md`，本机`.local/p39/v2/REPORT.md`及`DECISION_REQUIRED.md`。用户批准新64+原失败1=65计划，明确占1复验余量、剩7不得自动消耗，总上限仍72/¥10；授权条件是契约及比较口径不变，否则先完成离线差异并确认。
 
