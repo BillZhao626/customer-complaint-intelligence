@@ -5,8 +5,8 @@
 - 原枚举other/unknown可表达普通具体咨询low；首真实raw的业务判断可合理，错误是general_help，不能改正确low迎合basis。原raw/SQLite/failed/Prompt/预算全部保留；旧验证器源码不改，首次失败在新候选下仍因不适用basis拒绝，不伪装成功。
 - 审计证实通用刚性问题：引用紧迫词误触邮件级high、重复失败固定medium压过必要期限或不着急。独立`urgency-context-evidence-v1`候选按原文上下文审核basis，保持severe强制high、跨度、关系、状态、发票、语言及完整身份校验；有限程序不是完整语义证明。
 - wire仍analysis-v3.1，字段/枚举/Schema hash不变、SQLite仍2；**接受语义/比较口径改变**，不冒称完全兼容。新profile只在显式离线service/repository使用；旧service/存储/读取/Policy-v2/Prompt及所有原有测试expected保持。付费路径未启用，待研究者确认差异后再接正式付费编排并复验。
-- 28个跨产品/中英文/语境反例＋6类无事实basis负例；全套277/277，17个新增测试方法；64步明确placeholder fake保存/只读重读/幂等成功，语义质量null。A/B共同上下文基础完全相同，B仅追加原获批业务规则，无当前题ID/门店/hash例外。
-- prepared-v2 manifest `9793a27e9b81239e193650de88988f6de295dd840c3164c47d5e74e4ac033100`；新Prompt/hash、政策/源码/用户条件授权/输入白名单均新版本。共享envelope继承旧1次/¥0.041494，不解锁旧账本，当前新reserve0；新64上界¥2.74736，合计¥2.788854，payload最大22303字节。
+- 28个跨产品/中英文/语境反例＋6类无事实basis负例；最终全套279/279、干净导出portable185/185，19个新增测试方法，旧260/166测试ID保持；64步明确placeholder fake保存/只读重读/幂等成功，语义质量null。A/B共同上下文基础完全相同，B仅追加原获批业务规则，无当前题ID/门店/hash例外。
+- 最终prepared-v3 manifest `9a0e63fb494b7e926ac890438155ada2fb730953ba82b26c74a5a06eaf8b499b`；prepared-v2过程版保留。新Prompt/hash、政策/源码/用户条件授权/输入白名单均新版本。共享envelope继承旧1次/¥0.041494，不解锁旧账本，当前新reserve0；只允许唯一固定预算路径，候选身份修订追加记录，不能复制新额度；新64上界¥2.74736，合计¥2.788854，payload最大22303字节。
 - 本轮新增真实模型0次，累计仍1；没有新版8次冒烟或smoke pass、人类批准。NEW_SEMANTIC_HUMAN_JUDGMENT_PENDING / INDEPENDENT_HOLDOUT_PENDING。旧P3.6 243文件/40请求/锁账/24题v1.1与143/168、17/24、29/32保持。.env未改，无邮件发送。
 - 上轮c77ebdc已正常推送，CI38882302276成功；本轮新交付及CI见本机最终Git收据。不得自动创建比较口径批准或新版冒烟内容安全批准。
 

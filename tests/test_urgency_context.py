@@ -163,7 +163,7 @@ class EnvelopeTests(unittest.TestCase):
     def build(self,td):
         root=Path(td);old=root/'old.sqlite3';prior_fixture(old)
         m=dict(manifest_hash='fixture-new',parent_v1_manifest_hash='fixture-parent')
-        req=dict(user_evidence='OFFLINE FIXTURE ONLY',user_evidence_sha256=sha256(b'OFFLINE FIXTURE ONLY').hexdigest(),combined_planned_requests=65,explicit_extra_allowance=1)
+        req=dict(user_evidence='OFFLINE FIXTURE ONLY',user_evidence_sha256=sha256(b'OFFLINE FIXTURE ONLY').hexdigest(),combined_planned_requests=65,explicit_extra_allowance=1,offline_test_fixture=True)
         b=P39Envelope.create(root/'new.sqlite3',old,m,req)
         review=dict(status='researcher_approved_comparison_change',reviewer='OFFLINE FIXTURE',manifest_hash='fixture-new',user_approval_evidence='SIMULATED OFFLINE TEST')
         return b,old,review
@@ -208,3 +208,25 @@ class EnvelopeTests(unittest.TestCase):
             self.assertEqual(b.summary()['shared_requests'],65)
             with self.assertRaises(PermissionError):b.reserve('unapproved-extra',.04)
             self.assertAlmostEqual(b.summary()['shared_reserved_upper_cny'],.04*65)
+
+    def test_production_allowance_cannot_be_cloned_to_another_path(self):
+        with tempfile.TemporaryDirectory() as td:
+            b,old,review=self.build(td)
+            with b.connection() as c:
+                m=json.loads(c.execute('SELECT manifest FROM root').fetchone()[0]);req=json.loads(c.execute('SELECT request FROM root').fetchone()[0])
+            req['offline_test_fixture']=False
+            target=Path(td)/'clone.sqlite3'
+            with self.assertRaises(PermissionError):P39Envelope.create(target,old,m,req)
+            self.assertFalse(target.exists())
+
+    def test_offline_candidate_revision_is_append_only_and_preserves_spend(self):
+        with tempfile.TemporaryDirectory() as td:
+            b,old,review=self.build(td)
+            with b.connection() as c:
+                original=c.execute('SELECT manifest FROM root').fetchone()[0];m=json.loads(original);req=json.loads(c.execute('SELECT request FROM root').fetchone()[0])
+            m['manifest_hash']='fixture-revision';b.register_candidate(m,req)
+            self.assertEqual(b.summary()['shared_requests'],1);self.assertEqual(b.summary()['current_candidate_manifest_hash'],'fixture-revision')
+            with b.connection() as c:self.assertEqual(c.execute('SELECT manifest FROM root').fetchone()[0],original)
+            with self.assertRaises(PermissionError):b.approve(review)
+            review['manifest_hash']='fixture-revision';b.approve(review)
+            with self.assertRaises(PermissionError):b.register_candidate(m,req)

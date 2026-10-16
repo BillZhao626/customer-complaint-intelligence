@@ -24,7 +24,11 @@ def inherited(path):
 
 
 class P39Envelope:
-    def __init__(self,path):self.path=Path(path).resolve(strict=True)
+    def __init__(self,path):
+        self.path=Path(path).resolve(strict=True)
+        with self.connection() as c:request=json.loads(c.execute('SELECT request FROM root').fetchone()[0])
+        canonical=Path(__file__).resolve().parents[2]/'.local/p39/v2/shared-envelope.sqlite3'
+        if not request.get('offline_test_fixture') and self.path!=canonical.resolve():raise PermissionError('Production authorization has exactly one canonical envelope path')
 
     @contextmanager
     def connection(self):
@@ -42,6 +46,8 @@ class P39Envelope:
             or request.get('combined_planned_requests')!=65 or request.get('explicit_extra_allowance')!=1):raise ValueError('Missing real continuation scope evidence')
         if manifest['parent_v1_manifest_hash']!=prior['policy']['experiment']['manifest_hash']:raise ValueError('Wrong prior experiment')
         path=Path(path).resolve();root=Path(__file__).resolve().parents[2]
+        if not request.get('offline_test_fixture') and path!=(root/'.local/p39/v2/shared-envelope.sqlite3').resolve():
+            raise PermissionError('Cannot clone production allowance into another ledger')
         if path.is_relative_to(root) and not path.is_relative_to(root/'.local/p39/v2'):raise ValueError('Envelope must be isolated from historical ledgers')
         path.parent.mkdir(parents=True,exist_ok=True)
         with path.open('xb'):pass
@@ -54,16 +60,34 @@ class P39Envelope:
             for r in prior['rows']:c.execute('INSERT INTO events(kind,run_id,upper_cny,created_at) VALUES(?,?,?,?)',('inherited_v1',r[0],r[3],datetime.now(timezone.utc).isoformat()))
         return cls(path)
 
+    def current_manifest(self,c):
+        if c.execute("SELECT 1 FROM sqlite_master WHERE name='candidate_revisions'").fetchone():
+            row=c.execute('SELECT manifest FROM candidate_revisions ORDER BY id DESC LIMIT 1').fetchone()
+            if row:return json.loads(row[0])
+        return json.loads(c.execute('SELECT manifest FROM root').fetchone()[0])
+
+    def register_candidate(self,manifest,request):
+        """Append an offline candidate identity; never reset root, spend, lease or approval."""
+        with self.connection() as c:
+            c.execute('BEGIN IMMEDIATE')
+            if c.execute("SELECT COUNT(*) FROM events WHERE kind='v2_reserved'").fetchone()[0] or c.execute('SELECT 1 FROM approvals').fetchone() or c.execute('SELECT 1 FROM lease').fetchone():
+                raise PermissionError('Candidate revision forbidden after approval or dispatch')
+            old=self.current_manifest(c);original=json.loads(c.execute('SELECT request FROM root').fetchone()[0])
+            if (request!=original or any(manifest.get(k)!=old.get(k) for k in ('parent_v1_manifest_hash','inputs_hash','schema_hash','urgency_validation_profile'))
+                or manifest.get('schedule')!=old.get('schedule')):raise ValueError('Candidate revision changed inherited scope')
+            c.execute('CREATE TABLE IF NOT EXISTS candidate_revisions(id INTEGER PRIMARY KEY,manifest TEXT,created_at TEXT)')
+            c.execute('INSERT INTO candidate_revisions(manifest,created_at) VALUES(?,?)',(json.dumps(manifest),datetime.now(timezone.utc).isoformat()))
+
     def approve(self,review):
         with self.connection() as c:
-            m=json.loads(c.execute('SELECT manifest FROM root').fetchone()[0]);require_comparison_approval(m,review)
+            m=self.current_manifest(c);require_comparison_approval(m,review)
             c.execute('INSERT INTO approvals VALUES(?,?)',('comparison',json.dumps(review)))
 
     def reserve(self,run_id,upper_cny):
         if type(upper_cny) not in (int,float) or not 0<upper_cny<10:raise ValueError('Positive finite reserve required')
         with self.connection() as c:
             c.execute('BEGIN IMMEDIATE')
-            prior,m=c.execute('SELECT prior,manifest FROM root').fetchone();prior=json.loads(prior);m=json.loads(m)
+            prior=c.execute('SELECT prior FROM root').fetchone()[0];prior=json.loads(prior);m=self.current_manifest(c)
             # Tampering or later writes to the inherited ledger never free allowance.
             if sha256(Path(prior['source_path']).read_bytes()).hexdigest()!=prior['source_sha256']:raise PermissionError('Inherited ledger changed')
             approval=c.execute("SELECT evidence FROM approvals WHERE kind='comparison'").fetchone()
@@ -86,6 +110,7 @@ class P39Envelope:
         with self.connection() as c:
             n,total=c.execute("SELECT COUNT(*),COALESCE(SUM(upper_cny),0) FROM events WHERE kind!='settled'").fetchone()
             return dict(shared_requests=n,shared_reserved_upper_cny=total,inherited_requests=1,new_reserved_requests=n-1,
+                current_candidate_manifest_hash=self.current_manifest(c)['manifest_hash'],
                 hard_requests=72,planned_combined_ceiling=65,hard_cny=10,automatic_extra_retests=0,
                 comparison_approved=bool(c.execute("SELECT 1 FROM approvals WHERE kind='comparison'").fetchone()),
                 active_lease=bool(c.execute('SELECT 1 FROM lease').fetchone()))

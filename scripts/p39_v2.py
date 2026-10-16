@@ -19,6 +19,7 @@ def write(p,value):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','rehearse','preflight']);p.add_argument('--out',type=Path)
+    p.add_argument('--prepared',default='prepared-v2',choices=['prepared-v2','prepared-v3'])
     args=p.parse_args()
     from scripts.p38 import guard
     guard()
@@ -32,13 +33,14 @@ def main():
     sys.addaudithook(protect)
     from src.domain.contracts import EmailInput,digest
     from src.application.p39_v2 import manifest,system,messages,source_hash,ContextOfflineService
-    prepared=research/'prepared-v2'
+    prepared=research/args.prepared
     if args.action=='prepare':
         parent=load(ROOT/'.local/p39/prepared-v1/manifest.json');old_auth=load(ROOT/'.local/p39/prepared-v1/authorization.json')
         from src.application.p39_experiment import preflight as old_preflight,TokenCounter
         old_preflight(parent,old_auth)
         evidence=(research/'user-request-v2.txt').read_text(encoding='utf8');evidence_hash=sha256(evidence.encode('utf8')).hexdigest()
         m=manifest(parent,evidence_hash)
+        m.pop('manifest_hash');m['artifact_revision']=args.prepared;m['manifest_hash']=digest(m)
         price=load(ROOT/'.local/p39/price-model-receipt-v1.json')
         sys.path.insert(0,str(ROOT/'.local/p39/deps'))
         counter=TokenCounter(ROOT/'.local/p39/tokenizer-v4',price['tokenizer_sha256'],price['tokenizer_config_sha256'])
@@ -74,7 +76,10 @@ def main():
             status='CONDITIONAL_SCOPE_APPROVED_COMPARISON_CHANGE_REVIEW_REQUIRED',comparison_approval=None)
         write(prepared/'continuation-evidence.json',request)
         from src.infrastructure.p39_envelope import P39Envelope
-        ledger=P39Envelope.create(research/'shared-envelope.sqlite3',ROOT/'.local/p39/runtime-v1/budget.sqlite3',m,request)
+        envelope=research/'shared-envelope.sqlite3'
+        if envelope.exists():
+            ledger=P39Envelope(envelope);ledger.register_candidate(m,request)
+        else:ledger=P39Envelope.create(envelope,ROOT/'.local/p39/runtime-v1/budget.sqlite3',m,request)
         write(prepared/'envelope-preflight.json',ledger.summary())
         print(json.dumps({k:v for k,v in check.items() if k!='payload_bounds'},ensure_ascii=False))
     else:
