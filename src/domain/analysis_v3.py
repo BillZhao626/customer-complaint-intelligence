@@ -140,6 +140,9 @@ class EmailAnalysis(StrictModel):
 
 
 def to_v2(value: AnalysisV3,policy='customer-primary-v1'):
+    if policy in ('customer-primary-v2-safe','owner-operational-v2-safe'):
+        from src.domain.v3_compatibility import project
+        return project(value,policy)
     if policy not in ('customer-primary-v1','owner-operational-v1'):raise ValueError('Unknown compatibility policy')
     if value.compatibility_origin is not None:
         return value.compatibility_origin,['v2-origin restored; new issue fields unavailable']

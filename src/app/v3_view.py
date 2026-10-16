@@ -5,28 +5,56 @@ from src.domain.analysis_v3 import stored_analysis
 from src.application.v3_statistics import snapshot
 
 
-def show_v3(run):
+def show_v3(run,key_prefix='v3'):
     value=stored_analysis(run)
     st.subheader('Analysis-v3: issue details')
     st.caption('Customer importance and suggested handling order are separate. Routing is not verified responsibility. Draft is unsent and unreviewed.')
+    from src.application.v3_remediation import derive,HANDLING_POLICY
+    from src.application.reply_review import inspect_reply
+    import json
+    modes=['原始模型输出','保守兼容视图','业务兼容视图','已授权业务顺序预览']
+    mode=st.radio('View identity · 原始与派生版本',modes,horizontal=True,key=f'{key_prefix}_view_{run.run_id}')
+    derived=None
+    if mode!=modes[0]:
+        policy='customer-primary-v2-safe' if mode==modes[1] else 'owner-operational-v2-safe'
+        derived=derive(run,policy,HANDLING_POLICY if mode==modes[3] else None)
+        from src.domain.analysis_v3 import AnalysisV3
+        value=AnalysisV3.model_validate(derived['analysis'])
+        st.info('确定性派生视图；原 run、模型输出和历史成绩均未改变。')
+        st.caption(f'Rule: {derived["rule_version"]} · Projection: {policy} · Derived ID: {derived["derived_id"]}')
+        st.write({'v2门店兼容值':derived['projection']['store_location'],'v2业务来源兼容值':derived['projection']['source_attribution']})
+        if derived['changes']:st.write('业务顺序变更（客户重要性保持原文）：',derived['changes'])
+        st.download_button('Download derived view · 独立派生身份',json.dumps(derived,ensure_ascii=False,indent=2),
+            f'{derived["derived_id"]}.json','application/json',key=f'{key_prefix}_derived_{run.run_id}')
     st.write(f'Complaint: {value.complaint_status} · Sentiment: {value.sentiment} · Urgency: {value.urgency}')
     st.caption(f'Store: {value.mentioned_store} ({value.store_verification}) · Contact: {value.contact_channel} · Purchase: {value.purchase_channel}')
     st.write('Summary');st.text(value.summary)
     for issue in sorted(value.issues,key=lambda i:i.handling_priority or 999):
         with st.expander(f'{issue.issue_id}: {issue.object_name}',expanded=True):
-            st.write(f'Customer importance: {issue.customer_importance} · Suggested handling order: {issue.handling_priority or "unspecified"}')
+            left,right=st.columns(2)
+            left.markdown(f'**Customer importance · 客户重要性**\n\n{issue.customer_importance}')
+            right.markdown(f'**Suggested handling order · 业务建议顺序**\n\n{issue.handling_priority or "unspecified"}')
             st.write(f'{issue.reason} · {issue.sentiment} · {issue.urgency} · {issue.resolution}')
-            st.caption(f'Process: {issue.business_process} · Route to: {issue.routing_team} · Attribution: {issue.attribution_certainty} · Responsibility: {issue.responsibility}')
+            certainty={'reported':'客户报告，未核实','inferred':'推断，未核实','unclear':'不明确','unknown':'缺少信息','not_applicable':'不适用'}[issue.attribution_certainty]
+            if issue.attribution_certainty in ('unclear','unknown'):st.warning(f'归属：{certainty}；流程域 {issue.business_process} 不能当成已确定原因。')
+            else:st.caption(f'归属：{certainty} · 流程域：{issue.business_process}')
+            st.caption(f'建议团队：{issue.routing_team} · Responsibility: {issue.responsibility}（没有责任核实证据）')
             if issue.customer_requests:st.write('Customer requests: '+'; '.join(issue.customer_requests))
             if issue.missing_evidence:st.caption('Needs verification: '+'; '.join(issue.missing_evidence))
             if issue.priority_rationale:st.text(issue.priority_rationale)
-            for e in issue.evidence:st.text('Evidence: '+e.quote)
+            st.caption('引用对应本问题的对象/原因/情绪/状态/归属判断；逐字合法与语义支持需要分别审核。')
+            for e in issue.evidence:st.text(f'Evidence · {e.field}[{e.start}:{e.end}]: {e.quote}')
             for e in issue.importance_evidence:st.caption('Customer importance evidence: '+e.quote)
     if value.relations:
         st.write('Issue relations')
         for relation in value.relations:st.write(f'{relation.from_issue} ↔ {relation.to_issue}: {relation.kind}')
     st.warning('Unreviewed reply · 未审核、未发送；无人工批准记录。')
     st.text(value.suggested_reply)
+    screening=inspect_reply(value.suggested_reply)
+    if screening['findings']:
+        st.warning('回复词面复核：'+screening['status']+'；属于新规则诊断，不回写历史通过/失败。')
+        for finding in screening['findings']:st.text(f'{finding["severity"]} · {finding["kind"]}: {finding["quote"]}')
+    else:st.caption('新门禁未检出词面信号；内容仍待人工审，不代表回复正确或已批准。')
     with st.expander('Technical provenance / compatibility'):
         st.json({'run_id':run.run_id,'backend':run.config.backend,'model':run.config.model_id,
                  'resolved_model':run.metadata.get('resolved_model'),'prompt':run.config.prompt_version,
@@ -41,6 +69,8 @@ def render_v3_demo(root):
     from src.infrastructure.repository import Repository
     from src.infrastructure.dashboard_sources import ReadOnlyRepository
     render_candidate_review(root)
+    from src.app.semantic_workspace import render_semantic_workspace
+    render_semantic_workspace(root)
     render_v3_live(root)
     with st.expander('P3.5 multi-issue offline workspace'):
         st.caption('Explicit synthetic fixture, no language-model quality claim. New v3 runs use a separate local database.')
@@ -63,7 +93,7 @@ def render_v3_demo(root):
             if run and run.config.schema_version=='analysis-v3' and run.result:
                 st.caption(f'Run ID: {run.run_id}')
                 st.json({'input_hash':run.input_hash,'config':run.config.model_dump()},expanded=False)
-                st.text(run.email.subject);st.text(run.email.body);show_v3(run)
+                st.text(run.email.subject);st.text(run.email.body);show_v3(run,'demo')
             else: st.warning('No successful v3 result found.')
         runs=[r for r in repo.list_runs() if r.config.schema_version=='analysis-v3']
         if runs:
@@ -163,7 +193,7 @@ def render_v3_live(root):
         st.write(f'真实模型预测 · {run.status} · Run {run.run_id}')
         st.text(run.email.subject);st.text(run.email.body)
         st.caption(f'Tokens: {sum(a.metadata.get("total_tokens") or 0 for a in run.attempts)} · Peak cost estimate: {run.metadata.get("cost_cny")} CNY')
-        if run.result:show_v3(run)
+        if run.result:show_v3(run,'live')
         else:st.warning('模型输出未通过正式契约或调用失败；无可用预测，不能作为正确分析。')
         packet=dict(sample_id=run.email.email_id,run_id=run.run_id,input_hash=run.input_hash,
                     cohort_id=run.cohort_id,output_hash=run.metadata.get('analysis_v3_hash'),

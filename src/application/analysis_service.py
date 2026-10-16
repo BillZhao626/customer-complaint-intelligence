@@ -32,7 +32,7 @@ class AnalysisService:
             value=AnalysisV3.model_validate(data).validate_input(email)
             if value.compatibility_origin is not None:
                 raise ValueError('Providers must produce native v3 output')
-            check_reply(value)
+            check_reply(value,(self.config.parameters or {}).get('reply_gate_version'))
             result,diagnostics=to_v2(value,(self.config.parameters or {}).get('projection_policy','customer-primary-v1'))
             return result,dict(analysis_v3=value.model_dump(),analysis_v3_hash=digest(value.model_dump()),compatibility_diagnostics=diagnostics)
         return AnalysisResult.model_validate(data),{}

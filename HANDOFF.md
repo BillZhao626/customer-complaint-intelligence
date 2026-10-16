@@ -1,3 +1,27 @@
+# HANDOFF — P3.7 语义审核准备与定向修复
+
+2026-10-16（Asia/Shanghai）。先读`docs/p37/VERIFICATION.md`、`COMPATIBILITY.md`、`NEXT_AB_PLAN.md`及Git收据。本机总入口`.local/p37/REPORT.md`；当前任务新增DeepSeek请求0次、0元。
+
+- ENGINEERING_VERIFIED：原165/78基线保留；最终200/200完整离线、110/110 portable，新增32公开工程与3本机资产检查。无Schema/Taxonomy/SQLite迁移，无P4发送。
+- P3.6原40条JSON/SQLite、input/config/cohort/idempotency、Prompt/Schema、raw/parsed/output、白名单和预算全只读核验；143/168、17/24、29/32冻结不改。原账本40次、halted=authorization_limit，未注册配置或重启付费。
+- 新显式customer-primary-v2-safe / owner-operational-v2-safe遮蔽不确定门店及unclear/inferred归属；多个不同未解流程无客户主次时邮件级来源保留unclear。旧v1默认/历史重放均保留，来源不是责任。见兼容说明及反例。
+- 只有显式product-before-store-v1业务政策预览才将可决的equal并列顺序派生为1、2，保留客户equal/引用/关系/责任unverified。派生独立身份、父hash、逐字段原因和规则源码hash；29成功run共87派生见`.local/p37/final-replay-v1`，3失败不制造新预测。前期trial目录仅保留过程证据。
+- gate2否定门禁保持默认；新增gate3-scoped-review opt-in，覆盖中英文否定/转折/模糊物质承诺/已执行动作，词面无信号不等于批准。保存的commitment真实raw正式离线复验通过，原failed不改；另两结构失败仍拒绝。REAL_MODEL_RETEST_PENDING。
+- SEMANTIC_REVIEW_PREPARED：`.local/p37/review-v1/SEMANTIC_REVIEW24.md/json`对应22成功的8维AI意见、2失败不可评分；引用与run/input/config/output/raw绑定，所有human_score=null、reviewer空白。HUMAN_CONTENT_REVIEW_PENDING，不重裁24冻结值，不记入Gold。
+- DATASET_QUALITY_REVIEW_PREPARED：32代表独立评语，建议20保留/11修订/1自然子集隔离，均AI候选；11改写新hash仅提案未启用。完整172来源/原160eligible/12隔离不变，见`.local/p37/dataset-review-v1`。独立Holdout仍pending。
+- 本机`ROOT_CAUSES7.md/json`分六类逐题归因；`RESEARCHER_DECISIONS.md`列5项未来口径/内容/数据待决，无需重签24题。after_sales、urgency默认、问题粒度、原摘要原因等不能靠确定性映射假装模型已修复。
+- UI新增只读历史实验/风险/失败队列→原文→问题卡→AI待审包；原始/派生视图区分、客户重要性/业务顺序两列、证据标签/确定性/建议团队清晰。无新真实调用或发送入口。
+- 下一轮A/B仅提案：64计划、建议未来最多72次/10元，未授权未执行，不延伸P3.6账本。`.env`仍旧LLM_ENABLE_API=true，未修改；用离线入口，勿运行历史API脚本。
+- 起点1962文件hash留存，原P3.6整个243文件范围、预算、Prompt、24题、旧data/outputs、既存未跟踪成果均保护；只允许本轮源码/测试入口/HANDOFF更新。源码/脱敏文档正常Git交付，完整原文/审核包/Gold/账本/密钥不上传。
+
+```powershell
+python -B tests/run_offline.py
+python -B scripts/run_portable.py
+python -B scripts/p37.py replay --out .local/p37/NEW_REPLAY_DIRECTORY
+```
+
+---
+
 # HANDOFF — P3.6 真实v3开发试点
 
 2026-10-15（Asia/Shanghai）。先读 `docs/p36/VERIFICATION.md`、`DESIGN.md`、`REPRODUCE.md` 及Git交付；完整研究证据仅本机 `.local/p36/PILOT_REPORT.md`。

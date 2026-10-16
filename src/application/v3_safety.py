@@ -4,7 +4,11 @@ import re
 GATE_VERSION='v3-draft-gate-2-negation'
 
 
-def check_reply(value):
+def check_reply(value,version=None):
+    if version not in (None,GATE_VERSION):
+        from src.application.reply_review import VERSION,check
+        if version!=VERSION:raise ValueError('Unknown reply gate version')
+        return check(value)
     # Current application has no approval/payment/execution authority. These
     # unqualified claims cannot be emitted even if requested in customer text.
     patterns=[r'(?<!not )(?<!not been )\b(?:refund|compensation) (?:has been |is )?approved\b',
