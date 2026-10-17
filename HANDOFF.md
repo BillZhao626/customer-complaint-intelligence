@@ -1,3 +1,25 @@
+# HANDOFF — P3.9-R3 固定64完成，连续执行验证，Challenger未改善
+
+2026-10-17（Asia/Shanghai）。本轮用户明确授权质量失败继续、8次工程检查点后自动完成固定实验及最多6次独立探索。先读 `docs/p39r3/VERIFICATION.md`、`ROOT_CAUSE_OWNERSHIP.md`、`DESIGN.md`；本机入口 `.local/p39/r3/REPORT.md` 与 `fixed-report-delivery/REVIEW.html`。下方旧人工smoke批准要求仅保留历史，本轮范围以新增授权为准。
+
+- 固定32对64次全部实际尝试：34接受/30拒绝，A、B各17/32；14对双方接受、12对双方拒绝、单方接受各3。64/64严格JSON、61/64发布Schema形状、34/64正式全链接受。失败保留分母，旧3条从未重发。
+- `evaluation-continuity-v1`独立Runner/预算adapter保留冻结manifest `9a0e63fb…`、两Prompt、Schema/profile/正式预测链与输入不变；runtime `9fc19c9b…`。原停止/经济记录只追加，不代签人工内容批准。8尝试检查点4接受/4失败安全通过，再自动执行remaining。质量拒绝继续，未知发送/用量/模型/持久化异常停发。
+- 独立Challenger六例原B1/6接受、C0/6，未证明提升、不晋升、不追加调用。C严重锅柄风险仍severe/high，结构空店名拒绝不能说成危险程度降级。原A/B不回填。错误basis、状态/证据、渠道/未来动作、有限自然语言校验边界仍待解决。
+- 旧24开发参考一致性A90/168、12/24全对；B82/168、10/24全对，固定失败分母保留。新政策/有损投影限制与旧参考比较，非独立准确率。64输出1152维、C6输出108维均助手候选，所有human分数null；Issue Gold/证据语义/摘要回复人工质量pending。
+- 唯一共享封套累计71=旧1+固定64+探索6，全部收到并结算；保留最后1次不自动用。保守预留¥3.058708；343136 Tokens，高峰未命中估算¥0.959884，实际账单null。原root/旧usage/stop/预算及raw保持，追加71条累计usage收据。无重试/fallback/真实邮件发送。
+- 44历史raw只读因果差分完成；同一raw的模型原缺陷、严格拒绝、词汇误拒和Runner权责分别报告。原P3.6 143/168、17/24、29/32及24题v1.1不改。正常拒绝不都等于已证实模型语义错误。
+- 完整离线329/329，旧290测试ID全保留；末次报告补充4项通过，公开/精确HEAD CI见本机最终Git收据。报告任意JSON类型、not_sent分母及探索plan绑定缺口均在离线阶段修复。4380初始文件保护及原封套逐行恢复审计保留，.env未改，原既存未跟踪资产不清理/上传。
+- HUMAN_REVIEW_PENDING / INDEPENDENT_GOLD_PENDING / INDEPENDENT_HOLDOUT_PENDING。代码回滚不回滚经济账本。下一轮不能把保留1次当新授权，不能将已暴露32题改名Holdout。后续独立Gold/holdout及毕业设计路径见 `docs/p39r3/NEXT_PHASE.md`。
+
+```powershell
+python -B tests/run_offline.py
+python -B scripts/run_portable.py
+python -B scripts/p39_continuity.py preflight
+python -B scripts/p39_r3_report.py --out .local/p39/r3/NEW_REPORT
+```
+
+---
+
 # HANDOFF — P3.9-v2 获批接线，真实冒烟第3次失败即停
 
 2026-10-17（Asia/Shanghai）。研究者已明确批准候选9a0e63fb…、差异包a9117074…及urgency-context-evidence-v1接受语义。先读`docs/p39/APPROVED_LIVE_WIRING.md`，本机`.local/p39/v2/live-delivery-v1/REPORT.md`及`review/REVIEW.html`。以下旧待确认说明是历史记录，当前comparison已批准，但没有smoke内容批准。
