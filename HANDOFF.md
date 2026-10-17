@@ -1,3 +1,25 @@
+# HANDOFF — P3.10 全量质量审计与180次验证完成，质量未达标，不晋升
+
+2026-10-17（Asia/Shanghai）。先读 `docs/p310/VERIFICATION.md`、`CAUSAL_OWNERSHIP.md`、`ITERATIONS.md`、`REPRODUCE.md`；完整本机入口 `.local/p310/REPORT.md`。本轮新180次/30元已由研究者明确批准，全部180次收到并结算、锁账。旧P3.9仍71/72，保留1次未动。
+
+- 全部64原文/raw/回复、多重错误与18维候选统一台账完成，原30拒绝/34接受不变；14条有多个独立工程发现。全部人工分数null，不伪签Gold。早期44 raw再次只读核验。
+- D1首轮19/32；D2骨架4/32退化，不晋升。C3显式复用D1首轮，13次独立纠错11接受，工作流30/32；不是32次新的首轮请求。源码/Prompt/计划/raw/回执分版本保留。
+- C3冻结后新40为本开发代理编写的探索性数据，非独立人类holdout。新80初始交错配对：Champion10/40、Challenger3/40；最后23纠错20接受，最终23/40（57.5%），14拒绝因总调用上限未纠错。工作流16改善/3退化、+32.5个百分点，首轮实际退化17.5个百分点；未达70%目标。
+- 已接受纠错仍有折叠车风险minor/medium、预约投诉状态弱化、无时间的delay等语义候选；新冷烤盘未证明安全泛化。HUMAN_GOLD_PENDING / INDEPENDENT_HOLDOUT_PENDING / QUALITY_TARGET_NOT_MET / NO_PROMOTION。原UI/Champion默认不变，候选未启用。
+- 独立Validator v2同64 raw新增3诊断接受、0旧接受丢失；scoped-v3修复后续发现的跨事件借次数误接受及切片越界漏洞，纯离线、未用于付费正式口径。旧v1/v2和原状态保留，不把Validator收益当模型改善。
+- 新封套180 reservation=180 outcome=180真实run，0未知发送/隐式重试/fallback，36显式纠错计数其中。808000 tokens，高峰未命中费用上界估算¥2.306378、实际账单null；生命周期保守预留¥12.508716，halted=authorization_request_limit_180_complete。不借旧1次、不重建预算。
+- 完整358/358、Portable264/264本机无skip；独立新增scoped3/3，当前361唯一ID覆盖、原329全保留。当前portable含新增3；精确Git/CI见本机交付收据。5099初始文件无丢失，只有本交接和测试入口为授权修改；旧资产/.env/账本/既存未跟踪资料保留。无真实邮件发送或外部业务系统变更。
+
+```powershell
+python -B tests/run_offline.py
+python -B scripts/run_portable.py
+python -B scripts/p310.py audit --out .local/p310/NEW_EXCLUSIVE_AUDIT
+```
+
+预算已停，不能继续付费或把旧1次当新授权。保留全部负结果；以后改进须新版本与明确新预算，不能根据新40调完同一候选再声称盲测通过。以下交接原文作为历史保留。
+
+---
+
 # HANDOFF — P3.9-R3 固定64完成，连续执行验证，Challenger未改善
 
 2026-10-17（Asia/Shanghai）。本轮用户明确授权质量失败继续、8次工程检查点后自动完成固定实验及最多6次独立探索。先读 `docs/p39r3/VERIFICATION.md`、`ROOT_CAUSE_OWNERSHIP.md`、`DESIGN.md`；本机入口 `.local/p39/r3/REPORT.md` 与 `fixed-report-delivery/REVIEW.html`。下方旧人工smoke批准要求仅保留历史，本轮范围以新增授权为准。
