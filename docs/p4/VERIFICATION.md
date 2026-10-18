@@ -8,14 +8,14 @@
 |---|---|---|
 |原回归基线|361项通过，无skip|`.local/p311/baseline-regression.log`|
 |扩展完整回归|396项通过，无skip；包含原361个测试及35个产品测试|`.local/p4/full-final-v1.log`、`full-frozen-v2.log`及test-evidence|
-|最终反例修复复验|35项产品测试通过，含5项实际app.py AppTest；新增普通否定责任表达反例|`.local/p4/product-final-v2.log`|
+|最终反例修复复验|35项产品测试通过，含5项实际app.py AppTest；普通否定责任表达及拒绝后间接重开状态反例|`.local/p4/product-final-v3.log`|
 |Portable/CI|原Portable加全部P4产品测试，关闭外网；私有历史缺失明确skip；另跑公开P4纵向demo|`.local/p4/portable-final.log`、精确HEAD GitHub Actions收据|
 |明确语义机制fixture|37条，6机制族；18预期信号、19预期无信号，作者预期FP=0/FN=0|`.local/p4/counterexamples-final.json`；非独立语义统计|
 |来源/政策|14条run/input/raw/状态及附件hash核验；N33未纠错；244同raw分层诊断|`.local/p311/audit-final-v4/audit.json`|
 |纵向服务/SQLite|10条场景，独立连接重读，integrity_check=ok，foreign_key_check空|`.local/p4/demo-v1/acceptance.json`|
 |实际浏览器|普通咨询全流程、退回编辑v2再审并模拟发送、真实风险阻断并拒绝、Dashboard、新tab及真实服务重启恢复|`.local/p4/browser-acceptance.json`与screenshots|
 
-最终小范围修复是在完整回归之后补充普通否定表达，保留所有先前失败日志并对受影响的完整产品路径重跑。冻结源码身份见candidate-manifest，精确Git/CI状态及最终日志以本机交付收据为准。Python内存编译和 `pip check` 通过；不运行历史付费API脚本。
+最终小范围修复是在完整回归之后补充普通否定表达，并阻止已拒绝草稿通过退回状态间接重开审批，保留所有先前失败日志并对受影响的完整产品路径重跑。冻结源码身份见candidate-manifest，精确Git/CI状态及最终日志以本机交付收据为准。Python内存编译和 `pip check` 通过；不运行历史付费API脚本。
 
 ## 用户场景验收矩阵
 

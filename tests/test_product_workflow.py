@@ -114,7 +114,7 @@ class ProductWorkflowTests(unittest.TestCase):
         with self.assertRaises(Conflict):
             self.act(c, 'force_send')
         c = self.act(c, 'reject')
-        for action in ('approve', 'simulate_send'):
+        for action in ('approve', 'simulate_send', 'request_changes'):
             with self.assertRaises(Conflict):
                 self.act(c, action)
         c = self.act(c, 'save_edit', body=c['draft']['body'] + ' A product specialist can verify specifications.')

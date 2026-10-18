@@ -237,6 +237,8 @@ class ProductStore:
                     new_state = 'approved'
                     details['body_hash'] = record['draft']['body_hash']
                 elif action in ('reject', 'request_changes'):
+                    if state == 'rejected' and action == 'request_changes':
+                        raise Conflict('Rejected draft requires a new edited version before review can reopen')
                     if not reason.strip():
                         raise Conflict('Rejection or return requires a reason')
                     new_state = 'rejected' if action == 'reject' else 'changes_requested'
