@@ -1,5 +1,9 @@
 # Customer Complaint Intelligence
 
+**当前版本：P3.11–P4 产品候选版。** 已实现邮件/历史真实run → Issue与Evidence → 未审草稿 → 编辑版本/diff → 本地人工批准、退回或拒绝 → 模拟发送 → SQLite历史重读及分版本Dashboard。五项研究者政策有独立诊断层，严重分析错误不可用批准绕过。UI强制禁用付费API，真实SMTP/CRM没有接入。
+
+从 [P4交付入口](docs/p4/DELIVERY.md)、[演示说明](docs/p4/DEMO.md)、[系统设计](docs/p4/ARCHITECTURE.md) 开始。旧实验和下文阶段描述作为历史保留；“没有批准流程”等旧结论已由P4工作流更新。模型独立质量认证仍pending，P3.10失败Challenger未晋升，旧400封始终是确定性模板生成。
+
 P3.5已新增向后兼容的Analysis-v3多问题契约、明确有损的v2投影、问题/邮件分母分离及离线评测。Single Analysis中的P3.5工作区可运行公开双问题fixture；本地候选审核入口读取`COMPLAINT_V3_CANDIDATES`。完整验证和限制见[本轮交接](docs/p35/VERIFICATION.md)：本机154/154、portable67/67；真实v3模型质量仍pending。24条最终开发裁决及172条候选记录（160适用、12隔离）保存在本地，不随仓库公开。
 
 客户投诉分析研究原型，使用 Streamlit + Python Application Service + SQLite。提供显式 Offline Fake / Legacy Mock / DeepSeek 分析、七字段分类、摘要、未审核回复草稿、版本化保存、来源归属 Dashboard 和原文追溯。

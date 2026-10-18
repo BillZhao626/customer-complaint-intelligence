@@ -1,3 +1,24 @@
+# HANDOFF — P3.11–P4 完整产品候选版
+
+2026-10-18（Asia/Shanghai）。当前版本 `complaint-product-p4-rc1`；从 `docs/p4/DELIVERY.md`、`ARCHITECTURE.md`、`DATA_AND_WORKFLOW.md`、`VERIFICATION.md`、`DEMO.md` 开始。以下旧交接原文保留，旧“P4未实施”已由本阶段更新。
+
+- 五项研究者政策登记为owner-adjudication-v1；附件manifest、14条真实run/input/raw/原接受状态全部核对。N03原非自然样本保留，新自然版本同族开发；N33纠错NOT_ATTEMPTED。244条同raw新诊断独立保存，原状态/分母/Gold不动；完整回复human_score仍null。
+- 工作台已实现Issue/Evidence、来源/Prompt/Schema/时间追溯、草稿编辑版本/diff、人工批准/拒绝/退回、模拟发送和历史重读。独立产品SQLite v1不迁移原分析v2或实验库；状态操作、版本、事件和回执同事务，revision与hash防旧页/旧版本绕过。
+- 新质量门禁只做闭集诊断；严重潜在伤害、原因无证据、投诉状态弱化及虚构执行能力可阻断或升级复核。分析block不可由改回复或勾选消除。所有草稿需审核；local_human与demo_test分开，自动验收不代签人类评价。
+- UI强制关闭付费/API/tracing，无SMTP/CRM；本轮新付费0、真实发送0。P3.10保持180/180停发，P3.9保持71/72，最后1次未动；.env未改。
+- 已构建10条纵向演示，实际浏览器完成普通咨询、退回编辑新版本再审、真实已接受风险低估阻断/拒绝、Dashboard、关闭重开与服务进程重启恢复。其余多Issue/合规严重风险/契约失败等由实际app.py AppTest覆盖；详细测试、截图及精确Git/CI见验证文档与本机收据。
+- 本地演示 `.local/p4/demo-v1/START.md`；浏览器工作库 `.local/p4/browser-product.sqlite3`；裁决 `.local/p311/audit-final-v4/`。公开Git仅源码/测试/脱敏文档，原既存未跟踪成果不清理、不提交。
+- 独立Human Gold/holdout/完整回复语义认证仍pending；历史400封是确定性模板生成；P3.10模型质量未达标、不晋升。P5真实生成或评测需另行预算授权，不能借旧额度。
+
+```powershell
+.\.venv\Scripts\python.exe -B tests/run_offline.py
+.\.venv\Scripts\python.exe -B scripts/run_portable.py
+.\.venv\Scripts\python.exe -B scripts/p4_demo.py --out .local/p4/NEW_DEMO --real-replay
+.\.venv\Scripts\python.exe -B -m streamlit run app.py --server.address 127.0.0.1 --browser.gatherUsageStats false
+```
+
+---
+
 # HANDOFF — P3.10 全量质量审计与180次验证完成，质量未达标，不晋升
 
 2026-10-17（Asia/Shanghai）。先读 `docs/p310/VERIFICATION.md`、`CAUSAL_OWNERSHIP.md`、`ITERATIONS.md`、`REPRODUCE.md`；完整本机入口 `.local/p310/REPORT.md`。本轮新180次/30元已由研究者明确批准，全部180次收到并结算、锁账。旧P3.9仍71/72，保留1次未动。
