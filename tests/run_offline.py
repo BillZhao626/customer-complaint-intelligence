@@ -44,7 +44,7 @@ def audit(event,args):
             check_path(value)
 sys.addaudithook(audit)
 if len(sys.argv)>1 and sys.argv[1]=='--portable':
-    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits','tests.test_p39_continuity','tests.test_p39_continuity_report','tests.test_p39r3_causal','tests.test_p39r3_challenger','tests.test_p39_exploration','tests.test_p310','tests.test_p310_execution','tests.test_p310_report','tests.test_p310_correction','tests.test_p310_leakage','tests.test_p310_scoped_diagnostic'])
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits','tests.test_p39_continuity','tests.test_p39_continuity_report','tests.test_p39r3_causal','tests.test_p39r3_challenger','tests.test_p39_exploration','tests.test_p310','tests.test_p310_execution','tests.test_p310_report','tests.test_p310_correction','tests.test_p310_leakage','tests.test_p310_scoped_diagnostic','tests.test_product_quality','tests.test_product_workflow','tests.test_product_ui'])
 else:
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
 def flatten(suite):
@@ -62,7 +62,7 @@ if len(sys.argv)==1:
                   network='socket connections blocked',asset_writes='audit hook blocked',test_ids=ids,
                   failure_ids=[t.id() for t,_ in result.failures+result.errors])
     # New phase evidence must never overwrite frozen P1/P2 reports.
-    evidence_dir=ROOT/'.local/p310/test-evidence'/time.strftime('%Y%m%dT%H%M%S')
+    evidence_dir=ROOT/'.local/p4/test-evidence'/time.strftime('%Y%m%dT%H%M%S')
     evidence_dir.mkdir(parents=True,exist_ok=False)
     (evidence_dir/'test-results.json').write_text(json.dumps(evidence,indent=2),encoding='utf-8')
 sys.exit(not result.wasSuccessful())

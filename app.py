@@ -9,6 +9,10 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+# P3.11–P4 authorization: existing environment keys must not enable paid UI paths.
+os.environ.update(COMPLAINT_ENABLE_LIVE='false', LLM_ENABLE_API='false',
+                  LANGSMITH_TRACING='false', LANGCHAIN_TRACING='false', LANGCHAIN_TRACING_V2='false')
+
 from src.chains.mock_complaint_chain import analyze_email
 from src.dataset.generate_sample_dataset import generate_sample_files
 from src.evaluation.evaluate_results import evaluate_predictions, LEGACY_LABEL_COLUMNS
@@ -390,7 +394,10 @@ def render_i4f_dashboard() -> None:
 
 
 def render_single_analysis_tab() -> None:
-    render_offline_slice(ROOT_DIR)
+    from src.app.product_workspace import render
+    render(ROOT_DIR)
+    with st.expander('研究与旧版分析工具（历史兼容，付费禁用）'):
+        render_offline_slice(ROOT_DIR)
 
 
 def render_batch_analysis_tab() -> None:
@@ -436,8 +443,15 @@ def render_batch_analysis_tab() -> None:
 
 def render_dashboard_tab() -> None:
     st.subheader("Dashboard")
-    view = st.radio('Dashboard view', ['Historical dashboards', 'P3 versioned attribution'], key='dashboard_view')
-    if view == 'P3 versioned attribution':
+    view = st.radio('Dashboard view', ['Historical dashboards', 'P3 versioned attribution', 'P4 review workflow'], key='dashboard_view')
+    if view == 'P4 review workflow':
+        from src.app.product_workspace import store, show_dashboard
+        try:
+            show_dashboard(store(ROOT_DIR))
+        except Exception as exc:
+            st.error(f'Product dashboard unavailable ({type(exc).__name__}); no inferred statistics.')
+        return
+    elif view == 'P3 versioned attribution':
         from src.app.attribution_dashboard import render_attribution_dashboard
         render_attribution_dashboard(ROOT_DIR)
         return

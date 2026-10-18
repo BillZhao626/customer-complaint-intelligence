@@ -1,0 +1,40 @@
+{
+  "candidate_id": "complaint-product-p4-rc1",
+  "base_commit": "f7b49e307de5c4911f317e9d88540d11ef2fcc33",
+  "date": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "state": "ENGINEERING_CANDIDATE_HUMAN_QUALITY_PENDING",
+  "policy": {
+    "version": "owner-adjudication-v1",
+    "source": "Researcher decisions approved 2026-10-18; attachment retained locally",
+    "appointment": "Natural repeated cancellation of confirmed bookings is one unresolved service complaint; denial of a different complaint does not cancel it. Original unnatural input retained separately.",
+    "potential_injury": "Load-bearing bicycle frame lock or cookware handle failure: severe/high despite no injury, cold or empty condition. Assess foreseeable normal use.",
+    "delivery": "Rain-damaged delivered packaging: other / delivery/logistics issue; no invented delay or manufacturing cause.",
+    "importance": "Customer primary/secondary and business order are distinct. Merchant provides warranty documentation; no invented execution capability.",
+    "review": "Five policies do not approve complete replies or provide independent Human Gold."
+  },
+  "policy_hash": "fd28349e7977696aba67695bc2d4802e96455cace1f339d9059728b250672f09",
+  "quality_guard": "product-quality-guard-v1",
+  "source_sha256": {
+    "app.py": "272cb83c8d73760fb8ff3f88784a887428a6f4292b93cc3f0647d18928da9ccf",
+    "requirements.txt": "2572425faac3eacdaff23937715128e4ff6ddbf927b69206b126b5e8f2db0bc5",
+    "src/application/product_demo.py": "ef7c49e40f19e3eb88f1048b6074178834211851e53814e3b8ff3251b539e105",
+    "src/application/product_quality.py": "7f23facf91aa15908b7aebeb4e5b590892a144ee621ba34ddcd3f5e1a212aa40",
+    "src/application/product_sources.py": "a739415f7001667045ceb2ab0ab307fe1aebb15d368fbe51b7ef24253338597c",
+    "src/application/product_workflow.py": "18249393f25791b4986144b6b9ac703e85638006ed9a8f79c3249bc668c75b4b",
+    "src/app/product_workspace.py": "9e431b2dcc88577e5b30342c1b6b7c931472920276e93339af8b029ee7a5cda0",
+    "scripts/p311_audit.py": "b4a381c7226eac26aba57948d7a1aaea75ad2468bbaf1b1aaef1f6a42d6a280a",
+    "scripts/p4_demo.py": "d24e311f528adf6cc96279048400ed50eb7db7fab93da485bc3d8b5e1f90ca54",
+    "tests/test_product_quality.py": "00c6149b7a24d3031019c9c068e01f20272982031726f0d75ed325a78d4728d8",
+    "tests/test_product_ui.py": "26fa055658e6f48c117b7885fad83161b9363a819ffe0da1fce1def481ccddfe",
+    "tests/test_product_workflow.py": "5ae685a9226f8be97623caa77a449e39b0b7dc41581378ea20981322a475b993",
+    "tests/run_offline.py": "32808cb95794c9ae85e6c8023d856f67796341b7e6eb26985522a705f399c8f4",
+    ".github/workflows/offline.yml": "7c97361ee42ff2940dcf07c30d53500fc04d504cb05f6438e182d12b87427194"
+  },
+  "new_paid_calls_allowed": false,
+  "real_sends_supported": false,
+  "challenger_promoted": false,
+  "production_role_authentication": false,
+  "source_hash_method": "SHA256 of UTF-8 text with LF newlines; independent of Git CRLF checkout conversion",
+  "manifest_hash": "b5df7d7874b63b27ee9d1c61486495d34cdd737d4d1044648e3bff14de975459"
+}
