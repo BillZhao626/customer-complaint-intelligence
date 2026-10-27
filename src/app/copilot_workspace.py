@@ -63,6 +63,9 @@ def understanding(data, quality=None):
         return
     st.write(data.get('summary', '尚无摘要'))
     st.caption(f"{label(data.get('complaint_status'))} · 情绪{label(data.get('sentiment'))} · 紧急度{label(data.get('urgency'))}")
+    st.caption('提及门店（待核实）：' + label(data.get('mentioned_store', data.get('store_location', 'unknown'))))
+    if not data.get('issues') and data.get('product_name'):
+        st.caption('商品或服务：' + label(data['product_name']))
     st.caption('判断来自当前标示来源；业务来源不等于已证实原因或责任。')
     issues = data.get('issues', [])
     for n, i in enumerate(issues, 1):

@@ -52,7 +52,7 @@ P4.6 中文收件箱（相同普通咨询，建议需明确插入）：
 
 完整回归 **427/427通过**，0失败/错误/跳过，697.585秒（`full-release.txt`）；本轮开始418个测试ID全部保留。新增9项覆盖插入事务、来源、冲突、同文撤销审核、终态、安全阻断、串案、确认/恢复、旧v1兼容。拒绝状态不能靠同文插入重新开启审核。最终展示层邮件Markdown转义另执行9/9 UI与事务补充回归，38.978秒（`p46-release-ui.txt`）。
 
-最终源码的独立干净目录 Portable **333项：326通过、7跳过、0失败/错误**，485.744秒（`portable-delivery.txt`）。7项均依赖未公开的私有历史资产，不计为通过。通过Git索引检出到新的临时目录，无.env、研究data或本机数据库；代码/测试/配置blob逐项匹配，使用现有固定依赖环境。最终仅更新交付文字，源码身份保存在`portable-source-delivery.json`和`final-source-review.json`。
+独立干净目录 Portable **333项：326通过、7跳过、0失败/错误**，485.744秒（`portable-delivery.txt`）。7项均依赖未公开的私有历史资产，不计为通过。通过Git索引检出到新的临时目录，无.env、研究data或本机数据库；代码/测试/配置blob逐项匹配，使用现有固定依赖环境，源码身份保存在`portable-source-delivery.json`和`final-source-review.json`。之后仅补充详情区的待核实门店与旧v2商品展示，另通过9/9回归、23.436秒（`details-ui-final.txt`）；最终精确SHA的干净Ubuntu Portable CI以PR Checks及收据为准。
 
 原 **11,743个** data/outputs/历史.local/论文/未跟踪成果/.env 文件SHA256核对：**0改变、0丢失**；未删除旧测试ID。公开载荷按显式白名单审阅，已知本机密钥及凭据模式扫描无发现；11张P4.5/P4.6合成场景截图逐项允许，其他研究raw、Gold、SQLite与原未跟踪资产不发布。此扫描不宣称普适安全认证。`pip check`、Python AST检查和`git diff --check`通过。
 
