@@ -6,10 +6,19 @@ import sys
 import json
 import time
 import unittest
+import tempfile
+import atexit
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 os.environ.update(LLM_ENABLE_API='false',COMPLAINT_ENABLE_LIVE='false',LANGCHAIN_TRACING_V2='false',LANGSMITH_TRACING='false',LANGCHAIN_TRACING='false')
+# Older UI suites predate P4 and isolate only their P3 analysis database.
+# Give every collected test safe defaults, even when the invoking shell points
+# at a researcher's open workspace. Individual fixtures may override these.
+test_storage=tempfile.TemporaryDirectory(prefix='complaint_offline_')
+atexit.register(test_storage.cleanup)
+os.environ.update(COMPLAINT_PRODUCT_DB=str(Path(test_storage.name)/'product.sqlite3'),
+                  COMPLAINT_DB_PATH=str(Path(test_storage.name)/'analysis.sqlite3'))
 original_connect=socket.socket.connect
 def blocked(*args,**kwargs):
     # Windows asyncio creates a local socketpair for wakeups; permit only stdlib's internal call.
@@ -44,7 +53,7 @@ def audit(event,args):
             check_path(value)
 sys.addaudithook(audit)
 if len(sys.argv)>1 and sys.argv[1]=='--portable':
-    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits','tests.test_p39_continuity','tests.test_p39_continuity_report','tests.test_p39r3_causal','tests.test_p39r3_challenger','tests.test_p39_exploration','tests.test_p310','tests.test_p310_execution','tests.test_p310_report','tests.test_p310_correction','tests.test_p310_leakage','tests.test_p310_scoped_diagnostic','tests.test_product_quality','tests.test_product_workflow','tests.test_product_ui'])
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits','tests.test_p39_continuity','tests.test_p39_continuity_report','tests.test_p39r3_causal','tests.test_p39r3_challenger','tests.test_p39_exploration','tests.test_p310','tests.test_p310_execution','tests.test_p310_report','tests.test_p310_correction','tests.test_p310_leakage','tests.test_p310_scoped_diagnostic','tests.test_product_quality','tests.test_product_workflow','tests.test_product_ui','tests.test_csv_input','tests.test_product_analysis','tests.test_p5_preflight'])
 else:
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
 def flatten(suite):

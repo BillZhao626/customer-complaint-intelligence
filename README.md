@@ -1,6 +1,8 @@
 # Customer Complaint Intelligence
 
-**当前版本：P3.11–P4 产品候选版。** 已实现邮件/历史真实run → Issue与Evidence → 未审草稿 → 编辑版本/diff → 本地人工批准、退回或拒绝 → 模拟发送 → SQLite历史重读及分版本Dashboard。五项研究者政策有独立诊断层，严重分析错误不可用批准绕过。UI强制禁用付费API，真实SMTP/CRM没有接入。
+**当前版本：P4 Final / P5 Preflight 产品候选版。** 已实现邮件/历史真实run → Issue与Evidence → 未审草稿 → 编辑版本/diff → 本地人工批准、退回或拒绝 → 模拟发送 → SQLite历史重读及分版本Dashboard。五项研究者政策有独立诊断层，严重分析错误不可用批准绕过。UI强制禁用付费API，真实SMTP/CRM没有接入。
+
+最新 [最终研究者审核包](docs/p4/FINAL_READINESS.md) 包含离线真实 SDK 接线、浏览器验收、历史成绩单和 P5 独立质量认证提案。新付费调用未启用，独立质量认证仍 pending。
 
 从 [P4交付入口](docs/p4/DELIVERY.md)、[演示说明](docs/p4/DEMO.md)、[系统设计](docs/p4/ARCHITECTURE.md) 开始。旧实验和下文阶段描述作为历史保留；“没有批准流程”等旧结论已由P4工作流更新。模型独立质量认证仍pending，P3.10失败Challenger未晋升，旧400封始终是确定性模板生成。
 

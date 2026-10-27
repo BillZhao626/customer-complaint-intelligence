@@ -118,10 +118,16 @@ class ProductStore:
         c.execute('INSERT INTO product_events VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                   (str(uuid4()), operation_id, request_hash, case_id, revision, version, action, old, new, actor, actor_type, reason, json.dumps(details, ensure_ascii=False), timestamp()))
 
-    def create(self, run, source_ref='local analysis'):
+    def create(self, run, source_ref='local analysis', *, origin='historical_replay'):
         run = AnalysisRun.model_validate(run)
         data = analysis_data(run)
         kind = 'real_replay' if run.config.backend == 'deepseek_live' else run.config.backend
+        if origin not in ('historical_replay', 'new_analysis'):
+            raise ValueError('Unknown product origin')
+        if (run.config.parameters or {}).get('product_transport') == 'offline_mock_http':
+            kind = 'offline_fake'
+        if origin == 'new_analysis':
+            source_ref = 'new_analysis:' + source_ref
         snapshot = run.model_dump()
         key = digest(dict(run_id=run.run_id, input_hash=run.input_hash, raw_hash=raw_hash(run), snapshot_hash=digest(snapshot)))
         accepted = run.status == 'succeeded'
@@ -157,6 +163,12 @@ class ProductStore:
             events = [dict(r) for r in c.execute('SELECT * FROM product_events WHERE case_id=? ORDER BY revision', (case_id,))]
             receipt = c.execute('SELECT * FROM product_simulations WHERE case_id=?', (case_id,)).fetchone()
         run = AnalysisRun.model_validate_json(record.pop('snapshot_json'))
+        # Preserve SQLite v1 and historical snapshots. Derive display provenance
+        # from immutable config/source_ref without rewriting old stored enums.
+        if (run.config.parameters or {}).get('product_transport') == 'offline_mock_http':
+            record['source_kind'] = 'offline_mock_http'
+        elif run.config.backend == 'deepseek_live' and record['source_ref'].startswith('new_analysis:'):
+            record['source_kind'] = 'real_new_analysis'
         if digest(run.model_dump()) != record['snapshot_hash']:
             raise ValueError('Source snapshot integrity failure')
         data = analysis_data(run)
@@ -274,6 +286,10 @@ class ProductStore:
                                  blocked=sum(r['quality']['status'] == 'blocked' for r in rows),
                                  business_denominator=sum(bool(eligible(r)) for r in rows),
                                  negative=sum(r['run'].result.sentiment == 'negative' for r in rows if eligible(r)),
+                                 unknown_sentiment=sum(r['run'].result.sentiment == 'unknown' for r in rows if eligible(r)),
+                                 analysis_blocked=sum(bool(r['accepted']) and not eligible(r) for r in rows),
+                                 reply_blocked=sum(any(f['scope'] == 'reply' and f['severity'] == 'block' for f in r['quality']['findings']) for r in rows),
+                                 fallback=sum(bool(r['run'].metadata.get('fallback', False)) for r in rows),
                                  member_case_ids=[r['case_id'] for r in rows],
                                  business_member_case_ids=[r['case_id'] for r in rows if eligible(r)],
                                  denominator='Contract-accepted with no blocking analysis diagnostic for sentiment; failed raw and analysis conflicts excluded. No independent semantic certification. One case per immutable source run, versions not mixed.') for k, rows in groups.items()],

@@ -8,6 +8,7 @@ import streamlit as st
 from src.application.product_workflow import ProductStore, Conflict
 from src.application.product_demo import SCENARIOS, ProductFake, example
 from src.application.analysis_service import AnalysisService
+from src.application.product_analysis import ProductAnalysis, SnapshotPending
 from src.infrastructure.repository import Repository
 from src.domain.contracts import EmailInput
 
@@ -22,32 +23,64 @@ def store(root):
     return ProductStore(os.getenv('COMPLAINT_PRODUCT_DB', str(root / '.local/p4/product.sqlite3')))
 
 
-def show_case(db, c):
+LABELS = {
+    'pending_review': '待审核', 'changes_requested': '待修改', 'approved': '已批准',
+    'rejected': '已拒绝', 'simulated_sent': '已模拟发送', 'analysis_failed': '分析失败',
+    'negative': '负面', 'positive': '正面', 'neutral': '中性', 'mixed': '混合', 'unknown': '未知',
+    'low': '低', 'medium': '中', 'high': '高', 'none': '无', 'minor': '轻微', 'severe': '严重',
+    'unspecified': '未明确', 'primary': '主要', 'secondary': '次要', 'equal': '同等重要',
+    'no_complaint': '非投诉', 'current_unresolved': '当前未解决投诉',
+    'historical_resolved': '历史已解决', 'mixed_status': '混合状态',
+    'offline_fake': '离线示例 / unknown占位', 'legacy_mock': '旧规则 Mock',
+    'real_replay': '历史真实结果重放', 'real_new_analysis': '新真实分析',
+    'offline_mock_http': '离线 Mock HTTP（真实SDK）',
+    'inquiry': '咨询', 'complaint': '投诉', 'praise': '表扬',
+    'product quality': '商品质量', 'health or safety issue': '健康或安全问题',
+    'delivery delay': '配送延迟', 'customer service': '客户服务',
+    'billing or payment': '账单或付款', 'not_applicable': '不适用',
+    'reported': '客户报告，未核实', 'unclear': '不明确',
+}
+
+
+def label(value):
+    return LABELS.get(value, value or '未提供')
+
+
+def show_analysis(c):
     run = c['run']
-    st.subheader('分析与证据')
-    st.write(f"状态：{c['state']} · 草稿 v{c['current_version']} · 操作修订 {c['revision']}")
-    st.caption(f"案例 {c['case_id']} · 来源 {c['source_kind']} · 原始运行 {run.run_id} · 原契约 {run.status}")
+    st.subheader('原始邮件与分析结论')
+    st.caption(f"来源：{label(c['source_kind'])} · 原契约：{'接受' if c['accepted'] else '失败'}（不代表语义认证）")
     st.text(run.email.subject)
     st.text(run.email.body)
     if c['accepted']:
         data = c['analysis']
-        st.write(dict(complaint_status=data.get('complaint_status'), sentiment=data.get('sentiment'), urgency=data.get('urgency')))
+        cols = st.columns(3)
+        for col, title, field in zip(cols, ('情绪', '投诉状态', '紧急度'), ('sentiment', 'complaint_status', 'urgency')):
+            col.metric(title, label(data.get(field)))
         st.text(data.get('summary', ''))
-        issues = data.get('issues', [])
-        if issues:
-            st.dataframe(pd.DataFrame([{k: i.get(k) for k in ('issue_id', 'object_name', 'issue_kind', 'reason', 'risk_level', 'urgency', 'customer_importance', 'handling_priority', 'business_process', 'attribution_certainty')} for i in issues]), hide_index=True, width='stretch')
         st.caption('业务来源与建议处理顺序均不等于已核实责任；客户重要性单独保留。')
-        for i in issues:
-            with st.expander('Evidence · ' + i['issue_id'], expanded=True):
-                for k in ('evidence', 'risk_evidence', 'urgency_evidence', 'importance_evidence'):
-                    for e in i.get(k, []):
-                        st.text(f"{k} · {e['field']}[{e['start']}:{e['end']}]: {e['quote']}")
-                st.write({'risk_rationale': i.get('risk_rationale'), 'priority_rationale': i.get('priority_rationale'), 'missing_evidence': i.get('missing_evidence')})
+        for i in data.get('issues', []):
+            with st.expander(f"问题 {i['issue_id']} · {i.get('object_name', '')} · Evidence 原文证据", expanded=True):
+                st.write(f"类型：{label(i.get('issue_kind'))} ｜ 原因：{label(i.get('reason'))} ｜ 风险：{label(i.get('risk_level'))}")
+                st.write(f"处理顺序：{i.get('handling_priority')} ｜ 客户重要性：{label(i.get('customer_importance'))} ｜ 紧急度：{label(i.get('urgency'))}")
+                for field, title in (('evidence', '判断依据'), ('risk_evidence', '风险依据'), ('urgency_evidence', '紧急度依据'), ('importance_evidence', '重要性依据')):
+                    for e in i.get(field, []):
+                        st.text(f"{title} · {e['field']}[{e['start']}:{e['end']}]: {e['quote']}")
+                for field, title in (('risk_rationale', '风险说明'), ('priority_rationale', '处理顺序说明'), ('missing_evidence', '待补证据')):
+                    value = i.get(field)
+                    st.write(title + '：' + ('；'.join(value) if isinstance(value, list) else str(value or '无')))
     else:
         st.error('分析失败或结构化输出无效；raw 仅供诊断，不进入正式统计或发送。')
-    with st.expander('运行身份、原始输出与校验记录'):
-        st.json(dict(input_hash=run.input_hash, source_snapshot_hash=c['snapshot_hash'], source_kind=c['source_kind'],
-                     created_at=run.created_at, config=run.config.model_dump(), attempts=[a.model_dump() for a in run.attempts]))
+    with st.expander('Developer Details · 运行身份、原始输出与校验记录'):
+        st.json(dict(case_id=c['case_id'], run_id=run.run_id, input_hash=run.input_hash,
+                     source_snapshot_hash=c['snapshot_hash'], source_kind=c['source_kind'],
+                     created_at=run.created_at, config=run.config.model_dump(), attempts=[a.model_dump() for a in run.attempts],
+                     analysis=c['analysis'], quality=c['quality']))
+
+
+def show_case(db, c):
+    st.subheader(f"{label(c['state'])} · 回复草稿 v{c['current_version']}")
+    show_analysis(c)
     quality = c['quality']
     st.subheader('质量门禁与人工审核')
     st.warning('每份回复均为草稿。词面检查未命中不能证明语义正确；五项政策批准不等于完整回复批准。')
@@ -75,18 +108,18 @@ def show_case(db, c):
             st.info('有未保存修改；请先保存新版本后再审核或模拟发送。')
         cols = st.columns(5)
         actions = [('保存新版本', 'save_edit'), ('批准草稿', 'approve'), ('退回修改', 'request_changes'), ('拒绝草稿', 'reject'), ('模拟发送', 'simulate_send')]
-        for col, (label, action) in zip(cols, actions):
+        for col, (action_label, action) in zip(cols, actions):
             disabled = c['state'] == 'simulated_sent'
             if action == 'approve':
                 disabled |= dirty or quality['status'] == 'blocked' or c['state'] not in ('pending_review', 'changes_requested')
             elif action == 'simulate_send':
                 disabled |= dirty or quality['status'] == 'blocked' or c['state'] != 'approved'
-            if col.button(label, key='p4_' + action, disabled=disabled):
+            if col.button(action_label, key='p4_' + action, disabled=disabled):
                 try:
                     db.act(c['case_id'], action, expected_revision=c['revision'], actor=actor, actor_type=actor_type,
                            reason=reason, body=edited if action == 'save_edit' else None, checks=checks,
                            operation_id=str(uuid4()))
-                    st.session_state['p4_notice'] = f'{label}已持久化；真实邮件发送次数为 0。'
+                    st.session_state['p4_notice'] = f'{action_label}已持久化；真实邮件发送次数为 0。'
                     st.rerun()
                 except (ValueError, OSError) as exc:
                     st.error(str(exc) if isinstance(exc, ValueError) else '写入失败；保留当前编辑，未确认成功。请重读状态后重试。')
@@ -94,7 +127,8 @@ def show_case(db, c):
                     st.error(f'操作未确认成功（{type(exc).__name__}）；保留编辑并重读最新状态。')
     if c['receipt']:
         st.success('模拟发送已完成 · 没有网络投递或外部系统操作')
-        st.json(c['receipt'])
+        with st.expander('Developer Details · 模拟回执'):
+            st.json(c['receipt'])
     with st.expander('草稿版本与修改前后内容', expanded=False):
         for d in c['drafts']:
             st.write(f"v{d['version']} · {d['created_at']} · {d['editor']} / {d['actor_type']}")
@@ -135,12 +169,13 @@ def render(root):
                 if scenario != SCENARIOS[-1] and (email.subject, email.body) != (expected.subject, expected.body):
                     raise ValueError('固定fixture正文或主题已改变；请选择自定义unknown模式。')
                 repository = Repository(db.path.with_name(db.path.stem + '-analysis.sqlite3'))
-                run = AnalysisService(repository, ProductFake(email, scenario)).analyze(email)
-                c = db.create(run, 'LangChain Runnable / explicit offline fixture')
+                c = ProductAnalysis(AnalysisService(repository, ProductFake(email, scenario)), db).submit(email)
                 st.session_state['p4_case'] = c['case_id']
                 st.session_state['p4_history'] = c['case_id'] + ':' + str(c['revision'])
                 st.query_params['case_id'] = c['case_id']
                 st.rerun()
+            except SnapshotPending as exc:
+                st.error(f'分析已保存，产品快照待恢复。运行编号：{exc.run_id}；可通过 ProductAnalysis.recover 重建，不重复请求。')
             except ValueError as exc:
                 st.error(str(exc))
             except Exception as exc:
@@ -172,7 +207,7 @@ def render(root):
             # Include revision: a stable option otherwise retains its old label.
             choices = [f"{i}:{by_id[i]['revision']}" for i in ids]
             selected_option = st.selectbox('选择工作案例', choices, index=ids.index(current_id) if current_id in ids else 0,
-                                    format_func=lambda option: f"{by_id[option.split(':')[0]]['run'].email.email_id} · {by_id[option.split(':')[0]]['source_kind']} · {by_id[option.split(':')[0]]['state']} · {option[:8]}", key='p4_history')
+                                    format_func=lambda option: f"{by_id[option.split(':')[0]]['run'].email.email_id} · {label(by_id[option.split(':')[0]]['source_kind'])} · {label(by_id[option.split(':')[0]]['state'])} · {option[:8]}", key='p4_history')
             selected = selected_option.split(':')[0]
             if st.button('打开历史案例', key='p4_open'):
                 st.session_state['p4_case'] = selected
@@ -187,12 +222,27 @@ def render(root):
         st.error(f'历史读取或一致性检查失败（{type(exc).__name__}）；不生成虚假成功记录。')
 
 
-def show_dashboard(db):
+def show_dashboard(db, key='workspace'):
     st.subheader('工作台统计 · 按来源与版本分组')
+    st.caption('P4独立产品库：' + str(db.path))
     d = db.dashboard()
-    st.write({'工作案例总数': d['total'], '审核状态': d['states']})
+    st.write({'工作案例总数': d['total'], '审核状态': {label(k): v for k, v in d['states'].items()}})
+    st.caption('契约接受数 accepted + 失败数 failed = 全部案例。blocked 可与 accepted 重叠；分析阻断排除出业务分母，回复阻断不排除。unknown 保留在业务分母并单列；负面数 / 业务分母不是仅已知情绪样本的负面率。')
     if d['groups']:
-        st.dataframe(pd.DataFrame([{k: v for k, v in g.items() if k not in ('member_case_ids', 'business_member_case_ids', 'denominator', 'cohort_id')} for g in d['groups']]), hide_index=True, width='stretch')
-        with st.expander('统计分母与成员追溯'):
+        names = dict(source_kind='来源', cohort_id='版本组ID', total='全部案例', accepted='契约接受', failed='失败',
+                     blocked='任意阻断', analysis_blocked='分析阻断', reply_blocked='回复阻断', business_denominator='业务分母',
+                     unknown_sentiment='未知情绪', negative='负面', fallback='回退次数', model='模型', prompt='Prompt版本')
+        rows = [{names.get(k, k): label(v) if k == 'source_kind' else v for k, v in g.items()
+                 if k not in ('member_case_ids', 'business_member_case_ids', 'denominator')} for g in d['groups']]
+        st.dataframe(pd.DataFrame(rows), hide_index=True, width='stretch')
+        group = st.selectbox('选择统计版本组', d['groups'], key=key + '_group',
+                            format_func=lambda g: f"{label(g['source_kind'])} · {g['cohort_id'][:12]} · {g['total']}案例")
+        members = [db.get(i) for i in group['member_case_ids']]
+        member = st.selectbox('查看统计成员原文与证据', members, key=key + '_member',
+                             format_func=lambda c: f"{c['run'].email.email_id} · {label(c['state'])} · {c['case_id'][:8]}")
+        with st.expander('成员原始邮件、Issue 与 Evidence', expanded=False):
+            show_analysis(member)
+            st.link_button('进入该案例的审核工作台', '?case_id=' + member['case_id'])
+        with st.expander('Developer Details · 完整统计分母与成员ID'):
             st.json(d)
-    st.caption('情绪分母仅含原契约成功且没有分析阻断的案例；失败raw及明确分析冲突排除。回复阻断单列，契约成功不表示语义通过。Fake、真实重放、不同模型/Prompt版本分开。')
+    st.caption('契约成功不表示语义通过。离线示例、Mock HTTP、新真实分析、历史重放及不同完整版本组分别统计。工作流计数不是独立真人评价。')

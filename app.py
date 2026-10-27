@@ -18,6 +18,7 @@ from src.dataset.generate_sample_dataset import generate_sample_files
 from src.evaluation.evaluate_results import evaluate_predictions, LEGACY_LABEL_COLUMNS
 from src.evaluation.core import validate_summary
 from src.app.offline_slice import render_offline_slice
+from src.app.csv_input import CSVInputError, read_csv_input
 
 
 ROOT_DIR = Path(__file__).resolve().parent
@@ -307,8 +308,9 @@ def render_i4f_dashboard() -> None:
     metric_cols[0].metric("Total emails", f"{total_rows:,}")
     metric_cols[1].metric("Complaints", f"{complaint_count:,}")
     metric_cols[2].metric("Negative sentiment", f"{negative_count:,}")
-    metric_cols[3].metric("Formal accuracy", f"{formal['accuracy']:.2%}" if formal['available'] else 'unavailable')
+    metric_cols[3].metric("历史七字段参考一致率", f"{formal['accuracy']:.2%}" if formal['available'] else 'unavailable')
     metric_cols[4].metric("Historical API errors", str(formal['errors']) if formal['available'] else 'unavailable')
+    st.caption('历史80封 × 7字段：494/560 = 88.21%；参考来源为项目开发参考标签，非独立人工Gold。与400封模板数据统计及当前产品结果分开。报告不可用时不显示分数。')
     if not formal['available']:
         st.warning(formal['reason'])
 
@@ -401,7 +403,8 @@ def render_single_analysis_tab() -> None:
 
 
 def render_batch_analysis_tab() -> None:
-    st.subheader("Batch CSV Upload")
+    st.subheader("批量CSV · 旧规则演示")
+    st.info("来源：legacy_mock 确定性规则；不调用DeepSeek。导出结果不进入P4审核库，不代表新邮件的LLM理解或已审核回复。")
     st.caption("Upload a CSV with an email text column. Recommended column names: email_text or email_body.")
 
     uploaded = st.file_uploader("Upload customer email CSV", type=["csv"])
@@ -409,7 +412,9 @@ def render_batch_analysis_tab() -> None:
         st.info("Upload a CSV file or generate sample data from the Evaluation page.")
         return
 
-    df = pd.read_csv(uploaded)
+    df = load_input_csv(uploaded, '客户邮件')
+    if df is None:
+        return
     st.write("Preview")
     st.dataframe(df.head(20), width="stretch")
 
@@ -447,12 +452,13 @@ def render_dashboard_tab() -> None:
     if view == 'P4 review workflow':
         from src.app.product_workspace import store, show_dashboard
         try:
-            show_dashboard(store(ROOT_DIR))
+            show_dashboard(store(ROOT_DIR), key='dashboard')
         except Exception as exc:
             st.error(f'Product dashboard unavailable ({type(exc).__name__}); no inferred statistics.')
         return
     elif view == 'P3 versioned attribution':
         from src.app.attribution_dashboard import render_attribution_dashboard
+        st.info('P3读取 COMPLAINT_DB_PATH 分析库；默认单条工作台写入独立P4产品库。查看本轮案例请选择 P4 review workflow。P3不是P4的空数据替代来源。')
         render_attribution_dashboard(ROOT_DIR)
         return
     else:
@@ -477,6 +483,14 @@ def render_dashboard_tab() -> None:
 
     render_bar_chart(df, "store_location", "Store Locations")
     st.dataframe(df, width="stretch")
+
+
+def load_input_csv(source, label):
+    try:
+        return read_csv_input(source)
+    except CSVInputError as exc:
+        st.error(f'{label}：{exc}')
+        return None
 
 
 def render_evaluation_tab() -> None:
@@ -505,15 +519,23 @@ def render_evaluation_tab() -> None:
     golden_df = None
 
     if pred_file is not None:
-        predictions_df = pd.read_csv(pred_file)
+        predictions_df = load_input_csv(pred_file, '预测文件')
+        if predictions_df is None:
+            return
     elif default_predictions.exists():
-        predictions_df = pd.read_csv(default_predictions)
+        predictions_df = load_input_csv(default_predictions, '历史预测文件')
+        if predictions_df is None:
+            return
         st.info(f"Using saved predictions: {default_predictions}")
 
     if golden_file is not None:
-        golden_df = pd.read_csv(golden_file)
+        golden_df = load_input_csv(golden_file, '参考标签文件')
+        if golden_df is None:
+            return
     elif default_golden.exists():
-        golden_df = pd.read_csv(default_golden)
+        golden_df = load_input_csv(default_golden, '历史参考标签文件')
+        if golden_df is None:
+            return
         st.info(f"Using sample golden labels: {default_golden}")
 
     if predictions_df is None or golden_df is None:
@@ -551,10 +573,10 @@ def render_evaluation_tab() -> None:
 
 
 def main() -> None:
-    st.title("Customer Complaint Sentiment Analysis and Source Attribution")
-    st.caption("Offline Fake / Demo with versioned SQLite runs; historical CSV dashboards remain separate.")
+    st.title("客户投诉情绪分析与业务来源归因")
+    st.caption("离线演示与历史真实结果重放 · 人工审核 · 仅模拟发送 · P4 Final候选")
 
-    tabs = st.tabs(["Single Analysis", "Batch Analysis", "Dashboard", "Evaluation"])
+    tabs = st.tabs(["单条处理 / Single Analysis", "批量分析 / Batch Analysis", "统计看板 / Dashboard", "评测 / Evaluation"])
     with tabs[0]:
         render_single_analysis_tab()
     with tabs[1]:

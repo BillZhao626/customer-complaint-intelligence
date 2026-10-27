@@ -1,3 +1,15 @@
+# HANDOFF — P4 Final / P5 Preflight
+
+2026-10-27（Asia/Shanghai）。最新交付从 [最终研究者审核包](docs/p4/FINAL_READINESS.md) 开始；此前 RC1 和实验交接原文保留。
+
+- 新增 ProductAnalysis：真实 ChatOpenAI SDK + 受控 Mock HTTP → 原严格契约/Evidence → 分析 SQLite → 产品 SQLite → 原审核/模拟状态机；授权绑定 config/input/期限/新产品账本。快照失败可按 run_id 恢复，不重复请求。UI 仍默认离线；未授权或启用新付费调用。
+- 保留并整合上轮 CSV P1 修复；工作台优先展示原文、中文结论和 Issue/Evidence，溯源折叠；P4 看板补 unknown/阻断分母及成员下钻。批量入口明确 legacy_mock，统一服务 API 可显式调用 submit_many，未转成付费批处理。
+- 历史成绩由原机器资产复算，见 docs/p5/preflight/HISTORICAL_SCORECARD.md；论文/导师要求映射与 P5 独立双人标注、盲评、预算和晋升提案另列。原导师三封邮件未找到，不冒充已核验。空白标注材料生成器不会认证真人身份或冻结 Gold。
+- 本轮新付费 0、真实邮件发送 0。P3.9 71/72 与 P3.10 180/180 均保持原账本；.env 和历史 raw/Gold/预测不改。P3.10 Challenger 不晋升。独立 Human Gold、holdout 和回复语义认证仍 pending。
+- 新证据独立保存在 .local/p4/final-20261026/；目录名为开始日期，本轮续验跨至 10 月 27 日。最终测试/资产保护/Git/CI 收据见 FINAL_READINESS.md 及该目录 FINAL_VERIFICATION.json。不得把旧 RC1 manifest 改为新版本。
+
+---
+
 # HANDOFF — P3.11–P4 完整产品候选版
 
 2026-10-18（Asia/Shanghai）。当前版本 `complaint-product-p4-rc1`；从 `docs/p4/DELIVERY.md`、`ARCHITECTURE.md`、`DATA_AND_WORKFLOW.md`、`VERIFICATION.md`、`DEMO.md` 开始。以下旧交接原文保留，旧“P4未实施”已由本阶段更新。

@@ -1,0 +1,11 @@
+# P4 Final integration decision — 2026-10-26
+
+RC1 stores analysis and product state separately, but the UI performs their coordination and labels all DeepSeek runs as historical replay. Add a small ProductAnalysis coordinator over the existing AnalysisService/Repository/ProductStore. No schema, taxonomy, prompt, policy or historical database migration. SQLite v1 restricts source enums: retain those stored enums and derive display provenance from immutable config and the new source_ref prefix. Old snapshots retain their identity.
+
+The default remains offline. A new request requires an explicitly constructed service plus a separate, expiring product authorization bound to the complete config, input hash allowlist and canonical budget path. The ledger must contain this new authorization identity and exact config; old experiment envelopes cannot qualify. No budget is created by the product UI. A controlled httpx.MockTransport is injected into the real ChatOpenAI adapter and recorded in the config, so test runs cannot be presented as real responses. No P3.10 candidate is selected by default.
+
+Analysis is committed first. Product snapshot errors return a durable run ID; recover(run_id) reads only the analysis repository and does not call the provider or require a renewed paid authorization. ProductStore retains its source idempotency and strict reader, quality guard, revision/hash checks and review/simulation transactions. Running/uncertain runs are not made into snapshots; terminal failures have no draft.
+
+Acceptance: real LangChain/SDK + Mock HTTP → durable attempt → strict contract/Evidence → analysis SQLite → product SQLite → demo_test approval → simulation; duplicate/restart/recovery without redispatch; invalid JSON, Evidence and safety defects cannot send; expired/wrong identity/input/old authorization fails before HTTP. Dashboard adds unknown and explicit cohort/member drilldown without changing denominators. CSV remains labeled legacy mock; batch coordination reuses the same submit method only when explicitly chosen.
+
+This is engineering wiring, not promotion or real API certification. A real product profile and new budget approval remain researcher decisions. Human Gold and live SMTP are outside this change.

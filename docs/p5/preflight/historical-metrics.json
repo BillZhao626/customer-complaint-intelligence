@@ -1,0 +1,312 @@
+{
+  "version": "readiness-recalculation-v1",
+  "date": "2026-10-26",
+  "new_paid_calls": 0,
+  "metrics": {
+    "historical400": {
+      "evidence": "recomputed_from_machine_records",
+      "n": 400,
+      "unique_ids": 400,
+      "templates": 55,
+      "scenarios": {
+        "negative_product_quality": 50,
+        "negative_delivery_delay": 45,
+        "negative_customer_service": 45,
+        "negative_refund_request": 35,
+        "negative_after_sales": 35,
+        "negative_wrong_item": 25,
+        "negative_safety_health": 15,
+        "negative_unclear_responsibility": 10,
+        "positive_praise": 70,
+        "neutral_inquiry": 50,
+        "neutral_service_question": 20
+      },
+      "generator_matches": true,
+      "source": "deterministic_program_templates_not_LLM",
+      "human_gold": false
+    },
+    "historical80": {
+      "evidence": "recomputed_from_machine_records",
+      "correct_fields": 494,
+      "total_fields": 560,
+      "whole_email_correct": 32,
+      "expected": 80,
+      "accuracy": 0.8821428571428571
+    },
+    "p2": {
+      "evidence": "recomputed_from_machine_records",
+      "fields_correct": 83,
+      "fields_total": 84,
+      "emails_all_correct": 11,
+      "emails_total": 12,
+      "runtime": {
+        "requests": 12,
+        "received": 12,
+        "accepted": 12,
+        "failed": 0,
+        "input_tokens": 13242,
+        "output_tokens": 2209,
+        "total_tokens": 15451,
+        "estimated_peak_miss_cny": 0.044156,
+        "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+        "provider_latency_n": 12,
+        "provider_p50_ms": 2019.7830500037526,
+        "provider_p95_ms": 7975.221839996811,
+        "actual_invoice": null
+      }
+    },
+    "p36": {
+      "evidence": "recomputed_from_machine_records",
+      "fields_correct": 143,
+      "fields_total": 168,
+      "emails_all_correct": 17,
+      "emails_total": 24,
+      "final_runtime": {
+        "requests": 32,
+        "received": 32,
+        "accepted": 29,
+        "failed": 3,
+        "input_tokens": 111265,
+        "output_tokens": 18626,
+        "total_tokens": 129891,
+        "estimated_peak_miss_cny": 0.371538,
+        "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+        "provider_latency_n": 32,
+        "provider_p50_ms": 3474.333850000221,
+        "provider_p95_ms": 6429.149624999991,
+        "actual_invoice": null
+      },
+      "all_runtime": {
+        "requests": 40,
+        "received": 40,
+        "accepted": 32,
+        "failed": 8,
+        "input_tokens": 135149,
+        "output_tokens": 23460,
+        "total_tokens": 158609,
+        "estimated_peak_miss_cny": 0.457978,
+        "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+        "provider_latency_n": 40,
+        "provider_p50_ms": 3544.8746000001847,
+        "provider_p95_ms": 6317.969425000046,
+        "actual_invoice": null
+      }
+    },
+    "p39_fixed": {
+      "evidence": "recomputed_from_machine_records",
+      "A": {
+        "fields_correct": 90,
+        "fields_total": 168,
+        "emails_all_correct": 12,
+        "emails_total": 24,
+        "runtime": {
+          "requests": 32,
+          "received": 32,
+          "accepted": 17,
+          "failed": 15,
+          "input_tokens": 121895,
+          "output_tokens": 20859,
+          "total_tokens": 142754,
+          "estimated_peak_miss_cny": 0.410662,
+          "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+          "provider_latency_n": 32,
+          "provider_p50_ms": 3899.750650001806,
+          "provider_p95_ms": 6811.344405001317,
+          "actual_invoice": null
+        }
+      },
+      "B": {
+        "fields_correct": 82,
+        "fields_total": 168,
+        "emails_all_correct": 10,
+        "emails_total": 24,
+        "runtime": {
+          "requests": 32,
+          "received": 32,
+          "accepted": 17,
+          "failed": 15,
+          "input_tokens": 141575,
+          "output_tokens": 19520,
+          "total_tokens": 161095,
+          "estimated_peak_miss_cny": 0.43931,
+          "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+          "provider_latency_n": 32,
+          "provider_p50_ms": 3769.5771499966213,
+          "provider_p95_ms": 4992.810360000657,
+          "actual_invoice": null
+        }
+      },
+      "pairs": {
+        "succeeded/succeeded": 14,
+        "failed/failed": 12,
+        "succeeded/failed": 3,
+        "failed/succeeded": 3
+      }
+    },
+    "p310": {
+      "evidence": "recomputed_from_machine_records",
+      "total": {
+        "requests": 180,
+        "received": 180,
+        "accepted": 67,
+        "failed": 113,
+        "input_tokens": 692937,
+        "output_tokens": 115063,
+        "total_tokens": 808000,
+        "estimated_peak_miss_cny": 2.306378,
+        "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+        "provider_latency_n": 180,
+        "provider_p50_ms": 4047.426049999558,
+        "provider_p95_ms": 5762.330650000185,
+        "actual_invoice": null
+      },
+      "dev-v1": {
+        "challenger": {
+          "requests": 32,
+          "received": 32,
+          "accepted": 19,
+          "failed": 13,
+          "input_tokens": 101346,
+          "output_tokens": 19496,
+          "total_tokens": 120842,
+          "estimated_peak_miss_cny": 0.35866,
+          "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+          "provider_latency_n": 32,
+          "provider_p50_ms": 4061.5167999999358,
+          "provider_p95_ms": 7256.724760000678,
+          "actual_invoice": null
+        }
+      },
+      "dev-v2": {
+        "challenger": {
+          "requests": 32,
+          "received": 32,
+          "accepted": 4,
+          "failed": 28,
+          "input_tokens": 107010,
+          "output_tokens": 19563,
+          "total_tokens": 126573,
+          "estimated_peak_miss_cny": 0.370524,
+          "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+          "provider_latency_n": 32,
+          "provider_p50_ms": 3892.370799999753,
+          "provider_p95_ms": 5705.156674999534,
+          "actual_invoice": null
+        }
+      },
+      "new40-initial": {
+        "champion": {
+          "requests": 40,
+          "received": 40,
+          "accepted": 10,
+          "failed": 30,
+          "input_tokens": 178215,
+          "output_tokens": 25504,
+          "total_tokens": 203719,
+          "estimated_peak_miss_cny": 0.560462,
+          "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+          "provider_latency_n": 40,
+          "provider_p50_ms": 4006.6611000002013,
+          "provider_p95_ms": 5398.9693099993465,
+          "actual_invoice": null
+        },
+        "challenger": {
+          "requests": 40,
+          "received": 40,
+          "accepted": 3,
+          "failed": 37,
+          "input_tokens": 130255,
+          "output_tokens": 25963,
+          "total_tokens": 156218,
+          "estimated_peak_miss_cny": 0.468214,
+          "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+          "provider_latency_n": 40,
+          "provider_p50_ms": 4268.55790000036,
+          "provider_p95_ms": 5090.989024999907,
+          "actual_invoice": null
+        }
+      },
+      "dev-workflow": {
+        "challenger": {
+          "denominator": 32,
+          "first_accepted": 19,
+          "final_accepted": 30,
+          "corrections": 13,
+          "correction_accepted": 11,
+          "uncorrected_failures": 0,
+          "workflow_runtime": {
+            "requests": 45,
+            "received": 45,
+            "accepted": 30,
+            "failed": 15,
+            "input_tokens": 166008,
+            "output_tokens": 28751,
+            "total_tokens": 194759,
+            "estimated_peak_miss_cny": 0.562024,
+            "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+            "provider_latency_n": 45,
+            "provider_p50_ms": 3992.9535999999644,
+            "provider_p95_ms": 8215.66494000053,
+            "actual_invoice": null
+          },
+          "service_p50_ms": 4525.49665000015,
+          "service_p95_ms": 13783.329515000829
+        }
+      },
+      "new40-workflow": {
+        "champion": {
+          "denominator": 40,
+          "first_accepted": 10,
+          "final_accepted": 10,
+          "corrections": 0,
+          "correction_accepted": 0,
+          "uncorrected_failures": 30,
+          "workflow_runtime": {
+            "requests": 40,
+            "received": 40,
+            "accepted": 10,
+            "failed": 30,
+            "input_tokens": 178215,
+            "output_tokens": 25504,
+            "total_tokens": 203719,
+            "estimated_peak_miss_cny": 0.560462,
+            "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+            "provider_latency_n": 40,
+            "provider_p50_ms": 4006.6611000002013,
+            "provider_p95_ms": 5398.9693099993465,
+            "actual_invoice": null
+          },
+          "service_p50_ms": 4398.011550000319,
+          "service_p95_ms": 5944.084310000471
+        },
+        "challenger": {
+          "denominator": 40,
+          "first_accepted": 3,
+          "final_accepted": 23,
+          "corrections": 23,
+          "correction_accepted": 20,
+          "uncorrected_failures": 14,
+          "workflow_runtime": {
+            "requests": 63,
+            "received": 63,
+            "accepted": 23,
+            "failed": 40,
+            "input_tokens": 241704,
+            "output_tokens": 41245,
+            "total_tokens": 282949,
+            "estimated_peak_miss_cny": 0.813368,
+            "price_basis": "historical 2026-10-15/17 input 2/output 8 CNY per million; not current price or invoice",
+            "provider_latency_n": 63,
+            "provider_p50_ms": 4123.247800000172,
+            "provider_p95_ms": 5080.332999999882,
+            "actual_invoice": null
+          },
+          "service_p50_ms": 7494.319299999461,
+          "service_p95_ms": 11294.344100000442
+        }
+      }
+    }
+  },
+  "independent_human_gold": "not established; historical human scores remain null; owner policy/reference decisions are separate",
+  "limitations": "Machine-record arithmetic, not a new model experiment or human semantic audit. All old24/32/new40 are exposed development material."
+}
