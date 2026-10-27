@@ -39,7 +39,7 @@ class StreamlitTests(unittest.TestCase):
 
     def test_single_save_rerun_reopen_and_idempotency(self):
         app=self.app()
-        self.assertEqual([t.label for t in app.tabs],['智能接待','业务分析','研究与开发者工具','单条处理 / Single Analysis','批量分析 / Batch Analysis','统计看板 / Dashboard','评测 / Evaluation'])
+        self.assertEqual([t.label for t in app.tabs],['智能客服','AI助手','详情','业务分析','研究工具','单条处理 / Single Analysis','批量分析 / Batch Analysis','统计看板 / Dashboard','评测 / Evaluation'])
         run_id=self.submit(app,EMAILS[0])
         app.run()
         self.assertTrue(any('saved successfully' in x.value for x in app.success))

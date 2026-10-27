@@ -571,19 +571,9 @@ def render_evaluation_tab() -> None:
 
 
 def main() -> None:
-    st.markdown('''<style>
-    .block-container {padding-top:2.5rem; padding-bottom:2rem;}
-    h1 {font-size:1.65rem !important;} h3 {font-size:1.1rem !important;}
-    [data-testid="stText"] {white-space:pre-wrap; overflow-wrap:anywhere;}
-    @media (max-width: 760px) {
-      .block-container {padding:2rem 1rem;}
-      [data-testid="stHorizontalBlock"] {flex-wrap:wrap;}
-      [data-testid="stColumn"] {min-width:100%;}
-    }
-    </style>''', unsafe_allow_html=True)
-    st.title("基于LangChain的智能客户邮件处理与回复助手")
-    st.caption("理解客户问题 → 核对依据 → 编辑与审核 → 模拟发送 · 离线演示 / 历史重放，未启用新模型请求")
-    tabs = st.tabs(["智能接待", "业务分析", "研究与开发者工具"])
+    from src.app.inbox_style import apply
+    apply()
+    tabs = st.tabs(["智能客服", "业务分析", "研究工具"])
     with tabs[0]:
         render_single_analysis_tab()
     with tabs[1]:

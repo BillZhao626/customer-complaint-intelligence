@@ -24,6 +24,8 @@ def store(root):
 
 
 LABELS = {
+    'camera': '相机', 'drawer': '抽屉', 'old bed collection': '旧床取件', 'invoice': '发票',
+    'baking tray': '烤盘', 'desk lamp': '台灯', 'delivered package': '已送达包裹', 'folding bicycle': '折叠车',
     'pending_review': '待审核', 'changes_requested': '待修改', 'approved': '已批准',
     'rejected': '已拒绝', 'simulated_sent': '已模拟发送', 'analysis_failed': '分析失败',
     'negative': '负面', 'positive': '正面', 'neutral': '中性', 'mixed': '混合', 'unknown': '未知',

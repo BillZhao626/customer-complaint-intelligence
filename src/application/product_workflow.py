@@ -189,7 +189,7 @@ class ProductStore:
         return [self.get(i) for i in ids]
 
     def act(self, case_id, action, *, expected_revision, actor, actor_type, reason='', body=None, checks=None, operation_id=None):
-        if action not in ('save_edit', 'approve', 'reject', 'request_changes', 'simulate_send'):
+        if action not in ('save_edit', 'insert_suggestion', 'approve', 'reject', 'request_changes', 'simulate_send'):
             raise Conflict('Unknown or unauthorized action')
         if not actor.strip() or actor_type not in ('local_human', 'demo_test'):
             raise Conflict('Explicit local reviewer identity or labeled demo/test actor required')
@@ -223,10 +223,19 @@ class ProductStore:
                 quality = inspect(record['run'].email, record['analysis'], current_body, True)
                 new_state = state
                 details = dict(quality=quality, checks=checks, guard_version=VERSION)
-                if action == 'save_edit':
+                if action in ('save_edit', 'insert_suggestion'):
                     if not isinstance(body, str) or not body.strip() or len(body) > 30000:
                         raise ValueError('Nonblank reply up to 30000 characters required')
-                    if body == current_body:
+                    if action == 'insert_suggestion' and state == 'rejected' and body == current_body:
+                        raise Conflict('Rejected draft must be edited before a new review')
+                    if action == 'insert_suggestion':
+                        suggestion = record['run'].result.suggested_reply
+                        mode = checks.get('insertion_mode')
+                        if mode not in ('replace', 'append') or (mode == 'replace' and body != suggestion) or (mode == 'append' and not body.endswith(suggestion)):
+                            raise Conflict('Inserted text must bind to the current original suggestion')
+                        details['draft_source'] = dict(kind='copilot_suggestion', run_id=record['run'].run_id,
+                            input_hash=record['run'].input_hash, suggestion_hash=digest(suggestion), mode=mode)
+                    if body == current_body and action == 'save_edit':
                         return record
                     version += 1
                     quality = inspect(record['run'].email, record['analysis'], body, True)

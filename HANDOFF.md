@@ -1,3 +1,15 @@
+# HANDOFF — P4.6 Chinese Inbox & Copilot
+
+2026-10-28（Asia/Shanghai）。最新入口为 [中文版交付与体验流程](docs/p46/DELIVERY.md)、[真实浏览器与回归记录](docs/p46/VERIFICATION.md)、[兼容设计](docs/p46/DESIGN.md) 和 [五类回复审阅](docs/p46/CONTENT_REVIEW.md)。下方历史交接保留。
+
+- P4.5 提交6cdb7ee与全部未跟踪研究成果已核验保留；在其基础上做中文版收件箱/消息气泡/底部编辑器/右侧AI与详情双Tab。1366/1440三栏，1024/768工作区域切换，不迁移前端。
+- 插入建议使用既有ProductStore事务新增insert_suggestion事件，记录原建议run/input/hash，已有文本显式追加或替换，同文也新建版本并重新审核。SQLite v1、线程sidecar、原契约/政策/预算及幂等模拟发送保持兼容。
+- 保存案例/版本/回执与消息历史可重启恢复；未保存编辑仅按案例/版本留在浏览器会话，不冒充落库。旧v1已批准草稿可继续模拟发送。分析阻断始终不可由改写解除。
+- 四种执行来源严格区分；任意追问明确禁用；本轮新模型调用0、真实SMTP/CRM发送0。五类内容仅为开发代理审阅，不代签真人语义评分。Human Gold/holdout仍pending。
+- 本机新工作库、恢复副本、原始验收日志均在独立.local/p4/p46-20261028/。公开交付仅白名单源码、测试、文档和合成场景截图；最终测试/Git/CI状态以本轮验证文档及本机收据为准。
+
+---
+
 # HANDOFF — P4.5 Customer-Centric Copilot
 
 2026-10-27（Asia/Shanghai）。最新入口为 [P4.5交付](docs/p45/DELIVERY.md)、[真实浏览器与回归记录](docs/p45/VERIFICATION.md) 和 [设计依据](docs/p45/DESIGN.md)。以下 P4 Final 与所有历史交接原文保留。

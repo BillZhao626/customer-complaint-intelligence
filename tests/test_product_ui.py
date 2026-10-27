@@ -35,11 +35,15 @@ class ProductUITests(unittest.TestCase):
             app.selectbox(key='p4_scenario').set_value(SCENARIOS[scenario]).run()
         app.button(key='p4_analyze').click().run()
         self.assertFalse(app.exception, [e.message for e in app.exception])
+        if self.current(app)['draft']:
+            app.button(key='p46_insert').click().run()
+            self.assertFalse(app.exception, [e.message for e in app.exception])
         self.assertEqual(app.selectbox(key='p4_history').value.split(':')[0], self.current(app)['case_id'])
         return self.current(app)
 
     def approve(self, app):
         c = self.current(app)
+        app.button(key='p46_review_open').click().run()
         for key in ('facts', 'authority', 'issues'):
             app.checkbox(key=f"p4_{key}_{c['case_id']}_{c['current_version']}").check()
         if c['quality']['safety_review_required']:
@@ -51,13 +55,13 @@ class ProductUITests(unittest.TestCase):
 
     def test_inquiry_full_ui_send_reopen_new_session_dashboard(self):
         app = self.app(); c = self.analyze(app)
-        self.assertTrue(app.button(key='p4_simulate_send').disabled)
+        self.assertFalse(any(b.key=='p4_simulate_send' for b in app.button))
         self.assertTrue(any('Evidence' in e.label for e in app.expander))
         self.approve(app)
         app.button(key='p4_simulate_send').click().run()
         self.assertEqual(self.current(app)['state'], 'simulated_sent')
         fresh = self.app()
-        fresh.selectbox(key='p4_history').set_value(c['case_id'] + ':2')
+        fresh.selectbox(key='p4_history').set_value(c['case_id'] + ':' + str(self.current(app)['revision']))
         fresh.button(key='p4_open').click().run()
         self.assertTrue(any('模拟发送已完成' in x.value for x in fresh.success))
         self.assertFalse(any(b.key in ('p4_save_edit', 'p4_approve', 'p4_simulate_send') for b in fresh.button))
@@ -65,22 +69,23 @@ class ProductUITests(unittest.TestCase):
 
     def test_edit_return_save_approve_new_version_and_simulate(self):
         app = self.app(); c = self.analyze(app, 3)
+        app.button(key='p46_review_open').click().run()
         self.assertTrue(app.button(key='p4_approve').disabled)
         app.text_area(key=f"p4_reason_{c['case_id']}").set_value('Remove unsupported follow-up promise.')
         app.button(key='p4_request_changes').click().run()
         self.assertEqual(self.current(app)['state'], 'changes_requested')
-        reply_key = f"p4_reply_{c['case_id']}_1"
-        app.text_area(key=reply_key).set_value('Thank you for describing the lamp problem. Please share the model to help identify available support options.')
+        reply_key = f"p4_reply_{c['case_id']}_{c['current_version']}"
+        app.text_area(key=reply_key).set_value('Thank you for describing the lamp problem. Please share the model to help identify available support options.').run()
         app.button(key='p4_save_edit').click().run()
-        self.assertEqual(self.current(app)['current_version'], 2)
-        self.assertTrue(any('v1' in t.value and 'v2' in t.value for t in app.code))
+        self.assertEqual(self.current(app)['current_version'], 3)
+        self.assertTrue(any('v2' in t.value and 'v3' in t.value for t in app.code))
         self.approve(app)
         # A browser rerun after editing must disable send while text is dirty.
-        app.text_area(key=f"p4_reply_{c['case_id']}_2").set_value('An unsaved new reply.').run()
-        self.assertTrue(app.button(key='p4_simulate_send').disabled)
-        app.text_area(key=f"p4_reply_{c['case_id']}_2").set_value(self.current(app)['draft']['body']).run()
+        app.text_area(key=f"p4_reply_{c['case_id']}_3").set_value('An unsaved new reply.').run()
+        self.assertFalse(any(b.key=='p4_simulate_send' for b in app.button))
+        app.text_area(key=f"p4_reply_{c['case_id']}_3").set_value(self.current(app)['draft']['body']).run()
         app.button(key='p4_simulate_send').click().run()
-        self.assertEqual(self.current(app)['receipt']['version'], 2)
+        self.assertEqual(self.current(app)['receipt']['version'], 3)
 
     def test_multi_and_severe_safety_review_actual_widgets(self):
         app = self.app(); c = self.analyze(app, 1)
@@ -98,10 +103,12 @@ class ProductUITests(unittest.TestCase):
         self.assertIsNone(c['draft'])
         self.assertFalse(any(b.key == 'p4_approve' for b in app.button))
         c = self.analyze(app, 0)
+        app.button(key='p46_review_open').click().run()
         app.text_area(key=f"p4_reason_{c['case_id']}").set_value('Reject this demo draft for manual investigation.')
         app.button(key='p4_reject').click().run()
         self.assertEqual(self.current(app)['state'], 'rejected')
-        self.assertTrue(app.button(key='p4_simulate_send').disabled)
+        self.assertFalse(any(b.key=='p4_simulate_send' for b in app.button))
+        app.button(key='p46_review_open').click().run()
         self.assertTrue(app.button(key='p4_approve').disabled)
 
     def test_local_real_unsafe_replay_ui_block_preserves_original(self):
@@ -119,5 +126,7 @@ class ProductUITests(unittest.TestCase):
         c = self.current(app)
         self.assertEqual(c['source_kind'], 'real_replay')
         self.assertTrue(c['accepted'])
+        app.button(key='p46_insert').click().run()
+        app.button(key='p46_review_open').click().run()
         self.assertTrue(app.button(key='p4_approve').disabled)
-        self.assertTrue(app.button(key='p4_simulate_send').disabled)
+        self.assertFalse(any(b.key=='p4_simulate_send' for b in app.button))

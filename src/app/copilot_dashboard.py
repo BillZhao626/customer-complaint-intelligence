@@ -11,7 +11,7 @@ def render(root):
     dashboard = db.dashboard()
     st.caption('演示/研究工作案例，不是真实经营统计。每个完整来源版本组独立计算；同一邮件的新分析属于新案例，不是新增客户。')
     if not dashboard['groups']:
-        st.info('尚无已保存案例。请先在智能接待载入邮件。'); return
+        st.info('尚无已保存案例。请先在智能客服分析邮件。'); return
     groups = {g['source_kind'] + ':' + g['cohort_id']: g for g in dashboard['groups']}
     group_keys = list(groups)
     # Keep the domain selection separate from the widget identity. Streamlit
@@ -33,7 +33,7 @@ def render(root):
         state == '已模拟发送' and c['state'] == 'simulated_sent' or
         state == '待处理' and c['state'] != 'simulated_sent']
     st.caption(f'当前筛选 {len(filtered)} / 本版本组 {len(cases)} 案例；模拟发送不表示业务问题已解决。')
-    dimension = st.radio('查看维度', ['商品', '门店', '问题原因', '业务来源', '情绪', '日期'], horizontal=True, key='business_dimension')
+    dimension = st.radio('查看维度', ['商品', '门店', '问题原因', '业务来源', '情绪', '风险', '日期'], horizontal=True, key='business_dimension')
     rows = summarize(filtered, dimension)
     if rows:
         st.dataframe(pd.DataFrame([{'分组': label(r['name']), '邮件分析案例': r['total'], '负面反馈': r['negative'], '投诉案例': r['complaints'], '含未解决问题': r['unresolved']} for r in rows]), hide_index=True, width='stretch')
@@ -47,7 +47,6 @@ def render(root):
         member = member_map[selected_member]
         with st.expander('原始邮件与判断依据', expanded=True):
             show_analysis(member)
-            st.link_button('在智能接待打开此邮件', '?case_id=' + member['case_id'])
+            st.link_button('在智能客服打开此邮件', '?case_id=' + member['case_id'])
     with st.expander('开发者统计口径与身份'):
         st.json(dashboard)
-        st.caption(str(db.path))

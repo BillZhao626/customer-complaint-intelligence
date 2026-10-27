@@ -13,7 +13,7 @@ def summarize(cases, dimension):
         elif dimension == '门店':
             values = [(data.get('mentioned_store', 'unknown'), None)]
         else:
-            field = {'商品': 'object_name', '问题原因': 'reason', '业务来源': 'business_process', '情绪': 'sentiment'}[dimension]
+            field = {'商品': 'object_name', '问题原因': 'reason', '业务来源': 'business_process', '情绪': 'sentiment', '风险': 'risk_level'}[dimension]
             values = [(i.get(field) or 'unknown', i) for i in data.get('issues', [])
                       if dimension != '商品' or i.get('object_type') == 'product']
             if not values:
