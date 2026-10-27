@@ -1,3 +1,15 @@
+# HANDOFF — P4.5 Customer-Centric Copilot
+
+2026-10-27（Asia/Shanghai）。最新入口为 [P4.5交付](docs/p45/DELIVERY.md)、[真实浏览器与回归记录](docs/p45/VERIFICATION.md) 和 [设计依据](docs/p45/DESIGN.md)。以下 P4 Final 与所有历史交接原文保留。
+
+- 默认三栏智能接待：邮件、回复助手、理解与依据在1366×900首屏可见；业务分析与研究工具独立导航，旧CSV／Evaluation入口保留。
+- 新增9种显式预写／unknown场景及相机第二轮演示。RunnableLambda只返回预写数据；没有新付费调用、真实发送、知识检索或动态模型多轮。四类执行来源明确区分。
+- 独立不可变线程sidecar保留原文、模拟回执与上下文hash；不迁移旧产品或研究库。分析阻断仍不能由修改回复绕过，草稿版本和审核事件仍走原P4服务。
+- 真实浏览器已验收编辑Diff／审核／模拟、三Issue、严重风险、未知输入、往返、服务重启恢复、业务筛选下钻、宽窄屏、CSV与Evaluation错误隔离。详细边界及截图见验证记录；自动验收身份为demo_test，不代签真人语义评分。
+- 新源码／测试／脱敏交付在独立UX分支；旧原始资产、Gold、指标和未跟踪成果保留。原P3.9剩余额度及P3.10停发状态不变。独立Human Gold／holdout仍pending。
+
+---
+
 # HANDOFF — P4 Final / P5 Preflight
 
 2026-10-27（Asia/Shanghai）。最新交付从 [最终研究者审核包](docs/p4/FINAL_READINESS.md) 开始；此前 RC1 和实验交接原文保留。

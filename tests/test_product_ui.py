@@ -60,8 +60,8 @@ class ProductUITests(unittest.TestCase):
         fresh.selectbox(key='p4_history').set_value(c['case_id'] + ':2')
         fresh.button(key='p4_open').click().run()
         self.assertTrue(any('模拟发送已完成' in x.value for x in fresh.success))
-        self.assertTrue(fresh.button(key='p4_save_edit').disabled)
-        self.assertTrue(any('审核状态' in json.loads(m.value) for m in fresh.json))
+        self.assertFalse(any(b.key in ('p4_save_edit', 'p4_approve', 'p4_simulate_send') for b in fresh.button))
+        self.assertTrue(any('states' in json.loads(m.value) for m in fresh.json))
 
     def test_edit_return_save_approve_new_version_and_simulate(self):
         app = self.app(); c = self.analyze(app, 3)
