@@ -16,7 +16,8 @@ class StreamlitTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory(prefix='complaint_ui_')
         self.db=Path(self.temp.name)/'ui.sqlite3'
-        self.env=patch.dict(os.environ,{'COMPLAINT_DB_PATH':str(self.db)})
+        self.env=patch.dict(os.environ,{'COMPLAINT_DB_PATH':str(self.db),
+            'COMPLAINT_PRODUCT_DB':str(Path(self.temp.name)/'product.sqlite3')})
         self.env.start()
 
     def tearDown(self):
@@ -38,7 +39,7 @@ class StreamlitTests(unittest.TestCase):
 
     def test_single_save_rerun_reopen_and_idempotency(self):
         app=self.app()
-        self.assertEqual([t.label for t in app.tabs],['Single Analysis','Batch Analysis','Dashboard','Evaluation'])
+        self.assertEqual([t.label for t in app.tabs],['单条处理 / Single Analysis','批量分析 / Batch Analysis','统计看板 / Dashboard','评测 / Evaluation'])
         run_id=self.submit(app,EMAILS[0])
         app.run()
         self.assertTrue(any('saved successfully' in x.value for x in app.success))

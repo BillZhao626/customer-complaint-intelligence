@@ -1,0 +1,13 @@
+# P3.9-R3 execution continuity design
+
+2026-10-17, Asia/Shanghai. The current user request supersedes the old smoke-content approval prerequisite for this fixed fictional development experiment only.
+
+The frozen candidate, both prompts, RunConfig, input manifest, validators, projection, reply gate and original live transport remain byte-identical. A new `evaluation-continuity-v1` runner and budget adapter inherit the **same** canonical shared envelope. Original stops, root, economic reservations, approvals, usage and runtime identities are retained. The adapter appends an authorization binding and explicitly acknowledges only the audited historical `failure_requires_review` stop. It never fabricates a human content approval.
+
+New fixed runs use a separate SQLite database; old three runs are read through a read-only connection and skipped by exact schedule/run/event reconciliation. Every new dispatch uses the original AnalysisService/live execution/ContextLiveAnalyzer chain. Failure diagnosis is a separate read-only replay of raw, never a replacement prediction. Returned quality failures remain failed and have no accepted result or send permission.
+
+Before every dispatch, reconcile the ordered economic events with one durable terminal run per step, the input/config identity, completed payload and settlement. Unknown send, missing run, duplicate or divergent identity, invalid usage/cost/model, persistence failure or an active lease stop new dispatch. There is no retry, fallback, refunds of failed reservations or repair. The adapter atomically reserves against cumulative 72/10 and fixed-plan 65 limits. At eight attempted outputs it persists an engineering checkpoint including failures; request nine needs this checkpoint, not a human signature. Replies remain unreviewed and unsent.
+
+Acceptance: offline malformed JSON/schema/safety rejection continues through paired B; restart never resends a failed or accepted run; unknown send retains locks; model/usage/persistence drift stops; the eight-output checkpoint is durable and failure-inclusive; all 64 steps can complete under one envelope; concurrent claims cannot dispatch twice. Prior baseline tests keep their historical stop expectations. Challenger code/config/results are independent and can consume at most six requests only after fixed completion, cumulative <=71, leaving one hard-cap slot unused.
+
+Rollback: stop using the new entry point. Frozen old executables and all historical records remain available. Do not restore an old budget snapshot over current spend. Any safety stop needs a new explicit resolution; automatic recovery applies only to reconciled settled results.
