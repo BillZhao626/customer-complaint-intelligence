@@ -57,6 +57,8 @@ if len(sys.argv)>1 and sys.argv[1]=='--portable':
     suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_copilot'))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_p46_inbox'))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_copilot_questions'))
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromNames([
+        'tests.test_p47_content', 'tests.test_p47_content_v2', 'tests.test_p47_workflow', 'tests.test_p47_ui', 'tests.test_p47_questions']))
 else:
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
 def flatten(suite):

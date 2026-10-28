@@ -29,7 +29,7 @@ class CopilotService:
         if not 1 <= len(question) <= 1000: raise ValueError('请输入1–1000字的问题')
         context = context_for(self.store, case_id)
         mode = 'offline_evidence'
-        identity = dict(model='deterministic_rules', prompt=VERSION)
+        identity = dict(model='deterministic_rules', prompt=context.get('qa_version', VERSION))
         budget = None
         if provider is not None:
             # Deliberately closed live gate. A label alone cannot authorize network.

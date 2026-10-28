@@ -16,7 +16,7 @@ def select_case(c):
 def provenance(c):
     if c['source_kind'] == 'offline_fake':
         params = c['run'].config.parameters or {}
-        if params.get('product_scenario') == SCENARIOS[6]:
+        if params.get('product_scenario') == SCENARIOS[6] or params.get('service_scenario') == '自定义邮件（离线待人工）':
             return '未进行AI理解 · unknown流程占位'
         return '离线预写案例 · 无实时模型推理'
     return label(c['source_kind']) + ' · 本次未发起模型请求'

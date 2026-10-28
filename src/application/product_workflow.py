@@ -149,6 +149,19 @@ class ProductStore:
                               (case_id, 1, body, digest(body), json.dumps(quality, ensure_ascii=False), 'system_import', 'system', timestamp()))
                 self._event(c, case_id, 0, 1 if accepted else 0, 'created', None, state, 'system_import', 'system',
                             'Unreviewed draft; no inherited human approval', dict(raw_hash=raw_hash(run), quality=quality), 'create:' + key, key)
+                # A customer asking for a person is a routing signal, never an
+                # instruction to execute a model/tool or an inherited approval.
+                # Bind the request in the same transaction as the new case.
+                from src.application.service_triage import current_customer_text, explicit_human_request, is_p47_case, VERSION as ROUTING_VERSION
+                if is_p47_case(dict(run=run)) and explicit_human_request(current_customer_text(dict(run=run))):
+                    version = 1 if accepted else 0
+                    c.execute('UPDATE product_workflow SET revision=1 WHERE case_id=?', (case_id,))
+                    self._event(c, case_id, 1, version, 'request_handoff', state, state, 'customer_request_rule', 'system',
+                        '客户明确要求人工客服；仅记录本地转交请求，尚无人接管。',
+                        dict(quality=quality, guard_version=VERSION, checks={}, handoff=dict(mode='local_demo_only',
+                            routing_version=ROUTING_VERSION, reason_codes=['customer_requested'], run_id=run.run_id,
+                            input_hash=run.input_hash, draft_version=version, body_hash=digest(body) if body is not None else None)),
+                        'customer-handoff:' + key, digest(dict(source_key=key, action='request_handoff', routing=ROUTING_VERSION)))
         return self.get(case_id)
 
     def get(self, case_id):
@@ -189,7 +202,7 @@ class ProductStore:
         return [self.get(i) for i in ids]
 
     def act(self, case_id, action, *, expected_revision, actor, actor_type, reason='', body=None, checks=None, operation_id=None):
-        if action not in ('save_edit', 'insert_suggestion', 'approve', 'reject', 'request_changes', 'simulate_send'):
+        if action not in ('save_edit', 'insert_suggestion', 'approve', 'reject', 'request_changes', 'simulate_send', 'request_handoff', 'take_over'):
             raise Conflict('Unknown or unauthorized action')
         if not actor.strip() or actor_type not in ('local_human', 'demo_test'):
             raise Conflict('Explicit local reviewer identity or labeled demo/test actor required')
@@ -212,18 +225,28 @@ class ProductStore:
                 state, revision, version = row['state'], row['revision'], row['current_version']
                 if revision != expected_revision:
                     raise Conflict('Stale page: reload current case before changing it')
-                if state == 'analysis_failed':
+                if state == 'analysis_failed' and action not in ('request_handoff', 'take_over'):
                     raise Conflict('Failed analysis has no reviewable draft')
                 if state == 'simulated_sent':
                     if action == 'simulate_send':
                         return self.get(case_id)
                     raise Conflict('Simulation snapshot is terminal; retain the approved content')
                 record = self.get(case_id)
-                current_body = record['draft']['body']
-                quality = inspect(record['run'].email, record['analysis'], current_body, True)
+                current_body = record['draft']['body'] if record['draft'] else None
+                quality = inspect(record['run'].email, record['analysis'], current_body, bool(record['accepted']))
                 new_state = state
                 details = dict(quality=quality, checks=checks, guard_version=VERSION)
-                if action in ('save_edit', 'insert_suggestion'):
+                if action in ('request_handoff', 'take_over'):
+                    if not reason.strip():
+                        raise Conflict('Local handoff or takeover requires an explicit reason')
+                    from src.application.service_triage import triage
+                    route = triage(record)
+                    details['handoff'] = dict(mode='local_demo_only', routing_version=route['version'],
+                        routing_hash=route['routing_hash'], reason_codes=route['reason_codes'],
+                        run_id=record['run'].run_id, input_hash=record['run'].input_hash,
+                        source_kind=record['source_kind'], draft_version=version,
+                        body_hash=record['draft']['body_hash'] if record['draft'] else None)
+                elif action in ('save_edit', 'insert_suggestion'):
                     if not isinstance(body, str) or not body.strip() or len(body) > 30000:
                         raise ValueError('Nonblank reply up to 30000 characters required')
                     if action == 'insert_suggestion' and state == 'rejected' and body == current_body:
@@ -244,6 +267,13 @@ class ProductStore:
                     new_state = 'pending_review'
                     details.update(quality=quality, previous_version=version - 1)
                 elif action == 'approve':
+                    from src.application.service_triage import is_p47_case, triage
+                    if is_p47_case(record):
+                        if state == 'changes_requested':
+                            raise Conflict('已退回的草稿须实际修改并保存新版本后，再重新审核。')
+                        route = triage(record)
+                        if route['requires_takeover'] and not route['takeover_complete']:
+                            raise Conflict('此会话须先由本地操作者接管，再审核当前回复。')
                     if state not in ('pending_review', 'changes_requested', 'approved'):
                         raise Conflict('Rejected draft must be edited before a new review')
                     if state == 'approved':
@@ -264,6 +294,11 @@ class ProductStore:
                         raise Conflict('Rejection or return requires a reason')
                     new_state = 'rejected' if action == 'reject' else 'changes_requested'
                 elif action == 'simulate_send':
+                    from src.application.service_triage import is_p47_case, triage
+                    if is_p47_case(record):
+                        route = triage(record)
+                        if route['requires_takeover'] and not route['takeover_complete']:
+                            raise Conflict('此会话须先由本地操作者接管，再审核当前回复。')
                     if state != 'approved' or quality['status'] == 'blocked':
                         raise Conflict('Only current approved and unblocked draft can be simulated')
                     approval = next((e for e in reversed(record['events']) if e['action'] == 'approve' and e['version'] == version), None)

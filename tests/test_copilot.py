@@ -144,6 +144,7 @@ class CopilotUITests(unittest.TestCase):
         from streamlit.testing.v1 import AppTest
         with tempfile.TemporaryDirectory() as d, patch.dict(os.environ, COMPLAINT_PRODUCT_DB=str(Path(d)/'product.sqlite3'), COMPLAINT_DB_PATH=str(Path(d)/'legacy.sqlite3')):
             app = AppTest.from_file(str(Path(__file__).resolve().parents[1]/'app.py'), default_timeout=45).run()
+            app.selectbox(key='p4_scenario').set_value(SCENARIOS[0]).run()
             app.button(key='p4_analyze').click().run()
             first = app.session_state['p4_case']
             cohort = app.selectbox(key='business_cohort').value
@@ -167,6 +168,7 @@ class CopilotUITests(unittest.TestCase):
             app = AppTest.from_file(str(Path(__file__).resolve().parents[1]/'app.py'), default_timeout=45).run()
             self.assertFalse(app.exception)
             self.assertEqual([t.label for t in app.tabs if t.label in ('智能客服','业务分析','研究工具')], ['智能客服', '业务分析', '研究工具'])
+            app.selectbox(key='p4_scenario').set_value(SCENARIOS[0]).run()
             self.assertTrue(any('official specifications' in t.value for t in app.text))
             app.button(key='p4_analyze').click().run()
             app.button(key='p46_insert').click().run()
