@@ -138,7 +138,7 @@ class InboxUITests(unittest.TestCase):
         self.assertEqual(self.app.selectbox(key='p46_filter').value,'全部')
         self.assertEqual(self.app.session_state['p4_case'],c['case_id'])
         self.assertTrue(any('unknown流程占位' in x.value for x in self.app.caption))
-        self.assertTrue(self.app.text_input(key='p46_question').disabled)
+        self.assertFalse(self.app.text_input(key='p46_question_'+c['case_id']).disabled)
         self.assertFalse(self.app.exception)
 
     def test_existing_approved_v1_restores_without_losing_reply(self):

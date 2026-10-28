@@ -1,3 +1,16 @@
+# HANDOFF — P4.6.1 UX refinement & evidence Copilot
+
+2026-10-28（Asia/Shanghai）。基于7df9768增量更新原Draft PR #4。入口：[候选操作与研究者空白验收清单](docs/p46/REFINEMENT_DELIVERY.md)、[工程/真实浏览器证据](docs/p46/REFINEMENT_VERIFICATION.md)、[设计与兼容](docs/p46/REFINEMENT_DESIGN.md)。以下旧交接原文保留。
+
+- 首封自然排列+下一步+编辑器；多轮局部滚动；四尺寸首屏可见，无横向溢出。正文/编辑器16px，建议15px，时间/辅助13px，消除辅助透明度。
+- “证据问答”是真实可用的受限自然语言离线规则问答，只读本案保存原文、已校验线程、Issue/Evidence和质量；回答有引用/不确定性，不编造商品规格/订单/政策。不是实时自由模型或人工Gold。
+- 独立*-copilot.sqlite3保留问题/上下文快照/引用/Run/Prompt/模型/usage及失败；重启恢复、按案隔离、幂等；不迁移产品v1、分析或线程库，不改草稿或审核。仍须原建议显式插入、保存版本和人工审核；分析阻断不放宽。
+- 独立CopilotProvider复用真实LangChain ChatOpenAI适配，严格输出/引用/用量、超时、预算、幂等由SDK Mock HTTP验证；live硬关闭，真实Provider自由问答仍待独立授权/新预算/验证。
+- 全量445/445；原427及原418全部ID保留。最终问答专项18/18；干净Portable351=344通过+7私有资产skip。历史12,262文件0改0丢失；.env旧API开关虽开启，应用/测试强制关闭。付费新增0，真实SMTP/CRM发送0。
+- 本机收据与隔离工作库：.local/p4/p461-20261028/。公开仅白名单工程文件和合成真实截图。最终Git/精确提交CI以交付消息及git-delivery.json为准；研究者决定保持空白。
+
+---
+
 # HANDOFF — P4.6 Chinese Inbox & Copilot
 
 2026-10-28（Asia/Shanghai）。最新入口为 [中文版交付与体验流程](docs/p46/DELIVERY.md)、[真实浏览器与回归记录](docs/p46/VERIFICATION.md)、[兼容设计](docs/p46/DESIGN.md) 和 [五类回复审阅](docs/p46/CONTENT_REVIEW.md)。下方历史交接保留。

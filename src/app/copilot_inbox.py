@@ -13,6 +13,7 @@ from src.application.analysis_service import AnalysisService
 from src.application.product_analysis import ProductAnalysis
 from src.infrastructure.repository import Repository
 from src.domain.contracts import EmailInput, digest
+from src.application.copilot_service import CopilotService
 
 
 def preview(value):
@@ -47,6 +48,7 @@ def remember(c, key):
 
 
 def editor_value(c):
+    if not c['draft']: return ''
     buffers = st.session_state.setdefault('p46_buffers', {})
     key = f"p4_reply_{c['case_id']}_{c['current_version']}"
     if key in st.session_state:
@@ -189,19 +191,32 @@ def inbox(db, cases, c, scenario):
 def conversation(threads,c,email):
     st.html(f'<div class="conversation-title">{escape(email.subject)}</div>')
     st.caption((status(c)+' · '+provenance(c)) if c else '待处理 · 合成演示预览，尚未保存')
-    with st.container(height=350,border=False,key='conversation',autoscroll=True):
-        if c:
-            messages=threads.messages(c['case_id'])
-        else:
-            messages=[dict(role='customer',body=email.body,at=None)]
-        st.html('<div class="system-event">本地客户会话 · 客服消息仅来自已保存模拟回执</div>')
+    messages=threads.messages(c['case_id']) if c else [dict(role='customer',body=email.body,at=None)]
+    single=len(messages)==1
+    with st.container(height='content' if single else 280,border=False,
+                      key='conversation_single' if single else 'conversation',autoscroll=not single):
         for m in messages:
             outgoing=m['role']=='assistant_simulation'
             identity='客服 · 已模拟发送' if outgoing else '客户 · 原始来信'
             when=' · '+time_label(m['at']) if m['at'] else ' · 演示预览'
             st.html(f'<div class="message {"outgoing" if outgoing else "incoming"}"><div class="message-meta">{identity}{when}</div>{escape(m["body"])}</div>')
-        if c:
-            st.html(f'<div class="system-event">{len(c["events"])} 条处理记录 · {status(c)} · 草稿不会显示为已发送消息</div>')
+    # A stable block keeps the composer at the same Streamlit delta path when
+    # the next action changes after editing, approval or sending.
+    with st.container(key='next_action'):
+        next_action(c)
+
+
+def next_action(c):
+    if c and not c['receipt']:
+        guidance=('转人工核对风险与分析阻断，再处理回复。' if not c['accepted'] or c['quality']['status']=='blocked' else
+                  '审核已通过，核对当前版本后可模拟发送。' if c['state']=='approved' else
+                  '修改回复并保存新版本，再提交人工审核。' if c['state'] in ('rejected','changes_requested') else
+                  '核对当前草稿，保存修改后提交人工审核。' if editor_value(c).strip() else
+                  '查看AI建议并插入草稿，核实资料后提交人工审核。')
+        st.html('<div class="next-step">下一步 · '+guidance+'</div>')
+        if c['accepted'] and c['quality']['status']!='blocked' and not editor_value(c).strip() and st.button('查看AI建议',key='p461_view_advice'):
+            st.session_state['p46_next_region']='AI助手'
+            st.session_state['p461_assistant_tab']='AI助手';st.rerun()
 
 
 def composer(db,c):
@@ -243,9 +258,9 @@ def composer(db,c):
 
 
 def assistant(db,c,data):
-    a,b=st.tabs(['AI助手','详情'])
+    a,q,b=st.tabs(['AI助手','证据问答','详情'],key='p461_assistant_tab',on_change='rerun')
     with a:
-        with st.container(height=520,border=False,key='assistant_scroll'):
+        with st.container(height=600,border=False,key='assistant_scroll'):
             st.caption((provenance(c) if c else '离线预写建议')+' · 仅供内部参考')
             if not data or (c and not c['accepted']):
                 st.warning('没有可信建议，请人工阅读原文。')
@@ -276,8 +291,8 @@ def assistant(db,c,data):
                         for e in i.get('evidence',[]): st.text(e['quote'])
                         st.caption('还需补充：'+'；'.join(i.get('missing_evidence',[])))
                 if c and c['quality']['status']=='blocked': st.error('不可放行：请转人工处理。')
-        st.text_input('向AI追问',placeholder='当前离线模式不支持任意追问',disabled=True,key='p46_question')
-        st.caption('本次只读建议，不支持实时追问。' if c and c['source_kind']!='offline_fake' else '固定场景建议，不是实时AI推理。')
+    with q:
+        evidence_questions(db,c)
     with b:
         with st.container(height=600,border=False):
             understanding(data if not c or c['accepted'] else None,c['quality'] if c else None)
@@ -298,6 +313,48 @@ def assistant(db,c,data):
                     st.markdown('客户邮件/显式历史 → 输入与提示词组装 → LangChain ChatOpenAI 适配 → DeepSeek 输出 → Issue/原文证据 → 业务质量校验 → 草稿与人工审核。')
                     st.caption('当前分支使用 RunnableLambda 返回预写 Fixture/unknown；历史真实重放、SDK Mock HTTP 与未来实时 DeepSeek 分开。本轮实时调用关闭。')
                     st.json(dict(case_id=c['case_id'],run_id=c['run'].run_id,config=c['run'].config.model_dump(),snapshot_hash=c['snapshot_hash']))
+
+
+def evidence_questions(db,c):
+    st.markdown('**离线证据问答**')
+    st.caption('读取本案保存资料 · 规则识别问题 · 内部参考，非人工Gold')
+    if not c:
+        st.caption('先选择已保存会话，再向助手提问。');return
+    try:
+        service=CopilotService(db)
+        with st.form('qa_form_'+c['case_id']):
+            quick=st.selectbox('常见问题',['自行输入','客户主要想解决什么？','为什么被判断为投诉或咨询？',
+                '有哪些Issue及原文证据？','当前回复还缺哪些信息？','为什么需要人工介入或风险阻断？',
+                '下一步怎么处理？','哪些信息已提供，不能重复询问？'],key='qa_quick_'+c['case_id'])
+            question=st.text_input('向AI追问',placeholder='例如：客户已提供哪些信息？',key='p46_question_'+c['case_id'],max_chars=1000)
+            submitted=st.form_submit_button('依据本案回答',width='stretch')
+        if submitted:
+            selected=question.strip() or (quick if quick!='自行输入' else '')
+            if not selected: st.error('请输入问题或选择常见问题。')
+            else:
+                record=service.ask(c['case_id'],selected)
+                if record['status']=='running': st.warning('该问答已登记但结果尚未确认；请重读记录，不会自动重试。')
+        history=service.repository.history(c['case_id'])
+        if history:
+            with st.container(height=240,border=False,key='qa_history'):
+                for record in reversed(history[-12:]):
+                    st.text('问：'+record['question'])
+                    result=record['result'] or {}
+                    if record['status']=='succeeded':
+                        st.text(result['answer'])
+                        with st.expander('查看本次依据与不确定性'):
+                            for ref in result['references']:
+                                st.caption(ref['id']+' · '+ref['source']);st.text(ref['text'])
+                            for item in result['uncertainty']: st.caption(item)
+                            st.caption(f"资料快照 revision {record['context']['revision']} · {time_label(record['created_at'])}；不随后续编辑改写")
+                    elif record['status']=='failed': st.error(result['message']+'（'+result['error']+'）')
+                    else: st.warning('问答结果未确认；没有自动重试或发送。')
+        st.caption('已保存问答可重启恢复 · 同问题同资料复用')
+        with st.expander('实时AI追问 · 待授权'):
+            st.caption('默认关闭。独立LangChain接口仅完成SDK Mock HTTP工程验证；真实Provider自由问答待独立付费授权及验证。')
+            st.caption('问答仅内部参考。未提交输入不保证恢复；回复须明确插入、保存版本和人工审核。只展示最近12条问答，完整历史保存在本案独立问答库。')
+    except Exception as exc:
+        st.error(f'证据问答暂不可用（{type(exc).__name__}）；请保留问题后重试。草稿和审核不受影响。')
 
 
 def render(root):
