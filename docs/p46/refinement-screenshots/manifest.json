@@ -1,0 +1,114 @@
+{
+  "docs/p46/refinement-screenshots/after-1024.jpg": {
+    "sha256": "5bf7831ac3b93acf42da5d5441041ffe42d59cfc2917211923085d642da5be55",
+    "dimensions": [
+      1024,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/after-1366.jpg": {
+    "sha256": "70d35b5b87e82842c3e58f17dbcc76a68dfa3a2fe157d9872e6c3f4643bae352",
+    "dimensions": [
+      1366,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/after-1440.jpg": {
+    "sha256": "30b3117201e872215cbd74d131f00728859c4c96d1acc9fa71fa8b4585be90b6",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/after-768.jpg": {
+    "sha256": "76c838ede1737fc1268034869600aa8f573856f2901cb33a0648814e7cab03dd",
+    "dimensions": [
+      768,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/before-1024.jpg": {
+    "sha256": "18bfa0525b063180fb1771501d27b226294ed449386f51f1e2297fd2fb571482",
+    "dimensions": [
+      1024,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/before-1366.jpg": {
+    "sha256": "c229f94f32ed5f6139817d45b3f794cb7d6b6afbcb47426062dbf36a3fabf557",
+    "dimensions": [
+      1366,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/before-1440.jpg": {
+    "sha256": "efeb2dd9b7bf7cc2eb0224f72c65dee2d4f842dd939b045f9ae7b83cdbb391ff",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/before-768.jpg": {
+    "sha256": "0fd3e588daeb01609cb6b8c29f0838aa30a46fba1767c8ac661d582dc5839bb2",
+    "dimensions": [
+      768,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/qa-grounded-final.jpg": {
+    "sha256": "3f0f94d541ebd66c3c3962716456323cd35dfd715e6737e8d768f754ae706c35",
+    "dimensions": [
+      1366,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/risk-review-block.jpg": {
+    "sha256": "d521485b3f2a97ce01700b790220a39c7259a67f50217cdb9a69d76a89f48718",
+    "dimensions": [
+      1366,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/three-rounds-1024.jpg": {
+    "sha256": "dea5a6844f2d53efcc5c0643e1e75cbeeac9da8211557aed9539d8c07a82f1d7",
+    "dimensions": [
+      1024,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/three-rounds-1366.jpg": {
+    "sha256": "d0b7ee203d5cd00621ae1cefdb976df56c65eb952d8a86fcbb985f3256468389",
+    "dimensions": [
+      1366,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/three-rounds-1440.jpg": {
+    "sha256": "c4889603c2e378fc466886d454785f2cce67306b4e4523ef19402070e908e4f8",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  },
+  "docs/p46/refinement-screenshots/three-rounds-768.jpg": {
+    "sha256": "5782d8c214b1254a4b3ec0d6393a664aa088e02a0c9653791b61e56276bea4b8",
+    "dimensions": [
+      768,
+      900
+    ],
+    "source": "Real localhost browser screenshot; explicit synthetic acceptance cases; inspected by development agent"
+  }
+}

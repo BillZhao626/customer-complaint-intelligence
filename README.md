@@ -1,8 +1,15 @@
 # Customer Complaint Intelligence
 
-**当前版本：P4 Final / P5 Preflight 产品候选版。** 已实现邮件/历史真实run → Issue与Evidence → 未审草稿 → 编辑版本/diff → 本地人工批准、退回或拒绝 → 模拟发送 → SQLite历史重读及分版本Dashboard。五项研究者政策有独立诊断层，严重分析错误不可用批准绕过。UI强制禁用付费API，真实SMTP/CRM没有接入。
 
-最新 [最终研究者审核包](docs/p4/FINAL_READINESS.md) 包含离线真实 SDK 接线、浏览器验收、历史成绩单和 P5 独立质量认证提案。新付费调用未启用，独立质量认证仍 pending。
+**当前候选：P4.7 V2 中文客服收件箱 + AI Copilot + 人工兜底。** 普通建议轻确认，复杂问题转人工，严重风险保留硬阻断。入口为 [P4.7交付](docs/p47/DELIVERY.md)、[五图整改矩阵](docs/p47/IMAGE_DEFECT_MATRIX.md)、[九类内容前后对照](docs/p47/SCENARIO_COMPARISON.md) 和 [验证范围](docs/p47/VERIFICATION.md)。运行：`python -B scripts/p47_demo.py --out .local/p4/P47_NEW_DEMO --serve --port 8560`（新目录）。预写Fixture、历史真实重放、SDK Mock HTTP与新真实调用明确区分；本轮无新付费调用或真实发送。最终V2真实浏览器复验因浏览器工具仍报告禁用而待补（用户确认权限已开启），详见验证报告；研究者最终决定与P5启动均未代填。
+
+以下P4.6及更早内容按历史保留。
+
+**当前版本：P4.6 中文客户收件箱与 AI 助手。** 左侧选择会话 → 中间处理消息 → 右侧插入建议 → 编辑保存 → 人工审核 → 模拟发送。白底三栏、局部滚动、窄屏工作区域切换；原质量门禁、版本Diff、revision保护、线程与重启恢复保留。UI强制禁用付费API，真实SMTP/CRM没有接入。
+
+从 [P4.6交付与研究者体验流程](docs/p46/DELIVERY.md)、[真实浏览器前后截图及验收](docs/p46/VERIFICATION.md) 开始。快速运行：`python -B scripts/p46_demo.py --out .local/p4/P46_NEW_DEMO --serve --port 8546`（目录必须是新的）。演示回复为显式预写 Fixture，不是实时模型推理；AI追问未启用。
+
+P4 Final 阶段的 [研究者审核包](docs/p4/FINAL_READINESS.md) 保留离线真实 SDK 接线、浏览器验收、历史成绩单和 P5 独立质量认证提案。新付费调用未启用，独立质量认证仍 pending。
 
 从 [P4交付入口](docs/p4/DELIVERY.md)、[演示说明](docs/p4/DEMO.md)、[系统设计](docs/p4/ARCHITECTURE.md) 开始。旧实验和下文阶段描述作为历史保留；“没有批准流程”等旧结论已由P4工作流更新。模型独立质量认证仍pending，P3.10失败Challenger未晋升，旧400封始终是确定性模板生成。
 
@@ -10,7 +17,7 @@ P3.5已新增向后兼容的Analysis-v3多问题契约、明确有损的v2投影
 
 客户投诉分析研究原型，使用 Streamlit + Python Application Service + SQLite。提供显式 Offline Fake / Legacy Mock / DeepSeek 分析、七字段分类、摘要、未审核回复草稿、版本化保存、来源归属 Dashboard 和原文追溯。
 
-**研究边界：** P2 的 12 条是开发者合成案例，83/84 = **98.81% 字段参考匹配率**（12封 × 7字段），11/12 邮件七字段全对；不是独立人工泛化准确率。旧 400 条由固定模板程序生成，不能支持真实市场或门店排名。Human Gold 仍为 **HUMAN_GOLD_PENDING**，摘要/回复人工审核未完成；没有批准或发送流程。服务类别新 Prompt 只有离线规则证据，**REAL_MODEL_FIX_PENDING**。
+**研究边界：** P2 的 12 条是开发者合成案例，83/84 = **98.81% 字段参考匹配率**（12封 × 7字段），11/12 邮件七字段全对；不是独立人工泛化准确率。旧 400 条由固定模板程序生成，不能支持真实市场或门店排名。Human Gold 仍为 **HUMAN_GOLD_PENDING**，摘要/回复独立人工质量认证未完成。P2当时尚无批准流程；P4/P4.6现提供人工审核与模拟发送，真实发送未接入。服务类别新 Prompt 只有离线规则证据，**REAL_MODEL_FIX_PENDING**。
 
 P3 已实现来源/模型/Prompt/schema/taxonomy 隔离、时间和门店/产品/情绪/运行状态筛选、投诉/负面/归属分布、门店×产品交叉统计、unknown/unclear/none/unavailable/failed/fallback 区分，以及统计成员→原文/分析详情下钻。业务来源归属不是已证实因果或法律责任；原因描述投诉内容，渠道描述联系途径，三者不能互换。v2 未保存联系渠道，显示 unavailable。
 

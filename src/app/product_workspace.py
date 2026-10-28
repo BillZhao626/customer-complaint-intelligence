@@ -24,6 +24,8 @@ def store(root):
 
 
 LABELS = {
+    'camera': '相机', 'drawer': '抽屉', 'old bed collection': '旧床取件', 'invoice': '发票',
+    'baking tray': '烤盘', 'desk lamp': '台灯', 'delivered package': '已送达包裹', 'folding bicycle': '折叠车',
     'pending_review': '待审核', 'changes_requested': '待修改', 'approved': '已批准',
     'rejected': '已拒绝', 'simulated_sent': '已模拟发送', 'analysis_failed': '分析失败',
     'negative': '负面', 'positive': '正面', 'neutral': '中性', 'mixed': '混合', 'unknown': '未知',
@@ -39,6 +41,9 @@ LABELS = {
     'delivery delay': '配送延迟', 'customer service': '客户服务',
     'billing or payment': '账单或付款', 'not_applicable': '不适用',
     'reported': '客户报告，未核实', 'unclear': '不明确',
+    'product issue': '商品问题', 'store service issue': '门店服务问题',
+    'delivery/logistics issue': '配送/物流问题', 'billing/invoice issue': '账单/发票问题',
+    'after-sales service': '售后服务', 'other': '其他',
 }
 
 
@@ -140,7 +145,7 @@ def show_case(db, c):
         st.json(c['events'])
 
 
-def render(root):
+def render_legacy(root):
     st.header('客诉处理工作台 · P4 候选版')
     st.caption('输入 → 分析与证据 → 草稿版本 → 人工审核 → 模拟发送 → 历史重读')
     st.info('本轮付费调用已禁用。可重放历史真实结果，或使用明确标识的 Offline Fake。真实 SMTP / CRM 未接入。')
@@ -224,7 +229,8 @@ def render(root):
 
 def show_dashboard(db, key='workspace'):
     st.subheader('工作台统计 · 按来源与版本分组')
-    st.caption('P4独立产品库：' + str(db.path))
+    with st.expander('Developer Details · 数据库位置'):
+        st.caption(str(db.path))
     d = db.dashboard()
     st.write({'工作案例总数': d['total'], '审核状态': {label(k): v for k, v in d['states'].items()}})
     st.caption('契约接受数 accepted + 失败数 failed = 全部案例。blocked 可与 accepted 重叠；分析阻断排除出业务分母，回复阻断不排除。unknown 保留在业务分母并单列；负面数 / 业务分母不是仅已知情绪样本的负面率。')
@@ -246,3 +252,8 @@ def show_dashboard(db, key='workspace'):
         with st.expander('Developer Details · 完整统计分母与成员ID'):
             st.json(d)
     st.caption('契约成功不表示语义通过。离线示例、Mock HTTP、新真实分析、历史重放及不同完整版本组分别统计。工作流计数不是独立真人评价。')
+
+
+def render(root):
+    from src.app.copilot_workspace import render as copilot
+    copilot(root)

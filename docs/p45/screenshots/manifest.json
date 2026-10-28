@@ -1,0 +1,25 @@
+{
+  "capture": "Real in-app browser, local Streamlit; explicit authored synthetic demo only",
+  "images": [
+    {
+      "file": "before-1366.jpg",
+      "sha256": "c419351b7b4b84a438dddc52586b6243f5d030bb546645d473e521215cf4b883"
+    },
+    {
+      "file": "after-inquiry-1366.jpg",
+      "sha256": "8dc852fa718ef9e810de15883193bab90b3e74836741c357f41e81a1d06b3f86"
+    },
+    {
+      "file": "after-final-1366.jpg",
+      "sha256": "46eccd8384e8b4c0285df5fdb6ef685a57baa6ef9640c82adb88580552bc6678"
+    },
+    {
+      "file": "after-narrow-editor.jpg",
+      "sha256": "48a2a393f9a91e3d7966b0f93a5b7d91060bf8039df6c2f8d79aa13d3c0c103d"
+    },
+    {
+      "file": "browser-three-issues-expanded.jpg",
+      "sha256": "4cc35a4f17d04416c1a22ef1870201e0416b743adfd69411434e247569f59bd3"
+    }
+  ]
+}

@@ -26,3 +26,4 @@ jobs:
       - run: python -B scripts/run_portable.py
       - run: python -B scripts/p3_demo.py --out "${{ runner.temp }}/p3-demo"
       - run: python -B scripts/p4_demo.py --out "${{ runner.temp }}/p4-demo"
+      - run: python -B scripts/p47_demo.py --out "${{ runner.temp }}/p47-demo"
