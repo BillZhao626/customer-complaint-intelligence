@@ -1,0 +1,156 @@
+{
+  "real_browser": true,
+  "generated_images": false,
+  "images": [
+    {
+      "file": "frozen-before-1366.jpg",
+      "sha256": "81ec6a04a5b358b1cf219489bd4c822b23a727bcaf5879b021b34bf00bfd9145",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "fc48894 frozen recovery baseline"
+    },
+    {
+      "file": "frozen-before-1440.jpg",
+      "sha256": "d90011a98d8b700d0f3ec54a919f0fd873e9d5f2e00af2b0764fdc549d655929",
+      "pixels": [
+        1440,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "fc48894 frozen recovery baseline"
+    },
+    {
+      "file": "frozen-before-1024.jpg",
+      "sha256": "bda8cc375a1e024afb04e7b0c434a1ea69ec64b38cb3666361060ea882321a93",
+      "pixels": [
+        1024,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "fc48894 frozen recovery baseline"
+    },
+    {
+      "file": "frozen-before-768.jpg",
+      "sha256": "09eb9cc4d283bb8a07d678a82c916188128aecaac93d002cba869304d3b8aa8f",
+      "pixels": [
+        768,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "fc48894 frozen recovery baseline"
+    },
+    {
+      "file": "after-1366.jpg",
+      "sha256": "61ef5a47832a6423485ed7c6dca4ff338c09c44a50f69a71fc99e08de8f2774d",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "after-1440.jpg",
+      "sha256": "66f9474701c618527a32f7a23333c3f57cceb5667abc7a6a35113e6de3a09b33",
+      "pixels": [
+        1440,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "after-1024.jpg",
+      "sha256": "491be951f58e59d88c38a775525968cc11cb9ebd884040aa09b2d895616d2ee3",
+      "pixels": [
+        1024,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "after-768.jpg",
+      "sha256": "a21c1d87e37ef581e72b821fdb6723858da50cd0e06d44b10192665474726eef",
+      "pixels": [
+        768,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "delivery-reply.jpg",
+      "sha256": "fa192c482e27729588fd6292ef7d53a462d6b1b800fabe5fba6817cdf906104e",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "routine-receipt.jpg",
+      "sha256": "c529a6044c19e35003d9fa22dfd400ed79756f36efaf63a7b03cb8d40a2ec7e8",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "safety-before-takeover.jpg",
+      "sha256": "6bbca1669c520d846792baa9b806aacd8839cb157f9827f75118ab2dbb81f3be",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "safety-review.jpg",
+      "sha256": "d8673a239151fcb86a3b8edf944556aed97b2e05263826f6f843714e52ba2a1f",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "safety-receipt.jpg",
+      "sha256": "55a8781cce609fb707bdc61eb3c577128165144812fbf2225f6eaa791fa1adf4",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "human-request.jpg",
+      "sha256": "0e78a3d9fe88878701340c7eb23b8fb73aa423e51b959e72492d4afec3afd9a7",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    },
+    {
+      "file": "evidence-qa.jpg",
+      "sha256": "9041119a5a53e0c10cc3be5368f17f82be017885a5eabd72bf825113b5ce6916",
+      "pixels": [
+        1366,
+        900
+      ],
+      "source": "Real local Streamlit browser; synthetic developer-authored cases only",
+      "stage": "P4.7 initial candidate before additive V2; not proof of V2 browser completion"
+    }
+  ]
+}

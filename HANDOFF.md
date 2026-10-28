@@ -1,3 +1,17 @@
+# HANDOFF — P4.7 V2 中文客服助手候选
+
+2026-10-28（Asia/Shanghai）。**ENGINEERING_VERIFIED / FINAL_BROWSER_PENDING / HUMAN_ACCEPTANCE_PENDING**。入口：[交付与运行](docs/p47/DELIVERY.md)、[五图整改与剩余项](docs/p47/IMAGE_DEFECT_MATRIX.md)、[完整工程/浏览器范围](docs/p47/VERIFICATION.md)、[九类全文对照](docs/p47/SCENARIO_COMPARISON.md)、[真人空白清单](docs/p47/REVIEW_CHECKLIST.md)。下方历史交接完整保留。
+
+- 源码提交2a1078233ce8eec3b9015801c8d5c62c4200ce1d已普通push至原Draft PR #4，两精确SHA CI success；最后文档收据提交/CI身份见交付消息与本机git-delivery.json。无强推、main合并、Tag或Release。
+- 中文会话收件箱、预填草稿和简洁Copilot；普通已绑定建议显式轻确认；人工确认/转交/接管分开；新p47高风险服务端要求接管且安全核对仍在。request_handoff/take_over复用不可变事件，SQLite v1无迁移；版本/Diff、幂等、编辑撤销旧批准、回执恢复保留。
+- v1合成案例与策略保留；v2新增3种安全情绪及配送申请场景，各自input/output/strategy/policy hash绑定；推荐11会话覆盖9类。演示维修/更换/退货申请规则不是实际商家条款，期限、运费、资格与批准待人工核实。旧故意风险低估样例保留且不可改回复绕过。
+- 新版证据问答增加独立来源绑定context/答案版本，按当前草稿/接管/批准给下一步、分开客户资料与内部核实、引用演示规则；旧context序列/hash和保存记录兼容。LangChain仍预写Runnable/历史真实重放/SDK Mock HTTP/未启用新真实调用分开，任意新邮件unknown，未宣称实时语义能力。
+- 最终冻结完整495/495；445原测试ID全保留；干净Portable401=394通过+7私有资产skip。17变更Python AST、pipcheck、diffcheck、源码hash核对通过。保护12,766文件零改变零丢失、原59项未跟踪成果保留。.env旧API开关仍true且未改；应用/runner强制paid/live/tracing关闭。付费新增0，真实SMTP/CRM发送0。
+- 第一阶段真实浏览器四尺寸、普通轻确认模拟、安全接管/审核/模拟、配送问答有截图；最终V2/普通主动转人工完整路径/明确人工接管后续/旧坏分析改稿阻断的浏览器复验仍待补。浏览器工具返回Work设置禁用，已询问启用，未绕过；不能拿AppTest或旧截图作最终V2通过。详见矩阵。
+- 本机证据/源码恢复副本：.local/p47-20261028/；V2工作库/服务：.local/p4/p47-v2-final-20261028/，http://127.0.0.1:8560。其他中间服务已停止，历史工作库保留。研究者签署留空，当前不自动启动P5，待用户最终人工复核后另定冻结和独立真实模型质量认证。
+
+---
+
 # HANDOFF — P4.6.1 UX refinement & evidence Copilot
 
 2026-10-28（Asia/Shanghai）。基于7df9768增量更新原Draft PR #4。入口：[候选操作与研究者空白验收清单](docs/p46/REFINEMENT_DELIVERY.md)、[工程/真实浏览器证据](docs/p46/REFINEMENT_VERIFICATION.md)、[设计与兼容](docs/p46/REFINEMENT_DESIGN.md)。以下旧交接原文保留。

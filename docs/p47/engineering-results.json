@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-28 Asia/Shanghai",
+  "source_commit": "2a1078233ce8eec3b9015801c8d5c62c4200ce1d",
+  "full": {
+    "tests": 495,
+    "passed": 495,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 724.221
+  },
+  "portable": {
+    "tests": 401,
+    "passed": 394,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 7,
+    "seconds": 565.958,
+    "skip_reason": "Unavailable private historical assets"
+  },
+  "baseline_test_ids": 445,
+  "baseline_ids_preserved": 445,
+  "missing_baseline_ids": [],
+  "assets": {
+    "protected_files": 12766,
+    "changed": 0,
+    "missing": 0,
+    "existing_untracked_preserved": 59
+  },
+  "new_paid_model_requests": 0,
+  "real_smtp_crm_sends": 0,
+  "browser": {
+    "first_stage_real_screenshots": true,
+    "final_v2": "pending",
+    "reason": "Local browser use disabled in Work settings"
+  },
+  "human_acceptance": "pending",
+  "p5_started": false
+}
