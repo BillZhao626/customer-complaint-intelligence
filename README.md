@@ -1,7 +1,7 @@
 # Customer Complaint Intelligence
 
 
-**当前候选：P4.7 V2 中文客服收件箱 + AI Copilot + 人工兜底。** 普通建议轻确认，复杂问题转人工，严重风险保留硬阻断。入口为 [P4.7交付](docs/p47/DELIVERY.md)、[五图整改矩阵](docs/p47/IMAGE_DEFECT_MATRIX.md)、[九类内容前后对照](docs/p47/SCENARIO_COMPARISON.md) 和 [验证范围](docs/p47/VERIFICATION.md)。运行：`python -B scripts/p47_demo.py --out .local/p4/P47_NEW_DEMO --serve --port 8560`（新目录）。预写Fixture、历史真实重放、SDK Mock HTTP与新真实调用明确区分；本轮无新付费调用或真实发送。最终V2真实浏览器复验受Work本地浏览器设置阻止，详见验证报告；研究者最终决定与P5启动均未代填。
+**当前候选：P4.7 V2 中文客服收件箱 + AI Copilot + 人工兜底。** 普通建议轻确认，复杂问题转人工，严重风险保留硬阻断。入口为 [P4.7交付](docs/p47/DELIVERY.md)、[五图整改矩阵](docs/p47/IMAGE_DEFECT_MATRIX.md)、[九类内容前后对照](docs/p47/SCENARIO_COMPARISON.md) 和 [验证范围](docs/p47/VERIFICATION.md)。运行：`python -B scripts/p47_demo.py --out .local/p4/P47_NEW_DEMO --serve --port 8560`（新目录）。预写Fixture、历史真实重放、SDK Mock HTTP与新真实调用明确区分；本轮无新付费调用或真实发送。最终V2真实浏览器复验因浏览器工具仍报告禁用而待补（用户确认权限已开启），详见验证报告；研究者最终决定与P5启动均未代填。
 
 以下P4.6及更早内容按历史保留。
 

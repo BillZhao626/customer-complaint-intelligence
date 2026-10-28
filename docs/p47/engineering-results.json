@@ -32,7 +32,10 @@
   "browser": {
     "first_stage_real_screenshots": true,
     "final_v2": "pending",
-    "reason": "Local browser use disabled in Work settings"
+    "reason": "Browser adapter still reports local browser disabled after user confirmed all permissions enabled",
+    "user_confirms_permissions_enabled": true,
+    "desktop_control_stopped": true,
+    "permission_settings_modified": false
   },
   "human_acceptance": "pending",
   "p5_started": false
