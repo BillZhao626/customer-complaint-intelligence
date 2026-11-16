@@ -1,0 +1,72 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "mixed",
+    "expressed_evidence": [
+      "包装挺精致的，送人很合适",
+      "家里人也说茶的味道不错",
+      "结账的时候好像多收了一笔什么费用"
+    ],
+    "experience_polarity": "mixed",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "结账的时候好像多收了一笔什么费用",
+      "想问问这个是什么费用？麻烦帮忙看一下"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-088-1",
+        "object_type": "product",
+        "object_name": "茶叶礼盒",
+        "category": "Food/Beverage",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "包装挺精致的，送人很合适",
+          "家里人也说茶的味道不错"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-088-2",
+        "object_type": "service",
+        "object_name": "结账收费",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "billing/invoice issue",
+        "customer_requests": [
+          "询问多收的费用是什么费用",
+          "请帮忙核实小票上的收费"
+        ],
+        "evidence": [
+          "结账的时候好像多收了一笔什么费用",
+          "想问问这个是什么费用？麻烦帮忙看一下"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户对多收费用的表述为“好像”，是否确实多收尚不确定",
+      "未明确该费用是否为已知的包装或服务费"
+    ]
+  },
+  "call": {
+    "run_id": "49b59380-fdd6-4d37-bb43-401ddbb43905",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:14:06.000952+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

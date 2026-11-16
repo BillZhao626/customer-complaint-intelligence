@@ -1,0 +1,55 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "我不太确定是不是批次的问题，想问问这种情况一般怎么处理",
+      "麻烦您了，谢谢"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "感觉质地和之前买的不太一样，涂在脸上有点不太舒服",
+      "想问问这种情况一般怎么处理"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "朝阳门店",
+    "issues": [
+      {
+        "issue_id": "B7-023-1",
+        "object_type": "product",
+        "object_name": "面霜",
+        "category": "Beauty/Personal Care",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问这种情况一般怎么处理"
+        ],
+        "evidence": [
+          "感觉质地和之前买的不太一样",
+          "涂在脸上有点不太舒服",
+          "味道好像也稍微有点差别",
+          "想问问这种情况一般怎么处理"
+        ],
+        "risk": "unknown",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户未明确表达不满，仅提出疑问，投诉意图不确定",
+      "未说明具体不适程度或是否要求退换",
+      "小票是否保留尚不确定"
+    ]
+  },
+  "call": {
+    "run_id": "26cd42e9-6090-4d6c-8ce2-080a54457c4b",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:05:38.259258+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

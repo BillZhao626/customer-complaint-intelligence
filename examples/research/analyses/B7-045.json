@@ -1,0 +1,77 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "honestly the whole thing felt thrown together",
+      "it's been frustrating"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "when the package finally arrived it was missing things",
+      "kept getting passed around, and nobody really explained what happened",
+      "Can someone look into it and let me know what's going on?"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "I tried calling the store a couple times but kept getting passed around",
+      "nobody really explained what happened or when I'd get the rest"
+    ],
+    "mentioned_store": "Shanghai Pudong Store",
+    "issues": [
+      {
+        "issue_id": "B7-045-1",
+        "object_type": "product",
+        "object_name": "membership welcome materials",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "send the missing welcome materials"
+        ],
+        "evidence": [
+          "when the package finally arrived it was missing things",
+          "The box was kind of beat up too"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-045-2",
+        "object_type": "service",
+        "object_name": "store customer service",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "explain what happened and when the rest will arrive",
+          "look into the issue"
+        ],
+        "evidence": [
+          "kept getting passed around, and nobody really explained what happened or when I'd get the rest",
+          "it's been frustrating"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the missing items and damaged box stem from delivery handling or store fulfillment is not established",
+      "Exact contents expected in the welcome materials are unspecified"
+    ]
+  },
+  "call": {
+    "run_id": "e4ce899a-e111-4891-b369-fc6265cc41c7",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:08:31.462252+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

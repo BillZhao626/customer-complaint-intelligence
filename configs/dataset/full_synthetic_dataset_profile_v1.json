@@ -1,0 +1,100 @@
+{
+  "version": "v1",
+  "stage": "I-4A",
+  "target_size": 400,
+  "acceptable_size_range": {
+    "min": 300,
+    "max": 500
+  },
+  "dataset_role": "Synthetic dataset pool for dashboard statistics, batch processing demonstration, case coverage, and reviewed-test-set sampling.",
+  "reviewed_golden_test_set_size": {
+    "min": 50,
+    "max": 100,
+    "role": "Manually reviewed subset for formal metric evaluation."
+  },
+  "distribution_targets": {
+    "sentiment": {
+      "negative": "60-70%",
+      "positive": "15-20%",
+      "neutral": "10-20%"
+    },
+    "urgency": {
+      "high": "10-20%",
+      "medium": "45-60%",
+      "low": "25-35%"
+    },
+    "source_attribution": [
+      "product issue",
+      "delivery/logistics issue",
+      "customer service response issue",
+      "store service issue",
+      "refund/exchange process issue",
+      "none",
+      "unclear only small proportion"
+    ],
+    "complaint_reason": [
+      "product quality",
+      "delivery delay",
+      "customer service",
+      "refund request",
+      "after-sales service",
+      "wrong item",
+      "health or safety issue",
+      "other",
+      "none"
+    ],
+    "product_category": [
+      "Electronics",
+      "Home Appliances",
+      "Furniture",
+      "Clothing",
+      "Beauty/Personal Care",
+      "Sports/Outdoor",
+      "Food/Beverage",
+      "Service/Other if already supported by taxonomy"
+    ],
+    "store_location": {
+      "strategy": "Use multiple realistic synthetic store names with enough balance for top complaint store dashboard analysis.",
+      "avoid": "single-store dominance"
+    },
+    "edge_cases": [
+      "mixed praise + complaint",
+      "refund + no response",
+      "store staff issue vs customer support issue",
+      "delivery update confusion",
+      "safety/health issue",
+      "neutral inquiry",
+      "positive praise",
+      "wrong item",
+      "after-sales warranty/repair/exchange"
+    ]
+  },
+  "quality_control_rules": [
+    "unique email_id",
+    "no duplicate email body",
+    "allowed labels only",
+    "realistic but synthetic text",
+    "balanced label coverage",
+    "review high-risk boundary cases before formal evaluation"
+  ],
+  "privacy_rules": [
+    "no real personal data",
+    "store names synthetic or generic",
+    "no phone numbers",
+    "no addresses",
+    "no order numbers",
+    "no private information"
+  ],
+  "output_files_planned": [
+    "data/synthetic/customer_emails_full_v1.csv",
+    "data/golden/golden_labels_full_review_sample_v1.csv",
+    "outputs/dataset_profile_full_v1.md"
+  ],
+  "next_stage_recommendation": [
+    "I-4B generate dataset",
+    "I-4C select 50-100 reviewed golden test set",
+    "I-4D run 20-case smoke API",
+    "I-4E run reviewed golden test set evaluation",
+    "I-4F run full batch for dashboard/statistics"
+  ]
+}

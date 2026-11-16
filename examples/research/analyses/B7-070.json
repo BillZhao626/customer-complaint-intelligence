@@ -1,0 +1,49 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想问问这款机器大概多久需要清洗一次？",
+      "说明书上写得太复杂了，看得有点糊涂。"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "你们店",
+    "issues": [
+      {
+        "issue_id": "B7-070-1",
+        "object_type": "product",
+        "object_name": "咖啡机",
+        "category": "Home Appliances",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "告知咖啡机大概多久需要清洗一次"
+        ],
+        "evidence": [
+          "想问问这款机器大概多久需要清洗一次？",
+          "说明书上写得太复杂了，看得有点糊涂。"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "未提供咖啡机具体型号，无法确定对应产品",
+      "说明书复杂仅为背景说明，未明确表达对产品的不满"
+    ]
+  },
+  "call": {
+    "run_id": "3af6c737-4319-4b92-8fbf-9e4d11be8024",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:11:38.409987+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

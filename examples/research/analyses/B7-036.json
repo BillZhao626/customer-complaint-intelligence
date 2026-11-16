@@ -1,0 +1,73 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想问问这种情况一般怎么处理，是换一台还是怎么弄？",
+      "麻烦回复一下，谢谢"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "机器右下角有一块明显的磕痕，漆面掉了一点",
+      "现在这样我不太放心直接通电试"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "今天上午收到的",
+      "现在这样我不太放心直接通电试"
+    ],
+    "mentioned_store": "宁波天一店",
+    "issues": [
+      {
+        "issue_id": "B7-036-1",
+        "object_type": "product",
+        "object_name": "咖啡机",
+        "category": "Home Appliances",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问磕碰损坏的处理方式（换货或其他方案）"
+        ],
+        "evidence": [
+          "机器右下角有一块明显的磕痕，漆面掉了一点",
+          "想问问这种情况一般怎么处理，是换一台还是怎么弄？"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-036-2",
+        "object_type": "service",
+        "object_name": "外箱包装/运输",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "other",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [],
+        "evidence": [
+          "外箱侧面有一道挺长的裂口",
+          "外箱裂口的位置正好在机器那一侧，感觉运输途中可能被压过"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户未明确表达不满情绪，主要是询问处理方式，投诉意图不确定",
+      "运输受压仅为客户推测，非已证实原因"
+    ]
+  },
+  "call": {
+    "run_id": "256c09c0-797a-4652-8974-4746dee56a00",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:07:21.056359+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

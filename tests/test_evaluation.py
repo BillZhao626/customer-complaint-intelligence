@@ -1,3 +1,4 @@
+from tests.archive_support import requires_archive
 import csv
 import json
 import unittest
@@ -39,6 +40,7 @@ class EvaluationTests(unittest.TestCase):
             with self.subTest(bad=bad),self.assertRaises(ValueError):
                 evaluate([{'email_id':'x','sentiment':bad}],[{'email_id':'x','sentiment':bad}],['sentiment'])
 
+    @requires_archive('outputs/i4e2_reviewed_80_summary_v1.json')
     def test_corrupt_summary_unavailable(self):
         original=json.loads((ROOT/'outputs/i4e2_reviewed_80_summary_v1.json').read_text())
         self.assertTrue(validate_summary(original)['available'])
@@ -48,6 +50,7 @@ class EvaluationTests(unittest.TestCase):
             with self.subTest(patch=patch):
                 self.assertFalse(validate_summary({**original,**patch})['available'])
 
+    @requires_archive('outputs/i4g_full_pool_deepseek_predictions_v1.csv')
     def test_f06_each_bad_row_refuses_acceptance(self):
         original=rows('outputs/i4g_full_pool_deepseek_predictions_v1.csv')
         for patch in ({'backend_used':'mock_fallback'},{'parse_success':False},{'schema_validation_success':False},
@@ -58,6 +61,7 @@ class EvaluationTests(unittest.TestCase):
                 self.assertFalse(summarize(test,0)['accepted_for_dashboard_prediction_mode'])
 
 
+@requires_archive('outputs/i4e2_reviewed_80_summary_v1.json', 'outputs/i4g_full_pool_deepseek_predictions_v1.csv')
 class HistoricalTests(unittest.TestCase):
     def test_historical_80_raw_all_metrics(self):
         predictions=rows('outputs/i4e2_reviewed_80_predictions_v1.csv')

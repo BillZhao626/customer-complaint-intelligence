@@ -1,0 +1,28 @@
+{
+  "version": "v1",
+  "stage": "I-4D",
+  "reviewed_golden_file": "data/golden/golden_labels_review_sample_v1_reviewed.csv",
+  "reviewed_email_file": "data/synthetic/customer_emails_review_sample_v1.csv",
+  "source_auto_label_file": "data/golden/golden_labels_review_sample_auto_v1.csv",
+  "manual_review_method": "manual_review_chatgpt_assisted_v1",
+  "review_status_counts": {
+    "accepted": 70,
+    "corrected": 10
+  },
+  "fields_for_evaluation": [
+    "sentiment",
+    "urgency",
+    "is_complaint",
+    "store_location",
+    "product_category",
+    "complaint_reason",
+    "source_attribution"
+  ],
+  "metric_policy": {
+    "formal_metrics_should_use_reviewed_golden_test_set": true
+  },
+  "full_pool_policy": {
+    "400_row_full_pool_is_for_dashboard_batch_statistics_and_case_coverage": true
+  },
+  "next_stage_recommendation": "I-4E"
+}

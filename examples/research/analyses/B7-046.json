@@ -1,0 +1,71 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "这件我本来挺期待的，现在有点失望"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "领口有一道明显的褶皱",
+      "袖口有点脏",
+      "包装也挺简陋的",
+      "现在有点失望",
+      "想问下这种情况怎么处理？"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "朝阳门店",
+    "issues": [
+      {
+        "issue_id": "B7-046-1",
+        "object_type": "product",
+        "object_name": "亚麻衬衫",
+        "category": "Clothing",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问这种情况如何处理"
+        ],
+        "evidence": [
+          "领口有一道明显的褶皱",
+          "袖口有点脏"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-046-2",
+        "object_type": "product",
+        "object_name": "亚麻衬衫包装",
+        "category": "Clothing",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "包装也挺简陋的，就一个薄袋子"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "未明确说明希望退货、换货还是补偿，仅询问处理方式",
+      "褶皱和污渍的成因（生产、仓储或运输）无法从文本确认"
+    ]
+  },
+  "call": {
+    "run_id": "17c9f4f1-2585-4ba4-b55d-a201212f91ba",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:08:41.044604+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

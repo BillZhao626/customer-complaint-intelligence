@@ -1,0 +1,74 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "I'm writing because of how things went at your Ningbo Tianyi store earlier this week",
+      "The person I spoke to barely looked up, said they didn't know, and walked off",
+      "honestly it put me off coming back to that location"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "I'm writing because of how things went at your Ningbo Tianyi store earlier this week",
+      "The person I spoke to barely looked up, said they didn't know, and walked off",
+      "I left without what I came for and honestly it put me off coming back to that location"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "Ningbo Tianyi store",
+    "issues": [
+      {
+        "issue_id": "B7-075-1",
+        "object_type": "service",
+        "object_name": "staff assistance at Ningbo Tianyi store",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "inform the store of the poor staff experience"
+        ],
+        "evidence": [
+          "The person I spoke to barely looked up, said they didn't know, and walked off",
+          "asked someone else, who was a little more helpful but still couldn't tell me whether it was out of stock or just not carried there"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-075-2",
+        "object_type": "product",
+        "object_name": "food section item",
+        "category": "Food/Beverage",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "clarify availability of the item"
+        ],
+        "evidence": [
+          "I came in specifically to pick up something from your food section",
+          "I left without what I came for"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "The specific food item is not named.",
+      "Whether the item was out of stock or not carried is unknown."
+    ]
+  },
+  "call": {
+    "run_id": "3572d554-badb-4153-843c-3c7f3e77b409",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:12:19.704551+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

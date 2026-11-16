@@ -1,0 +1,54 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "对方态度比较冷淡",
+      "也是爱答不理的，感觉挺不舒服的",
+      "结果弄得心情不太好"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "希望店里能注意一下这方面",
+      "感觉挺不舒服的"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "温州鹿城店",
+    "issues": [
+      {
+        "issue_id": "B7-078-1",
+        "object_type": "service",
+        "object_name": "温州鹿城店店员服务",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "希望店里能注意并改善店员服务态度"
+        ],
+        "evidence": [
+          "对方态度比较冷淡",
+          "也是爱答不理的",
+          "也没人主动过来帮忙"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "未提及具体产品型号，产品信息不明确",
+      "未明确要求具体补偿或处理结果"
+    ]
+  },
+  "call": {
+    "run_id": "f709ba73-0d2c-4c48-ad01-315e0cfccda7",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:12:44.890361+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

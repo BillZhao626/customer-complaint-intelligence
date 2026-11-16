@@ -1,0 +1,27 @@
+{
+  "version": "v1",
+  "stage": "I-3.6",
+  "purpose": "Candidate-only golden label patch and audit trail for reviewed I-3.5.1 cases; original golden labels are not overwritten.",
+  "original_golden_file": "data/golden/golden_labels_pilot_v1.csv",
+  "candidate_patch_file": "data/golden/golden_labels_pilot_v1_candidate_patch.csv",
+  "audit_report": "outputs/golden_label_candidate_patch_audit_v1.md",
+  "metric_preview_report": "outputs/i36_candidate_patch_metric_preview_v1.md",
+  "metric_preview_json": "outputs/i36_candidate_patch_metric_preview_v1.json",
+  "validation_report": "outputs/i36_candidate_patch_validation_report_v1.md",
+  "candidate_cases": [
+    "P015",
+    "P028",
+    "P046"
+  ],
+  "candidate_patch_policy": {
+    "do_not_overwrite_original": true,
+    "needs_human_confirmation": true,
+    "use_for_secondary_metric_preview_only": true,
+    "should_apply_now_false_required": true
+  },
+  "recommended_next_stage": [
+    "human_review_candidate_patch",
+    "decide_whether_to_accept_candidate_labels",
+    "then expand_dataset_or_refine_prompt"
+  ]
+}

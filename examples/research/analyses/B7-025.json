@@ -1,0 +1,76 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "I'm pretty disappointed with what turned up",
+      "the height adjustment doesn't work either",
+      "I don't really want to keep messing with it at this point"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "I'm pretty disappointed with what turned up",
+      "the chair had a crack in the base",
+      "the height adjustment doesn't work either",
+      "Can you let me know what my options are?"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "I'd rather not have to haul it back across town if there's another way"
+    ],
+    "mentioned_store": "Xinjiekou store",
+    "issues": [
+      {
+        "issue_id": "B7-025-1",
+        "object_type": "product",
+        "object_name": "office chair",
+        "category": "Furniture",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "let me know what my options are",
+          "avoid hauling it back across town if there's another way"
+        ],
+        "evidence": [
+          "the chair had a crack in the base",
+          "the height adjustment doesn't work either",
+          "it stays stuck at the lowest setting"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-025-2",
+        "object_type": "unknown",
+        "object_name": "packaging",
+        "category": "unknown",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [],
+        "evidence": [
+          "The box was already bashed in on one side when I got it"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the damaged box caused the chair defects is not established; reported source is not proven cause.",
+      "Whether the customer wants a replacement, repair, or refund is not specified beyond asking for options."
+    ]
+  },
+  "call": {
+    "run_id": "36e809b4-463d-45cc-b440-2b6046a0d80f",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:05:54.800479+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

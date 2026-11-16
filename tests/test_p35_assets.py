@@ -1,3 +1,4 @@
+from tests.archive_support import requires_archive
 """Local-only frozen owner decisions and candidate assets; excluded from portable CI."""
 import json
 from pathlib import Path
@@ -8,6 +9,7 @@ from src.evaluation.e2e_v3 import validate_candidates,dataset_hash
 ROOT=Path(__file__).resolve().parents[1]
 
 
+@requires_archive('.local/p35/calibration-decision-v1.1/snapshot.json')
 class P35LocalAssets(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

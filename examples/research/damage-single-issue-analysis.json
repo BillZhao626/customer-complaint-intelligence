@@ -1,0 +1,55 @@
+{
+  "parse": {
+    "value": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "neutral",
+      "expressed_evidence": [
+        "想问问这种情况一般怎么处理",
+        "麻烦回复一下，谢谢"
+      ],
+      "experience_polarity": "negative",
+      "complaint_intent": "uncertain",
+      "complaint_evidence": [
+        "外箱侧面有一道挺长的裂口",
+        "机器右下角有一块明显的磕痕，漆面掉了一点",
+        "现在这样我不太放心直接通电试"
+      ],
+      "urgency": "medium",
+      "urgency_evidence": [
+        "今天上午收到的",
+        "下午拆开看",
+        "现在这样我不太放心直接通电试"
+      ],
+      "mentioned_store": "宁波天一店",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "咖啡机",
+          "category": "Home Appliances",
+          "sentiment": "neutral",
+          "experience_polarity": "negative",
+          "issue_kind": "complaint",
+          "business_process": "product issue",
+          "customer_requests": [
+            "询问这种情况一般怎么处理，是换一台还是怎么弄",
+            "麻烦回复一下"
+          ],
+          "evidence": [
+            "外箱侧面有一道挺长的裂口",
+            "机器右下角有一块明显的磕痕，漆面掉了一点",
+            "现在这样我不太放心直接通电试",
+            "是换一台还是怎么弄"
+          ],
+          "risk": "minor",
+          "urgency": "medium",
+          "resolution": "unresolved"
+        }
+      ],
+      "uncertainty": [
+        "无法确认磕碰是否由运输造成，客户仅为推测",
+        "未说明具体希望换货还是其他处理方式，仅询问一般处理流程"
+      ]
+    }
+  }
+}

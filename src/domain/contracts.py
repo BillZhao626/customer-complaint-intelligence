@@ -62,6 +62,10 @@ class RunConfigV31(RunConfig):
     taxonomy_version: Literal['complaint-issues-v3.1'] = 'complaint-issues-v3.1'
 
 
+class RunConfigV32(RunConfigV31):
+    schema_version: Literal['analysis-v3.2'] = 'analysis-v3.2'
+
+
 class AnalysisResult(StrictModel):
     store_location: str = Field(min_length=1)
     product_name: str = Field(min_length=1)
@@ -112,7 +116,7 @@ class AnalysisRun(StrictModel):
     idempotency_key: str
     email: EmailInput
     input_hash: str
-    config: RunConfig | RunConfigV31
+    config: RunConfig | RunConfigV31 | RunConfigV32
     cohort_id: str
     status: RunStatus
     created_at: str

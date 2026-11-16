@@ -1,0 +1,92 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "物流信息一直停在某个中转站没动",
+      "官网上门店查询那块好像也打不开",
+      "打客服电话等了好久也没人接",
+      "这个物流状态一直不更新让我有点不放心"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "物流信息一直停在某个中转站没动",
+      "官网上门店查询那块好像也打不开",
+      "打客服电话等了好久也没人接",
+      "能不能帮我看看是怎么回事"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "耳机倒是不急用"
+    ],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "B7-081-1",
+        "object_type": "service",
+        "object_name": "物流配送",
+        "category": "Electronics",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "查询物流停滞原因并协助处理"
+        ],
+        "evidence": [
+          "物流信息一直停在某个中转站没动",
+          "这个物流状态一直不更新让我有点不放心"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-081-2",
+        "object_type": "service",
+        "object_name": "门店查询功能",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "官网上门店查询那块好像也打不开"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-081-3",
+        "object_type": "service",
+        "object_name": "客服电话",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [],
+        "evidence": [
+          "打客服电话等了好久也没人接"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "门店查询打不开为顾客推测性描述（“好像”），无法确认是否为实际故障",
+      "物流停滞原因未知，仅为顾客报告的状态"
+    ]
+  },
+  "call": {
+    "run_id": "fa5debe3-e816-4f7c-a93b-c24c3ff393ee",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:13:08.659160+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

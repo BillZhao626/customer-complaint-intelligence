@@ -1,0 +1,52 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "I just want to know what I'd be getting",
+      "I've been burned before by having to order filters separately"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [
+      "I think I'm ready to go ahead, but I wanted to ask something first"
+    ],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "B7-065-1",
+        "object_type": "product",
+        "object_name": "espresso machine",
+        "category": "Home Appliances",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Clarify whether the milk frother is the wand type or the automatic one",
+          "Confirm what is included in the box besides the machine"
+        ],
+        "evidence": [
+          "I couldn't tell if that's the wand type or the automatic one",
+          "is there anything in the box besides the machine itself?"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "No explicit evaluative sentiment expressed; pre-purchase inquiry only",
+      "Prior experience of needing to order filters separately is not attributed to this store"
+    ]
+  },
+  "call": {
+    "run_id": "18628ad8-a4b8-46ec-b7f8-ab03058fe888",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:11:03.201724+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

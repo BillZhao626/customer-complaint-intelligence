@@ -1,0 +1,77 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "The person I spoke to was polite",
+      "I'm not trying to make a fuss, I just want to know where I stand"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "the staff told me the terms had changed and that my plan might not be covered the way I thought",
+      "couldn't confirm whether my situation falls under any kind of warranty or protection, and suggested I contact someone else, though I wasn't given a clear next step"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "I'd like to understand whether my plan is still valid as originally described, and if not, what happened to it",
+      "before I decide what to do"
+    ],
+    "mentioned_store": "Shenzhen Nanshan store",
+    "issues": [
+      {
+        "issue_id": "B7-019-1",
+        "object_type": "service",
+        "object_name": "membership plan",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "Confirm whether the membership plan is still valid as originally described",
+          "Explain what happened to the plan/terms if not valid"
+        ],
+        "evidence": [
+          "the staff told me the terms had changed and that my plan might not be covered the way I thought",
+          "I'd like to understand whether my plan is still valid as originally described"
+        ],
+        "risk": "unknown",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-019-2",
+        "object_type": "service",
+        "object_name": "store staff response",
+        "category": "Service/Other",
+        "sentiment": "mixed",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "Provide a clear next step for resolving the membership question"
+        ],
+        "evidence": [
+          "The person I spoke to was polite",
+          "suggested I contact someone else, though I wasn't given a clear next step"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the customer intends to pursue redress or only seeks information",
+      "Whether the plan terms actually changed or the staff member was mistaken",
+      "Whether any warranty/protection applies to the membership plan"
+    ]
+  },
+  "call": {
+    "run_id": "821e6608-8719-467f-ac27-8e70a1fa559d",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:05:03.985461+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

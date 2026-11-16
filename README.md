@@ -1,72 +1,131 @@
 # Customer Complaint Intelligence
 
-P3.5已新增向后兼容的Analysis-v3多问题契约、明确有损的v2投影、问题/邮件分母分离及离线评测。Single Analysis中的P3.5工作区可运行公开双问题fixture；本地候选审核入口读取`COMPLAINT_V3_CANDIDATES`。完整验证和限制见[本轮交接](docs/p35/VERIFICATION.md)：本机154/154、portable67/67；真实v3模型质量仍pending。24条最终开发裁决及172条候选记录（160适用、12隔离）保存在本地，不随仓库公开。
+**从客户来信到有依据的服务回应。** 基于 React、FastAPI、LangChain 和 DeepSeek 的客户反馈分析与回复审核应用。
 
-客户投诉分析研究原型，使用 Streamlit + Python Application Service + SQLite。提供显式 Offline Fake / Legacy Mock / DeepSeek 分析、七字段分类、摘要、未审核回复草稿、版本化保存、来源归属 Dashboard 和原文追溯。
+系统分别识别客户的表达情绪、实际体验和投诉意图，将一封邮件中的多个问题关联到商品、门店及原文证据。客服可以查看反馈趋势、核查业务事项、编辑回复，并在人工审核后进行本地模拟发送。
 
-**研究边界：** P2 的 12 条是开发者合成案例，83/84 = **98.81% 字段参考匹配率**（12封 × 7字段），11/12 邮件七字段全对；不是独立人工泛化准确率。旧 400 条由固定模板程序生成，不能支持真实市场或门店排名。Human Gold 仍为 **HUMAN_GOLD_PENDING**，摘要/回复人工审核未完成；没有批准或发送流程。服务类别新 Prompt 只有离线规则证据，**REAL_MODEL_FIX_PENDING**。
+![完整客服工作台](docs/media/inbox.png)
 
-P3 已实现来源/模型/Prompt/schema/taxonomy 隔离、时间和门店/产品/情绪/运行状态筛选、投诉/负面/归属分布、门店×产品交叉统计、unknown/unclear/none/unavailable/failed/fallback 区分，以及统计成员→原文/分析详情下钻。业务来源归属不是已证实因果或法律责任；原因描述投诉内容，渠道描述联系途径，三者不能互换。v2 未保存联系渠道，显示 unavailable。
+## 按用户任务了解产品
 
-## 安装与安全离线 Demo
+| 用户任务 | 产品能力 | 入口 |
+| --- | --- | --- |
+| 找到来信 | 会话搜索、状态筛选、原信与对应草稿 | 客服工作台 |
+| 理解反馈 | 表达情绪、体验倾向、投诉意图、多问题事项和逐字原文引用 | AI Copilot、依据 |
+| 查看趋势 | 商品负面体验、门店服务投诉、商品与门店交叉筛选、成员下钻 | 业务洞察 |
+| 跟进诉求 | 产品资料查询、售后、物流、账单及门店事项分别记录 | 业务动作 |
+| 审核回复 | 编辑保存、退回意见、版本记录、风险阻断和审批条件 | 回复区、详情 |
+| 检查质量 | 历史分类对照、回复评价和保存版本对比 | 质量评价 |
 
-Python 3.12；直接依赖固定为验收版本。建议新建虚拟环境。安装依赖需要访问包仓库，测试与 demo 不请求模型。
+门店被提及与门店被投诉分别统计。业务计数由 Python 确定性计算，保留分子、分母和原邮件成员，支持回查分析依据。
+
+![反馈统计与筛选](docs/media/insights.png)
+
+## 快速启动
+
+使用 **Python 3.12、Node.js 22 和 npm**。首次安装需要访问软件包仓库，运行演示无需 API 密钥。
 
 ```powershell
+git clone https://github.com/BillZhao626/customer-complaint-intelligence.git
+cd customer-complaint-intelligence
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -B scripts/run_portable.py
-# --out 必须不存在，不覆盖任何旧运行
-.\.venv\Scripts\python.exe -B scripts/p3_demo.py --out .local/p3-demo-v1
-$env:LLM_ENABLE_API = 'false'
-$env:COMPLAINT_ENABLE_LIVE = 'false'
-$env:LANGSMITH_TRACING = 'false'
-$env:LANGCHAIN_TRACING_V2 = 'false'
-$env:LANGCHAIN_TRACING = 'false'
-$env:COMPLAINT_DB_PATH = '.local/p3-demo-v1/runs.sqlite3'
-$env:COMPLAINT_DATASET_MANIFEST = '.local/p3-demo-v1/dataset.json'
-.\.venv\Scripts\python.exe -m streamlit run app.py --browser.gatherUsageStats false
+.\.venv\Scripts\python.exe -m pip install -r requirements.lock.txt
+cd web-client
+npm ci
+npm run build
+cd ..
+.\.venv\Scripts\python.exe -B review.py
 ```
 
-打开 **Dashboard → P3 versioned attribution → Configured SQLite runs**。选择模型/实验版本，再选门店、产品、情绪和时间。选择 Breakdown 查看类别或交叉表；在 Statistic to inspect 选择统计项、Numerator/Denominator 成员，再点 Open original and analysis。Download statistics and member IDs 导出绑定版本、分母和成员ID的 JSON。原三个历史模式仍在 Historical dashboards。
+macOS/Linux 使用 `.venv/bin/python` 替代上述 Python 路径。打开 **http://127.0.0.1:8790/**，按 Ctrl+C 停止。端口可通过 `python review.py --port 8791` 调整。
 
-10条公开 demo 是 `src/evaluation/p3_fixture.py` 的显式合成验收表：7成功、1失败、1fallback、1不确定；含一个故意设置的归属差异，用于验证比较器。它不是模型质量实验或人工 Gold。原文、P2.5 Sample manifest、input hash、run ID、版本和输出 hash 写入新目录。CLI 无付费模式。普通 Single Analysis 的 Offline Fake 只识别演示 token，不是自然语言模型。绑定 demo manifest 时只接受其样本；分析其他邮件请使用另一个新数据库并取消该 manifest 设置。
+演示读取仓库中经过筛选的合成邮件和历史保存输出，在临时 SQLite 数据库中运行真实 API、业务逻辑和 React 界面。编辑与审核保留在本次会话，退出后临时数据库清除。启动入口强制关闭模型调用和遥测，没有 SMTP、退款或外部订单写入。无需复制 `.env`，也不依赖原开发机数据库。
 
-本机拥有 P2 结果时可选 **P2 saved synthetic DeepSeek results**；该入口只读 `.local/p2-pilot-v1/run-*.json`，不打开旧 SQLite、重跑模型或重建账本。远程干净检出没有这些研究资产，会显示不可用。不要为了查看 P2 把可写 Single Analysis 数据库指向历史库。
+### 建议体验顺序
 
-## 统计解释
+1. 打开 [瑜伽垫来信](http://127.0.0.1:8790/portfolio/cases/yoga-later)，切换 AI Copilot、依据、业务动作和详情。
+2. 打开 [业务洞察](http://127.0.0.1:8790/?view=insights&source=b8-r6-policy)，按商品与门店筛选，再点击统计成员回看邮件。
+3. 查看 [商品到货磕碰](http://127.0.0.1:8790/portfolio/cases/p12) 的售后与物流两条独立事项。
+4. 在 [表扬邮件](http://127.0.0.1:8790/portfolio/cases/p10) 中修改一处草稿并保存，在详情回看对应版本；通过审核后才能本地模拟发送。
+5. 搜索 `synced copy`，查看事实未确认时的审批限制。打开 [保存回复对照](http://127.0.0.1:8790/portfolio/yoga)，比较两份原始回复及其人工评价。
 
-计数单位是同一 cohort、时间区间内每个 `email_id + input_hash` 的最新运行，即邮件修订版。重试不会重复计入；修改正文会形成不同修订版，不等同于独立消费者数。
+![两份保存回复的产品对照](docs/media/reply-comparison.png)
 
-|分母|适用指标|
-|---|---|
-|全部所选邮件修订版|邮件数量、成功数、投诉/负面全邮件比例、失败与fallback状态|
-|成功且无fallback|投诉/负面成功比例、门店/产品/交叉分布、unknown桶|
-|投诉邮件|主要原因、来源归属分布、有效归属覆盖|
-|有效业务归属|投诉中五个具体业务类别的分布，不含unknown/unclear/none|
+## LangChain 怎样参与实际链路
 
-每项携带分子、分母名称、过滤条件和双方成员ID。零分母为 null / unavailable。业务字段筛选会排除没有结果的邮件；界面同时展示筛选前状态和排除数量。没有 manifest 的数据库明确标记 unregistered，不能被当成已核实研究数据集。门店按保存值精确分组，无未经审定的别名合并。
+```mermaid
+flowchart LR
+    A[客户邮件与会话上下文] --> B[LangChain 消息与模型调用]
+    B --> C[DeepSeek 结构化分析]
+    C --> D[Python 解析与逐字引用校验]
+    D --> E[诉求规划与本地业务工具]
+    E --> F[事实和任务回执]
+    F --> G[LangChain 绑定回复输出工具]
+    G --> H[回复草稿与事实检查]
+    H --> I[人工审核与版本保存]
+```
 
-## 代码与验证
+LangChain 的 `ChatOpenAI` 客户端组织消息并调用 DeepSeek；回复阶段使用 `bind(tools=...).ainvoke(...)` 约束工具参数输出。应用层解析 JSON、验证原文引用和任务身份，再把核查结果与实际事项状态带入回复。业务工具由 Python 执行，结构化输出工具本身不代表执行了退款或物流操作。
 
-|目录/入口|用途|
-|---|---|
-|app.py、src/app/|四tab界面、P3过滤与下钻|
-|src/application/|分析服务、确定性 AttributionService|
-|src/domain/contracts.py|冻结 analysis-v2 / research-products-v2|
-|src/infrastructure/|provider、SQLite、只读数据适配器|
-|src/evaluation/|统一分层评价、P3参考差异、人工协议|
-|scripts/p3_demo.py|新目录离线fixture与评价|
-|scripts/p3_calibration.py|本机24条双人独立校准包|
-|tests/、.github/workflows/offline.yml|阻断外部socket的便携工程CI|
+运行记录支持回看实际保存的分析、回复和事件。完整源码同时保留模型 provider、预算与请求控制、工具执行、事实检查、自动评价和工作流。离线演示复用这些应用模块，回放保存结果；它不会重新生成模型答案。
 
-完整本机回归包含历史资产复算；公开检出只运行自包含 portable 套件，不伪称拥有原始研究数据。P3 浏览器范围为离线 Dashboard 筛选、失败/空分母、下钻和保存结果读取/下载；完整上传→模型→审批→发送链路未验证，AppTest 不替代浏览器。
+详细的调用职责、数据关系及持久化迁移见 [架构与源码导航](docs/ARCHITECTURE.md)。
+
+## 工程特征
+
+- **多问题及来源关联。** 同一邮件可以同时包含表扬、商品问题与配送诉求，每项保留对应原句。
+- **事实与动作分开。** 资料未知时保持核查状态，回复中涉及“已创建”的动作须有匹配回执。
+- **版本与审批绑定。** 保存修改产生新版本，历史审批不能直接用于修改后的草稿；旧页面写入受到版本冲突检查。
+- **风险审核。** 安全、凭据和未知同步行为等问题进入明确复核路径，前后端共同执行批准条件。
+- **可追溯统计。** 统计成员可以回到原邮件和分析版本，失败、未知及不同分母保持区分。
+- **默认离线验证。** 自动测试阻断外部连接，使用临时存储和显式 fixture。
+
+## 评价结果与复核
+
+| 评价对象 | 保存结果 | 解释 |
+| --- | --- | --- |
+| 历史情绪分类 | 78/80，Macro-F1 0.9712 | 与项目历史参考标签对照；不是独立人工泛化准确率 |
+| 同组 54 封合成研究邮件 | 47/54 → 51/54 → 52/54 | 同一自动评价标准下三种保存方案的初步通过数 |
+| 预设严重问题 | 11/11 检出，正常对照误报 0/29 | 受控开发案例上的评价检查 |
+| 人工判断对照 | 15/17 一致 | 对应精确保存版本的人工定性评价 |
+| 重复与换位 | 18/20、17/19 一致 | 分别检验重复评分与调换顺序后的稳定性 |
+
+上述为历史保存结果，当前方案仍有 2/54 未达到初步通过标准，不能解释为全量人工认证或真实业务解决率。瑜伽垫案例的后续回复更具体地回应使用不适，补齐退换与退款核查方向，并依据订单和购买渠道核实适用条件。两份原始回复与人工评价绑定，编辑后的新稿不继承旧评价。
+
+样本来源与指标定义见 [合成样本说明](examples/README.md)。本轮工程验收见 [验证说明](docs/VALIDATION.md)。
+
+## 验证工程
 
 ```powershell
-# 仅原本机具有完整历史资产时
-python -B tests/run_offline.py
+.\.venv\Scripts\python.exe -m pip check
+.\.venv\Scripts\python.exe -B tests/run_offline.py
+.\.venv\Scripts\python.exe -B verify_review.py
+cd web-client
+npm test
+npm run build
 ```
 
-`data/`、`outputs/`、`.local/`、论文/学校材料、原始模型返回、预算库、真实 `.env` 不上传。旧历史 API runner 可能付费且使用固定输出位置，不能当测试运行。新付费调用需单独授权。
+测试、构建与 CI 的成功属于工程验证，保存模型结果的质量结论按上表的样本和评价范围理解。需要受控模型实验时，先阅读 [模型调用与研究复现](docs/MODEL_EXECUTION.md)，不要将历史实验脚本当作普通测试入口。
 
-自有源码采用 [MIT](LICENSE)，第三方依赖保留其各自许可；[许可范围](docs/p3/LICENSING.md)。工程及研究状态见 [P3 验证](docs/p3/VERIFICATION.md)、[公开审计](docs/p3/PUBLIC_RELEASE.md)、[语义与分母](docs/p3/DESIGN.md)、[P2.5 人工指南](docs/p25/ANNOTATION_GUIDE.md)；下一轮从 [HANDOFF](HANDOFF.md) 恢复。
+## 源码布局
+
+| 位置 | 内容 |
+| --- | --- |
+| `web-client/` | React / TypeScript 工作台、业务洞察、评价页面及前端测试 |
+| `src/app/` | FastAPI 路由、会话、防跨源访问及请求校验 |
+| `src/application/` | 分析编排、证据关联、工具规划、事项状态、审核及版本 |
+| `src/infrastructure/` | LangChain provider、请求控制、SQLite 存储和可移植数据路径 |
+| `src/domain/`、`src/schemas/` | 邮件、分析、问题事项及版本契约 |
+| `src/evaluation/`、`tests/` | 分类与回复评价、风险检查、离线回归 |
+| `src/dataset/`、`configs/` | 合成数据构建、校验、统计和配置模板 |
+| `examples/`、`resources/` | 审查后的合成样本、保存输出、明确的离线 fixture |
+| `review.py` | 临时数据库启动及保存案例回放入口 |
+| `app.py` | 保留的早期 Streamlit 研究入口 |
+
+公开范围与排除项见 [源码与资产范围](docs/PUBLIC_SCOPE.md)。自有源码采用 [MIT](LICENSE)，第三方组件保持各自许可，见 [第三方与数据说明](THIRD_PARTY_NOTICES.md)。
+
+## 版本关系
+
+早期 Streamlit 原型保留在 Git 历史中，可查看 [原 main 快照](https://github.com/BillZhao626/customer-complaint-intelligence/tree/f0a5eb71e7a46c036700f1d406cc3b34b680ff07)。本次完整工程候选承接该历史，新增当前 React / FastAPI 应用与可复核样本，不重写旧提交。
+
+当前候选的发布状态、提交和实测记录见 [发布说明](docs/RELEASE.md)。

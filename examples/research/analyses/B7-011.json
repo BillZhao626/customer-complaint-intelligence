@@ -1,0 +1,68 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "有个店员一直很耐心地陪我看了好几种",
+      "也没有催我",
+      "这样的服务让人挺舒服的",
+      "下次还会去"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "宁波天一店",
+    "issues": [
+      {
+        "issue_id": "B7-011-1",
+        "object_type": "service",
+        "object_name": "天一店茶叶区店员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "有个店员一直很耐心地陪我看了好几种",
+          "还跟我讲了不同茶叶适合送什么样的人",
+          "她还帮我仔细包好，提醒我保存上要注意的地方",
+          "这样的服务让人挺舒服的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-011-2",
+        "object_type": "product",
+        "object_name": "茶叶礼盒",
+        "category": "Food/Beverage",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "礼盒送出去对方很喜欢"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "店员具体姓名未确认，仅描述为短头发、戴眼镜的女生",
+      "购买日期仅提及上周六下午，无具体日期"
+    ]
+  },
+  "call": {
+    "run_id": "401dadca-410e-467b-a52d-7ec825c163e1",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:04:03.703385+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "麻烦回复一下，谢谢"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "B7-068-1",
+        "object_type": "product",
+        "object_name": "办公椅",
+        "category": "Furniture",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "none",
+        "customer_requests": [
+          "告知坐垫厚度和靠背高度",
+          "告知椅脚材质是尼龙还是金属"
+        ],
+        "evidence": [
+          "坐垫厚度和靠背高度大概是多少",
+          "椅脚是尼龙的还是金属的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "86c0576f-bfd7-4cd5-be22-c6afa2adf72c",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:11:25.457029+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

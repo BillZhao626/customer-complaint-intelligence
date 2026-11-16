@@ -1,0 +1,69 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "I just wanted to write in about the service I got at your West Lake store last weekend",
+      "It's a small thing, but it made a difference to me.",
+      "Please pass along my thanks if you can."
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "West Lake store",
+    "issues": [
+      {
+        "issue_id": "B7-009-1",
+        "object_type": "service",
+        "object_name": "West Lake store electronics counter service",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "Pass along my thanks"
+        ],
+        "evidence": [
+          "took the time to actually listen to what was going wrong",
+          "walked me through what my options were without any pressure",
+          "Please pass along my thanks if you can."
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "resolved"
+      },
+      {
+        "issue_id": "B7-009-2",
+        "object_type": "product",
+        "object_name": "wireless headphones",
+        "category": "Electronics",
+        "sentiment": "neutral",
+        "experience_polarity": "positive",
+        "issue_kind": "other",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "they kept cutting out on one side",
+          "He even showed me how to reset them properly",
+          "I've been back to using them all week and so far so good."
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "resolved"
+      }
+    ],
+    "uncertainty": [
+      "Headphone fault cause is not established; reset appears to have addressed it but long-term reliability is unknown."
+    ]
+  },
+  "call": {
+    "run_id": "b24ac46e-dd69-488e-a40d-dd2b18fcdc39",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:49.981712+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

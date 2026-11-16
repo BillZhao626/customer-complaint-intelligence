@@ -1,0 +1,38 @@
+{
+  "version": "p5a-quality-assets-v1",
+  "source": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+  "family_count": 16,
+  "single_emails": 48,
+  "conversations": 6,
+  "chinese": 36,
+  "english": 12,
+  "selected_families": [
+    "F01-M01",
+    "F01-M02",
+    "F02-M01",
+    "F03-M01",
+    "F03-M02",
+    "F04-M01",
+    "F04-M02",
+    "F05-M01",
+    "F06-M01",
+    "F07-M01",
+    "F08-M01",
+    "F09-M01",
+    "F10-M01",
+    "F10-M02",
+    "F11-M01",
+    "F12-M02"
+  ],
+  "model_calls": 0,
+  "human_gold_created": false,
+  "knowledge_drafts": 4,
+  "knowledge_approved": 0,
+  "files": {
+    "bad_cases.json": "57f77dbeffd53c3d5d8f1fa3b098b70322998cd7f425e3af16d62ac8dd1e7161",
+    "cases_dev.json": "e37c91ff24ce08129e39c23e599897b549d7df7851521f1f3700ab38888c2623",
+    "conversations_dev.json": "d0ee6e9caaa534a942bece97858d00fd0d7d2ebb2df522c1a6e037f69c8f7e91",
+    "knowledge_drafts.json": "a8b70ece3da0e92199d144e412eee20f4c8058f7c1ad4be2bb7d6b9e3174b40c",
+    "scenario_family_matrix.csv": "57ff728f76bcb1e0e0edd5aa1f61e2faedb8c683c72a052c8ed5ec04ac66d594"
+  }
+}

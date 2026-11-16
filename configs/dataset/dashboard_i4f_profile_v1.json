@@ -1,0 +1,26 @@
+{
+  "version": "v1",
+  "stage": "I-4F",
+  "source_dataset_file": "data/synthetic/customer_emails_full_v1.csv",
+  "source_auto_label_file": "data/golden/golden_labels_full_auto_v1.csv",
+  "dashboard_output_dir": "outputs/dashboard_i4f",
+  "generated_tables": [
+    "outputs/dashboard_i4f/store_complaint_ranking_v1.csv",
+    "outputs/dashboard_i4f/product_negative_sentiment_ranking_v1.csv",
+    "outputs/dashboard_i4f/complaint_reason_distribution_v1.csv",
+    "outputs/dashboard_i4f/source_attribution_distribution_v1.csv",
+    "outputs/dashboard_i4f/urgency_distribution_v1.csv",
+    "outputs/dashboard_i4f/sentiment_distribution_v1.csv",
+    "outputs/dashboard_i4f/store_by_product_matrix_v1.csv",
+    "outputs/dashboard_i4f/negative_complaint_cases_for_demo_v1.csv"
+  ],
+  "generated_json": "outputs/dashboard_i4f/dashboard_stats_v1.json",
+  "label_status": "auto_labels_for_dashboard_statistics",
+  "formal_evaluation_reference": "I-4E.2 80-case reviewed golden test set",
+  "formal_accuracy": 0.8821,
+  "caveats": [
+    "full_pool_not_formal_accuracy_benchmark",
+    "product_category_normalization_issue_identified_in_I4E3"
+  ],
+  "recommended_next_stage": "I-5A_Streamlit_dashboard_integration"
+}

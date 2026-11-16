@@ -6,10 +6,19 @@ import sys
 import json
 import time
 import unittest
+import tempfile
+import atexit
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 os.environ.update(LLM_ENABLE_API='false',COMPLAINT_ENABLE_LIVE='false',LANGCHAIN_TRACING_V2='false',LANGSMITH_TRACING='false',LANGCHAIN_TRACING='false')
+# Older UI suites predate P4 and isolate only their P3 analysis database.
+# Give every collected test safe defaults, even when the invoking shell points
+# at a researcher's open workspace. Individual fixtures may override these.
+test_storage=tempfile.TemporaryDirectory(prefix='complaint_offline_')
+atexit.register(test_storage.cleanup)
+os.environ.update(COMPLAINT_PRODUCT_DB=str(Path(test_storage.name)/'product.sqlite3'),
+                  COMPLAINT_DB_PATH=str(Path(test_storage.name)/'analysis.sqlite3'))
 original_connect=socket.socket.connect
 def blocked(*args,**kwargs):
     # Windows asyncio creates a local socketpair for wakeups; permit only stdlib's internal call.
@@ -28,7 +37,7 @@ async def blocked_async_connection(*args,**kwargs):
 asyncio.BaseEventLoop.create_connection=blocked_async_connection
 # Reject writes to frozen research assets even when an accidental test calls
 # a historical writer. Temporary database/export paths are unaffected.
-protected=[(ROOT/p).resolve() for p in ('data/raw','data/synthetic','data/golden','outputs','docs/dissertation')]
+protected=[(ROOT/p).resolve() for p in ('data/raw','data/synthetic','data/golden','outputs','docs/dissertation','examples')]
 def check_path(value):
     if isinstance(value,(str,bytes,os.PathLike)):
         path=Path(os.fsdecode(value)).resolve()
@@ -44,7 +53,14 @@ def audit(event,args):
             check_path(value)
 sys.addaudithook(audit)
 if len(sys.argv)>1 and sys.argv[1]=='--portable':
-    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits'])
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_portable','tests.test_p25','tests.test_p3','tests.test_p35','tests.test_p36','tests.test_p37','tests.test_p38','tests.test_p39','tests.test_urgency_context','tests.test_p39_context_live','tests.test_p39_observed_limits','tests.test_p39_continuity','tests.test_p39_continuity_report','tests.test_p39r3_causal','tests.test_p39r3_challenger','tests.test_p39_exploration','tests.test_p310','tests.test_p310_execution','tests.test_p310_report','tests.test_p310_correction','tests.test_p310_leakage','tests.test_p310_scoped_diagnostic','tests.test_product_quality','tests.test_product_workflow','tests.test_product_ui','tests.test_csv_input','tests.test_product_analysis','tests.test_p5_preflight'])
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_copilot'))
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_p46_inbox'))
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_copilot_questions'))
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromNames([
+        'tests.test_p47_content', 'tests.test_p47_content_v2', 'tests.test_p47_workflow', 'tests.test_p47_ui', 'tests.test_p47_questions']))
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromNames(['tests.test_p5_api', 'tests.test_p5_quality']))
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromName('tests.test_p5b4'))
 else:
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern=sys.argv[1] if len(sys.argv)>1 else 'test_*.py',top_level_dir=str(ROOT))
 def flatten(suite):
@@ -62,7 +78,7 @@ if len(sys.argv)==1:
                   network='socket connections blocked',asset_writes='audit hook blocked',test_ids=ids,
                   failure_ids=[t.id() for t,_ in result.failures+result.errors])
     # New phase evidence must never overwrite frozen P1/P2 reports.
-    evidence_dir=ROOT/'.local/p39/v2/test-evidence'/time.strftime('%Y%m%dT%H%M%S')
+    evidence_dir=ROOT/'.local/p4/test-evidence'/time.strftime('%Y%m%dT%H%M%S')
     evidence_dir.mkdir(parents=True,exist_ok=False)
     (evidence_dir/'test-results.json').write_text(json.dumps(evidence,indent=2),encoding='utf-8')
 sys.exit(not result.wasSuccessful())

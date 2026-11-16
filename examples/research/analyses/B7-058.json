@@ -1,0 +1,70 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想请您帮忙确认一下具体情况，谢谢"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "这一点让我有些困惑"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "南京新街口店",
+    "issues": [
+      {
+        "issue_id": "B7-058-1",
+        "object_type": "service",
+        "object_name": "退款流程",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "确认退款是否会收取额外费用及具体说明"
+        ],
+        "evidence": [
+          "想办理退款",
+          "好像会收取一笔额外的费用",
+          "想请您帮忙确认一下具体情况"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-058-2",
+        "object_type": "product",
+        "object_name": "跑鞋",
+        "category": "Sports/Outdoor",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "other",
+        "business_process": "product issue",
+        "customer_requests": [
+          "办理退款"
+        ],
+        "evidence": [
+          "回家试穿后觉得不太合适"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "退款额外费用是否实际存在未确认，仅为客户理解",
+      "客户是否正式提出投诉意图不明确，语气以询问为主"
+    ]
+  },
+  "call": {
+    "run_id": "be15f61a-aedf-4cef-a094-9dfbbba54226",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:10:11.381835+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

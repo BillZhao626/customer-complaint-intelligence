@@ -1,0 +1,73 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "希望你们能帮我查一下当时的记录，看看是不是哪里弄错了",
+      "衣服本身没什么问题，就是这笔费用让我有点不放心"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "还是没弄明白多出来的那笔是什么",
+      "这笔费用让我有点不放心"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "上周六",
+      "希望你们能帮我查一下当时的记录"
+    ],
+    "mentioned_store": "深圳南山店",
+    "issues": [
+      {
+        "issue_id": "B7-076-1",
+        "object_type": "service",
+        "object_name": "结账小票金额",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "billing/invoice issue",
+        "customer_requests": [
+          "核查当时结账记录，确认多出的费用是否弄错"
+        ],
+        "evidence": [
+          "有一笔金额对不上",
+          "还是没弄明白多出来的那笔是什么",
+          "希望你们能帮我查一下当时的记录"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-076-2",
+        "object_type": "product",
+        "object_name": "衣服",
+        "category": "Clothing",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "other",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "衣服本身没什么问题"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "多出的费用是否为收银错误尚不明确，仅为顾客核对后的疑问",
+      "顾客未明确要求退款或赔偿，投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "ca28144e-e923-4f41-9efc-f46fd939e6c5",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:12:29.128882+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

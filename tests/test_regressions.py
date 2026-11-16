@@ -1,3 +1,4 @@
+from tests.archive_support import requires_archive
 """P1 defect regressions; initial red run recorded before implementation."""
 import json
 import unittest
@@ -33,6 +34,7 @@ class EvaluationRegression(unittest.TestCase):
         self.assertEqual((report['status'], report['expected'], report['matched'], report['coverage']), ('invalid',80,79,79/80))
         self.assertEqual(report['metrics'], [])
 
+    @requires_archive('outputs/i4e2_reviewed_80_predictions_v1.csv')
     def test_f02_formal_duplicate(self):
         from src.evaluation.run_i4e2_reviewed_80_eval_v1 import compute_weighted_metrics
         rows = pd.read_csv(ROOT/'outputs/i4e2_reviewed_80_predictions_v1.csv',keep_default_na=False).to_dict('records')
@@ -51,6 +53,7 @@ class ContractRegression(unittest.TestCase):
         with self.assertRaises(ValueError):
             _to_bool('unrecognized')
 
+    @requires_archive('data/synthetic/customer_emails_full_v1.csv')
     def test_f04_canonical_represents_research_labels(self):
         from src.domain.contracts import PRODUCT_CATEGORIES
         actual=set(pd.read_csv(ROOT/'data/synthetic/customer_emails_full_v1.csv')['product_category'])
@@ -66,6 +69,7 @@ class PresentationRegression(unittest.TestCase):
             metric.assert_not_called()
             self.assertTrue(warning.called)
 
+    @requires_archive('data/synthetic/customer_emails_full_v1.csv')
     def test_f06_mixed_backend(self):
         from src.evaluation.run_i4g_full_pool_deepseek_batch_v1 import summarize
         row={'backend_used':'deepseek_api','parse_success':True,'schema_validation_success':True,'api_attempted':True,'api_error':False}

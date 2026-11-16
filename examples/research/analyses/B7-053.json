@@ -1,0 +1,56 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "我不是想催得很急，只是这笔钱一直挂着，心里没底",
+      "能不能帮我查一下现在卡在哪个环节？"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "到现在账户里一直没看到退款，也没有任何进度更新",
+      "这笔钱一直挂着，心里没底"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "上个月在南京新街口店买了一双跑鞋",
+      "到现在账户里一直没看到退款"
+    ],
+    "mentioned_store": "南京新街口店",
+    "issues": [
+      {
+        "issue_id": "B7-053-1",
+        "object_type": "service",
+        "object_name": "退款处理",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "查询退款当前卡在哪个环节",
+          "告知是否需要补充信息"
+        ],
+        "evidence": [
+          "到现在账户里一直没看到退款，也没有任何进度更新",
+          "能不能帮我查一下现在卡在哪个环节？"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户语气平和，未明确表达不满，投诉意图不确定",
+      "退款延迟的具体原因未说明，仅报告未收到退款"
+    ]
+  },
+  "call": {
+    "run_id": "08ae6f7d-1f0c-45b0-9823-d0e7ecf7ac40",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:09:35.032762+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

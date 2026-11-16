@@ -1,0 +1,71 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想问问这种情况你们一般怎么处理",
+      "礼盒包装挺好看的"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "茶包封口那里会散开，茶叶漏到杯子里，喝起来很麻烦",
+      "想问问这种情况你们一般怎么处理"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "苏州工业园区店",
+    "issues": [
+      {
+        "issue_id": "B7-026-1",
+        "object_type": "product",
+        "object_name": "茶叶礼盒",
+        "category": "Food/Beverage",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问茶包封口散开问题的处理方式",
+          "询问是否需要将剩余茶包带到店里查看"
+        ],
+        "evidence": [
+          "茶包封口那里会散开，茶叶漏到杯子里",
+          "大概三四次里有一次吧",
+          "需要我把剩下的茶包带过去看看吗"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-026-2",
+        "object_type": "product",
+        "object_name": "茶叶礼盒包装",
+        "category": "Food/Beverage",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "礼盒包装挺好看的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "未拆封的送人礼盒是否存在同样问题未知",
+      "客户未明确表达不满，投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "6a4ccc26-b689-4bcc-be3f-5451f85cec1b",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:06:03.633118+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

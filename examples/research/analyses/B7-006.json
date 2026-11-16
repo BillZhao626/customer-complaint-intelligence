@@ -1,0 +1,82 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "音质比我预想的好很多",
+      "戴着也舒服",
+      "店员当时推荐得挺实在，没有硬推贵的",
+      "其他都挺满意"
+    ],
+    "experience_polarity": "mixed",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "温州鹿城店",
+    "issues": [
+      {
+        "issue_id": "B7-006-1",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "音质比我预想的好很多",
+          "戴着也舒服"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-006-2",
+        "object_type": "service",
+        "object_name": "店员推荐服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "店员当时推荐得挺实在，没有硬推贵的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-006-3",
+        "object_type": "product",
+        "object_name": "耳机包装盒",
+        "category": "Electronics",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "包装盒有点难拆"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "包装盒难拆的负面评价较轻，整体仍以满意为主，是否构成正式投诉意图不明确"
+    ]
+  },
+  "call": {
+    "run_id": "81cf060e-9d27-4864-9260-4484014acd72",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:29.748477+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

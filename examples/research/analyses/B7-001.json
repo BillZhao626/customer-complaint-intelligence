@@ -1,0 +1,66 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "音质和降噪都比预想的好",
+      "戴着也舒服",
+      "实际用下来完全够用",
+      "谢谢店里小哥耐心帮我试"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [
+      "就是随口说一声，没什么问题"
+    ],
+    "mentioned_store": "杭州西湖店",
+    "issues": [
+      {
+        "issue_id": "B7-001-1",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "音质和降噪都比预想的好",
+          "戴着也舒服",
+          "实际用下来完全够用"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-001-2",
+        "object_type": "service",
+        "object_name": "杭州西湖店店员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "谢谢店里小哥耐心帮我试"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "9b6f1bf5-c040-48fa-b711-ae70628f3d11",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:02:54.599796+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

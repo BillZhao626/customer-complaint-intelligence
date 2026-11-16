@@ -1,0 +1,67 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "感觉挺好的",
+      "东西不错",
+      "店员态度也挺好的"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-007-1",
+        "object_type": "product",
+        "object_name": "面霜（白色瓶子）",
+        "category": "Beauty/Personal Care",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "感觉挺好的",
+          "脸没那么干了",
+          "这个不会"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-007-2",
+        "object_type": "service",
+        "object_name": "浦东店店员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "店员态度也挺好的",
+          "没有一直跟着我推销"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "顾客未记住面霜具体名称，仅描述为白色瓶子款",
+      "邮件未明确要求回复或后续行动"
+    ]
+  },
+  "call": {
+    "run_id": "518c9eba-e745-472b-8118-beb1c524cd53",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:36.321728+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

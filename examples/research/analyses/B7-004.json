@@ -1,0 +1,81 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "当时店员帮我挑的尺码挺合适",
+      "晾干后基本没怎么皱，版型也没走样，这点比我预想的好",
+      "目前穿着挺舒服，透气，颜色也没掉"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "深圳南山店",
+    "issues": [
+      {
+        "issue_id": "B7-004-1",
+        "object_type": "product",
+        "object_name": "亚麻衬衫",
+        "category": "Clothing",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "晾干后基本没怎么皱，版型也没走样，这点比我预想的好",
+          "目前穿着挺舒服，透气，颜色也没掉"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-004-2",
+        "object_type": "service",
+        "object_name": "深圳南山店店员",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "当时店员帮我挑的尺码挺合适"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-004-3",
+        "object_type": "product",
+        "object_name": "亚麻衬衫",
+        "category": "Clothing",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "确认亚麻面料是否不宜使用烘干机"
+        ],
+        "evidence": [
+          "这种面料平时是不是最好别用烘干机？"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "afaf0151-da6b-4200-999e-fa12dc8c4e12",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:14.228177+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

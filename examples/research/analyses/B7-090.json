@@ -1,0 +1,88 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "mixed",
+    "expressed_evidence": [
+      "挺耐心的",
+      "脚感确实比原来舒服，跑完膝盖也没那么累，这点挺满意的",
+      "不过有个小问题一直没解决",
+      "有点影响体验"
+    ],
+    "experience_polarity": "mixed",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "鞋舌跑着跑着会往一边偏，每次跑完都得重新整理，有点影响体验",
+      "不知道是我这双的问题还是这款都这样，想问问有没有什么办法"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "南山店",
+    "issues": [
+      {
+        "issue_id": "B7-090-1",
+        "object_type": "service",
+        "object_name": "南山店店员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "店员帮我试了好几双，还让我在店里走了走，挺耐心的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-090-2",
+        "object_type": "product",
+        "object_name": "跑鞋",
+        "category": "Sports/Outdoor",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "脚感确实比原来舒服，跑完膝盖也没那么累，这点挺满意的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-090-3",
+        "object_type": "product",
+        "object_name": "跑鞋鞋舌",
+        "category": "Sports/Outdoor",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问鞋舌偏移是单双问题还是该款通病，以及解决办法"
+        ],
+        "evidence": [
+          "鞋舌跑着跑着会往一边偏，每次跑完都得重新整理，有点影响体验",
+          "我试过把鞋带系紧一点，但效果一般"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "鞋舌偏移是否属于该款通病或个别产品问题不明确",
+      "客户未明确要求退换或赔偿，投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "abd425f4-74a9-4d16-8c71-616c2e1fcc25",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:14:23.875335+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

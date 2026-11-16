@@ -1,0 +1,37 @@
+{
+  "R7H-012": {
+    "version": "fixed-final-v25b",
+    "trace_sha256": "e5a3bedac812ad11e1a16446f8a6f56aa4ea7670071eed33a04235f018038c15",
+    "run_id": "e9b259a3-702e-4209-8204-9f2cc079448b",
+    "input_sha256": "548dd66fabbe0ef806b15e8faf2bbda42a64a2f9d7c58f1d145197e01e359293",
+    "reply_sha256": "aec60a31c1f26501309eeca814781e82b9c95352a94a9dd49a42745509a8b403"
+  },
+  "R7H-015": {
+    "version": "fixed-final-v25b",
+    "trace_sha256": "f5ae465bb2d0dc5525f9e87f9ccb5160285daaac6ad4edbc42f0edb18f6275e0",
+    "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+    "input_sha256": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+    "reply_sha256": "90175ec0d34c09fa022a0c2dfaea0866e420f1984a9b4233c9039368a794cb0f"
+  },
+  "R7H-023": {
+    "version": "fixed-final-v25b",
+    "trace_sha256": "9cc8629f9623b617c1d804959faca45283db7ff655e4182b351dfc3113ee4d15",
+    "run_id": "2a3c4134-b9e3-43f9-ae71-a973e0eb4ef2",
+    "input_sha256": "a3a12271db23be88f18de2aeaca98d001a71d7cdd8080dddd3a7e803625cd4f3",
+    "reply_sha256": "f4c1f9597e032bcc1d4d4bc43f2ae2b853cb9748b1819e212eb0db6d1ca743e8"
+  },
+  "R11OG-06-en": {
+    "version": "transfer-final-v25b",
+    "trace_sha256": "576c481aac78798eab29e2c47fb5d96e1b940d3fbb01249f6c8b98dbf3467b26",
+    "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+    "input_sha256": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+    "reply_sha256": "adcde637d4c19fff8dbe1d494db897d9cff8e2d49259960a5a228c944074ee41"
+  },
+  "R11OG-08-en": {
+    "version": "transfer-final-v25b",
+    "trace_sha256": "b4a7a03d6595dcdc28165baeae3359a2c0b2f23bcab4f324d7b1bc13c5304faf",
+    "run_id": "8215b258-afe4-4032-b1b2-c5e0b16fc3e0",
+    "input_sha256": "012e544fd74ce8167c49220c5a5d7f7592399dfd16c604702cba2952c6748e17",
+    "reply_sha256": "5c7663f84d86aa8298fc49d71f37f32a1249f5312661313b8b7fcd4ccaa84c22"
+  }
+}

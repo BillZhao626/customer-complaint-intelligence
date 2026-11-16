@@ -21,10 +21,24 @@ class AnalysisService:
             raise ValueError('Analyzer identity must match requested configuration')
         if analyzer.backend=='deepseek_live' and self.config!=analyzer.config:
             raise ValueError('Live prompt/parameters must match analyzer configuration')
-        if (self.config.schema_version,self.config.taxonomy_version) not in (('analysis-v2','research-products-v2'),('analysis-v3','complaint-issues-v3'),('analysis-v3.1','complaint-issues-v3.1')):
+        if (self.config.schema_version,self.config.taxonomy_version) not in (('analysis-v2','research-products-v2'),('analysis-v3','complaint-issues-v3'),('analysis-v3.1','complaint-issues-v3.1'),('analysis-v3.2','complaint-issues-v3.1')):
             raise ValueError('Unsupported schema version')
 
     def validate_result(self,data,email):
+        if self.config.schema_version=='analysis-v3.2':
+            from src.domain.analysis_v32 import validate,PROFILE
+            from src.domain.contracts import digest
+            from src.domain.analysis_v31 import POLICY,PROJECTION
+            from src.application.reply_review import VERSION
+            params=self.config.parameters or {}
+            if (params.get('validation_profile')!=PROFILE or params.get('policy_version')!=POLICY
+                or params.get('projection_policy')!=PROJECTION or params.get('reply_gate_version')!=VERSION):
+                raise ValueError('Explicit v3.2 context/policy/projection/gate required')
+            value,result,changes,diagnostics=validate(data,email,context_check_profile=params.get('context_check_profile'))
+            return result,dict(analysis_v32=value.model_dump(),analysis_v32_hash=digest(value.model_dump()),
+                runtime_normalization=changes,prediction_kind='raw_provider_prediction_with_runtime_context',
+                projection_hash=digest(result.model_dump()),projection_kind='deterministic_lossy_projection',
+                compatibility_diagnostics=diagnostics,reply_status='unreviewed_unsent')
         if self.config.schema_version=='analysis-v3.1':
             from src.domain.analysis_v31 import AnalysisV31,to_v2,POLICY,PROJECTION
             from src.domain.contracts import digest

@@ -1,0 +1,96 @@
+{
+  "profile_name": "synthetic_dataset_profile_v1",
+  "stage": "I-2A Synthetic Dataset Schema, Generation Plan, and Reference Notes",
+  "planned_pilot_size": 50,
+  "planned_full_size_range": [
+    300,
+    500
+  ],
+  "planned_golden_subset_size_range": [
+    30,
+    50
+  ],
+  "dataset_output_path": "data/synthetic/synthetic_customer_emails_v1.csv",
+  "golden_subset_output_path": "data/golden/golden_test_subset_v1.csv",
+  "schema_doc_path": "docs/synthetic_dataset_schema_v1.md",
+  "generation_plan_doc_path": "docs/synthetic_dataset_generation_plan_v1.md",
+  "reference_notes_doc_path": "docs/dataset_reference_notes_v1.md",
+  "allowed_sentiments": [
+    "positive",
+    "neutral",
+    "negative"
+  ],
+  "allowed_urgency_levels": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "allowed_product_categories": [
+    "Electronics",
+    "Home Appliances",
+    "Clothing",
+    "Furniture",
+    "Beauty Products",
+    "Sportswear",
+    "Service",
+    "Other"
+  ],
+  "allowed_complaint_reasons": [
+    "product quality",
+    "delivery delay",
+    "customer service",
+    "wrong item",
+    "after-sales service",
+    "health or safety issue",
+    "refund request",
+    "none",
+    "other"
+  ],
+  "allowed_source_attribution_labels": [
+    "product issue",
+    "store service issue",
+    "delivery/logistics issue",
+    "customer service response issue",
+    "refund/exchange process issue",
+    "unclear",
+    "none"
+  ],
+  "recommended_products": [
+    "wireless headphone",
+    "coffee machine",
+    "jacket",
+    "desk lamp",
+    "skincare product",
+    "blender",
+    "laptop",
+    "rice cooker",
+    "running shoes",
+    "air purifier",
+    "smartphone",
+    "office chair"
+  ],
+  "recommended_store_locations": [
+    "Hangzhou West Lake Store",
+    "Shanghai Pudong Store",
+    "Beijing Chaoyang Store",
+    "Shenzhen Nanshan Store",
+    "Guangzhou Tianhe Store",
+    "Chengdu Chunxi Road Store",
+    "Nanjing Xinjiekou Store"
+  ],
+  "quality_control_steps": [
+    "Generate synthetic emails using LLM prompts.",
+    "Validate required fields.",
+    "Check label consistency.",
+    "Remove duplicates or unrealistic emails.",
+    "Manually review a subset.",
+    "Keep a 30-50 case golden test set.",
+    "Record known limitations."
+  ],
+  "privacy_notes": [
+    "Use synthetic examples only.",
+    "Do not include real personal information.",
+    "Do not include private customer data.",
+    "Do not include real phone numbers, addresses, or order IDs."
+  ]
+}

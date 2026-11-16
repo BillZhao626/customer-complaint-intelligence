@@ -1,0 +1,79 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "可是到现在也没收到任何消息",
+      "都没有人回复",
+      "实在有点不知道该怎么办了"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "我前后发过两次邮件问进度，都没有人回复",
+      "打电话过去转了好几次也没人接",
+      "能不能麻烦你们帮我查一下订单到底什么情况"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "因为家里正好在装修，我特意算好了时间",
+      "如果还要等很久，也请至少告诉我一声，我好安排后面的事情"
+    ],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-074-1",
+        "object_type": "service",
+        "object_name": "浦东店订单进度查询",
+        "category": "Furniture",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "查询订单当前状态",
+          "告知预计等待时间"
+        ],
+        "evidence": [
+          "到现在也没收到任何消息",
+          "我前后发过两次邮件问进度，都没有人回复",
+          "打电话过去转了好几次也没人接"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-074-2",
+        "object_type": "product",
+        "object_name": "餐桌椅",
+        "category": "Furniture",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "确认到货时间"
+        ],
+        "evidence": [
+          "当时说好到货会通知我",
+          "如果还要等很久，也请至少告诉我一声"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "订单是否已到货或延迟原因未说明",
+      "邮件和电话未回复的具体原因未知"
+    ]
+  },
+  "call": {
+    "run_id": "d4a7ba43-8eb5-4c26-b6b6-f1abe49bd9f8",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:12:11.276781+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

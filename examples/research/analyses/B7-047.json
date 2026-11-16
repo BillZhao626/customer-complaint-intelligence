@@ -1,0 +1,74 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "实际等的时间比预期长了不少",
+      "我心里有点没底",
+      "这个过程让我有些失望"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "实际等的时间比预期长了不少，中间也没有收到什么更新",
+      "这个过程让我有些失望"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "本来是打算送人的，所以对到货时间比较在意",
+      "送礼的时间点比较敏感"
+    ],
+    "mentioned_store": "深圳南山店",
+    "issues": [
+      {
+        "issue_id": "B7-047-1",
+        "object_type": "service",
+        "object_name": "茶叶礼盒配送",
+        "category": "Food/Beverage",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "确认配送安排是否与下单时信息一致"
+        ],
+        "evidence": [
+          "实际等的时间比预期长了不少",
+          "中间也没有收到什么更新",
+          "这个过程让我有些失望"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-047-2",
+        "object_type": "product",
+        "object_name": "茶叶礼盒",
+        "category": "Food/Beverage",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "礼盒本身收到后看着还可以"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "客户对配送延迟是否构成正式投诉意图不明确，语气为询问确认",
+      "下单时展示的配送信息具体内容未知，无法判断是否确为配送安排问题"
+    ]
+  },
+  "call": {
+    "run_id": "1eb2413c-7f8e-44c0-8f47-15b0b2db5e4f",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:08:48.458302+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "当时试听觉得还不错就买了",
+      "想问下这种情况能不能换回我试的那款？",
+      "麻烦告知一下需要带什么"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "回家拆开才发现盒子里装的是另一款，跟我试的不是同一个型号，包装上的名字也对不上"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "是给下个月出差路上用的",
+      "我平时上班比较忙，周末才有空过去"
+    ],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-017-1",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "换回试听的那款型号",
+          "告知换货需要携带的物品"
+        ],
+        "evidence": [
+          "回家拆开才发现盒子里装的是另一款，跟我试的不是同一个型号，包装上的名字也对不上",
+          "想问下这种情况能不能换回我试的那款？"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "未明确表达不满情绪，换货请求语气礼貌，是否构成投诉意图不确定",
+      "小票是否保留尚未确认（“小票应该还在袋子里，我找找看”）"
+    ]
+  },
+  "call": {
+    "run_id": "29b11292-ca32-4c30-b9ff-6f8866bb5609",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:04:48.539705+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

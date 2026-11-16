@@ -1,3 +1,4 @@
+from tests.archive_support import requires_archive
 """Local research evidence only. Excluded from portable CI; never calls provider."""
 import json
 from pathlib import Path
@@ -11,6 +12,7 @@ from src.evaluation.e2e_v3 import validate_candidates,Candidate,dataset_hash
 ROOT=Path(__file__).resolve().parents[1]
 
 
+@requires_archive('.local/p36/inputs-v1.json')
 class P37LocalAssets(unittest.TestCase):
     def test_all40_replay_and_original_metrics_are_frozen(self):
         audit,groups=audit_p36(ROOT/'.local/p36')

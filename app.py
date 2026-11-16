@@ -9,11 +9,16 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+# P3.11–P4 authorization: existing environment keys must not enable paid UI paths.
+os.environ.update(COMPLAINT_ENABLE_LIVE='false', LLM_ENABLE_API='false',
+                  LANGSMITH_TRACING='false', LANGCHAIN_TRACING='false', LANGCHAIN_TRACING_V2='false')
+
 from src.chains.mock_complaint_chain import analyze_email
 from src.dataset.generate_sample_dataset import generate_sample_files
 from src.evaluation.evaluate_results import evaluate_predictions, LEGACY_LABEL_COLUMNS
 from src.evaluation.core import validate_summary
 from src.app.offline_slice import render_offline_slice
+from src.app.csv_input import CSVInputError, read_csv_input
 
 
 ROOT_DIR = Path(__file__).resolve().parent
@@ -46,7 +51,7 @@ OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 st.set_page_config(
-    page_title="Complaint LLM System MVP",
+    page_title="智能客户邮件处理与回复助手",
     layout="wide",
 )
 
@@ -303,8 +308,9 @@ def render_i4f_dashboard() -> None:
     metric_cols[0].metric("Total emails", f"{total_rows:,}")
     metric_cols[1].metric("Complaints", f"{complaint_count:,}")
     metric_cols[2].metric("Negative sentiment", f"{negative_count:,}")
-    metric_cols[3].metric("Formal accuracy", f"{formal['accuracy']:.2%}" if formal['available'] else 'unavailable')
+    metric_cols[3].metric("历史七字段参考一致率", f"{formal['accuracy']:.2%}" if formal['available'] else 'unavailable')
     metric_cols[4].metric("Historical API errors", str(formal['errors']) if formal['available'] else 'unavailable')
+    st.caption('历史80封 × 7字段：494/560 = 88.21%；参考来源为项目开发参考标签，非独立人工Gold。与400封模板数据统计及当前产品结果分开。报告不可用时不显示分数。')
     if not formal['available']:
         st.warning(formal['reason'])
 
@@ -390,11 +396,13 @@ def render_i4f_dashboard() -> None:
 
 
 def render_single_analysis_tab() -> None:
-    render_offline_slice(ROOT_DIR)
+    from src.app.product_workspace import render
+    render(ROOT_DIR)
 
 
 def render_batch_analysis_tab() -> None:
-    st.subheader("Batch CSV Upload")
+    st.subheader("批量CSV · 旧规则演示")
+    st.info("来源：legacy_mock 确定性规则；不调用DeepSeek。导出结果不进入P4审核库，不代表新邮件的LLM理解或已审核回复。")
     st.caption("Upload a CSV with an email text column. Recommended column names: email_text or email_body.")
 
     uploaded = st.file_uploader("Upload customer email CSV", type=["csv"])
@@ -402,7 +410,9 @@ def render_batch_analysis_tab() -> None:
         st.info("Upload a CSV file or generate sample data from the Evaluation page.")
         return
 
-    df = pd.read_csv(uploaded)
+    df = load_input_csv(uploaded, '客户邮件')
+    if df is None:
+        return
     st.write("Preview")
     st.dataframe(df.head(20), width="stretch")
 
@@ -436,9 +446,17 @@ def render_batch_analysis_tab() -> None:
 
 def render_dashboard_tab() -> None:
     st.subheader("Dashboard")
-    view = st.radio('Dashboard view', ['Historical dashboards', 'P3 versioned attribution'], key='dashboard_view')
-    if view == 'P3 versioned attribution':
+    view = st.radio('Dashboard view', ['Historical dashboards', 'P3 versioned attribution', 'P4 review workflow'], key='dashboard_view')
+    if view == 'P4 review workflow':
+        from src.app.product_workspace import store, show_dashboard
+        try:
+            show_dashboard(store(ROOT_DIR), key='dashboard')
+        except Exception as exc:
+            st.error(f'Product dashboard unavailable ({type(exc).__name__}); no inferred statistics.')
+        return
+    elif view == 'P3 versioned attribution':
         from src.app.attribution_dashboard import render_attribution_dashboard
+        st.info('P3读取 COMPLAINT_DB_PATH 分析库；默认单条工作台写入独立P4产品库。查看本轮案例请选择 P4 review workflow。P3不是P4的空数据替代来源。')
         render_attribution_dashboard(ROOT_DIR)
         return
     else:
@@ -463,6 +481,14 @@ def render_dashboard_tab() -> None:
 
     render_bar_chart(df, "store_location", "Store Locations")
     st.dataframe(df, width="stretch")
+
+
+def load_input_csv(source, label):
+    try:
+        return read_csv_input(source)
+    except CSVInputError as exc:
+        st.error(f'{label}：{exc}')
+        return None
 
 
 def render_evaluation_tab() -> None:
@@ -491,15 +517,23 @@ def render_evaluation_tab() -> None:
     golden_df = None
 
     if pred_file is not None:
-        predictions_df = pd.read_csv(pred_file)
+        predictions_df = load_input_csv(pred_file, '预测文件')
+        if predictions_df is None:
+            return
     elif default_predictions.exists():
-        predictions_df = pd.read_csv(default_predictions)
+        predictions_df = load_input_csv(default_predictions, '历史预测文件')
+        if predictions_df is None:
+            return
         st.info(f"Using saved predictions: {default_predictions}")
 
     if golden_file is not None:
-        golden_df = pd.read_csv(golden_file)
+        golden_df = load_input_csv(golden_file, '参考标签文件')
+        if golden_df is None:
+            return
     elif default_golden.exists():
-        golden_df = pd.read_csv(default_golden)
+        golden_df = load_input_csv(default_golden, '历史参考标签文件')
+        if golden_df is None:
+            return
         st.info(f"Using sample golden labels: {default_golden}")
 
     if predictions_df is None or golden_df is None:
@@ -537,18 +571,30 @@ def render_evaluation_tab() -> None:
 
 
 def main() -> None:
-    st.title("Customer Complaint Sentiment Analysis and Source Attribution")
-    st.caption("Offline Fake / Demo with versioned SQLite runs; historical CSV dashboards remain separate.")
-
-    tabs = st.tabs(["Single Analysis", "Batch Analysis", "Dashboard", "Evaluation"])
+    from src.app.inbox_style import apply
+    apply()
+    tabs = st.tabs(["智能客服", "业务分析", "研究工具"])
     with tabs[0]:
         render_single_analysis_tab()
     with tabs[1]:
-        render_batch_analysis_tab()
+        from src.app.copilot_dashboard import render
+        try:
+            render(ROOT_DIR)
+        except Exception as exc:
+            st.error(f'业务分析暂不可用（{type(exc).__name__}）；接待记录保留。')
     with tabs[2]:
-        render_dashboard_tab()
-    with tabs[3]:
-        render_evaluation_tab()
+        from src.app.copilot_workspace import research
+        try:
+            research(ROOT_DIR)
+        except Exception as exc:
+            st.error(f'开发者来源读取失败（{type(exc).__name__}）；原研究资产未改变。')
+        legacy = st.tabs(['单条处理 / Single Analysis', '批量分析 / Batch Analysis', '统计看板 / Dashboard', '评测 / Evaluation'])
+        for tab, renderer in zip(legacy, [lambda: render_offline_slice(ROOT_DIR), render_batch_analysis_tab, render_dashboard_tab, render_evaluation_tab]):
+            with tab:
+                try:
+                    renderer()
+                except Exception as exc:
+                    st.error(f'此研究工具暂不可用（{type(exc).__name__}）；不会改变接待状态。')
 
 
 if __name__ == "__main__":

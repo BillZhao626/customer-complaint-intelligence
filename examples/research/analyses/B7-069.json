@@ -1,0 +1,50 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "Could you tell me which box that might be?"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "Wenzhou Lucheng store",
+    "issues": [
+      {
+        "issue_id": "B7-069-1",
+        "object_type": "product",
+        "object_name": "tea gift box (green and gold box with several kinds of tea)",
+        "category": "Food/Beverage",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Identify which tea gift box matches the description",
+          "Confirm availability for ordering a couple as gifts"
+        ],
+        "evidence": [
+          "I'm trying to remember which one I saw",
+          "Could you tell me which box that might be?",
+          "I'd like to order a couple as gifts if it's still available"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "No dissatisfaction expressed; inquiry only, so complaint intent is no",
+      "Product identity is uncertain from the customer's description"
+    ]
+  },
+  "call": {
+    "run_id": "342130a4-66fe-4117-8d6d-161f840a3e94",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:11:31.070959+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

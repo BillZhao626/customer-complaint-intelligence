@@ -1,0 +1,98 @@
+{
+  "project_name": "Customer Complaint Sentiment Analysis and Source Attribution System Based on Large Language Model and LangChain",
+  "stage": "I-6AB",
+  "package_type": "project_closeout_and_dissertation_material_package",
+  "formal_accuracy_source": {
+    "name": "80-case reviewed golden test set",
+    "file": "data/golden/golden_labels_review_sample_v1_reviewed.csv",
+    "evaluation_summary": "outputs/i4e2_reviewed_80_summary_v1.json",
+    "total_cases": 80,
+    "total_fields": 560,
+    "correct_fields": 494,
+    "mismatches": 66,
+    "backend": "deepseek_api",
+    "api_attempted": 80,
+    "api_errors": 0,
+    "parse_success": 80,
+    "schema_validation_success": 80
+  },
+  "formal_accuracy": 0.8821,
+  "formal_accuracy_percent": "88.21%",
+  "full_pool_rows": 400,
+  "full_pool_api_status": {
+    "backend_used": "deepseek_api",
+    "api_attempted_count": 400,
+    "api_error_count": 0,
+    "parse_success_count": 400,
+    "schema_validation_success_count": 400,
+    "failed_count": 0,
+    "retry_total": 0,
+    "runtime_seconds": 2515.43,
+    "average_seconds_per_case": 6.29,
+    "accepted_for_dashboard_prediction_mode": true
+  },
+  "dashboard_modes": [
+    {
+      "name": "Synthetic Reference Statistics",
+      "source": "400-row full pool auto labels",
+      "purpose": "dataset design, coverage, and dashboard reference statistics",
+      "formal_accuracy": false
+    },
+    {
+      "name": "DeepSeek Prediction Statistics",
+      "source": "400-row full pool real DeepSeek predictions",
+      "purpose": "model-output dashboard statistics and batch processing evidence",
+      "formal_accuracy": false
+    },
+    {
+      "name": "Formal Reviewed Golden Evaluation",
+      "source": "80-case reviewed golden test set",
+      "purpose": "formal model accuracy",
+      "formal_accuracy": true
+    }
+  ],
+  "known_caveats": [
+    "The 400-row full pool is not formal accuracy because it is not fully human-reviewed.",
+    "DeepSeek Prediction Statistics are model-output dashboard statistics, not formal accuracy.",
+    "I-4E.4 product_category normalization is a secondary interpretation layer and does not replace the I-4E.2 formal result.",
+    "product_category taxonomy alignment remains a known follow-up issue.",
+    "The dataset is synthetic and should be described as dissertation/system evaluation data, not an industrial benchmark."
+  ],
+  "protected_files": [
+    "data/synthetic/customer_emails_full_v1.csv",
+    "data/golden/golden_labels_full_auto_v1.csv",
+    "data/golden/golden_labels_review_sample_v1_reviewed.csv",
+    "outputs/i4e2_reviewed_80_predictions_v1.csv",
+    "src/chains/langchain_complaint_chain.py",
+    "src/chains/mock_complaint_chain.py",
+    "app.py",
+    "prompt files",
+    "taxonomy files",
+    "parser/schema/API configuration",
+    "environment and secret files"
+  ],
+  "recommended_next_steps": [
+    "Finalize dissertation chapters using the I-6AB material package.",
+    "Capture or organize UI screenshots for the system implementation and defense presentation.",
+    "Optionally implement a product_category normalization module as a separate future optimization.",
+    "Optionally add a FastAPI service layer for deployment-oriented demonstration.",
+    "Prepare defense slides using formal evaluation and dashboard evidence."
+  ],
+  "generated_files": [
+    "docs/project_closeout_index_v1.md",
+    "docs/dissertation_material_package_v1.md",
+    "docs/evaluation_result_writeup_v1.md",
+    "docs/supervisor_report_summary_v1.md",
+    "docs/defense_demo_script_v1.md",
+    "configs/project_closeout_profile_v1.json",
+    "src/evaluation/validate_i6ab_closeout_assets_v1.py",
+    "outputs/i6ab_project_closeout_validation_report_v1.md"
+  ],
+  "stage_constraints": {
+    "no_api_call": true,
+    "no_model_inference_rerun": true,
+    "no_dataset_regeneration": true,
+    "no_golden_label_overwrite": true,
+    "no_active_chain_prompt_schema_app_change": true
+  }
+}

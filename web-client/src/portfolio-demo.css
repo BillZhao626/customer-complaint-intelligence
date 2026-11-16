@@ -1,0 +1,71 @@
+/* Keep saved long replies readable in the inbox and on narrow screens. */
+.b5-composer textarea {
+  field-sizing: content;
+  height: auto;
+  min-height: 110px;
+  max-height: 44dvh;
+  line-height: 1.48;
+}
+.b5-guard-note {
+  font-size: 12px;
+}
+.portfolio-case-link {
+  position: absolute;
+  top: 14px;
+  right: 28px;
+  z-index: 1;
+  padding: 6px 9px;
+  background: #fff;
+  font-size: 13px;
+}
+.portfolio-case-link a {
+  color: #594676;
+}
+@media (max-width: 850px) {
+  .portfolio-case-link {
+    position: static;
+  }
+}
+/* Preserve a comfortable reading area for both the original and the draft. */
+@media (min-width: 1200px) {
+  .b5-app.r2-app {
+    grid-template-columns: 54px 248px minmax(450px,1fr) 335px;
+  }
+  .b5-conversation-head, .b5-list header, .b5-copilot-tabs {
+    height: 66px;
+  }
+  .b5-timeline {
+    padding: 9px 22px 5px;
+  }
+  .b5-date-divider {
+    padding: 4px 0 6px;
+  }
+  .b5-message {
+    margin-bottom: 6px;
+    max-width: 96%;
+  }
+  .b5-bubble {
+    padding: 10px 13px;
+    line-height: 1.55;
+  }
+  .b5-composer-wrap {
+    padding: 0 13px 12px;
+  }
+  .b5-composer textarea {
+    padding: 2px 13px 11px;
+    max-height: 46dvh;
+  }
+  .b5-copilot-content {
+    padding: 13px 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .b5-action-card {
+    margin-bottom: 9px;
+    padding: 9px 10px;
+  }
+  .b5-action-card p {
+    margin: 5px 0;
+  }
+}

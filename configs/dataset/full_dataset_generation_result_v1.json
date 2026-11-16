@@ -1,0 +1,16 @@
+{
+  "stage": "I-4B",
+  "generated_dataset_file": "data/synthetic/customer_emails_full_v1.csv",
+  "generated_auto_label_file": "data/golden/golden_labels_full_auto_v1.csv",
+  "target_size": 400,
+  "actual_size": 400,
+  "generation_script": "src/dataset/generate_full_dataset_v1.py",
+  "validation_script": "src/dataset/validate_full_dataset_v1.py",
+  "distribution_script": "src/dataset/summarize_full_dataset_v1.py",
+  "profile_used": "configs/dataset/full_synthetic_dataset_profile_v1.json",
+  "quality_audit_report": "outputs/full_dataset_quality_audit_v1.md",
+  "distribution_report": "outputs/full_dataset_distribution_report_v1.md",
+  "dataset_role": "synthetic dataset pool for dashboard statistics, batch processing, case coverage, and reviewed golden test set sampling",
+  "label_status": "auto_generated_not_human_reviewed",
+  "next_stage_recommendation": "I-4C reviewed golden test set candidate selection"
+}
