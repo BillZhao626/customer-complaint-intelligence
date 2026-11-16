@@ -107,7 +107,7 @@ class InboxUITests(unittest.TestCase):
         self.app.button(key='case_'+first['case_id']).click().run()
         self.assertEqual(self.app.text_area(key=key).value,'Unsaved camera reply.')
         self.assertTrue(any('official specifications' in t.value for t in self.app.text))
-        self.assertEqual(self.app.query_params['case_id'],[first['case_id']])
+        self.assertEqual(self.app.query_params['case_id'],first['case_id'])
         self.assertNotEqual(ProductStore(self.path).get(first['case_id'])['draft']['body'],'Unsaved camera reply.')
 
     def test_insert_confirmation_cancel_append_and_fresh_reload(self):

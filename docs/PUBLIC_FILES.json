@@ -310,8 +310,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8419,
-      "sha256": "cbbfa7f2171b6c6cf961a46da462251d9af3d37d6fefcfc11b2057e5e8939fad"
+      "bytes": 8545,
+      "sha256": "dd4aa7acbf99208d9a36f65224c620dc9f816341041d3facb8afe1f919e6d60d"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -430,8 +430,8 @@
     },
     {
       "path": "docs/SECURITY_REVIEW.md",
-      "bytes": 2725,
-      "sha256": "d765befd229bb15a977a879fc38e5edfd5b32f74233cd7b46c64a27273e773e2"
+      "bytes": 3031,
+      "sha256": "18e468319838c273d4fc56ef9b8239ed0b70449d1e8a125acb73ff74f72cd6f8"
     },
     {
       "path": "docs/VALIDATION.md",
@@ -2185,8 +2185,8 @@
     },
     {
       "path": "src/app/copilot_dashboard.py",
-      "bytes": 3940,
-      "sha256": "62509a06649b0a2011a8be2b81ddb2db1ead7a45e00c5f4b49f35de8359e4782"
+      "bytes": 4434,
+      "sha256": "31e9b043d69e6dfb2d91601c1133d30f645cb39411731a16b7394ac15eaaa6a1"
     },
     {
       "path": "src/app/copilot_inbox.py",
@@ -3680,8 +3680,8 @@
     },
     {
       "path": "tests/test_p46_inbox.py",
-      "bytes": 9408,
-      "sha256": "6347ebaf513a14c4d74b1d7a49c5f5e52d47a7d7d0508a2bfc0361e1121ad6f3"
+      "bytes": 9406,
+      "sha256": "247457079eea8fd51b1f753cda4f50611fcd0dbfd14a96615a373cb8ff0a4614"
     },
     {
       "path": "tests/test_p47_content.py",

@@ -25,6 +25,8 @@
 
 使用 **Python 3.12、Node.js 22 和 npm**。首次安装需要访问软件包仓库，运行演示无需 API 密钥。
 
+也可以下载 Release 中的完整工程 ZIP，解压进入项目目录，从下方 `python -m venv .venv` 开始执行。
+
 ```powershell
 git clone https://github.com/BillZhao626/customer-complaint-intelligence.git
 cd customer-complaint-intelligence

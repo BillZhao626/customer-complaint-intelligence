@@ -40,10 +40,19 @@ def render(root):
         st.caption('每组按case去重，多问题可跨组；组间数量不可直接相加。商品仅统计product对象，未提供信息归unknown。日期为案例保存日（UTC），不冒充客户来信时间或真实经营趋势。')
     members = filtered
     if members:
-        member_map = {c['case_id'] + ':' + str(c['revision']): c for c in members}
+        # Follow the case as its draft revision changes. A revision-dependent
+        # option leaves Streamlit's retained selection pointing at a removed
+        # value after editing or approval.
+        member_map = {c['case_id']: c for c in members}
+        member_key = 'business_member_' + selected_group + '_' + state
+        previous_member = st.session_state.get(member_key)
+        if previous_member and previous_member not in member_map:
+            previous_case = previous_member.split(':', 1)[0]
+            if previous_case in member_map:
+                st.session_state[member_key] = previous_case
         selected_member = st.selectbox('下钻查看原文', list(member_map),
             format_func=lambda k: f"{member_map[k]['run'].email.subject} · {label(member_map[k]['state'])}",
-            key='business_member_' + selected_group + '_' + state)
+            key=member_key)
         member = member_map[selected_member]
         with st.expander('原始邮件与判断依据', expanded=True):
             show_analysis(member)
