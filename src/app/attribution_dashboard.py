@@ -21,7 +21,7 @@ def render_attribution_dashboard(root):
         st.warning(f'Source unavailable ({type(exc).__name__}). Run the offline demo setup or select an available source.')
         return
     if not service.cohorts:
-        st.info('No saved runs. Analyze an Offline Fake email in Single Analysis, then reopen Dashboard.')
+        st.info('P3分析库暂无运行。默认单条工作台的数据请到 P4 review workflow 查看；研究与旧版分析工具才写入此P3库。')
         return
     configs = service.cohorts
     cohort = st.selectbox('Model / experiment version',list(configs),key='p3_cohort',format_func=lambda k:

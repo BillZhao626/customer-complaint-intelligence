@@ -1,0 +1,95 @@
+[
+  {
+    "bad_case_id": "P5A-BC1",
+    "source_head": "8755ae5",
+    "source_module": "src/application/service_scenarios.py",
+    "source_function": "example('产品功能咨询')",
+    "scenario": "产品功能咨询",
+    "email": {
+      "email_id": "p47-service-0",
+      "subject": "DemoCam C200 能直接连电脑吗？",
+      "body": "你好，我看中你们的 DemoCam C200，想用它在电脑上开视频会议。它能用线直接连电脑吗？如果还要买转接头，希望下单前先弄清楚，免得买回来用不了。"
+    },
+    "input_hash": "336b1be76cf4183cac2943d3731c584f3602334e909795762716a0815ac6068a",
+    "before_reply": "您好，您想确认 DemoCam C200 能否有线连接电脑开视频会议，以及是否需要转接头。您已提供型号，不用再重复填写。仅凭型号还不能确认这项功能，需要对照商家提供的官方连接说明。为免买错，先不用急着购买转接头；您可以补充电脑的接口类型和操作系统，方便进一步核对是否匹配。",
+    "before_reply_hash": "fce99bdd35e7791de3c180c7ffb477a9a66ff826b5636ee06bb924982871c9b8",
+    "after_reply_candidate": "关于 DemoCam C200 能否用线直接接电脑开视频会议，需要由商品资料人员核实连接协议和配件要求，不能仅凭型号或接口名称判断。为避免买错，确认前建议先不要购买转接设备。",
+    "after_reply_hash": "f54f1f22bc589ae4efbfea2e735ebf72518212e523d18b89d44b602db3ee7cc7",
+    "root_cause_layer": "knowledge/action",
+    "root_cause": "未把型号已知与商家协议知识缺失分开；向客户补环境信息仍不能填补核心规格。",
+    "change": "改为商家核实协议；不再追问型号，也不声称创建了未发生的任务。",
+    "earliest_failure": "knowledge/action",
+    "evidence_kind": "read_existing_authored_fixture_not_real_llm_run",
+    "development_check": {
+      "internal_dedup_text_removed": true,
+      "unexecuted_action_claim": false,
+      "known_customer_facts_preserved": true
+    },
+    "human_scores": null,
+    "owner_acceptance": null,
+    "quality_effect": "NOT_MEASURED",
+    "historical_source_modified": false
+  },
+  {
+    "bad_case_id": "P5A-BC2",
+    "source_head": "8755ae5",
+    "source_module": "src/application/service_scenarios.py",
+    "source_function": "example('配送包装受损')",
+    "scenario": "配送包装受损",
+    "email": {
+      "email_id": "p47-service-1",
+      "subject": "包裹送到了，但纸箱被雨淋透了",
+      "body": "今天收到订单 DEMO-24031，快递把箱子放在门口，外箱被雨淋透了，侧面也破了。我拍了外包装的照片，但还没拆开检查里面的台灯。这种情况该怎么处理？我担心打开后有问题就说不清了。"
+    },
+    "input_hash": "b885a73cd44e93cfa8fd6468cd094981ca63b559b46dcd22d0ade98ff4df70d3",
+    "before_reply": "很抱歉包裹送到时出现了这样的情况，您担心里面的商品受损是可以理解的。订单号 DEMO-24031 和您已有外包装照片的情况都已在来信中说明，不用重复填写。请先保留外包装和现有照片；若商品或插头有受潮迹象，请不要通电，也不用为了取证试用。方便的话，请说明里面的台灯是否也有受潮或破损。售后人员需要结合这些资料和订单记录，确认适用的退换或其他处理方式。",
+    "before_reply_hash": "a28db7d3dbc6c620cb285754ad905295cc61e9b4a714b6dca2be725f29a3e47b",
+    "after_reply_candidate": "很抱歉包裹送达时外箱被雨淋湿并破损。请保留包装和现有照片，在安全情况下查看台灯本体是否受潮或破损；电源部分若有湿痕请不要通电。售后需要结合本体情况和订单记录核对适用选项。",
+    "after_reply_hash": "0491c21ead469a313249e278590ab25312ef9f5fbaa7989d92594084fc876ee5",
+    "root_cause_layer": "reply rendering",
+    "root_cause": "内部去重说明混入客户正文，拉长回复；已送达/包装/本体三种事实需分开。",
+    "change": "删除内部提示，保留照片与电气安全，唯一澄清为本体状态。",
+    "earliest_failure": "reply rendering",
+    "evidence_kind": "read_existing_authored_fixture_not_real_llm_run",
+    "development_check": {
+      "internal_dedup_text_removed": true,
+      "unexecuted_action_claim": false,
+      "known_customer_facts_preserved": true
+    },
+    "human_scores": null,
+    "owner_acceptance": null,
+    "quality_effect": "NOT_MEASURED",
+    "historical_source_modified": false
+  },
+  {
+    "bad_case_id": "P5A-BC3",
+    "source_head": "8755ae5",
+    "source_module": "src/application/service_scenarios.py",
+    "source_function": "example('商品售后故障')",
+    "scenario": "商品售后故障",
+    "email": {
+      "email_id": "p47-service-2",
+      "subject": "上个月买的台灯突然不亮了",
+      "body": "上个月在你们店买的台灯，昨晚正常开着，后来就不亮了。家里其他电器能正常使用，我没有拆过它。还没用多久就坏了，挺影响晚上工作的。请问是送修还是换一个？"
+    },
+    "input_hash": "1ca4a3b972a5a99717aba401b0d7808d118bf016a875c79d9b208cbfe6cc20e7",
+    "before_reply": "抱歉台灯这么快就出现问题，也耽误了您晚上工作。您提到其他电器能正常使用，而且没有拆机，这些情况无需再重复说明。请先暂停使用这盏灯，不必拆开或反复通电测试。您可以提供订单编号和灯具型号，并说明是否有异常气味或外观变化。维修还是换货，需要售后人员结合购买记录、故障情况和适用政策确认，现阶段先把资料准备齐会更有助于处理。",
+    "before_reply_hash": "824bd9ed7e4d959ddec63f1b9671acca31a195f873da8b5bd01251f7acfe650c",
+    "after_reply_candidate": "抱歉台灯刚买不久就不亮，影响了您晚上工作。请先暂停使用，不必拆机或反复通电。方便时提供订单号和型号，便于售后核对维修或更换的受理方式；如有现成的异味或外观变化信息，也可以一并说明。",
+    "after_reply_hash": "b0e96bdf1b04b55b4658f5897c0db7f186a17a303004664e98df3ed684b345a9",
+    "root_cause_layer": "reply rendering",
+    "root_cause": "把记住“其他电器正常、未拆机”的内部要求朗读给客户；不能因此证明本体原因。",
+    "change": "保留已知信息在理解层，正文只给停用、最小资料及售后核实下一步。",
+    "earliest_failure": "reply rendering",
+    "evidence_kind": "read_existing_authored_fixture_not_real_llm_run",
+    "development_check": {
+      "internal_dedup_text_removed": true,
+      "unexecuted_action_claim": false,
+      "known_customer_facts_preserved": true
+    },
+    "human_scores": null,
+    "owner_acceptance": null,
+    "quality_effect": "NOT_MEASURED",
+    "historical_source_modified": false
+  }
+]

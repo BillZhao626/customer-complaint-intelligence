@@ -1,0 +1,71 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "当时没太在意",
+      "我不太确定是不是运输或者存放的问题，想问问这种情况一般怎么处理"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "感觉膏体好像不太对劲，质地和之前买的不太一样，涂在脸上也有点不舒服"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "涂在脸上也有点不舒服"
+    ],
+    "mentioned_store": "深圳南山店",
+    "issues": [
+      {
+        "issue_id": "B7-030-1",
+        "object_type": "product",
+        "object_name": "面霜外包装",
+        "category": "Beauty/Personal Care",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "外包装有点压坏了，盒子边角都变形了"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-030-2",
+        "object_type": "product",
+        "object_name": "面霜膏体",
+        "category": "Beauty/Personal Care",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问这种情况一般怎么处理"
+        ],
+        "evidence": [
+          "感觉膏体好像不太对劲，质地和之前买的不太一样",
+          "涂在脸上也有点不舒服"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户未明确表达不满或要求退换，仅询问处理方式，投诉意图不确定",
+      "膏体异常原因不明，客户自述不确定是否为运输或存放问题",
+      "小票可能留存但暂时找不到，购买凭证不确定"
+    ]
+  },
+  "call": {
+    "run_id": "0ab8c99f-054d-4347-92e1-5d8cad9ef03a",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:06:33.936377+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

@@ -1,0 +1,820 @@
+{
+  "email": {
+    "email_id": "B7-035",
+    "subject": "Order arrived damaged - tea gift box",
+    "body": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+  },
+  "analysis": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "I'm pretty disappointed"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "I'm pretty disappointed",
+      "I'd really like to get this sorted before Saturday if possible"
+    ],
+    "urgency": "high",
+    "urgency_evidence": [
+      "This was supposed to be a gift for a friend's birthday this weekend",
+      "I'd really like to get this sorted before Saturday if possible"
+    ],
+    "mentioned_store": "Beijing Chaoyang store",
+    "issues": [
+      {
+        "issue_id": "I1",
+        "object_type": "product",
+        "object_name": "tea gift box",
+        "category": "Food/Beverage",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "get this sorted before Saturday"
+        ],
+        "evidence": [
+          "the gift box inside was crushed on one corner",
+          "a couple of the tea tins were dented"
+        ],
+        "risk": "minor",
+        "urgency": "high",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "The exact cause of the damage (packaging vs. transit) is not stated; only the reported outcome is known.",
+      "Whether the store's phone guidance counts as service is unclear, but no service complaint is expressed."
+    ]
+  },
+  "analysis_call": {
+    "identity": "R7-001-064",
+    "run_id": "682e29cb-ac46-4c7d-8057-517768aeb3a9",
+    "request_hash": "369469e3f88d85fcf78b510c293b005444248548c0d92d39ed97c8b82635bfb0",
+    "raw": "{\"version\": \"p5b8-calibration-1\", \"uncertainty\": [\"The exact cause of the damage (packaging vs. transit) is not stated; only the reported outcome is known.\", \"Whether the store's phone guidance counts as service is unclear, but no service complaint is expressed.\"], \"expressed_sentiment\": \"negative\", \"expressed_evidence\": [\"I'm pretty disappointed\"], \"experience_polarity\": \"negative\", \"complaint_intent\": \"yes\", \"complaint_evidence\": [\"I'm pretty disappointed\", \"I'd really like to get this sorted before Saturday if possible\"], \"urgency\": \"high\", \"urgency_evidence\": [\"This was supposed to be a gift for a friend's birthday this weekend\", \"I'd really like to get this sorted before Saturday if possible\"], \"mentioned_store\": \"Beijing Chaoyang store\", \"issues\": [{\"issue_id\": \"I1\", \"object_type\": \"product\", \"object_name\": \"tea gift box\", \"category\": \"Food/Beverage\", \"sentiment\": \"negative\", \"experience_polarity\": \"negative\", \"issue_kind\": \"complaint\", \"business_process\": \"product issue\", \"customer_requests\": [\"get this sorted before Saturday\"], \"evidence\": [\"the gift box inside was crushed on one corner\", \"a couple of the tea tins were dented\"], \"risk\": \"minor\", \"urgency\": \"high\", \"resolution\": \"unresolved\"}]}",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "model_snapshot": "unavailable",
+      "provider_response_id": "20c8de20-c5fb-4b83-86b7-7c4a4984aad6",
+      "response_id": "lc_run--01a1b055-b43e-7e63-b177-0685673edfbe-0",
+      "finish_reason": "stop",
+      "input_tokens": 1829,
+      "output_tokens": 310,
+      "total_tokens": 2139,
+      "usage": {
+        "input_tokens": 1829,
+        "output_tokens": 310,
+        "total_tokens": 2139,
+        "input_token_details": {
+          "cache_read": 1664
+        },
+        "output_token_details": {}
+      },
+      "token_usage": {
+        "completion_tokens": 310,
+        "prompt_tokens": 1829,
+        "total_tokens": 2139,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1664
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 165
+      },
+      "payload_sha256": "3103d59b9b11cb6638f7388c2cb12cfe2902dc055455dcf51ca9bb1bfa44407e",
+      "dispatch_at": "2026-11-06T10:09:29.151267+00:00"
+    },
+    "elapsed_ms": 3086.4465000013297,
+    "mode": "LIVE"
+  },
+  "analysis_parse": {
+    "status": "accepted",
+    "value": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "negative",
+      "expressed_evidence": [
+        "I'm pretty disappointed"
+      ],
+      "experience_polarity": "negative",
+      "complaint_intent": "yes",
+      "complaint_evidence": [
+        "I'm pretty disappointed",
+        "I'd really like to get this sorted before Saturday if possible"
+      ],
+      "urgency": "high",
+      "urgency_evidence": [
+        "This was supposed to be a gift for a friend's birthday this weekend",
+        "I'd really like to get this sorted before Saturday if possible"
+      ],
+      "mentioned_store": "Beijing Chaoyang store",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "tea gift box",
+          "category": "Food/Beverage",
+          "sentiment": "negative",
+          "experience_polarity": "negative",
+          "issue_kind": "complaint",
+          "business_process": "product issue",
+          "customer_requests": [
+            "get this sorted before Saturday"
+          ],
+          "evidence": [
+            "the gift box inside was crushed on one corner",
+            "a couple of the tea tins were dented"
+          ],
+          "risk": "minor",
+          "urgency": "high",
+          "resolution": "unresolved"
+        }
+      ],
+      "uncertainty": [
+        "The exact cause of the damage (packaging vs. transit) is not stated; only the reported outcome is known.",
+        "Whether the store's phone guidance counts as service is unclear, but no service complaint is expressed."
+      ]
+    },
+    "error": null,
+    "semantic_eligible": true
+  },
+  "call": {
+    "identity": "R7-001-065",
+    "run_id": "48ab2168-b789-4f34-98bb-13a877d80b2a",
+    "request_hash": "5bfe9ce7b62f5ad9ac39ea7b09c45c772caa7f577f51508833fb8adc96076bea",
+    "raw": "{\"reply\": \"Dear Customer,\\n\\nThank you for your email, and I'm sorry to hear that the tea gift box arrived with a crushed corner and dented tins, especially with a friend's birthday this weekend. I understand the disappointment, and I appreciate your patience in writing in with the details.\\n\\nYou mentioned that you've attached a few photos — thank you for that. To help us verify the order, could you please reply with your order reference or other purchase proof (for example, a receipt or order confirmation)? It would also help if you could keep the packaging and the damaged items as they are for now, along with the photos you've taken.\\n\\nI've created an internal aftersales verification request, which is pending. It will look into replacement stock, expedited delivery options and possible alternatives in light of your Saturday deadline, though I'm not able to guarantee that timing at this stage. If you'd like an update, feel free to reply to this email and ask for progress.\\n\\nThank you again for reaching out.\\n\\nKind regards,\\nCustomer Service Team\"}",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "model_snapshot": "unavailable",
+      "provider_response_id": "f98db4d9-ec9c-4cfe-b26e-dac430ddebe4",
+      "finish_reason": "tool_calls",
+      "input_tokens": 2117,
+      "output_tokens": 243,
+      "total_tokens": 2360,
+      "usage": {
+        "input_tokens": 2117,
+        "output_tokens": 243,
+        "total_tokens": 2360,
+        "input_token_details": {
+          "cache_read": 640
+        },
+        "output_token_details": {}
+      },
+      "contract": "STRICT_TOOL_ARGUMENTS_NOT_CONTENT_JSON",
+      "payload_sha256": "00979972c552e7e9f18ca25601de6731074154b8ceb83691c422466d6a8128f4",
+      "dispatch_at": "2026-11-06T10:09:33.373621+00:00"
+    },
+    "elapsed_ms": 2958.3896000003733,
+    "mode": "LIVE"
+  },
+  "parse": {
+    "status": "accepted",
+    "value": {
+      "reply": "Dear Customer,\n\nThank you for your email, and I'm sorry to hear that the tea gift box arrived with a crushed corner and dented tins, especially with a friend's birthday this weekend. I understand the disappointment, and I appreciate your patience in writing in with the details.\n\nYou mentioned that you've attached a few photos — thank you for that. To help us verify the order, could you please reply with your order reference or other purchase proof (for example, a receipt or order confirmation)? It would also help if you could keep the packaging and the damaged items as they are for now, along with the photos you've taken.\n\nI've created an internal aftersales verification request, which is pending. It will look into replacement stock, expedited delivery options and possible alternatives in light of your Saturday deadline, though I'm not able to guarantee that timing at this stage. If you'd like an update, feel free to reply to this email and ask for progress.\n\nThank you again for reaching out.\n\nKind regards,\nCustomer Service Team"
+    },
+    "error": null,
+    "semantic_eligible": true
+  },
+  "slot": {
+    "case_id": "B7-035",
+    "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+    "run_id": "48ab2168-b789-4f34-98bb-13a877d80b2a",
+    "arm": "GUIDED",
+    "parse_ok": true,
+    "reply": "Dear Customer,\n\nThank you for your email, and I'm sorry to hear that the tea gift box arrived with a crushed corner and dented tins, especially with a friend's birthday this weekend. I understand the disappointment, and I appreciate your patience in writing in with the details.\n\nYou mentioned that you've attached a few photos — thank you for that. To help us verify the order, could you please reply with your order reference or other purchase proof (for example, a receipt or order confirmation)? It would also help if you could keep the packaging and the damaged items as they are for now, along with the photos you've taken.\n\nI've created an internal aftersales verification request, which is pending. It will look into replacement stock, expedited delivery options and possible alternatives in light of your Saturday deadline, though I'm not able to guarantee that timing at this stage. If you'd like an update, feel free to reply to this email and ask for progress.\n\nThank you again for reaching out.\n\nKind regards,\nCustomer Service Team",
+    "facts": {
+      "status": "UNKNOWN",
+      "source": "SCOPED_LOCAL_FACTS_QUERY",
+      "external_query": false
+    },
+    "attachment_manifest": [],
+    "events": [
+      {
+        "event_id": "cf06a37e-363a-494f-a2d2-b02db5a11193",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "7ab77fa10464fc00d03f4070e5010f0dfa377a99a163c7731a006df2715b67fe",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.929042+00:00",
+        "_binding": {
+          "case_id": "B7-035",
+          "run_id": "48ab2168-b789-4f34-98bb-13a877d80b2a",
+          "arm": "GUIDED",
+          "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+          "tool_event_id": "cf06a37e-363a-494f-a2d2-b02db5a11193",
+          "event_state": "requested",
+          "event_hash": "ddc341272452f12d60b2b0116c41e7e1412e8970a5b0eea82a64f8baeaef058d"
+        }
+      },
+      {
+        "event_id": "79a779ff-18a9-48c0-98f0-4be1e3a26ebf",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "7ab77fa10464fc00d03f4070e5010f0dfa377a99a163c7731a006df2715b67fe",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.930050+00:00",
+        "_binding": {
+          "case_id": "B7-035",
+          "run_id": "48ab2168-b789-4f34-98bb-13a877d80b2a",
+          "arm": "GUIDED",
+          "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+          "tool_event_id": "79a779ff-18a9-48c0-98f0-4be1e3a26ebf",
+          "event_state": "executed",
+          "event_hash": "5407c5662da7f20e24f41e5c819f6ea70acf419d2288d2932d2ed6f4e1541912"
+        }
+      },
+      {
+        "event_id": "ce125adb-320b-4ea1-a320-a2c0df4e4dfe",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "2ba07ad7575b10a38b2e0f86181eabc04cb8e157dec5e9461aa51bebb3490fd0",
+        "kind": "aftersales_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "get this sorted before Saturday; 核查替换库存、加急配送及替代方案，不保证期限; 核实检查、维修或退换适用条件",
+            "evidence": [
+              "the gift box inside was crushed on one corner",
+              "a couple of the tea tins were dented"
+            ],
+            "priority": "high",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.930050+00:00",
+        "_binding": {
+          "case_id": "B7-035",
+          "run_id": "48ab2168-b789-4f34-98bb-13a877d80b2a",
+          "arm": "GUIDED",
+          "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+          "tool_event_id": "ce125adb-320b-4ea1-a320-a2c0df4e4dfe",
+          "event_state": "requested",
+          "event_hash": "9f58d07c92e1b3b75d51ba9244448ed168a1d4391bf0f32e01e28821462658d8"
+        }
+      },
+      {
+        "event_id": "0cc05a4d-cb95-4f12-a50c-471a11554917",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "2ba07ad7575b10a38b2e0f86181eabc04cb8e157dec5e9461aa51bebb3490fd0",
+        "kind": "aftersales_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "get this sorted before Saturday; 核查替换库存、加急配送及替代方案，不保证期限; 核实检查、维修或退换适用条件",
+            "evidence": [
+              "the gift box inside was crushed on one corner",
+              "a couple of the tea tins were dented"
+            ],
+            "priority": "high",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.931051+00:00",
+        "_binding": {
+          "case_id": "B7-035",
+          "run_id": "48ab2168-b789-4f34-98bb-13a877d80b2a",
+          "arm": "GUIDED",
+          "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+          "tool_event_id": "0cc05a4d-cb95-4f12-a50c-471a11554917",
+          "event_state": "created",
+          "event_hash": "2c41b6b59ff0e76d638f94d704a0fce5d19f3c0a710f2fa8e67715d1f77a9455"
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "events": [
+      {
+        "event_id": "cf06a37e-363a-494f-a2d2-b02db5a11193",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "7ab77fa10464fc00d03f4070e5010f0dfa377a99a163c7731a006df2715b67fe",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.929042+00:00"
+      },
+      {
+        "event_id": "79a779ff-18a9-48c0-98f0-4be1e3a26ebf",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "7ab77fa10464fc00d03f4070e5010f0dfa377a99a163c7731a006df2715b67fe",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.930050+00:00"
+      },
+      {
+        "event_id": "ce125adb-320b-4ea1-a320-a2c0df4e4dfe",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "2ba07ad7575b10a38b2e0f86181eabc04cb8e157dec5e9461aa51bebb3490fd0",
+        "kind": "aftersales_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "get this sorted before Saturday; 核查替换库存、加急配送及替代方案，不保证期限; 核实检查、维修或退换适用条件",
+            "evidence": [
+              "the gift box inside was crushed on one corner",
+              "a couple of the tea tins were dented"
+            ],
+            "priority": "high",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.930050+00:00"
+      },
+      {
+        "event_id": "0cc05a4d-cb95-4f12-a50c-471a11554917",
+        "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+        "conversation_id": "B7-035",
+        "operation_id": "2ba07ad7575b10a38b2e0f86181eabc04cb8e157dec5e9461aa51bebb3490fd0",
+        "kind": "aftersales_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "get this sorted before Saturday; 核查替换库存、加急配送及替代方案，不保证期限; 核实检查、维修或退换适用条件",
+            "evidence": [
+              "the gift box inside was crushed on one corner",
+              "a couple of the tea tins were dented"
+            ],
+            "priority": "high",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "B7-035",
+            "revision": "r7-dev-v3",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-06T10:09:31.931051+00:00"
+      }
+    ],
+    "facts": {
+      "status": "UNKNOWN",
+      "source": "SCOPED_LOCAL_FACTS_QUERY",
+      "external_query": false
+    },
+    "context": {
+      "issues": [],
+      "latest_request": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+      "identifiers": [],
+      "preferred_outcome": null,
+      "availability": null,
+      "refuses_handoff": false,
+      "wants_human": false,
+      "service_complaint": false,
+      "urgent": false,
+      "installation_cancelled": false,
+      "deadline_negated": false,
+      "source_messages": [
+        {
+          "role": "customer",
+          "text": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+        }
+      ]
+    },
+    "external_actions": 0
+  },
+  "plan": [
+    {
+      "kind": "aftersales_request",
+      "issue_ids": [
+        "I1"
+      ],
+      "goal": "get this sorted before Saturday; 核查替换库存、加急配送及替代方案，不保证期限; 核实检查、维修或退换适用条件",
+      "evidence": [
+        "the gift box inside was crushed on one corner",
+        "a couple of the tea tins were dented"
+      ],
+      "priority": "high"
+    }
+  ],
+  "plan_error": null,
+  "guard": {
+    "version": "p5b8r4-scoped-action-evidence-2-owner-intent",
+    "assessments": [
+      {
+        "state": "INTERNAL_CREATED",
+        "quote": "I've created an internal aftersales verification request",
+        "claim_type": "INTERNAL_CREATED",
+        "business_object": [
+          "product"
+        ],
+        "object_mentions": [],
+        "target": null,
+        "asserted_status": "created",
+        "span": {
+          "start": 631,
+          "end": 687,
+          "text": "I've created an internal aftersales verification request"
+        },
+        "supported": true,
+        "support_status": "supported",
+        "event_ids": [
+          "0cc05a4d-cb95-4f12-a50c-471a11554917"
+        ],
+        "negative_event_ids": [],
+        "reasons": [
+          "kind_mismatch",
+          "status_mismatch"
+        ],
+        "unavailable_identity_fields": [],
+        "evidence_identity": "STRICT_BOUND"
+      }
+    ],
+    "findings": [],
+    "external_executors_available": false,
+    "attachment_evidence": {
+      "source_mentions": [
+        {
+          "state": "HISTORICAL_UNVERIFIED",
+          "quote": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks.",
+          "start": 37,
+          "end": 544,
+          "coordinate": "subject+newline+body Unicode codepoints"
+        }
+      ],
+      "received_files": [],
+      "viewed_files": [],
+      "absent": false,
+      "instruction": "Use only stated source levels. Offers, taken, reported sent, system received and viewed are distinct. No mention means no photo history. Ask conditionally when useful. Historical sending is unverified now. Ambiguous mentions do not establish taking or sending."
+    },
+    "inherited_non_action_reviews": []
+  },
+  "service_brief": {
+    "version": "service-response-20261106-v13-resolved-history",
+    "current_objectives": [
+      "get this sorted before Saturday"
+    ],
+    "resolved_matters": [],
+    "acknowledgements": [
+      {
+        "kind": "apology_for_current_inconvenience",
+        "source_quotes": [
+          "Order arrived damaged - tea gift box",
+          "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+        ],
+        "instruction": "Offer a brief proportionate apology for the current reported inconvenience, even if expression is neutral; do not infer anger or confirmed liability."
+      },
+      {
+        "kind": "thanks_for_praise",
+        "source_quotes": [
+          "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+        ],
+        "instruction": "Thank the actual praise warmly; this does not imply a request to relay it."
+      }
+    ],
+    "completed_steps": [],
+    "feedback_relay": {
+      "requested": false,
+      "source_quotes": [],
+      "instruction": "Only thank praise when no relay was requested; do not add a relay promise or claim."
+    },
+    "reply_focus": "Only current objectives. If product issue is resolved, thank and wish pleasant use; omit recurrence advice. No promise to reply/contact later. Give customer-controlled next steps instead.",
+    "paragraph_topics": [
+      "acknowledgement",
+      "current questions and useful advice",
+      "supported pending progress and customer next step"
+    ],
+    "paragraph_rule": "Combine naturally for simple cases; keep multiple questions distinct. No fixed paragraph count; one status sentence is enough.",
+    "pending_progress": [
+      {
+        "event_id": "0cc05a4d-cb95-4f12-a50c-471a11554917",
+        "kind": "aftersales_request",
+        "state": "created",
+        "goal": "get this sorted before Saturday; 核查替换库存、加急配送及替代方案，不保证期限; 核实检查、维修或退换适用条件",
+        "may_say_zh": "已创建售后核实请求，待处理。",
+        "may_say_en": "An internal aftersales verification request has been created and is pending.",
+        "unverified_outcomes": [
+          "staff acceptance or start",
+          "external recipient/delivery",
+          "investigation result",
+          "callback schedule",
+          "completion"
+        ],
+        "instruction": "Describe the supported pending request once. Do not assert acceptance OR non-acceptance without evidence."
+      }
+    ],
+    "evidence_intake": {
+      "order_reference": "Ask for missing order reference or purchase proof only for the actual unresolved verification; never for praise/thanks relay.",
+      "photos": "Use attachment_evidence source states. Ask conditionally for useful missing evidence; never ask again for reported sent files.",
+      "permission": "Customer may reply with relevant details; no guaranteed visit availability."
+    },
+    "knowledge": [
+      {
+        "topic": "damage",
+        "source": "Owner service/safety policy",
+        "advice": "Offer a proportionate apology. Keep packaging and existing photos; ask to share photos merely taken, check receipt if reported sent. For damaged electrical equipment do not power on before qualified assessment. Ask for missing order proof only. Check repair/replacement and logistics handling, do not establish cause or guarantee entitlement."
+      },
+      {
+        "topic": "deadline",
+        "source": "Owner service policy",
+        "advice": "Preserve the exact deadline. The pending task should check replacement stock, expedited delivery and alternatives; no guaranteed arrival."
+      }
+    ],
+    "attachment_manifest": [],
+    "unknown_merchant_facts": [
+      "payment obligations/fee waivers",
+      "refund or exchange entitlement",
+      "inspection availability",
+      "staff acceptance",
+      "callback schedule"
+    ],
+    "permitted_closing": "Thank customer; wish pleasant use where appropriate. Invite customer to provide missing information or ask for progress. Do not commit staff to future contact.",
+    "execution_scope": "LOCAL_SIMULATION_PENDING; no external action",
+    "attitude": "Apologize proportionately for actual harm even with neutral expression; thank praise; no unsolicited warnings about resolved faults."
+  },
+  "composer": {
+    "version": "service-response-20261106-v13-resolved-history",
+    "system_hash": "e9a0147bcc50aae603615cfa78c7a078a3c0966daab1bcaf3a350e550509cd7c",
+    "planner_hash": "816e9389ff5c0da7b0ad782c10e84ad60c5677a5110267628d979bf4982c4ed4"
+  },
+  "dataset_role": "DEV"
+}

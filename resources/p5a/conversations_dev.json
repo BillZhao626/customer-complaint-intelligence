@@ -1,0 +1,188 @@
+[
+  {
+    "conversation_id": "P5A-D1",
+    "scenario_family": "F01-M01",
+    "split": "DEV",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "human_gold": null,
+    "model_calls": 0,
+    "turns": [
+      {
+        "role": "customer",
+        "body": "想买你们那个C系列相机开线上会议，能一根线接电脑吗？"
+      },
+      {
+        "role": "agent_candidate_unsent",
+        "body": "需要先定位具体型号；方便时提供型号即可。"
+      },
+      {
+        "role": "customer",
+        "body": "找到了，是 DemoCam C200。"
+      }
+    ],
+    "turn2_plan": "型号已定位；接下来应由商家核实C200接口协议，不再向客户索型号。",
+    "turn2_customer_reply": "C200 的有线会议连接方式需要商家核对具体协议和配件要求，确认之前建议先不要购买转接设备。",
+    "customer_facts_added": "找到了，是 DemoCam C200。",
+    "critical_invariants": [
+      "不重复索要新增事实",
+      "客户报告不是商家已查证记录",
+      "不伪称已执行"
+    ],
+    "human_naturalness": null
+  },
+  {
+    "conversation_id": "P5A-D2",
+    "scenario_family": "F03-M01",
+    "split": "DEV",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "human_gold": null,
+    "model_calls": 0,
+    "turns": [
+      {
+        "role": "customer",
+        "body": "包裹外箱湿了，里面的灯还没看。订单DEMO-D503。"
+      },
+      {
+        "role": "agent_candidate_unsent",
+        "body": "请保留包装，在安全情况下查看商品本体；受潮电器不要通电。"
+      },
+      {
+        "role": "customer",
+        "body": "打开看了，灯罩有裂纹，电源袋也是湿的。我没插电。"
+      }
+    ],
+    "turn2_plan": "新增本体破损与受潮信息，禁止通电；转入内部损坏方案核实，不再问是否拆箱。",
+    "turn2_customer_reply": "请保持台灯停用，电源袋受潮时不要通电。保留灯罩、包装与现有资料，售后需要根据本体破损和受潮情况核对可行处理方案。",
+    "customer_facts_added": "打开看了，灯罩有裂纹，电源袋也是湿的。我没插电。",
+    "critical_invariants": [
+      "不重复索要新增事实",
+      "客户报告不是商家已查证记录",
+      "不伪称已执行"
+    ],
+    "human_naturalness": null
+  },
+  {
+    "conversation_id": "P5A-D3",
+    "scenario_family": "F04-M01",
+    "split": "DEV",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "human_gold": null,
+    "model_calls": 0,
+    "turns": [
+      {
+        "role": "customer",
+        "body": "台灯不亮了，不知道怎么送修。"
+      },
+      {
+        "role": "agent_candidate_unsent",
+        "body": "请先停用，不必拆机；提供订单号和型号以核对受理方式。"
+      },
+      {
+        "role": "customer",
+        "body": "订单DEMO-D504，底座标着L120，没有异味。"
+      }
+    ],
+    "turn2_plan": "订单、型号已补充；内部核对受理与保修条件，不重复询问型号。",
+    "turn2_customer_reply": "L120 的受理方式和适用保修条件需要按 DEMO-D504 核对。请保持停用，不必拆机或反复试亮，寄回或到店方式应在核实后确定。",
+    "customer_facts_added": "订单DEMO-D504，底座标着L120，没有异味。",
+    "critical_invariants": [
+      "不重复索要新增事实",
+      "客户报告不是商家已查证记录",
+      "不伪称已执行"
+    ],
+    "human_naturalness": null
+  },
+  {
+    "conversation_id": "P5A-D4",
+    "scenario_family": "F05-M01",
+    "split": "DEV",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "human_gold": null,
+    "model_calls": 0,
+    "turns": [
+      {
+        "role": "customer",
+        "body": "折叠车骑着时车架锁扣突然打开了。"
+      },
+      {
+        "role": "agent_candidate_unsent",
+        "body": "请停止使用，不要骑行或复现；需人工安全核实，请保留订单与车型资料。"
+      },
+      {
+        "role": "customer",
+        "body": "订单DEMO-D505，F20车型。我现在更想退掉，不想修。"
+      }
+    ],
+    "turn2_plan": "新增订单、车型和退货偏好；severe/high不变；人工安全及退货权限核实，不承诺批准。",
+    "turn2_customer_reply": "请继续停止使用，不要骑行或测试锁扣。DEMO-D505 的F20车型及退货诉求需要一并交由人工安全售后核实，具体退货方案须结合订单和检查情况确认。",
+    "customer_facts_added": "订单DEMO-D505，F20车型。我现在更想退掉，不想修。",
+    "critical_invariants": [
+      "不重复索要新增事实",
+      "客户报告不是商家已查证记录",
+      "不伪称已执行"
+    ],
+    "human_naturalness": null
+  },
+  {
+    "conversation_id": "P5A-D5",
+    "scenario_family": "F07-M01",
+    "split": "DEV",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "human_gold": null,
+    "model_calls": 0,
+    "turns": [
+      {
+        "role": "customer",
+        "body": "退货页面昨天关了，咖啡机还没用，可以申请吗？"
+      },
+      {
+        "role": "agent_candidate_unsent",
+        "body": "请提供订单号与显示的截止日期，供核实例外受理条件。"
+      },
+      {
+        "role": "customer",
+        "body": "订单DEMO-D507，页面写10月27日截止，现在是28日，原包装还在。"
+      }
+    ],
+    "turn2_plan": "新增具体日期，但仅为客户报告；核对订单规则和例外权限，不再问日期。",
+    "turn2_customer_reply": "页面日期显示仅相差一天，仍需按 DEMO-D507 核对有效期限与例外受理条件。未使用和原包装情况可以随申请说明，由有权限的人员判断处理方式。",
+    "customer_facts_added": "订单DEMO-D507，页面写10月27日截止，现在是28日，原包装还在。",
+    "critical_invariants": [
+      "不重复索要新增事实",
+      "客户报告不是商家已查证记录",
+      "不伪称已执行"
+    ],
+    "human_naturalness": null
+  },
+  {
+    "conversation_id": "P5A-D6",
+    "scenario_family": "F09-M01",
+    "split": "DEV",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "human_gold": null,
+    "model_calls": 0,
+    "turns": [
+      {
+        "role": "customer",
+        "body": "安装两次取消，我不想再空等。"
+      },
+      {
+        "role": "agent_candidate_unsent",
+        "body": "抱歉反复影响安排，请提供预约编号以核对记录与可履行时段。"
+      },
+      {
+        "role": "customer",
+        "body": "DEMO-S5096。下周只有周三下午有人在家，其他时间不要再直接约。"
+      }
+    ],
+    "turn2_plan": "新增编号与客户可用时段；内部核实能否履行，不把周三下午说成已约好。",
+    "turn2_customer_reply": "DEMO-S5096 需要核对下周三下午能否实际履行安装。您的可用时间应作为排期约束，未核实前不能当作已确认预约。",
+    "customer_facts_added": "DEMO-S5096。下周只有周三下午有人在家，其他时间不要再直接约。",
+    "critical_invariants": [
+      "不重复索要新增事实",
+      "客户报告不是商家已查证记录",
+      "不伪称已执行"
+    ],
+    "human_naturalness": null
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "version": "v1",
+  "stage": "I-4E.4",
+  "purpose": "Post-evaluation product_category normalization for offline metric analysis only. These rules do not modify model outputs, reviewed golden labels, prompts, chains, parser, schema, API settings, or datasets.",
+  "canonical_labels": [
+    "Electronics",
+    "Home Appliances",
+    "Furniture",
+    "Clothing",
+    "Beauty/Personal Care",
+    "Sports/Outdoor",
+    "Food/Beverage",
+    "Service/Other"
+  ],
+  "direct_mappings": {
+    "beauty products": "Beauty/Personal Care",
+    "beauty/personal care": "Beauty/Personal Care",
+    "skincare": "Beauty/Personal Care",
+    "electronics": "Electronics",
+    "electronic": "Electronics",
+    "home appliance": "Home Appliances",
+    "home appliances": "Home Appliances",
+    "furniture": "Furniture",
+    "clothing": "Clothing",
+    "clothes": "Clothing",
+    "sportswear": "Sports/Outdoor",
+    "sports/outdoor": "Sports/Outdoor",
+    "sports and outdoor": "Sports/Outdoor",
+    "food/beverage": "Food/Beverage",
+    "food and beverage": "Food/Beverage",
+    "service": "Service/Other",
+    "service/other": "Service/Other"
+  },
+  "conditional_mappings": [
+    {
+      "source_value": "other",
+      "target_value": "Service/Other",
+      "condition": "Only when context clearly indicates a service, membership, plan, gift card, installation, delivery service, subscription, warranty, repair, or other non-physical service case.",
+      "context_keywords": [
+        "service",
+        "membership",
+        "plan",
+        "gift card",
+        "installation",
+        "delivery service",
+        "subscription",
+        "warranty",
+        "repair"
+      ]
+    }
+  ],
+  "unknown_policy": {
+    "other_without_service_context": "Keep as Other for evaluation analysis; do not force-map to a canonical product category.",
+    "blank_or_missing": "unknown"
+  },
+  "analysis_policy": {
+    "do_not_modify_predictions": true,
+    "do_not_modify_reviewed_golden_labels": true,
+    "post_evaluation_analysis_only": true,
+    "no_api_call": true,
+    "formal_original_result_remains_i4e2": true
+  }
+}

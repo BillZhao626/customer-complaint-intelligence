@@ -1,0 +1,50 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "你好，我上周在苏州工业园店看到一件亚麻衬衫，当时没买，现在想问问还有没有。",
+      "如果有的话能不能告诉我大概什么价位？谢谢。"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "苏州工业园店",
+    "issues": [
+      {
+        "issue_id": "B7-063-1",
+        "object_type": "product",
+        "object_name": "亚麻衬衫",
+        "category": "Clothing",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "none",
+        "customer_requests": [
+          "确认亚麻衬衫是否还有货",
+          "告知大概价位"
+        ],
+        "evidence": [
+          "现在想问问还有没有",
+          "能不能告诉我大概什么价位"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户对衬衫具体颜色记忆不清，无法确定所指商品",
+      "未说明尺码或款式，库存确认存在歧义"
+    ]
+  },
+  "call": {
+    "run_id": "e1452a72-a1d9-4917-9004-850c6d72df2b",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:10:49.141782+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

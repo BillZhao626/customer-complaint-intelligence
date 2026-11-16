@@ -1,0 +1,53 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "麻烦尽快查一下到底怎么回事"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "物流信息一直停在同一个状态好几天了"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "我等着用",
+      "麻烦尽快查一下"
+    ],
+    "mentioned_store": "温州鹿城店",
+    "issues": [
+      {
+        "issue_id": "B7-044-1",
+        "object_type": "service",
+        "object_name": "面霜订单配送",
+        "category": "Beauty/Personal Care",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "查询物流停滞原因并尽快处理"
+        ],
+        "evidence": [
+          "物流信息一直停在同一个状态好几天了",
+          "麻烦尽快查一下到底怎么回事"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "物流停滞的具体原因未说明，仅为客户报告",
+      "投诉意图不明确：客户要求查件，未明确表达不满或索赔"
+    ]
+  },
+  "call": {
+    "run_id": "80e3dd84-f6ad-4930-b756-abeb399ad1ee",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:08:25.161486+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

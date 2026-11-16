@@ -1,0 +1,73 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "I'm pretty disappointed"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "the gift box inside was crushed on one corner and a couple of the tea tins were dented",
+      "I'm pretty disappointed",
+      "I'd really like to get this sorted before Saturday if possible"
+    ],
+    "urgency": "high",
+    "urgency_evidence": [
+      "This was supposed to be a gift for a friend's birthday this weekend",
+      "I'd really like to get this sorted before Saturday if possible"
+    ],
+    "mentioned_store": "Beijing Chaoyang store",
+    "issues": [
+      {
+        "issue_id": "B7-035-1",
+        "object_type": "product",
+        "object_name": "tea gift box",
+        "category": "Food/Beverage",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Resolve the damaged gift box before Saturday"
+        ],
+        "evidence": [
+          "the gift box inside was crushed on one corner",
+          "a couple of the tea tins were dented"
+        ],
+        "risk": "minor",
+        "urgency": "high",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-035-2",
+        "object_type": "service",
+        "object_name": "store phone response",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "other",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "Email photos to the store as instructed"
+        ],
+        "evidence": [
+          "the person I spoke to said to email with photos"
+        ],
+        "risk": "none",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the damage occurred in transit or before dispatch is not stated; reported source is not proven cause."
+    ]
+  },
+  "call": {
+    "run_id": "5c86507a-42e4-4058-9985-d274a291f209",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:07:12.991568+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

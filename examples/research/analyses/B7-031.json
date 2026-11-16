@@ -1,0 +1,70 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "工作人员态度倒是挺好的，帮我手动处理了",
+      "不过这样每次都要麻烦人家，我自己也觉得挺不方便的"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "刷卡的时候经常识别不出来，有时候要试好几次才行",
+      "想问问这种情况能不能帮忙看看卡是不是有问题，或者需要换一张？"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "苏州工业园区店",
+    "issues": [
+      {
+        "issue_id": "B7-031-1",
+        "object_type": "product",
+        "object_name": "会员卡",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "检查会员卡是否存在问题",
+          "如有需要更换一张新卡"
+        ],
+        "evidence": [
+          "刷卡的时候经常识别不出来，有时候要试好几次才行",
+          "想问问这种情况能不能帮忙看看卡是不是有问题，或者需要换一张？"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-031-2",
+        "object_type": "service",
+        "object_name": "工作人员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "工作人员态度倒是挺好的，帮我手动处理了"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "resolved"
+      }
+    ],
+    "uncertainty": [
+      "刷卡识别失败的具体原因（卡片故障或读卡设备问题）未明确",
+      "客户未明确表达不满或要求赔偿，投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "754393cc-3ca4-48f7-bd1b-c13c3d2dd9e5",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:06:41.755164+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

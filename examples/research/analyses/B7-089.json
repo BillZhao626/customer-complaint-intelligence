@@ -1,0 +1,79 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "mixed",
+    "expressed_evidence": [
+      "I've been mostly happy with it",
+      "the machine seems to take much longer to heat up than it did at the beginning",
+      "sometimes the first cup comes out only lukewarm"
+    ],
+    "experience_polarity": "mixed",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "the machine seems to take much longer to heat up than it did at the beginning",
+      "sometimes the first cup comes out only lukewarm",
+      "I can't find it in the box"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "I'm not in a hurry, just would like some clarity"
+    ],
+    "mentioned_store": "Beijing Chaoyang store",
+    "issues": [
+      {
+        "issue_id": "B7-089-1",
+        "object_type": "product",
+        "object_name": "coffee machine",
+        "category": "Home Appliances",
+        "sentiment": "mixed",
+        "experience_polarity": "mixed",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Tell me what to check regarding the longer heat-up time and lukewarm first cup"
+        ],
+        "evidence": [
+          "I've been mostly happy with it",
+          "the machine seems to take much longer to heat up than it did at the beginning",
+          "sometimes the first cup comes out only lukewarm",
+          "I'm not sure if I'm doing something wrong or if this is normal"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-089-2",
+        "object_type": "product",
+        "object_name": "descaling product",
+        "category": "Home Appliances",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Let me know whether the descaling product should have been included",
+          "If not included, tell me what I should get instead"
+        ],
+        "evidence": [
+          "I remember the staff mentioning something about a descaling product when I bought it, but I can't find it in the box",
+          "Could you let me know whether that should have been included, and if not, what I should get instead?"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the heat-up change and lukewarm first cup are a defect or normal operation is unclear from the text",
+      "Whether the descaling product was supposed to be included is unclear"
+    ]
+  },
+  "call": {
+    "run_id": "cbb1bfa6-daac-4664-971b-02c0be6ba8f7",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:14:14.243184+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

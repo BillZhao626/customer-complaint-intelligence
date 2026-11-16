@@ -1,0 +1,92 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "mixed",
+    "expressed_evidence": [
+      "整体用下来挺满意的",
+      "出咖啡的速度和口感都不错",
+      "店员当时介绍得也很耐心，这点想特别说声谢谢",
+      "不过有个小问题一直没解决"
+    ],
+    "experience_polarity": "mixed",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "有个小问题一直没解决",
+      "水箱那里偶尔会渗一点水出来"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "不着急，方便的时候回复我就行"
+    ],
+    "mentioned_store": "宁波天一店",
+    "issues": [
+      {
+        "issue_id": "B7-084-1",
+        "object_type": "product",
+        "object_name": "咖啡机",
+        "category": "Home Appliances",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "整体用下来挺满意的",
+          "出咖啡的速度和口感都不错"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-084-2",
+        "object_type": "service",
+        "object_name": "宁波天一店店员",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "店员当时介绍得也很耐心，这点想特别说声谢谢"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-084-3",
+        "object_type": "product",
+        "object_name": "咖啡机水箱",
+        "category": "Home Appliances",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问渗水原因",
+          "询问是否需要送检维修"
+        ],
+        "evidence": [
+          "水箱那里偶尔会渗一点水出来",
+          "想问问这种情况一般是什么原因，需不需要拿过去看一下？"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "渗水原因未明，仅为客户描述",
+      "客户未明确要求维修或退换，仅询问"
+    ]
+  },
+  "call": {
+    "run_id": "e4e5daa7-8e38-494a-8ba6-7e0a0c09b8ec",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:13:32.305365+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

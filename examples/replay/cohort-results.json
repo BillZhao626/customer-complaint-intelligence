@@ -1,0 +1,58 @@
+{
+  "fixed": {
+    "DEV": {
+      "n": 54,
+      "new": {
+        "PASS": 52,
+        "UNKNOWN": 2
+      },
+      "V14": {
+        "PASS": 51,
+        "PARTIAL": 1,
+        "UNKNOWN": 2
+      },
+      "R11": {
+        "PASS": 47,
+        "FAIL": 5,
+        "UNKNOWN": 2
+      }
+    },
+    "OWNER": {
+      "n": 9,
+      "new": {
+        "PASS": 9
+      },
+      "V14": {
+        "PASS": 9
+      },
+      "R11": {
+        "PASS": 9
+      }
+    },
+    "EXTRA": {
+      "n": 7,
+      "new": {
+        "PASS": 7
+      },
+      "V14": {
+        "PASS": 7
+      },
+      "R11": {
+        "UNKNOWN": 7
+      }
+    }
+  },
+  "transfer": {
+    "n": 24,
+    "counts": {
+      "PASS": 20,
+      "UNKNOWN": 3,
+      "FAIL": 1
+    }
+  },
+  "development_reading": {
+    "DEV_supported": 51,
+    "transfer_supported": 16
+  },
+  "basis": "v25b archived first replies and provisional model grades. Development reading used AI assistance."
+}

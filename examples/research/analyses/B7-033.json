@@ -1,0 +1,53 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想问问这种情况怎么处理"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "打开后发现里面有一罐的封口是松的，茶叶闻起来也有点受潮的味道",
+      "这盒是要送人的，现在这样我不好拿出去"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "这盒是要送人的，现在这样我不好拿出去"
+    ],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-033-1",
+        "object_type": "product",
+        "object_name": "茶叶礼盒",
+        "category": "Food/Beverage",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问这种情况怎么处理"
+        ],
+        "evidence": [
+          "里面有一罐的封口是松的",
+          "茶叶闻起来也有点受潮的味道"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户未明确要求退换或赔偿，仅询问处理方式，投诉意图不确定",
+      "受潮原因未确认，仅为客户观察"
+    ]
+  },
+  "call": {
+    "run_id": "72e150d5-8ba6-410e-b66e-a3532c60d352",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:06:57.782540+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

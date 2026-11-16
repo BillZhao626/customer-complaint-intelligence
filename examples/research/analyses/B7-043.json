@@ -1,0 +1,76 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "这次配送体验确实让我挺失望的"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "实际等了五天才收到",
+      "可我明明备注了送货上门",
+      "外包装已经有点受潮了",
+      "这次配送体验确实让我挺失望的",
+      "希望你们能跟物流那边反馈一下"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "实际等了五天才收到",
+      "外包装已经有点受潮了"
+    ],
+    "mentioned_store": "苏州工业园区店",
+    "issues": [
+      {
+        "issue_id": "B7-043-1",
+        "object_type": "service",
+        "object_name": "配送服务",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "向物流反馈配送问题"
+        ],
+        "evidence": [
+          "实际等了五天才收到",
+          "可我明明备注了送货上门",
+          "外包装已经有点受潮了",
+          "这次配送体验确实让我挺失望的"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-043-2",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "耳机本身目前用着还行"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "外包装受潮是否影响耳机功能未明确说明",
+      "“用着还行”为温和正面评价，正面程度有限"
+    ]
+  },
+  "call": {
+    "run_id": "419d3d82-e058-46c6-890e-056a5e9ba96f",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:08:16.496195+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

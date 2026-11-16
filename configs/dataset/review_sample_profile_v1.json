@@ -1,0 +1,33 @@
+{
+  "version": "v1",
+  "stage": "I-4C",
+  "source_dataset_file": "data/synthetic/customer_emails_full_v1.csv",
+  "source_auto_label_file": "data/golden/golden_labels_full_auto_v1.csv",
+  "selected_email_file": "data/synthetic/customer_emails_review_sample_v1.csv",
+  "selected_auto_label_file": "data/golden/golden_labels_review_sample_auto_v1.csv",
+  "manual_review_template_file": "data/golden/golden_labels_review_sample_manual_template_v1.csv",
+  "review_batch_dir": "outputs/review_batches_i4c",
+  "review_batch_index": "outputs/review_batches_i4c/review_batch_index_v1.md",
+  "target_sample_size": 80,
+  "actual_sample_size": 80,
+  "selection_policy": [
+    "deterministic selection by email_id and label deficits",
+    "guarantee coverage for observed sentiment, urgency, product_category, source_attribution, complaint_reason, edge_case_type, and store_location values",
+    "fill remaining slots using stratified deficit scoring",
+    "avoid duplicate email bodies"
+  ],
+  "balancing_dimensions": [
+    "sentiment",
+    "urgency",
+    "product_category",
+    "source_attribution",
+    "complaint_reason",
+    "store_location",
+    "edge_case_type",
+    "scenario_type"
+  ],
+  "coverage_report": "outputs/i4c_review_sample_coverage_report_v1.md",
+  "annotation_guidelines": "docs/reviewed_golden_test_set_annotation_guidelines_v1.md",
+  "label_status": "selected_auto_labels_not_human_reviewed",
+  "next_stage_recommendation": "manual_review_selected_sample_and_create_reviewed_golden_test_set"
+}

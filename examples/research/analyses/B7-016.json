@@ -1,0 +1,52 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "我想问问这种情况一般怎么处理比较合适？",
+      "麻烦您了，谢谢。"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "最近发现鞋子有时候会出现一些问题",
+      "穿着跑着跑着感觉不太对劲，时好时坏的"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "温州鹿城店",
+    "issues": [
+      {
+        "issue_id": "B7-016-1",
+        "object_type": "product",
+        "object_name": "跑鞋",
+        "category": "Sports/Outdoor",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "咨询这种情况一般怎么处理比较合适"
+        ],
+        "evidence": [
+          "最近发现鞋子有时候会出现一些问题",
+          "穿着跑着跑着感觉不太对劲，时好时坏的"
+        ],
+        "risk": "unknown",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "问题描述模糊（'具体说不太清楚'），无法确定具体故障类型",
+      "未明确要求退换或维修，投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "4155c04b-2f8a-4c8c-a893-1b541377dc47",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:04:40.609154+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

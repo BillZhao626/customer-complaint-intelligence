@@ -1,0 +1,65 @@
+{
+  "case": {
+    "title": "瑜伽垫异味案例",
+    "source": "合成研究邮件",
+    "subject": "Request for help",
+    "email": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+    "replies": [
+      {
+        "key": "earlier",
+        "title": "较早回复",
+        "review": "部分符合",
+        "reply": "Dear Customer,\n\nThank you for writing, and I'm sorry the new yoga mat's smell made your room uncomfortable and led you to stop using it. That's an understandable concern, and I'd like to help you look into it.\n\nTo check the material and care information, could you reply with the product link or model name, and your order reference or other purchase proof? That will let us confirm which mat you have and the correct material and care guidance. In the meantime, you can assess the concern yourself by airing the mat in a well-ventilated space, noting whether the smell fades over a few days, and checking the care label or product page for material details and cleaning instructions. If the odor persists, note how long it has lasted and under what conditions, as this will help any further review.\n\nAn internal aftersales verification request has been created and is pending, covering the material and care information and how to assess the concern. You're welcome to reply with the details above or ask for progress at any time.\n\nKind regards,\nCustomer Service Team"
+      },
+      {
+        "key": "later",
+        "title": "修改后回复",
+        "review": "符合要求",
+        "reply": "Dear Customer,\n\nI'm sorry the new yoga mat's strong smell made your room uncomfortable and that you had to stop using it. That's an unpleasant experience with a new purchase, and I understand wanting to understand the material before deciding what to do next.\n\nTo give you accurate material and care information, I need to identify the exact mat you purchased. Could you reply with your order number, or the model name or SKU if you have it? With that, I can pull the official product record for the material composition and care instructions rather than guessing.\n\nIn the meantime, a practical way to assess the smell yourself is to air the mat in a well-ventilated space for a period and note whether the smell diminishes over time. This is general guidance only, not a diagnosis or a safety determination — a change in smell doesn't by itself confirm anything about the material. Continuing to keep it out of use for now, as you have been doing, is reasonable while you assess.\n\nWhether a return, exchange or refund is available depends on the applicable policy for this product and your purchase channel, including any time window, fees or conditions, and none of that is confirmed yet. Once I have your order reference, I can check those terms for you.\n\nI've created an internal verification request to retrieve the official material and care information and to check the return, exchange and refund conditions; it is pending. Please send the order number or model/SKU when you can, and I'll take it from there.\n\nKind regards,\nCustomer Service"
+      }
+    ],
+    "improvements": [
+      "具体回应新购商品带来的不适",
+      "给出退货、换货或退款的核查方向",
+      "按订单和购买渠道核实适用条件"
+    ]
+  },
+  "metrics": {
+    "sentiment": {
+      "matched": 78,
+      "total": 80,
+      "macro_f1": 0.9712418300653595
+    },
+    "reply_comparison": {
+      "total": 54,
+      "met_threshold": [
+        47,
+        51,
+        52
+      ],
+      "needs_review": 2
+    },
+    "reliability": {
+      "serious_findings": [
+        11,
+        11
+      ],
+      "false_alarms": [
+        0,
+        29
+      ],
+      "human_agreement": [
+        15,
+        17
+      ],
+      "repeat_decision": [
+        18,
+        20
+      ],
+      "reordered_preference": [
+        17,
+        19
+      ]
+    }
+  }
+}

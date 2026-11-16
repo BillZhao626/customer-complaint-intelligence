@@ -1,0 +1,56 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "I want the rest of my money back",
+      "Can you check this and let me know?"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "The refund I got was less than what I paid",
+      "nobody told me about any fee when I returned it",
+      "I want the rest of my money back"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "I want the rest of my money back"
+    ],
+    "mentioned_store": "Hangzhou West Lake store",
+    "issues": [
+      {
+        "issue_id": "B7-055-1",
+        "object_type": "service",
+        "object_name": "refund fee on office chair return",
+        "category": "Furniture",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "Refund the remaining amount owed",
+          "Check the refund and fee and respond"
+        ],
+        "evidence": [
+          "The refund I got was less than what I paid",
+          "nobody told me about any fee when I returned it",
+          "I want the rest of my money back"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the fee was legitimate or disclosed elsewhere is not established; the customer's account is the only source."
+    ]
+  },
+  "call": {
+    "run_id": "b4ccf3f5-833d-4809-b772-031ccca1fbb4",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:09:50.568455+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

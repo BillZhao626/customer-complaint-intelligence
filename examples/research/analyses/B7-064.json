@@ -1,0 +1,65 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "不太确定尺码该怎么选",
+      "想请教一下"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "B7-064-1",
+        "object_type": "product",
+        "object_name": "跑鞋",
+        "category": "Sports/Outdoor",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "咨询跑鞋尺码是否偏正常或需选大半码"
+        ],
+        "evidence": [
+          "不太确定尺码该怎么选",
+          "你们这几款跑鞋的尺码是偏正常还是需要选大半码"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-064-2",
+        "object_type": "service",
+        "object_name": "换货服务",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "咨询不合适时换货是否方便"
+        ],
+        "evidence": [
+          "如果买回来发现不合适，换货方便吗"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "5e58ea82-f34e-41db-86dd-2d4a8f313677",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:10:55.577966+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

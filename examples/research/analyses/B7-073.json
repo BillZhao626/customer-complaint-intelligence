@@ -1,0 +1,53 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "发现有一笔费用我不太确定是什么",
+      "想麻烦你们帮忙看一下这笔是什么"
+    ],
+    "experience_polarity": "unknown",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "心里还是有点不踏实"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "金额不算特别大"
+    ],
+    "mentioned_store": "杭州西湖店",
+    "issues": [
+      {
+        "issue_id": "B7-073-1",
+        "object_type": "service",
+        "object_name": "账单费用",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "unknown",
+        "issue_kind": "inquiry",
+        "business_process": "billing/invoice issue",
+        "customer_requests": [
+          "帮忙核实小票上的一笔不明费用是什么"
+        ],
+        "evidence": [
+          "发现有一笔费用我不太确定是什么",
+          "想麻烦你们帮忙看一下这笔是什么"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "该笔费用是否为错误收费尚不明确，客户仅表示不确定",
+      "客户未明确表达不满，是否构成投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "2bd6e883-e29b-409b-bcd8-ea66f19670bc",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:12:03.443545+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

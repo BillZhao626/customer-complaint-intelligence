@@ -1,0 +1,135 @@
+{
+  "version": "v1",
+  "stage": "I-3.5.1",
+  "purpose": "Document how external public datasets can support evaluation credibility as references, while clarifying that they do not directly replace the project-specific golden labels.",
+  "resources": {
+    "amazon_reviews": {
+      "source_type": "public product review datasets",
+      "relevance_to_project": "Useful for product review language, rating-based sentiment reference, product category metadata, and review schema design.",
+      "useful_fields": [
+        "review text",
+        "star rating",
+        "product category",
+        "product metadata",
+        "sentiment reference"
+      ],
+      "missing_fields": [
+        "retail store location",
+        "complaint reason",
+        "source attribution",
+        "urgency",
+        "suggested email reply"
+      ],
+      "direct_golden_label_suitability": "partial",
+      "recommended_use": [
+        "schema reference",
+        "sentiment reference",
+        "product feedback language reference",
+        "optional auxiliary sanity set"
+      ],
+      "limitations": [
+        "review data is not the same as customer complaint email data",
+        "does not naturally provide store location or source attribution labels",
+        "not a direct replacement for the current golden labels"
+      ]
+    },
+    "cfpb_consumer_complaints": {
+      "source_type": "official U.S. government financial consumer complaint database",
+      "relevance_to_project": "Useful for complaint issue taxonomy, consumer narrative style, product/issue/sub-issue structure, and public complaint analytics reference.",
+      "useful_fields": [
+        "product",
+        "issue",
+        "sub-issue",
+        "consumer narrative",
+        "company response",
+        "complaint metadata"
+      ],
+      "missing_fields": [
+        "retail product categories",
+        "physical store location",
+        "retail refund/exchange process labels",
+        "suggested customer service reply",
+        "project source attribution labels"
+      ],
+      "direct_golden_label_suitability": "no",
+      "recommended_use": [
+        "taxonomy reference",
+        "complaint expression reference",
+        "external discussion point",
+        "possible auxiliary benchmark only after domain caveats"
+      ],
+      "limitations": [
+        "financial services domain rather than retail product email domain",
+        "not a statistical sample of consumers' marketplace experiences",
+        "consumer narratives are consumers' own descriptions and are not necessarily verified facts",
+        "not direct ground truth for this project"
+      ]
+    },
+    "bitext_customer_support": {
+      "source_type": "customer support intent and response dataset",
+      "relevance_to_project": "Useful for customer support intents, category design, entity/slot reference, and response wording examples.",
+      "useful_fields": [
+        "intent",
+        "category",
+        "utterance",
+        "entities or slots",
+        "response examples"
+      ],
+      "missing_fields": [
+        "retail store location",
+        "project-specific source attribution",
+        "complaint reason labels",
+        "urgency labels",
+        "email-level structured extraction targets"
+      ],
+      "direct_golden_label_suitability": "partial",
+      "recommended_use": [
+        "support intent reference",
+        "response style reference",
+        "optional auxiliary sanity set after mapping"
+      ],
+      "limitations": [
+        "mainly intent/chatbot oriented",
+        "not aligned to full current schema",
+        "not a direct replacement for internal golden labels"
+      ]
+    },
+    "customer_support_ticket_datasets": {
+      "source_type": "public or sample support ticket datasets",
+      "relevance_to_project": "Useful for support ticket metadata, priority/status workflow, issue category design, and channel handling.",
+      "useful_fields": [
+        "ticket type",
+        "channel",
+        "priority",
+        "status",
+        "product",
+        "customer issue"
+      ],
+      "missing_fields": [
+        "consistent store location labels",
+        "exact project complaint reason taxonomy",
+        "exact project source attribution taxonomy",
+        "suggested reply structured target"
+      ],
+      "direct_golden_label_suitability": "partial",
+      "recommended_use": [
+        "workflow reference",
+        "priority taxonomy reference",
+        "optional external validation set after license and schema review"
+      ],
+      "limitations": [
+        "license and quality vary",
+        "may not be official authoritative benchmarks",
+        "may require substantial schema mapping"
+      ]
+    }
+  },
+  "recommended_strategy": [
+    "internal_golden_labels",
+    "manual_review",
+    "candidate_label_patch",
+    "external_reference_review",
+    "optional_external_sanity_set"
+  ],
+  "next_stage_recommendation": "Proceed to I-3.6 golden label candidate review before expanding to larger synthetic data."
+}

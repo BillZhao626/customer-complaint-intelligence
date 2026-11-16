@@ -1,0 +1,38 @@
+{
+  "profile_name": "evaluation_profile_v1",
+  "stage": "I-1.3.1 Evaluation Consistency and Stage Summary",
+  "dataset_path": "data/raw/smoke_test_emails_v1.csv",
+  "golden_label_path": "data/golden/golden_labels_smoke_v1.csv",
+  "prediction_output_path": "outputs/smoke_test_predictions_v1.csv",
+  "report_output_path": "outputs/smoke_test_report_v1.md",
+  "evaluated_fields": [
+    "sentiment",
+    "urgency",
+    "is_complaint",
+    "store_location",
+    "product_category",
+    "complaint_reason"
+  ],
+  "classification_metrics": [
+    "accuracy",
+    "precision_weighted",
+    "recall_weighted",
+    "f1_weighted",
+    "support"
+  ],
+  "text_generation_rubric_fields": [
+    "relevance_to_complaint",
+    "correct_reason_attribution",
+    "politeness",
+    "actionability",
+    "no_unsupported_information",
+    "consistency_with_structured_fields"
+  ],
+  "notes": [
+    "The smoke regression set is manually designed and synthetic.",
+    "The mock analyzer is an offline fallback baseline.",
+    "Exact-match accuracy is the primary smoke regression metric.",
+    "Weighted precision, recall, F1-score, and support are supplementary metrics.",
+    "This profile supports later comparison with LangChain and LLM structured output experiments."
+  ]
+}

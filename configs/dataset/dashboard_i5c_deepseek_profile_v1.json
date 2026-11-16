@@ -1,0 +1,22 @@
+{
+  "version": "v1",
+  "stage": "I-5C",
+  "source_prediction_file": "outputs/i4g_full_pool_deepseek_predictions_v1.csv",
+  "source_i4g_summary_file": "outputs/i4g_full_pool_deepseek_batch_summary_v1.json",
+  "dashboard_output_dir": "outputs/dashboard_i5c_deepseek",
+  "generated_json": "outputs/dashboard_i5c_deepseek/deepseek_dashboard_stats_v1.json",
+  "generated_tables": [
+    "outputs/dashboard_i5c_deepseek/deepseek_store_complaint_ranking_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_product_negative_sentiment_ranking_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_complaint_reason_distribution_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_source_attribution_distribution_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_urgency_distribution_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_sentiment_distribution_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_store_by_product_matrix_v1.csv",
+    "outputs/dashboard_i5c_deepseek/deepseek_negative_complaint_cases_for_demo_v1.csv"
+  ],
+  "label_status": "deepseek_predictions_for_dashboard_statistics_not_formal_accuracy",
+  "formal_evaluation_reference": "I-4E.2 80-case reviewed golden test set",
+  "formal_accuracy": 0.8821,
+  "recommended_next_stage": "Streamlit_dashboard_screenshot_packaging_or_dissertation_results_writeup"
+}

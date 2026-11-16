@@ -1,3 +1,4 @@
+from tests.archive_support import requires_archive
 """Local research assets stay local; public portable suite excludes this module."""
 import copy
 import json
@@ -10,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def load(p):return json.loads((ROOT/p).read_text(encoding='utf-8-sig'))
 
 
+@requires_archive('.local/p35/dataset-candidate-v2/candidates.json', '.local/p36/inputs-v1.json')
 class LocalP38Assets(unittest.TestCase):
     def test_adoption_is_reproducible_and_preserves_all_approved_texts(self):
         from src.dataset.adoption_v3 import build

@@ -1,0 +1,56 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "I just want to know where the shoes actually are and when I can expect them"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "I've been waiting around for a delivery that never showed up"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "That was supposed to be two days ago, and nothing has arrived since"
+    ],
+    "mentioned_store": "Shenzhen Nanshan store",
+    "issues": [
+      {
+        "issue_id": "B7-042-1",
+        "object_type": "service",
+        "object_name": "delivery of running shoes order",
+        "category": "Sports/Outdoor",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "Locate the order",
+          "Provide expected delivery time",
+          "Look into the missing delivery"
+        ],
+        "evidence": [
+          "The first delivery attempt didn't work out",
+          "I rescheduled through the link in the message and picked a new time",
+          "That was supposed to be two days ago, and nothing has arrived since",
+          "they don't have anything for me"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the customer intends to file a formal complaint or only seeks tracking information is unclear",
+      "Cause of the missed rescheduled delivery is unknown"
+    ]
+  },
+  "call": {
+    "run_id": "eb6d82f0-20b5-4f75-b1ab-3bb2e4a8808d",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:08:07.973471+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

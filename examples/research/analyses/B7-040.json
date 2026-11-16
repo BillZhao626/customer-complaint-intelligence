@@ -1,0 +1,75 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想麻烦帮忙查一下大概是什么情况",
+      "麻烦您了，谢谢"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "我这边一直没收到",
+      "不过到现在也没有消息"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "礼盒是准备送人的，时间上有点赶",
+      "想确认一下还能不能按原来的时间送到"
+    ],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-040-1",
+        "object_type": "service",
+        "object_name": "茶叶礼盒配送",
+        "category": "Food/Beverage",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "查询配送情况",
+          "确认能否按原定时间送达"
+        ],
+        "evidence": [
+          "当时说好会安排配送，我这边一直没收到",
+          "想麻烦帮忙查一下大概是什么情况"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-040-2",
+        "object_type": "service",
+        "object_name": "到货前通知",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "提供到货前通知"
+        ],
+        "evidence": [
+          "之前我在邮件里也提过一句，说希望到货前能有个通知，不过到现在也没有消息"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户语气礼貌，未明确表达不满，投诉意图不确定",
+      "配送延迟的具体原因未说明"
+    ]
+  },
+  "call": {
+    "run_id": "de2e93da-122b-4d79-ab61-4b32732ab2ca",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:07:52.370936+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

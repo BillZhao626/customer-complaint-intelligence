@@ -1,0 +1,70 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "this has been a hassle I didn't need"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "I still haven't seen the money back on my card",
+      "Can someone look into where the refund is stuck?"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "That was a while ago now and I still haven't seen the money back on my card"
+    ],
+    "mentioned_store": "Suzhou Industrial Park store",
+    "issues": [
+      {
+        "issue_id": "B7-059-1",
+        "object_type": "product",
+        "object_name": "coffee machine",
+        "category": "Home Appliances",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "it kept leaking water all over the counter"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "resolved"
+      },
+      {
+        "issue_id": "B7-059-2",
+        "object_type": "service",
+        "object_name": "refund",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "look into where the refund is stuck",
+          "provide an update"
+        ],
+        "evidence": [
+          "I still haven't seen the money back on my card",
+          "Can someone look into where the refund is stuck?"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Refund delay duration is vague ('a while ago now'); exact cause of delay unknown."
+    ]
+  },
+  "call": {
+    "run_id": "d0764da0-746b-456e-bfd0-2596c3d5e194",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:10:18.781132+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

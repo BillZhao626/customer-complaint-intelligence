@@ -1,0 +1,55 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "现在想确认一下这款面霜里有没有容易致敏的成分",
+      "需要的话我可以把产品带过去给你们看看"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "脸上有点发红、发痒，我就先停用了"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "脸上有点发红、发痒，我就先停用了",
+      "这两天好了一些"
+    ],
+    "mentioned_store": "宁波天一店",
+    "issues": [
+      {
+        "issue_id": "B7-066-1",
+        "object_type": "product",
+        "object_name": "面霜",
+        "category": "Beauty/Personal Care",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "确认面霜中是否含有容易致敏的成分",
+          "确认该面霜是否适合其皮肤"
+        ],
+        "evidence": [
+          "脸上有点发红、发痒，我就先停用了",
+          "现在想确认一下这款面霜里有没有容易致敏的成分，或者是不是不适合我这种皮肤"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户未明确表达不满或要求退换，投诉意图不确定",
+      "发红发痒是否由面霜引起未经证实"
+    ]
+  },
+  "call": {
+    "run_id": "5f660094-ad6e-43d0-b432-b7d0580fd5e4",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:11:10.207438+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

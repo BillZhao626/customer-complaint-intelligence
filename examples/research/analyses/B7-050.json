@@ -1,0 +1,74 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "麻烦帮我看看现在到底是什么情况，谢谢"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "但到现在也没收到任何更新，钱也没到账",
+      "说会帮我查，之后就没下文了"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "上个月",
+      "到现在也没收到任何更新，钱也没到账"
+    ],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-050-1",
+        "object_type": "service",
+        "object_name": "退款处理",
+        "category": "Furniture",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "查询退款当前进度",
+          "完成退款"
+        ],
+        "evidence": [
+          "申请了退款",
+          "到现在也没收到任何更新，钱也没到账"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-050-2",
+        "object_type": "service",
+        "object_name": "客服回电跟进",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "给出明确处理结果"
+        ],
+        "evidence": [
+          "我打过一次电话，说会帮我查，之后就没下文了"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "未明确退款申请的具体日期与承诺处理时限",
+      "未说明是否已联系门店或官方客服渠道"
+    ]
+  },
+  "call": {
+    "run_id": "383144fc-0504-4ad5-b1a5-a17485e5ae8b",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:09:10.902037+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "version": "v1",
+  "stage": "I-3.7",
+  "official_metric_set": [
+    "accuracy",
+    "precision",
+    "recall",
+    "F1",
+    "mismatch_count"
+  ],
+  "evaluated_fields": [
+    "sentiment",
+    "urgency",
+    "is_complaint",
+    "store_location",
+    "product_category",
+    "complaint_reason",
+    "source_attribution"
+  ],
+  "reference_label_versions": {
+    "v1_original": {
+      "file": "data/golden/golden_labels_pilot_v1.csv",
+      "role": "historical pilot comparison reference"
+    },
+    "v1_candidate_patch": {
+      "file": "data/golden/golden_labels_pilot_v1_candidate_patch.csv",
+      "role": "audit artifact and preview-only candidate changes"
+    },
+    "v2_reviewed": {
+      "file": "data/golden/golden_labels_pilot_v2_reviewed.csv",
+      "role": "human-reviewed project reference labels for future reviewed pilot metrics"
+    }
+  },
+  "dataset_roles": {
+    "pilot_50": {
+      "role": "controlled prompt revision and audit trail pilot",
+      "formal_use": "historical and reviewed pilot metrics"
+    },
+    "full_synthetic_pool_300_500": {
+      "role": "synthetic dataset pool for dashboard statistics, batch processing, case coverage, and reviewed-test-set sampling",
+      "formal_use": "not official metrics unless manually reviewed"
+    },
+    "reviewed_golden_test_set_50_100": {
+      "role": "manually reviewed subset for formal evaluation",
+      "formal_use": "official project accuracy, precision, recall, F1, and mismatch count"
+    }
+  },
+  "metric_reporting_policy": {
+    "report_v1_historical_metrics": true,
+    "report_v2_reviewed_metrics_after_human_confirmation": true,
+    "candidate_patch_metrics_preview_only": true,
+    "always_name_label_version": true,
+    "mismatch_definition": "model output differs from the current project reference label"
+  },
+  "external_dataset_policy": {
+    "reference_resources": [
+      "Amazon Reviews",
+      "CFPB",
+      "Bitext",
+      "generic ticket datasets"
+    ],
+    "not_direct_golden_answers": true,
+    "use_cases": [
+      "language style reference",
+      "taxonomy inspiration",
+      "credibility discussion",
+      "optional external sanity checks after schema mapping"
+    ]
+  },
+  "api_run_policy": {
+    "run_small_smoke_test_before_full_batch": true,
+    "recommended_smoke_size": 20,
+    "avoid_overwriting_previous_outputs": true,
+    "use_versioned_output_filenames": true,
+    "do_not_change_prompt_or_api_config_inside_evaluation_stage": true
+  },
+  "output_versioning_policy": {
+    "prediction_outputs": "include stage and version in filename",
+    "reports": "include stage and version in filename",
+    "golden_labels": "create new versioned files instead of overwriting prior references"
+  },
+  "next_stage_recommendation": [
+    "I-4A full dataset expansion profile",
+    "I-4B full synthetic dataset generation",
+    "I-4C reviewed golden test set selection",
+    "I-4D 20-case smoke API",
+    "I-4E reviewed golden test set evaluation",
+    "I-4F full batch dashboard/statistics run"
+  ]
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "knowledge_id": "PRD-01",
+    "kind": "PRODUCT_SPEC",
+    "retrieval_key": "DemoCam C200:wired_meeting",
+    "subject": "虚构DemoCam C200连接规格草案",
+    "version": "DRAFT-v1",
+    "source_type": "ORIGINAL_FICTIONAL_DEMO",
+    "source_status": "AUTHORED_REVIEW_ONLY",
+    "owner_approval": "OWNER_PENDING",
+    "use_in_model": "NO",
+    "effective_from": null,
+    "effective_to": null,
+    "source_ref": "resources/p5a/knowledge_drafts.json#PRD-01",
+    "case_scope": null,
+    "claims": {
+      "usb": "USB-C仅充电与照片文件传输，不提供USB UVC摄像头协议",
+      "ethernet": "网口提供局域网RTSP视频流；不等同会议软件即插即用摄像头",
+      "capture": "HDMI输出可配兼容采集设备接入电脑，具体系统与会议软件兼容性须再核对",
+      "customer_answer": "在这份待批准虚构规格中，C200不能仅靠USB线作为会议摄像头；网口用于局域网视频流，电脑会议需另核对采集设备和软件兼容性。"
+    },
+    "unknown_claims": [
+      "采集设备清单",
+      "操作系统版本兼容表",
+      "与现有演示版本是否冲突"
+    ],
+    "applicable_scenes": [
+      "F01-M01",
+      "F01-M02",
+      "F10-M02",
+      "F11-M01"
+    ],
+    "limitations": [
+      "仅供研究者审阅的虚构事实",
+      "不代表任何真实商品",
+      "待批准前不注入模型，不作为可发送答案"
+    ],
+    "owner_decisions_required": [
+      "接受/修改/拒绝具体事实及限制",
+      "批准适用版本及生效日期"
+    ],
+    "approved_by": null,
+    "content_hash": "0467bc72f86b01bfafaaaa7e03158b257f6b4df7dfd4807ccee0929dc2e0e516"
+  },
+  {
+    "knowledge_id": "PRD-02",
+    "kind": "PRODUCT_SPEC",
+    "retrieval_key": "DemoLamp L120:power",
+    "subject": "虚构L120台灯用电与故障草案",
+    "version": "DRAFT-v1",
+    "source_type": "ORIGINAL_FICTIONAL_DEMO",
+    "source_status": "AUTHORED_REVIEW_ONLY",
+    "owner_approval": "OWNER_PENDING",
+    "use_in_model": "NO",
+    "effective_from": null,
+    "effective_to": null,
+    "source_ref": "resources/p5a/knowledge_drafts.json#PRD-02",
+    "case_scope": null,
+    "claims": {
+      "power": "使用随附低压电源，不拆开灯体排查；电源与接口有湿痕时禁止通电",
+      "service": "不亮故障先核实订单、型号与现象，受理方式由售后按规则确定",
+      "limits": "其他电器正常并不能单独证明灯具本体制造缺陷"
+    },
+    "unknown_claims": [
+      "电源额定参数",
+      "保修期限",
+      "寄修地址与责任方"
+    ],
+    "applicable_scenes": [
+      "F03-M01",
+      "F04-M01"
+    ],
+    "limitations": [
+      "不提供未经批准的电气额定参数",
+      "不承诺维修成功或换货资格"
+    ],
+    "owner_decisions_required": [
+      "接受/修改/拒绝具体事实及限制",
+      "批准适用版本及生效日期"
+    ],
+    "approved_by": null,
+    "content_hash": "8c24e20e4df881e0c4a905942e23625cf4fe76325e0546d8e2a6a60f6777bc76"
+  },
+  {
+    "knowledge_id": "POL-03",
+    "kind": "POLICY",
+    "retrieval_key": "after_sales:transport_damage",
+    "subject": "虚构运输受损受理草案",
+    "version": "DRAFT-v1",
+    "source_type": "ORIGINAL_FICTIONAL_DEMO",
+    "source_status": "AUTHORED_REVIEW_ONLY",
+    "owner_approval": "OWNER_PENDING",
+    "use_in_model": "NO",
+    "effective_from": null,
+    "effective_to": null,
+    "source_ref": "resources/p5a/knowledge_drafts.json#POL-03",
+    "case_scope": null,
+    "claims": {
+      "scope": "仅适用于本演示商家订单的运输受损申请",
+      "intake": "已有订单号与现有照片可受理资料核实；不要求重新拍摄或危险试用",
+      "conditions": "包装受损与本体受损分别记录；商品、电源受潮时不通电",
+      "authority": "人工核实订单、受损范围及可用方案后决定维修或更换申请",
+      "excluded": "仅包装湿不直接证明本体损坏；不自动批准退款、补发或免运费"
+    },
+    "unknown_claims": [
+      "受理时限",
+      "运费承担",
+      "赔偿条件",
+      "具体审批角色"
+    ],
+    "applicable_scenes": [
+      "F03-M01",
+      "F03-M02"
+    ],
+    "limitations": [
+      "条款与审批权均待研究者批准",
+      "不得据此自动执行售后动作"
+    ],
+    "owner_decisions_required": [
+      "接受/修改/拒绝具体事实及限制",
+      "批准适用版本及生效日期"
+    ],
+    "approved_by": null,
+    "content_hash": "2a7f3906c963140a421fdadd0678117aecd1a40bddee0d5cc53b010c117d52b6"
+  },
+  {
+    "knowledge_id": "POL-10",
+    "kind": "POLICY",
+    "retrieval_key": "after_sales:return_exception",
+    "subject": "虚构退货例外核实草案",
+    "version": "DRAFT-v1",
+    "source_type": "ORIGINAL_FICTIONAL_DEMO",
+    "source_status": "AUTHORED_REVIEW_ONLY",
+    "owner_approval": "OWNER_PENDING",
+    "use_in_model": "NO",
+    "effective_from": null,
+    "effective_to": null,
+    "source_ref": "resources/p5a/knowledge_drafts.json#POL-10",
+    "case_scope": null,
+    "claims": {
+      "scope": "标准期限后例外请求的人工受理，不新增自动退货权",
+      "evidence": "核对订单日期、有效退货截止日期、商品使用状态及请求理由",
+      "authority": "有权限的研究者指定角色记录接受或拒绝的具体理由",
+      "excluded": "仅超期一天、未拆封或忙碌均不自动获得批准，也不直接构成拒绝依据"
+    },
+    "unknown_claims": [
+      "标准退货期限",
+      "运费承担",
+      "例外授权人",
+      "允许例外的具体条件"
+    ],
+    "applicable_scenes": [
+      "F07-M01"
+    ],
+    "limitations": [
+      "不是法律意见或真实商家规则",
+      "不得擅自填入天数、金额或已批准结果"
+    ],
+    "owner_decisions_required": [
+      "接受/修改/拒绝具体事实及限制",
+      "批准适用版本及生效日期"
+    ],
+    "approved_by": null,
+    "content_hash": "f3e3294392d24b8ebd8de620132bfb9092c052929d2a091dfc4848c225e8538a"
+  }
+]

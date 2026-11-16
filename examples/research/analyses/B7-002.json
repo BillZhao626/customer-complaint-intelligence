@@ -1,0 +1,68 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "Really happy with the office chair I bought",
+      "the staff there were patient with all my questions and didn't rush me at all",
+      "it's made a real difference",
+      "It feels solid and well made",
+      "Please pass on my thanks to the team there"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "Pudong store",
+    "issues": [
+      {
+        "issue_id": "B7-002-1",
+        "object_type": "product",
+        "object_name": "office chair",
+        "category": "Furniture",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "it's made a real difference",
+          "It feels solid and well made",
+          "the adjustments were easy to figure out"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-002-2",
+        "object_type": "service",
+        "object_name": "Pudong store staff",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "Please pass on my thanks to the team there"
+        ],
+        "evidence": [
+          "the staff there were patient with all my questions and didn't rush me at all",
+          "Please pass on my thanks to the team there"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "767ab6f7-eba8-4297-8be3-c216d6381355",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:01.075233+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "不过这个体验真的不太好",
+      "我明明选了送货上门，也没人提前跟我说会放别的地方"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "不过这个体验真的不太好",
+      "希望你们能跟配送那边说一下，下次别这样了"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "苏州工业园店",
+    "issues": [
+      {
+        "issue_id": "B7-038-1",
+        "object_type": "service",
+        "object_name": "送货上门配送服务",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "跟配送那边沟通，避免再次未经通知将包裹放在别处"
+        ],
+        "evidence": [
+          "快递员打电话说放门口了，但我开门什么都没看到",
+          "后来在楼下快递柜旁边找到的",
+          "我明明选了送货上门，也没人提前跟我说会放别的地方"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-038-2",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "other",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "盒子有点压扁了，耳机倒是还能用"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "包装压扁是否影响产品长期使用未说明",
+      "客户未明确要求赔偿或换货"
+    ]
+  },
+  "call": {
+    "run_id": "d909654a-c423-45c2-9b81-86eaff000bd7",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:07:35.667988+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

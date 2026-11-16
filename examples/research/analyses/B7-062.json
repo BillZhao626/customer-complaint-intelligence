@@ -1,0 +1,50 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "I'm a little confused about what's actually included",
+      "I'd just like someone to walk me through what my plan covers"
+    ],
+    "experience_polarity": "unknown",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "B7-062-1",
+        "object_type": "service",
+        "object_name": "membership plan",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "unknown",
+        "issue_kind": "inquiry",
+        "business_process": "unclear",
+        "customer_requests": [
+          "Explain what the membership plan covers",
+          "Clarify whether benefits changed"
+        ],
+        "evidence": [
+          "I'm a little confused about what's actually included",
+          "I'd just like someone to walk me through what my plan covers so I know what I'm paying for"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Customer is unsure whether benefits changed or they misread; no details provided to verify plan",
+      "No specific store or product identified"
+    ]
+  },
+  "call": {
+    "run_id": "08a2161d-a7c4-4c56-b6c4-7832a6825aed",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:10:41.933397+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

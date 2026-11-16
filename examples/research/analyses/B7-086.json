@@ -1,0 +1,69 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "最近想调整一下方案，但不太清楚现在有哪些选择",
+      "能帮我一起看看吗？"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "之前有一次消费的积分好像没算进去"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "苏州工业园区店",
+    "issues": [
+      {
+        "issue_id": "B7-086-1",
+        "object_type": "service",
+        "object_name": "会员方案",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "了解当前可选的会员方案"
+        ],
+        "evidence": [
+          "最近想调整一下方案，但不太清楚现在有哪些选择"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-086-2",
+        "object_type": "service",
+        "object_name": "会员积分",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "核查该次消费积分未计入的情况"
+        ],
+        "evidence": [
+          "之前有一次消费的积分好像没算进去"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "积分是否确实未计入尚不确定，客户表述为“好像没算进去”",
+      "客户未明确要求补录积分或提出正式投诉，投诉意图不确定"
+    ]
+  },
+  "call": {
+    "run_id": "ef829182-1773-41e0-ae21-ba5b1ba92732",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:13:50.472690+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

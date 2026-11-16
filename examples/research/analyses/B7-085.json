@@ -1,0 +1,95 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "mixed",
+    "expressed_evidence": [
+      "The staff member who helped me was genuinely lovely",
+      "which I appreciated",
+      "the cream itself has been great so far",
+      "I noticed a line for a service charge that I hadn't expected",
+      "I honestly don't remember anyone mentioning it at the counter"
+    ],
+    "experience_polarity": "mixed",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "I noticed a line for a service charge that I hadn't expected",
+      "I wanted to ask what it's for",
+      "I'm not trying to make a fuss"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [
+      "I'd just like to understand the charge before I come back"
+    ],
+    "mentioned_store": "Shenzhen Nanshan store",
+    "issues": [
+      {
+        "issue_id": "B7-085-1",
+        "object_type": "service",
+        "object_name": "in-store staff assistance",
+        "category": "Beauty/Personal Care",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "The staff member who helped me was genuinely lovely",
+          "she took the time to walk me through the different options and didn't rush me at all"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-085-2",
+        "object_type": "service",
+        "object_name": "unexpected service charge on receipt",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "billing/invoice issue",
+        "customer_requests": [
+          "Explain what the service charge is for",
+          "Clarify whether the charge was agreed to at the counter"
+        ],
+        "evidence": [
+          "I noticed a line for a service charge that I hadn't expected",
+          "I wanted to ask what it's for",
+          "Was it something I agreed to without realizing?"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-085-3",
+        "object_type": "product",
+        "object_name": "face cream",
+        "category": "Beauty/Personal Care",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "none",
+        "customer_requests": [],
+        "evidence": [
+          "the cream itself has been great so far"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": [
+      "Whether the unexpected service charge constitutes a complaint or a neutral clarification request is ambiguous; customer explicitly says she is not trying to make a fuss.",
+      "Whether the service charge was disclosed at the counter is unknown from the source text."
+    ]
+  },
+  "call": {
+    "run_id": "a0ba970a-635b-4f6c-a46c-c647523efd6c",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:13:41.856020+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

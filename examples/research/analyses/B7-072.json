@@ -1,0 +1,69 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "I wanted to ask whether you usually have a few models out that I can actually try on and listen to",
+      "Also curious if weekends tend to be busy"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [
+      "planning to come by your Shenzhen Nanshan store this weekend"
+    ],
+    "mentioned_store": "Shenzhen Nanshan store",
+    "issues": [
+      {
+        "issue_id": "B7-072-1",
+        "object_type": "service",
+        "object_name": "In-store headphone demo availability",
+        "category": "Electronics",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "Confirm whether multiple wireless headphone models are available for in-store trial"
+        ],
+        "evidence": [
+          "whether you usually have a few models out that I can actually try on and listen to, or if it's mostly boxed stock"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-072-2",
+        "object_type": "service",
+        "object_name": "Weekend store crowding",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "Advise on weekend busyness to allow unhurried browsing"
+        ],
+        "evidence": [
+          "curious if weekends tend to be busy, since I'd rather come when I can take my time"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "No response from store yet; availability and crowding unknown",
+      "No explicit evaluation of past experience; sentiment inferred from neutral inquiry tone"
+    ]
+  },
+  "call": {
+    "run_id": "6e7c02d5-d340-46a1-a618-ccea4bd00c77",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:11:55.234918+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

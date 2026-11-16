@@ -1,0 +1,13 @@
+{
+  "id": "CATALOG-C200-1",
+  "identity": "SYNTHETIC_LOCAL_FIXTURE_NOT_MERCHANT_APPROVAL",
+  "model": "C200",
+  "listing_words_reported": [
+    "USB",
+    "Ethernet"
+  ],
+  "windows_meeting_support": null,
+  "direct_video_support": null,
+  "additional_accessories": null,
+  "purpose": "Local demo of a scoped knowledge check that preserves unavailable specifications. Not real merchant knowledge."
+}

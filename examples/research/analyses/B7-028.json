@@ -1,0 +1,51 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "出现这种情况让我挺失望的"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "鞋底侧面就开始开胶，现在越来越明显",
+      "出现这种情况让我挺失望的"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "浦东门店",
+    "issues": [
+      {
+        "issue_id": "B7-028-1",
+        "object_type": "product",
+        "object_name": "跑鞋（深蓝色款）",
+        "category": "Sports/Outdoor",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "询问这种情况该如何处理"
+        ],
+        "evidence": [
+          "鞋底侧面就开始开胶，现在越来越明显",
+          "出现这种情况让我挺失望的"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "具体型号不明确，仅描述为深蓝色跑鞋",
+      "未明确要求退换或维修，仅询问处理方式"
+    ]
+  },
+  "call": {
+    "run_id": "b5e63ffc-6c62-418c-95a1-66165a7fde39",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:06:17.453542+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

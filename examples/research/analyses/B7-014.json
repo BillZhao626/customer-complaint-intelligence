@@ -1,0 +1,85 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "店员没有急着推荐贵的，而是先问清楚用途",
+      "前后折腾了十几分钟也没不耐烦",
+      "这次算是真正买对了",
+      "谢谢那位店员，也谢谢店里愿意花时间解释"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "温州鹿城店",
+    "issues": [
+      {
+        "issue_id": "B7-014-1",
+        "object_type": "service",
+        "object_name": "温州鹿城店店员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "店员没有急着推荐贵的，而是先问清楚用途",
+          "还特意把连接步骤写在纸上",
+          "前后折腾了十几分钟也没不耐烦"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "resolved"
+      },
+      {
+        "issue_id": "B7-014-2",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "现在老人用得很顺手，每天出门都带着",
+          "这次算是真正买对了"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "resolved"
+      },
+      {
+        "issue_id": "B7-014-3",
+        "object_type": "service",
+        "object_name": "电话客服支持",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "customer service response issue",
+        "customer_requests": [],
+        "evidence": [
+          "对方在电话里一步步教我操作，前后折腾了十几分钟也没不耐烦"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "resolved"
+      }
+    ],
+    "uncertainty": [
+      "耳机配对小问题已由电话指导解决，未说明是否完全排除故障",
+      "邮件提及此前客服留言中的需求，但未提供具体记录"
+    ]
+  },
+  "call": {
+    "run_id": "019edd4d-33a3-427d-a526-f1228c898430",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:04:24.097547+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

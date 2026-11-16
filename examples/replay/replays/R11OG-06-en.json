@@ -1,0 +1,554 @@
+{
+  "email": {
+    "email_id": "R11OG-06-en",
+    "subject": "Product and service enquiry",
+    "body": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+  },
+  "analysis": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [],
+    "experience_polarity": "unknown",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "Please check before I clear space."
+    ],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "I1",
+        "object_type": "service",
+        "object_name": "cloud sync backup behavior",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "unknown",
+        "issue_kind": "inquiry",
+        "business_process": "unclear",
+        "customer_requests": [
+          "Confirm whether deleting a file on the device also deletes the synced copy"
+        ],
+        "evidence": [
+          "If I delete a file on the device will that delete the synced copy too?"
+        ],
+        "risk": "unknown",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "No explicit statement of dissatisfaction or complaint; intent is a pre-action clarification.",
+      "No store or service channel is named, so no mentioned store can be identified."
+    ]
+  },
+  "slot": {
+    "case_id": "R11OG-06-en",
+    "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+    "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+    "arm": "GUIDED",
+    "parse_ok": true,
+    "reply": "Thanks for checking before clearing space — I understand the concern, and I'm sorry for the uncertainty the app's wording has caused.\n\nI can't confirm from the information available here whether deleting a file on your device also removes the synced copy, so please don't delete anything yet on the assumption that the cloud copy is a separate backup. The app's use of \"backup\" for cloud sync doesn't by itself establish that the two copies are independent.\n\nAn internal verification request on this exact question has been created and is pending. In the meantime, the safest customer-controlled step is to keep the file in place, or move it to another location you control, until the sync behaviour is confirmed. If you can reply with the app name and version, and the platform you're using (for example iOS or Android), that will help identify the correct behaviour for your setup. You're also welcome to ask for progress on the pending check at any time.",
+    "facts": {
+      "status": "UNKNOWN",
+      "facts": []
+    },
+    "attachment_manifest": [],
+    "events": [
+      {
+        "event_id": "658c74a8-19cc-473b-9a4e-e8c42047d8b4",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "80f1434dfe109b88bd6ef5030fcd3b0b655ca48b91e93b2f847b54370bc96ea7",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.841171+00:00",
+        "_binding": {
+          "case_id": "R11OG-06-en",
+          "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+          "arm": "GUIDED",
+          "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+          "tool_event_id": "658c74a8-19cc-473b-9a4e-e8c42047d8b4",
+          "event_state": "requested",
+          "event_hash": "d71c52317233d53bbf64611c2f620e2f04c9cb7eed90e1c32e255af281b5453a"
+        }
+      },
+      {
+        "event_id": "020bd103-bc4c-493b-920a-b0d82cb9fd79",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "80f1434dfe109b88bd6ef5030fcd3b0b655ca48b91e93b2f847b54370bc96ea7",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.843377+00:00",
+        "_binding": {
+          "case_id": "R11OG-06-en",
+          "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+          "arm": "GUIDED",
+          "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+          "tool_event_id": "020bd103-bc4c-493b-920a-b0d82cb9fd79",
+          "event_state": "executed",
+          "event_hash": "e930cd00dfe964ffd36c215a8c3fffab58cecdbe17d6d3ece85efb726f76eb03"
+        }
+      },
+      {
+        "event_id": "14d42a26-08b5-464f-9fbf-4eb0979aefc9",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "e276ae2fd638c777fee84a44e395946c65ccfed28201a1767f88ecf2e8b4ca57",
+        "kind": "clarification_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "clarification_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Confirm whether deleting a file on the device also deletes the synced copy",
+            "evidence": [
+              "If I delete a file on the device will that delete the synced copy too?"
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.843377+00:00",
+        "_binding": {
+          "case_id": "R11OG-06-en",
+          "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+          "arm": "GUIDED",
+          "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+          "tool_event_id": "14d42a26-08b5-464f-9fbf-4eb0979aefc9",
+          "event_state": "requested",
+          "event_hash": "1803533d2f857b4991d40d456e971c53aa2f97f4892ee25bb269aa5886a09ad7"
+        }
+      },
+      {
+        "event_id": "5126a204-faf6-4132-928b-59b92cc58d41",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "e276ae2fd638c777fee84a44e395946c65ccfed28201a1767f88ecf2e8b4ca57",
+        "kind": "clarification_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "clarification_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Confirm whether deleting a file on the device also deletes the synced copy",
+            "evidence": [
+              "If I delete a file on the device will that delete the synced copy too?"
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.844375+00:00",
+        "_binding": {
+          "case_id": "R11OG-06-en",
+          "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+          "arm": "GUIDED",
+          "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+          "tool_event_id": "5126a204-faf6-4132-928b-59b92cc58d41",
+          "event_state": "created",
+          "event_hash": "6b4f01b0e6b8b57affb16008f18abbbba4ef37c3793d45134f581f34d7f2b017"
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "events": [
+      {
+        "event_id": "658c74a8-19cc-473b-9a4e-e8c42047d8b4",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "80f1434dfe109b88bd6ef5030fcd3b0b655ca48b91e93b2f847b54370bc96ea7",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.841171+00:00"
+      },
+      {
+        "event_id": "020bd103-bc4c-493b-920a-b0d82cb9fd79",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "80f1434dfe109b88bd6ef5030fcd3b0b655ca48b91e93b2f847b54370bc96ea7",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.843377+00:00"
+      },
+      {
+        "event_id": "14d42a26-08b5-464f-9fbf-4eb0979aefc9",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "e276ae2fd638c777fee84a44e395946c65ccfed28201a1767f88ecf2e8b4ca57",
+        "kind": "clarification_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "clarification_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Confirm whether deleting a file on the device also deletes the synced copy",
+            "evidence": [
+              "If I delete a file on the device will that delete the synced copy too?"
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.843377+00:00"
+      },
+      {
+        "event_id": "5126a204-faf6-4132-928b-59b92cc58d41",
+        "input_hash": "f25419931777917dd2a52cfc649f545cce1ac05ed0a6cb71c894515266fc9727",
+        "conversation_id": "R11OG-06-en",
+        "operation_id": "e276ae2fd638c777fee84a44e395946c65ccfed28201a1767f88ecf2e8b4ca57",
+        "kind": "clarification_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "clarification_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Confirm whether deleting a file on the device also deletes the synced copy",
+            "evidence": [
+              "If I delete a file on the device will that delete the synced copy too?"
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R11OG-06-en",
+            "revision": "transfer-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:52:04.844375+00:00"
+      }
+    ],
+    "facts": {
+      "status": "UNKNOWN",
+      "facts": []
+    },
+    "context": {
+      "issues": [],
+      "latest_request": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space.",
+      "identifiers": [],
+      "preferred_outcome": null,
+      "availability": null,
+      "refuses_handoff": false,
+      "wants_human": false,
+      "service_complaint": false,
+      "urgent": false,
+      "installation_cancelled": false,
+      "deadline_negated": false,
+      "source_messages": [
+        {
+          "role": "customer",
+          "text": "The app calls cloud sync a backup. If I delete a file on the device will that delete the synced copy too? Please check before I clear space."
+        }
+      ]
+    },
+    "external_actions": 0
+  },
+  "composer": {
+    "version": "service-response-r11-scoped-service-v25b",
+    "system_hash": "cfd50380680d0bd71d9aaac784cb5977dc5ca41e52b07d01961c33d109d10eb0",
+    "planner_hash": "881df60dc79909e5464488fa211bbf2e1df69e18ba4c1931d275b839110c6580"
+  },
+  "dataset_role": "INDEPENDENT_TEST",
+  "plan_error": null,
+  "analysis_call": {
+    "run_id": "bbe57a14-b8fe-4b44-b931-4a4f30952400",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "dispatch_at": "2026-11-10T11:51:59.325950+00:00"
+    }
+  },
+  "call": {
+    "run_id": "9be97eb1-2dce-422e-8b1e-c79959278e6d",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "dispatch_at": "2026-11-10T11:52:14.471901+00:00"
+    },
+    "raw": "{\"reply\": \"Thanks for checking before clearing space — I understand the concern, and I'm sorry for the uncertainty the app's wording has caused.\\n\\nI can't confirm from the information available here whether deleting a file on your device also removes the synced copy, so please don't delete anything yet on the assumption that the cloud copy is a separate backup. The app's use of \\\"backup\\\" for cloud sync doesn't by itself establish that the two copies are independent.\\n\\nAn internal verification request on this exact question has been created and is pending. In the meantime, the safest customer-controlled step is to keep the file in place, or move it to another location you control, until the sync behaviour is confirmed. If you can reply with the app name and version, and the platform you're using (for example iOS or Android), that will help identify the correct behaviour for your setup. You're also welcome to ask for progress on the pending check at any time.\"}",
+    "elapsed_ms": 8972.26129999035
+  },
+  "analysis_parse": {
+    "error": null
+  },
+  "parse": {
+    "error": null
+  },
+  "historical_grade": "PASS"
+}

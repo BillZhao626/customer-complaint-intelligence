@@ -1,0 +1,53 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "你们是搬走了还是关了？",
+      "附近还有没有能试鞋的门店？"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "原来那家店的位置已经换成别的了"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "鹿城",
+    "issues": [
+      {
+        "issue_id": "B7-080-1",
+        "object_type": "service",
+        "object_name": "温州鹿城店",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "确认鹿城店是搬迁还是关闭",
+          "了解附近可试鞋的门店"
+        ],
+        "evidence": [
+          "原来那家店的位置已经换成别的了",
+          "你们是搬走了还是关了？",
+          "附近还有没有能试鞋的门店？"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "未明确表达不满，投诉意图不确定",
+      "门店是搬迁还是关闭未知"
+    ]
+  },
+  "call": {
+    "run_id": "882b4c08-79ea-4461-b342-86acddf3abe1",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:13:01.552902+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

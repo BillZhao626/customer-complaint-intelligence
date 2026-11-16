@@ -1,0 +1,72 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "说实话有点郁闷，毕竟才用了没多久"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "说实话有点郁闷，毕竟才用了没多久"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "宁波天一店",
+    "issues": [
+      {
+        "issue_id": "B7-024-1",
+        "object_type": "product",
+        "object_name": "无线耳机",
+        "category": "Electronics",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "告知保修流程（到店还是寄修）"
+        ],
+        "evidence": [
+          "右耳突然没声音了",
+          "重新配对、换设备试了都不行",
+          "说实话有点郁闷，毕竟才用了没多久"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-024-2",
+        "object_type": "service",
+        "object_name": "保修流程",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "说明保修卡使用流程",
+          "说明是否需要发票及如何提交"
+        ],
+        "evidence": [
+          "具体怎么走流程不太清楚，是直接拿到店里还是寄到哪里？",
+          "发票我应该是留着的，不过得回去翻一下"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "complaint_intent 不确定：用户表达郁闷但主要诉求是询问保修流程，未明确要求赔偿或投诉",
+      "发票是否保留尚未确认"
+    ]
+  },
+  "call": {
+    "run_id": "a2035398-f37a-487e-bb5e-230aab802f6b",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:05:45.929256+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

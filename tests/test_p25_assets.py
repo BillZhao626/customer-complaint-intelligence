@@ -1,3 +1,4 @@
+from tests.archive_support import requires_archive
 """Local full-history audit: intentionally excluded from portable checkout tests."""
 import csv
 import json
@@ -7,6 +8,7 @@ from src.evaluation.dataset_audit import audit_dataset
 
 ROOT=Path(__file__).resolve().parents[1]
 
+@requires_archive('data/synthetic/customer_emails_full_v1.csv')
 class FullDatasetAuditTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):cls.audit=audit_dataset(ROOT/'data/synthetic/customer_emails_full_v1.csv')

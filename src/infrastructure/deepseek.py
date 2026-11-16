@@ -38,10 +38,15 @@ class LiveSettings:
 class DeepSeekAnalyzer:
     backend='deepseek_live'
     model_id='deepseek-flash'
-    def __init__(self,settings,provider=None,prompt_profile='p2-frozen'):
+    def __init__(self,settings,provider=None,prompt_profile='p2-frozen',*,mock_http_transport=None):
         settings.validate()
         self.settings=settings
         self.provider=provider
+        self.mock_http_transport=mock_http_transport
+        if mock_http_transport is not None:
+            import httpx
+            if not isinstance(mock_http_transport,httpx.MockTransport) or provider is not None:
+                raise ValueError('An explicit MockTransport without provider override is required')
         if prompt_profile=='p2-frozen':
             self.messages=messages;version=PROMPT_VERSION;prompt_hash=PROMPT_HASH
         elif prompt_profile=='service-boundary-v1':
@@ -77,6 +82,9 @@ class DeepSeekAnalyzer:
             self.config=self.config.model_copy(update={'parameters':dict(self.config.parameters,
                 policy_version=POLICY,projection_policy=PROJECTION,reply_gate_version=VERSION)})
 
+        if mock_http_transport is not None:
+            self.config=self.config.model_copy(update={'parameters':dict(self.config.parameters,product_transport='offline_mock_http')})
+
     def make_client(self,timeout):
         import httpx
         from langchain_openai import ChatOpenAI
@@ -87,7 +95,7 @@ class DeepSeekAnalyzer:
                 payload['max_tokens']=payload.pop('max_completion_tokens')
                 return payload
         # No environment proxy or redirects to a third-party endpoint; no hidden retries.
-        transport=httpx.AsyncClient(timeout=timeout,follow_redirects=False,trust_env=False)
+        transport=httpx.AsyncClient(timeout=timeout,follow_redirects=False,trust_env=False,transport=self.mock_http_transport)
         client=DeepSeekChatOpenAI(model=self.model_id,api_key=self.settings.api_key,base_url=self.settings.endpoint,
             temperature=0,max_tokens=self.settings.max_tokens,max_retries=0,timeout=timeout,
             model_kwargs={'response_format':{'type':'json_object'}},extra_body={'thinking':{'type':'disabled'}},

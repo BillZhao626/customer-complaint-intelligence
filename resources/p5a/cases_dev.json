@@ -1,0 +1,4868 @@
+[
+  {
+    "case_id": "P5A-F01-M01-1",
+    "scenario_family": "F01-M01",
+    "parent_family": "F01",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "C200 能接电脑开会吗？",
+    "body": "你好，想买一台 DemoCam C200 放在书桌上开线上会议。我看页面写了USB接口，这是不是插到电脑上就能当摄像头？不想再单独折腾采集卡。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "核实C200能否直接有线视频会议，不让客户代找商家规格",
+      "customer_goal": "核实C200能否直接有线视频会议，不让客户代找商家规格",
+      "known_facts": [
+        {
+          "quote": "你好，想买一台 DemoCam C200 放在书桌上开线上会议。我看页面写了USB接口，这是不是插到电脑上就能当摄像头？不想再单独折腾采集卡。",
+          "field": "body",
+          "start": 0,
+          "end": 71,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "核实C200能否直接有线视频会议，不让客户代找商家规格；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "C200 的 USB 接口能否直接用作会议摄像头，需要由商品资料人员核实协议和连接方式，不能仅凭“USB接口”判断。确认这点之前，建议先别购买采集卡或转接头。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F01-M01-2",
+    "scenario_family": "F01-M01",
+    "parent_family": "F01",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "C200 能接电脑开会吗？",
+    "body": "昨晚一直在看C200，越看越糊涂。有人说网线就行，有人说得买采集卡，我的用途就是电脑视频会议，能不能给个准信？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "核实C200能否直接有线视频会议，不让客户代找商家规格",
+      "customer_goal": "核实C200能否直接有线视频会议，不让客户代找商家规格",
+      "known_facts": [
+        {
+          "quote": "昨晚一直在看C200，越看越糊涂。有人说网线就行，有人说得买采集卡，我的用途就是电脑视频会议，能不能给个准信？",
+          "field": "body",
+          "start": 0,
+          "end": 55,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "困惑",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "核实C200能否直接有线视频会议，不让客户代找商家规格；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "困惑",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "网线、USB和采集卡对应的用途可能不同，混在一起确实容易买错。C200 的会议连接方式需要商家核对准确规格；这项核实应由商品资料或人工客服完成，您暂时不用额外购买设备。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F01-M01-3",
+    "scenario_family": "F01-M01",
+    "parent_family": "F01",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "C200 能接电脑开会吗？",
+    "body": "I am considering the DemoCam C200 for work calls. The listing mentions USB, but I cannot tell if it works as a webcam without a capture card. Could you clarify before I order?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "核实C200能否直接有线视频会议，不让客户代找商家规格",
+      "customer_goal": "核实C200能否直接有线视频会议，不让客户代找商家规格",
+      "known_facts": [
+        {
+          "quote": "I am considering the DemoCam C200 for work calls. The listing mentions USB, but I cannot tell if it works as a webcam without a capture card. Could you clarify before I order?",
+          "field": "body",
+          "start": 0,
+          "end": 175,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "cautious",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "核实C200能否直接有线视频会议，不让客户代找商家规格；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "cautious",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "C200接口/协议、电脑系统支持、是否需要额外设备"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "A USB port alone does not confirm webcam support. The C200 connection protocol and any capture-device requirements need verification by the product team before a reliable recommendation is possible. Please hold off on buying an adapter for now.",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F01-M02-1",
+    "scenario_family": "F01-M02",
+    "parent_family": "F01",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "C200 两种接口的区别",
+    "body": "C200后面有网口和USB口，我只想在电脑上用。两个口是不是随便接一个就可以？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实",
+      "customer_goal": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实",
+      "known_facts": [
+        {
+          "quote": "C200后面有网口和USB口，我只想在电脑上用。两个口是不是随便接一个就可以？",
+          "field": "body",
+          "start": 0,
+          "end": 39,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "两个接口的用途需要按 C200 的有效规格分别确认，不能当成可互换的电脑连接方式。目前还需要商品资料人员核实这款型号的接口协议，再判断是否适合您的用途。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F01-M02-2",
+    "scenario_family": "F01-M02",
+    "parent_family": "F01",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "C200 两种接口的区别",
+    "body": "我怕买错，页面只拍了C200背面的接口，没有讲网口和USB怎么用。开视频会到底走哪个？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实",
+      "customer_goal": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实",
+      "known_facts": [
+        {
+          "quote": "我怕买错，页面只拍了C200背面的接口，没有讲网口和USB怎么用。开视频会到底走哪个？",
+          "field": "body",
+          "start": 0,
+          "end": 43,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "担心",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "担心",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "选购前弄清接口用途很有必要。C200 能否用于电脑会议、分别需要怎样连接，应由商家提供可核实的规格说明；仅看接口照片还不能推荐其中一个。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F01-M02-3",
+    "scenario_family": "F01-M02",
+    "parent_family": "F01",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "C200 两种接口的区别",
+    "body": "C200的网口和USB是做同一件事的吗？我需要电脑开会，不只是导照片。买之前想把这个弄明白。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实",
+      "customer_goal": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实",
+      "known_facts": [
+        {
+          "quote": "C200的网口和USB是做同一件事的吗？我需要电脑开会，不只是导照片。买之前想把这个弄明白。",
+          "field": "body",
+          "start": 0,
+          "end": 46,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "认真",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "测试知识完整时应直接回答；当前完整草案仍待批准，安全运行先请求内部核实；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "认真",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "审核PRD-01草案；未批准不能声称UVC或RTSP规格生效"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "网口与USB不能当作同一种连接方式。C200 哪种协议适用于电脑会议，需要商品资料人员核实；支持文件传输也不能单独证明支持会议摄像头。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F02-M01-1",
+    "scenario_family": "F02-M01",
+    "parent_family": "F02",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "物流这几天都没动",
+    "body": "订单 DEMO-P5021 的物流停在“已揽收”三天了，后面一条都没有。我这周在家，想知道是不是正常运输中。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "追踪三天未更新，先核实状态而非断言延误",
+      "customer_goal": "追踪三天未更新，先核实状态而非断言延误",
+      "known_facts": [
+        {
+          "quote": "订单 DEMO-P5021 的物流停在“已揽收”三天了，后面一条都没有。我这周在家，想知道是不是正常运输中。",
+          "field": "body",
+          "start": 0,
+          "end": 54,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "物流追踪"
+      ],
+      "emotion": {
+        "primary": "担心",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "追踪三天未更新，先核实状态而非断言延误；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "担心",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "物流连续三天没有新记录，确实让人难以安排收货。DEMO-P5021 需要核对最新运输状态和商家标明的预计日期；仅凭记录停更，还不能确认是延误或丢件。",
+    "issue_specs": [
+      {
+        "object_name": "物流追踪",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "核实追踪停更原因和实际运输状态"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F02-M01-2",
+    "scenario_family": "F02-M01",
+    "parent_family": "F02",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "物流这几天都没动",
+    "body": "麻烦看下 DEMO-P5022，页面还是前几天那个揽收状态。我不是催今天一定到，就是想知道包裹有没有发出来。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "追踪三天未更新，先核实状态而非断言延误",
+      "customer_goal": "追踪三天未更新，先核实状态而非断言延误",
+      "known_facts": [
+        {
+          "quote": "麻烦看下 DEMO-P5022，页面还是前几天那个揽收状态。我不是催今天一定到，就是想知道包裹有没有发出来。",
+          "field": "body",
+          "start": 0,
+          "end": 54,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "物流追踪"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "追踪三天未更新，先核实状态而非断言延误；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "您关心的是包裹是否实际进入运输。DEMO-P5022 的揽收与后续交接记录需要由物流人员核对，页面没有更新还不足以判断包裹所在位置。",
+    "issue_specs": [
+      {
+        "object_name": "物流追踪",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "核实追踪停更原因和实际运输状态"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F02-M01-3",
+    "scenario_family": "F02-M01",
+    "parent_family": "F02",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "物流这几天都没动",
+    "body": "The tracking for DEMO-P5023 has shown only “collected” for three days. I am getting worried it never left the depot. What can be checked?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "追踪三天未更新，先核实状态而非断言延误",
+      "customer_goal": "追踪三天未更新，先核实状态而非断言延误",
+      "known_facts": [
+        {
+          "quote": "The tracking for DEMO-P5023 has shown only “collected” for three days. I am getting worried it never left the depot. What can be checked?",
+          "field": "body",
+          "start": 0,
+          "end": 137,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "物流追踪"
+      ],
+      "emotion": {
+        "primary": "worried",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "追踪三天未更新，先核实状态而非断言延误；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "worried",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "本案物流轨迹、商家承诺送达日期、是否存在异常扫描"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "Three days without an update makes the shipment hard to track. The latest carrier handover and the promised delivery date need an internal check for DEMO-P5023. A missing scan alone does not establish that the parcel is lost or late.",
+    "issue_specs": [
+      {
+        "object_name": "物流追踪",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "核实追踪停更原因和实际运输状态"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F03-M01-1",
+    "scenario_family": "F03-M01",
+    "parent_family": "F03",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "外箱被雨淋湿了",
+    "body": "DEMO-P5031今天放在门口，回家时纸箱已经湿了，边角也软了。我把外箱拍下来了，里面是台灯，还没拿出来。怕一拆就说不清，这样怎么办？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-03@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "包裹已送达，外箱受潮不等于商品故障或延误",
+      "customer_goal": "包裹已送达，外箱受潮不等于商品故障或延误",
+      "known_facts": [
+        {
+          "quote": "DEMO-P5031今天放在门口，回家时纸箱已经湿了，边角也软了。我把外箱拍下来了，里面是台灯，还没拿出来。怕一拆就说不清，这样怎么办？",
+          "field": "body",
+          "start": 0,
+          "end": 68,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "已送达包裹外箱"
+      ],
+      "emotion": {
+        "primary": "担心",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "安全查看商品本体是否受潮或破损",
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_CLARIFICATION",
+      "reason": "包裹已送达，外箱受潮不等于商品故障或延误；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "安全查看商品本体是否受潮或破损"
+      ],
+      "internal_questions": [
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "担心",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_CLARIFICATION",
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "很抱歉包裹送到时外箱已被雨淋湿。请保留包装和已有照片；可以在安全情况下查看台灯是否受潮或破损，电源部分若有湿痕请不要通电。商品本体的情况是下一步核对售后选项所需的关键资料。",
+    "issue_specs": [
+      {
+        "object_name": "已送达包裹外箱",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "确认商品本体状态和运输受损处理"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F03-M01-2",
+    "scenario_family": "F03-M01",
+    "parent_family": "F03",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "外箱被雨淋湿了",
+    "body": "刚拿到 DEMO-P5032，箱子底下全是水。照片我有，灯还在里面。今天的雨又不是我能控制的，别让我来回填一堆表，先告诉我该做什么。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-03@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "包裹已送达，外箱受潮不等于商品故障或延误",
+      "customer_goal": "包裹已送达，外箱受潮不等于商品故障或延误",
+      "known_facts": [
+        {
+          "quote": "刚拿到 DEMO-P5032，箱子底下全是水。照片我有，灯还在里面。今天的雨又不是我能控制的，别让我来回填一堆表，先告诉我该做什么。",
+          "field": "body",
+          "start": 0,
+          "end": 66,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "已送达包裹外箱"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "安全查看商品本体是否受潮或破损",
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_CLARIFICATION",
+      "reason": "包裹已送达，外箱受潮不等于商品故障或延误；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "安全查看商品本体是否受潮或破损"
+      ],
+      "internal_questions": [
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_CLARIFICATION",
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉让您收到这样的包裹。先保留外箱和照片，安全查看灯具本体是否有湿痕或破损即可；有受潮迹象时不要接电。接下来应由售后核对运输受损的处理方式，不需要先做反复试用。",
+    "issue_specs": [
+      {
+        "object_name": "已送达包裹外箱",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "确认商品本体状态和运输受损处理"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F03-M01-3",
+    "scenario_family": "F03-M01",
+    "parent_family": "F03",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "外箱被雨淋湿了",
+    "body": "DEMO-P5033 arrived today in a soaked carton. I took a photo but have not unpacked the lamp. Is it safe to open, and what information do you need?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-03@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "包裹已送达，外箱受潮不等于商品故障或延误",
+      "customer_goal": "包裹已送达，外箱受潮不等于商品故障或延误",
+      "known_facts": [
+        {
+          "quote": "DEMO-P5033 arrived today in a soaked carton. I took a photo but have not unpacked the lamp. Is it safe to open, and what information do you need?",
+          "field": "body",
+          "start": 0,
+          "end": 145,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "已送达包裹外箱"
+      ],
+      "emotion": {
+        "primary": "cautious",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "安全查看商品本体是否受潮或破损",
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_CLARIFICATION",
+      "reason": "包裹已送达，外箱受潮不等于商品故障或延误；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "安全查看商品本体是否受潮或破损"
+      ],
+      "internal_questions": [
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "cautious",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_CLARIFICATION",
+        "本案运输受损处理规则、订单与签收记录"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "I am sorry the carton arrived soaked. Keep the carton and existing photo. If it is safe to unpack, check for visible moisture or damage without powering the lamp; do not connect any wet electrical parts. Whether the item itself is affected is the key detail for an after-sales review.",
+    "issue_specs": [
+      {
+        "object_name": "已送达包裹外箱",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "确认商品本体状态和运输受损处理"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F03-M02-1",
+    "scenario_family": "F03-M02",
+    "parent_family": "F03",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "灯罩在运输中裂了",
+    "body": "DEMO-P5034刚收到，纸箱一角破了，台灯灯罩有一道很长的裂纹。附件是外箱和灯罩照片，拆箱后就放在桌上没用。这件事怎么处理？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-03@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "订单和破损照片齐全，内部核实方案而非重复要资料",
+      "customer_goal": "订单和破损照片齐全，内部核实方案而非重复要资料",
+      "known_facts": [
+        {
+          "quote": "DEMO-P5034刚收到，纸箱一角破了，台灯灯罩有一道很长的裂纹。附件是外箱和灯罩照片，拆箱后就放在桌上没用。这件事怎么处理？",
+          "field": "body",
+          "start": 0,
+          "end": 64,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "已送达台灯灯罩破损"
+      ],
+      "emotion": {
+        "primary": "失望",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "订单和破损照片齐全，内部核实方案而非重复要资料；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "失望",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉收到的灯罩已经开裂。请先把台灯放在不会碰倒的位置，保留包装和附件照片，暂时不要使用。接下来需要售后根据这次运输损坏和适用规则核对可行方案，包括维修或换货及相关运费。",
+    "issue_specs": [
+      {
+        "object_name": "已送达台灯灯罩破损",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "确认商品本体状态和运输受损处理"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F03-M02-2",
+    "scenario_family": "F03-M02",
+    "parent_family": "F03",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "灯罩在运输中裂了",
+    "body": "这是 DEMO-P5035 的照片，箱子和灯罩都破了。礼物明天要送人，现在成这样，我想知道还有什么办法。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-03@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "订单和破损照片齐全，内部核实方案而非重复要资料",
+      "customer_goal": "订单和破损照片齐全，内部核实方案而非重复要资料",
+      "known_facts": [
+        {
+          "quote": "这是 DEMO-P5035 的照片，箱子和灯罩都破了。礼物明天要送人，现在成这样，我想知道还有什么办法。",
+          "field": "body",
+          "start": 0,
+          "end": 52,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "已送达台灯灯罩破损"
+      ],
+      "emotion": {
+        "primary": "着急",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "订单和破损照片齐全，内部核实方案而非重复要资料；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "着急",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉这次破损打乱了您准备礼物的安排。先不要使用裂开的灯具，保留包装和现有照片。售后需要优先核对本案可用的处理方案与实际时间，未经确认不能保证明天能替换到货。",
+    "issue_specs": [
+      {
+        "object_name": "已送达台灯灯罩破损",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "确认商品本体状态和运输受损处理"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F03-M02-3",
+    "scenario_family": "F03-M02",
+    "parent_family": "F03",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "灯罩在运输中裂了",
+    "body": "订单DEMO-P5036的灯罩明显裂了，纸箱也破了。两处照片都在附件里，灯放着没用。请说一下有哪些处理选项。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-03@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "订单和破损照片齐全，内部核实方案而非重复要资料",
+      "customer_goal": "订单和破损照片齐全，内部核实方案而非重复要资料",
+      "known_facts": [
+        {
+          "quote": "订单DEMO-P5036的灯罩明显裂了，纸箱也破了。两处照片都在附件里，灯放着没用。请说一下有哪些处理选项。",
+          "field": "body",
+          "start": 0,
+          "end": 54,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "已送达台灯灯罩破损"
+      ],
+      "emotion": {
+        "primary": "失望",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "订单和破损照片齐全，内部核实方案而非重复要资料；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "失望",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "适用运输损坏方案、维修/换货权限及运费"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉台灯送到时已经受损。请将灯具放稳、暂时不要使用，保留纸箱和现有照片。维修或换货方案以及运费，需要售后根据这次受损情况核对适用规则。",
+    "issue_specs": [
+      {
+        "object_name": "已送达台灯灯罩破损",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "other",
+        "business_process": "delivery/logistics issue",
+        "routing_team": "logistics",
+        "customer_requests": [
+          "确认商品本体状态和运输受损处理"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F04-M01-1",
+    "scenario_family": "F04-M01",
+    "parent_family": "F04",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "刚买不久的灯不亮了",
+    "body": "上个月买的台灯昨晚突然不亮了，插座上别的东西都能用。我没拆过，晚上赶作业还得借灯。请问可以修吗？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-02@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "普通不亮故障不凭其他电器正常证明制造缺陷",
+      "customer_goal": "普通不亮故障不凭其他电器正常证明制造缺陷",
+      "known_facts": [
+        {
+          "quote": "上个月买的台灯昨晚突然不亮了，插座上别的东西都能用。我没拆过，晚上赶作业还得借灯。请问可以修吗？",
+          "field": "body",
+          "start": 0,
+          "end": 48,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "台灯故障"
+      ],
+      "emotion": {
+        "primary": "失望",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号和型号",
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "普通不亮故障不凭其他电器正常证明制造缺陷；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号和型号"
+      ],
+      "internal_questions": [
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "失望",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉台灯突然不亮，影响了您晚上使用。请先暂停使用，不必拆机或反复通电排查。方便时提供订单号和型号，便于售后核对适用的维修或更换申请方式。",
+    "issue_specs": [
+      {
+        "object_name": "台灯故障",
+        "customer_requests": [
+          "确定台灯维修或更换申请路径"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F04-M01-2",
+    "scenario_family": "F04-M01",
+    "parent_family": "F04",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "刚买不久的灯不亮了",
+    "body": "那盏书桌灯又不亮了，才买没多久，家里其他电器明明正常。我没有拆它，也不知道该寄回去还是去门店，能不能把步骤说清楚？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-02@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "普通不亮故障不凭其他电器正常证明制造缺陷",
+      "customer_goal": "普通不亮故障不凭其他电器正常证明制造缺陷",
+      "known_facts": [
+        {
+          "quote": "那盏书桌灯又不亮了，才买没多久，家里其他电器明明正常。我没有拆它，也不知道该寄回去还是去门店，能不能把步骤说清楚？",
+          "field": "body",
+          "start": 0,
+          "end": 57,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "台灯故障"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号和型号",
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "普通不亮故障不凭其他电器正常证明制造缺陷；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号和型号"
+      ],
+      "internal_questions": [
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉让您为刚买的台灯来回考虑处理办法。请先停用，也不要自行拆修。提供订单号和型号后，需要售后先核对受理方式及适用选项，再确定寄回还是到店，避免白跑。",
+    "issue_specs": [
+      {
+        "object_name": "台灯故障",
+        "customer_requests": [
+          "确定台灯维修或更换申请路径"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F04-M01-3",
+    "scenario_family": "F04-M01",
+    "parent_family": "F04",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "刚买不久的灯不亮了",
+    "body": "My desk lamp stopped lighting up last night. Other appliances work and I have not opened it. I bought it last month; how do I get it repaired?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-02@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "普通不亮故障不凭其他电器正常证明制造缺陷",
+      "customer_goal": "普通不亮故障不凭其他电器正常证明制造缺陷",
+      "known_facts": [
+        {
+          "quote": "My desk lamp stopped lighting up last night. Other appliances work and I have not opened it. I bought it last month; how do I get it repaired?",
+          "field": "body",
+          "start": 0,
+          "end": 142,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "台灯故障"
+      ],
+      "emotion": {
+        "primary": "disappointed",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号和型号",
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "普通不亮故障不凭其他电器正常证明制造缺陷；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号和型号"
+      ],
+      "internal_questions": [
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "disappointed",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "购买记录、故障受理方式与保修/更换条件"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "I am sorry the lamp has stopped working so soon. Please stop using it and do not open it or keep trying to power it on. An order reference and model will help after-sales staff verify the applicable repair or replacement process.",
+    "issue_specs": [
+      {
+        "object_name": "台灯故障",
+        "customer_requests": [
+          "确定台灯维修或更换申请路径"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F04-M02-1",
+    "scenario_family": "F04-M02",
+    "parent_family": "F04",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "右耳老是断音",
+    "body": "耳机右边听着听着就没声，过一会又有。我收到不到一周，不太想再折腾。寄回检查的话，运费是怎么收的？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "区分故障描述、客户目标与未知运费规则",
+      "customer_goal": "区分故障描述、客户目标与未知运费规则",
+      "known_facts": [
+        {
+          "quote": "耳机右边听着听着就没声，过一会又有。我收到不到一周，不太想再折腾。寄回检查的话，运费是怎么收的？",
+          "field": "body",
+          "start": 0,
+          "end": 48,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "耳机单侧断音"
+      ],
+      "emotion": {
+        "primary": "疲惫",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单编号与耳机型号",
+        "保修/退换受理方式及适用运费"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "区分故障描述、客户目标与未知运费规则；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单编号与耳机型号"
+      ],
+      "internal_questions": [
+        "保修/退换受理方式及适用运费"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "疲惫",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "保修/退换受理方式及适用运费"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉新耳机就出现右侧断音。请提供订单号和型号，售后需要据此核对受理方式及运费规则；目前的间歇断音描述可以作为核实线索，不必反复录制故障。",
+    "issue_specs": [
+      {
+        "object_name": "耳机单侧断音",
+        "reason": "product quality",
+        "customer_requests": [
+          "确定断音售后及运费"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F04-M02-2",
+    "scenario_family": "F04-M02",
+    "parent_family": "F04",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "右耳老是断音",
+    "body": "周末刚拿到耳机，右耳断断续续，很影响听课。要修还是换我都想先了解，特别是邮费，别寄过去之后再告诉我要付。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "区分故障描述、客户目标与未知运费规则",
+      "customer_goal": "区分故障描述、客户目标与未知运费规则",
+      "known_facts": [
+        {
+          "quote": "周末刚拿到耳机，右耳断断续续，很影响听课。要修还是换我都想先了解，特别是邮费，别寄过去之后再告诉我要付。",
+          "field": "body",
+          "start": 0,
+          "end": 52,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "耳机单侧断音"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单编号与耳机型号",
+        "保修/退换受理方式及适用运费"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "区分故障描述、客户目标与未知运费规则；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单编号与耳机型号"
+      ],
+      "internal_questions": [
+        "保修/退换受理方式及适用运费"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "保修/退换受理方式及适用运费"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉断音影响了您听课。维修或换货及邮费应在寄回前说清楚；请提供订单号和型号，方便按适用规则核对两个方案的条件，再决定走哪一种。",
+    "issue_specs": [
+      {
+        "object_name": "耳机单侧断音",
+        "reason": "product quality",
+        "customer_requests": [
+          "确定断音售后及运费"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F04-M02-3",
+    "scenario_family": "F04-M02",
+    "parent_family": "F04",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "右耳老是断音",
+    "body": "The right earbud cuts out during normal listening. I received it a few days ago. Before returning it for inspection, can you tell me who pays postage?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "区分故障描述、客户目标与未知运费规则",
+      "customer_goal": "区分故障描述、客户目标与未知运费规则",
+      "known_facts": [
+        {
+          "quote": "The right earbud cuts out during normal listening. I received it a few days ago. Before returning it for inspection, can you tell me who pays postage?",
+          "field": "body",
+          "start": 0,
+          "end": 150,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "耳机单侧断音"
+      ],
+      "emotion": {
+        "primary": "practical",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单编号与耳机型号",
+        "保修/退换受理方式及适用运费"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "区分故障描述、客户目标与未知运费规则；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单编号与耳机型号"
+      ],
+      "internal_questions": [
+        "保修/退换受理方式及适用运费"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "practical",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "保修/退换受理方式及适用运费"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "I am sorry the right earbud is cutting out. Please share the order reference and model so the applicable inspection and postage terms can be verified before you send it back. The existing fault description is useful; repeated recordings are unnecessary.",
+    "issue_specs": [
+      {
+        "object_name": "耳机单侧断音",
+        "reason": "product quality",
+        "customer_requests": [
+          "确定断音售后及运费"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F05-M01-1",
+    "scenario_family": "F05-M01",
+    "parent_family": "F05",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "骑行时车架锁扣打开",
+    "body": "昨天下班骑折叠车，车架锁扣突然自己打开，车身晃了一下。我赶紧停了，现在看着它就不敢骑。能退回去检查吗？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "暂停骑行，严重安全问题必须人工安全审核",
+      "customer_goal": "暂停骑行，严重安全问题必须人工安全审核",
+      "known_facts": [
+        {
+          "quote": "昨天下班骑折叠车，车架锁扣突然自己打开，车身晃了一下。我赶紧停了，现在看着它就不敢骑。能退回去检查吗？",
+          "field": "body",
+          "start": 0,
+          "end": 51,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "折叠车车架锁扣"
+      ],
+      "emotion": {
+        "primary": "担心",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号和车型（仅已有安全资料）",
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "risk": "severe"
+    },
+    "policy_decision": {
+      "action": "HARD_BLOCK",
+      "reason": "暂停骑行，严重安全问题必须人工安全审核；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号和车型（仅已有安全资料）"
+      ],
+      "internal_questions": [
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "担心",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HARD_BLOCK",
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "很抱歉发生这样的险情。请停止使用这辆车，不要骑行，也不要测试锁扣来复现故障。车架连接失效需要人工优先核实安全问题；请保留车辆和现有资料，提供订单号与车型，便于确认检查及退换申请路径。",
+    "issue_specs": [
+      {
+        "object_name": "折叠车车架锁扣",
+        "category": "Sports/Outdoor",
+        "reason": "health or safety issue",
+        "customer_requests": [
+          "安全核实锁扣失效及售后申请"
+        ],
+        "risk_level": "severe",
+        "risk_rationale": "骑行时承重车架锁扣失效有严重潜在伤害，不由语气决定。"
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F05-M01-2",
+    "scenario_family": "F05-M01",
+    "parent_family": "F05",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "骑行时车架锁扣打开",
+    "body": "折叠车车架锁扣在骑行中自行打开。车已经停放，请说明售后检查的申请方式。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "暂停骑行，严重安全问题必须人工安全审核",
+      "customer_goal": "暂停骑行，严重安全问题必须人工安全审核",
+      "known_facts": [
+        {
+          "quote": "折叠车车架锁扣在骑行中自行打开。车已经停放，请说明售后检查的申请方式。",
+          "field": "body",
+          "start": 0,
+          "end": 35,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "折叠车车架锁扣"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号和车型（仅已有安全资料）",
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "risk": "severe"
+    },
+    "policy_decision": {
+      "action": "HARD_BLOCK",
+      "reason": "暂停骑行，严重安全问题必须人工安全审核；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号和车型（仅已有安全资料）"
+      ],
+      "internal_questions": [
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HARD_BLOCK",
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "骑行中的车架锁扣失效需要优先进行安全核实。请继续停止使用，不要骑行或试锁扣。订单号、车型和安全取得的现有资料可用于人工售后确认检查及退换申请步骤。",
+    "issue_specs": [
+      {
+        "object_name": "折叠车车架锁扣",
+        "category": "Sports/Outdoor",
+        "reason": "health or safety issue",
+        "customer_requests": [
+          "安全核实锁扣失效及售后申请"
+        ],
+        "risk_level": "severe",
+        "risk_rationale": "骑行时承重车架锁扣失效有严重潜在伤害，不由语气决定。"
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F05-M01-3",
+    "scenario_family": "F05-M01",
+    "parent_family": "F05",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "骑行时车架锁扣打开",
+    "body": "才骑了两次，折叠车车架锁扣就自己打开了，差点摔下去！这不是一句抱歉就能过去的，到底怎么处理？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "暂停骑行，严重安全问题必须人工安全审核",
+      "customer_goal": "暂停骑行，严重安全问题必须人工安全审核",
+      "known_facts": [
+        {
+          "quote": "才骑了两次，折叠车车架锁扣就自己打开了，差点摔下去！这不是一句抱歉就能过去的，到底怎么处理？",
+          "field": "body",
+          "start": 0,
+          "end": 46,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "折叠车车架锁扣"
+      ],
+      "emotion": {
+        "primary": "生气",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号和车型（仅已有安全资料）",
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "risk": "severe"
+    },
+    "policy_decision": {
+      "action": "HARD_BLOCK",
+      "reason": "暂停骑行，严重安全问题必须人工安全审核；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号和车型（仅已有安全资料）"
+      ],
+      "internal_questions": [
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "生气",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HARD_BLOCK",
+        "安全核实与退换权限；禁止为取证复现"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "很抱歉让您遇到危险。请立即停止使用，不要骑行或试验锁扣。这个承重连接故障需要人工优先核实，并一起评估您希望的处理方式；请保留车辆、现有资料及订单信息，检查与退换方案须在核实后确认。",
+    "issue_specs": [
+      {
+        "object_name": "折叠车车架锁扣",
+        "category": "Sports/Outdoor",
+        "reason": "health or safety issue",
+        "customer_requests": [
+          "安全核实锁扣失效及售后申请"
+        ],
+        "risk_level": "severe",
+        "risk_rationale": "骑行时承重车架锁扣失效有严重潜在伤害，不由语气决定。"
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F06-M01-1",
+    "scenario_family": "F06-M01",
+    "parent_family": "F06",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "退掉还是换一副",
+    "body": "耳机用着不顺心，想处理一下。退掉吧又挺喜欢这个外形，换一副又怕还是这样。你们这边可以怎么选？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "客户尚未决定退换，先明确偏好并由人工核实资格",
+      "customer_goal": "客户尚未决定退换，先明确偏好并由人工核实资格",
+      "known_facts": [
+        {
+          "quote": "耳机用着不顺心，想处理一下。退掉吧又挺喜欢这个外形，换一副又怕还是这样。你们这边可以怎么选？",
+          "field": "body",
+          "start": 0,
+          "end": 46,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "耳机退换选择"
+      ],
+      "emotion": {
+        "primary": "犹豫",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "更倾向退货还是换货；订单编号",
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_CLARIFICATION",
+      "reason": "客户尚未决定退换，先明确偏好并由人工核实资格；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "更倾向退货还是换货；订单编号"
+      ],
+      "internal_questions": [
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "犹豫",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_CLARIFICATION",
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "您还在退货和换货之间考虑，可以先说更希望结束购买还是继续使用同款。订单号也有助于售后核对各自条件，是否适用需要结合购买与商品情况确认。",
+    "issue_specs": [
+      {
+        "object_name": "耳机退换选择",
+        "reason": "refund request",
+        "business_process": "refund/exchange process issue",
+        "routing_team": "refunds",
+        "customer_requests": [
+          "了解退货或换货选择"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F06-M01-2",
+    "scenario_family": "F06-M01",
+    "parent_family": "F06",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "退掉还是换一副",
+    "body": "这副耳机总让我操心，我现在也说不准想退还是想换。最烦的是两边流程要重新走一遍，有没有省事一点的办法？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "客户尚未决定退换，先明确偏好并由人工核实资格",
+      "customer_goal": "客户尚未决定退换，先明确偏好并由人工核实资格",
+      "known_facts": [
+        {
+          "quote": "这副耳机总让我操心，我现在也说不准想退还是想换。最烦的是两边流程要重新走一遍，有没有省事一点的办法？",
+          "field": "body",
+          "start": 0,
+          "end": 50,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "耳机退换选择"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "更倾向退货还是换货；订单编号",
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_CLARIFICATION",
+      "reason": "客户尚未决定退换，先明确偏好并由人工核实资格；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "更倾向退货还是换货；订单编号"
+      ],
+      "internal_questions": [
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_CLARIFICATION",
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉这次使用和处理都让您费心。先确定您更希望退货还是保留同款，再按订单核对对应申请条件，可以减少无关步骤；暂时拿不准也可以先核对两种选项。",
+    "issue_specs": [
+      {
+        "object_name": "耳机退换选择",
+        "reason": "refund request",
+        "business_process": "refund/exchange process issue",
+        "routing_team": "refunds",
+        "customer_requests": [
+          "了解退货或换货选择"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F06-M01-3",
+    "scenario_family": "F06-M01",
+    "parent_family": "F06",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "退掉还是换一副",
+    "body": "I am not sure whether to return these earbuds or try another pair. I like the fit but do not want another round of trouble. What should I decide first?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "客户尚未决定退换，先明确偏好并由人工核实资格",
+      "customer_goal": "客户尚未决定退换，先明确偏好并由人工核实资格",
+      "known_facts": [
+        {
+          "quote": "I am not sure whether to return these earbuds or try another pair. I like the fit but do not want another round of trouble. What should I decide first?",
+          "field": "body",
+          "start": 0,
+          "end": 151,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "耳机退换选择"
+      ],
+      "emotion": {
+        "primary": "uncertain",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "更倾向退货还是换货；订单编号",
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_CLARIFICATION",
+      "reason": "客户尚未决定退换，先明确偏好并由人工核实资格；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "更倾向退货还是换货；订单编号"
+      ],
+      "internal_questions": [
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "uncertain",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_CLARIFICATION",
+        "退换条件、商品状态、退款/换货审批权限"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "It helps to decide whether you would prefer to end the purchase or keep the same model. Your order reference is also needed to verify the conditions for each option. Eligibility and the final remedy require an authorised after-sales review.",
+    "issue_specs": [
+      {
+        "object_name": "耳机退换选择",
+        "reason": "refund request",
+        "business_process": "refund/exchange process issue",
+        "routing_team": "refunds",
+        "customer_requests": [
+          "了解退货或换货选择"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F07-M01-1",
+    "scenario_family": "F07-M01",
+    "parent_family": "F07",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "退货日期只差一天",
+    "body": "我想退那台小咖啡机，刚发现页面昨天截止。还在原包装里没用过，只晚了一天，有没有办法申请看一下？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-10@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准",
+      "customer_goal": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准",
+      "known_facts": [
+        {
+          "quote": "我想退那台小咖啡机，刚发现页面昨天截止。还在原包装里没用过，只晚了一天，有没有办法申请看一下？",
+          "field": "body",
+          "start": 0,
+          "end": 47,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "退货期限例外申请"
+      ],
+      "emotion": {
+        "primary": "期待",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号与页面显示的退货截止日期",
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号与页面显示的退货截止日期"
+      ],
+      "internal_questions": [
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "期待",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "您希望对未使用、仅超过页面期限一天的咖啡机申请例外。可以提供订单号和页面截止日期，供售后核对日期、商品状态与例外受理条件；能否受理需要有权限的人员判断。",
+    "issue_specs": [
+      {
+        "object_name": "退货期限例外申请",
+        "category": "Home Appliances",
+        "reason": "refund request",
+        "business_process": "refund/exchange process issue",
+        "routing_team": "refunds",
+        "customer_requests": [
+          "评估仅超期一天的退货例外"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F07-M01-2",
+    "scenario_family": "F07-M01",
+    "parent_family": "F07",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "退货日期只差一天",
+    "body": "就差一天系统就不让我退了。咖啡机一次都没用，最近忙没顾上，难道一点商量都没有？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-10@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准",
+      "customer_goal": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准",
+      "known_facts": [
+        {
+          "quote": "就差一天系统就不让我退了。咖啡机一次都没用，最近忙没顾上，难道一点商量都没有？",
+          "field": "body",
+          "start": 0,
+          "end": 39,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "退货期限例外申请"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号与页面显示的退货截止日期",
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号与页面显示的退货截止日期"
+      ],
+      "internal_questions": [
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "只差一天却无法提交申请，确实容易让人着急。未使用情况可以作为例外申请的说明；订单号与截止日期仍需核实，再由有权限的人员评估可行处理方式。",
+    "issue_specs": [
+      {
+        "object_name": "退货期限例外申请",
+        "category": "Home Appliances",
+        "reason": "refund request",
+        "business_process": "refund/exchange process issue",
+        "routing_team": "refunds",
+        "customer_requests": [
+          "评估仅超期一天的退货例外"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F07-M01-3",
+    "scenario_family": "F07-M01",
+    "parent_family": "F07",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "退货日期只差一天",
+    "body": "The return page closed yesterday for my unused coffee machine. It is still packed. Is there any way to request an exception for being one day late?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "POL-10@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准",
+      "customer_goal": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准",
+      "known_facts": [
+        {
+          "quote": "The return page closed yesterday for my unused coffee machine. It is still packed. Is there any way to request an exception for being one day late?",
+          "field": "body",
+          "start": 0,
+          "end": 147,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "退货期限例外申请"
+      ],
+      "emotion": {
+        "primary": "hopeful",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号与页面显示的退货截止日期",
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "客户称只超期一天，须核实日期和例外权限，不直接拒绝或批准；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号与页面显示的退货截止日期"
+      ],
+      "internal_questions": [
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "hopeful",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "订单日期、有效期限规则、例外审批权限及可行方案"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "An exception request can describe that the machine is unused and the page closed one day ago. Please share the order reference and displayed deadline so the dates and applicable exception process can be checked by an authorised reviewer.",
+    "issue_specs": [
+      {
+        "object_name": "退货期限例外申请",
+        "category": "Home Appliances",
+        "reason": "refund request",
+        "business_process": "refund/exchange process issue",
+        "routing_team": "refunds",
+        "customer_requests": [
+          "评估仅超期一天的退货例外"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F08-M01-1",
+    "scenario_family": "F08-M01",
+    "parent_family": "F08",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "三件事请一起看",
+    "body": "柜子抽屉夜里会自己滑出来，走过磕碰到腿。 周六说好取旧床，等一上午都没人来。 DEMO-P5081的发票还少了一张床头柜，麻烦别再只回一件事。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明",
+      "customer_goal": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明",
+      "known_facts": [
+        {
+          "quote": "柜子抽屉夜里会自己滑出来，走过磕碰到腿。",
+          "field": "body",
+          "start": 0,
+          "end": 20,
+          "source": "customer_report_not_verified"
+        },
+        {
+          "quote": "周六说好取旧床，等一上午都没人来。",
+          "field": "body",
+          "start": 21,
+          "end": 38,
+          "source": "customer_report_not_verified"
+        },
+        {
+          "quote": "DEMO-P5081的发票还少了一张床头柜，麻烦别再只回一件事。",
+          "field": "body",
+          "start": 39,
+          "end": 71,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "抽屉滑出碰撞",
+        "旧床取件爽约",
+        "发票漏项"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "柜子型号、取件预约编号、现有发票信息",
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "risk": "minor"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "柜子型号、取件预约编号、现有发票信息"
+      ],
+      "internal_questions": [
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉这几件事都没有处理清楚。抽屉先尽量避开走道一侧，避免再次磕碰，不必复现故障；柜子型号有助于核对支持方式。旧床取件需要预约编号以核查履约记录，发票漏项则需现有发票信息与 DEMO-P5081 明细对应。三项应一起交由人工协调，各自确认处理步骤。",
+    "issue_specs": [
+      {
+        "object_name": "抽屉滑出碰撞",
+        "category": "Furniture",
+        "reason": "health or safety issue",
+        "business_process": "product issue",
+        "customer_requests": [
+          "排查抽屉滑出"
+        ],
+        "risk_level": "minor",
+        "risk_rationale": "狭窄走道普通磕碰风险，未陈述承重失效",
+        "quote": "柜子抽屉夜里会自己滑出来，走过磕碰到腿。"
+      },
+      {
+        "object_name": "旧床取件爽约",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "after-sales service",
+        "business_process": "store service issue",
+        "routing_team": "store_operations",
+        "customer_requests": [
+          "核实取件安排"
+        ],
+        "quote": "周六说好取旧床，等一上午都没人来。"
+      },
+      {
+        "object_name": "发票漏项",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "billing/invoice issue",
+        "business_process": "billing/invoice issue",
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "核对漏开商品"
+        ],
+        "quote": "DEMO-P5081的发票还少了一张床头柜，麻烦别再只回一件事。"
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F08-M01-2",
+    "scenario_family": "F08-M01",
+    "parent_family": "F08",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "三件事请一起看",
+    "body": "新柜子的抽屉有时滑出来，我经过会磕碰。 旧床周六没被取走，占着客厅。 发票漏了床头柜那项，订单DEMO-P5082。请帮我理一理要怎么处理。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明",
+      "customer_goal": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明",
+      "known_facts": [
+        {
+          "quote": "新柜子的抽屉有时滑出来，我经过会磕碰。",
+          "field": "body",
+          "start": 0,
+          "end": 19,
+          "source": "customer_report_not_verified"
+        },
+        {
+          "quote": "旧床周六没被取走，占着客厅。",
+          "field": "body",
+          "start": 20,
+          "end": 34,
+          "source": "customer_report_not_verified"
+        },
+        {
+          "quote": "发票漏了床头柜那项，订单DEMO-P5082。请帮我理一理要怎么处理。",
+          "field": "body",
+          "start": 35,
+          "end": 70,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "抽屉滑出碰撞",
+        "旧床取件爽约",
+        "发票漏项"
+      ],
+      "emotion": {
+        "primary": "困惑",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "柜子型号、取件预约编号、现有发票信息",
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "risk": "minor"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "柜子型号、取件预约编号、现有发票信息"
+      ],
+      "internal_questions": [
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "困惑",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "可以按三件事分别核对：抽屉先避免影响走道，柜子型号可用于查支持资料；旧床需要查预约与未取件记录；发票则应按 DEMO-P5082 对应现有票据核对床头柜漏项。涉及不同人员，需人工协调，新的取件时间和调整结果都要确认。",
+    "issue_specs": [
+      {
+        "object_name": "抽屉滑出碰撞",
+        "category": "Furniture",
+        "reason": "health or safety issue",
+        "business_process": "product issue",
+        "customer_requests": [
+          "排查抽屉滑出"
+        ],
+        "risk_level": "minor",
+        "risk_rationale": "狭窄走道普通磕碰风险，未陈述承重失效",
+        "quote": "新柜子的抽屉有时滑出来，我经过会磕碰。"
+      },
+      {
+        "object_name": "旧床取件爽约",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "after-sales service",
+        "business_process": "store service issue",
+        "routing_team": "store_operations",
+        "customer_requests": [
+          "核实取件安排"
+        ],
+        "quote": "旧床周六没被取走，占着客厅。"
+      },
+      {
+        "object_name": "发票漏项",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "billing/invoice issue",
+        "business_process": "billing/invoice issue",
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "核对漏开商品"
+        ],
+        "quote": "发票漏了床头柜那项，订单DEMO-P5082。请帮我理一理要怎么处理。"
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F08-M01-3",
+    "scenario_family": "F08-M01",
+    "parent_family": "F08",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "三件事请一起看",
+    "body": "The drawer slides out and I bump into it in the narrow walkway. The old-bed collection booked for Saturday did not happen. The invoice for DEMO-P5083 is also missing the bedside table. Please cover all three.",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明",
+      "customer_goal": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明",
+      "known_facts": [
+        {
+          "quote": "The drawer slides out and I bump into it in the narrow walkway.",
+          "field": "body",
+          "start": 0,
+          "end": 63,
+          "source": "customer_report_not_verified"
+        },
+        {
+          "quote": "The old-bed collection booked for Saturday did not happen.",
+          "field": "body",
+          "start": 64,
+          "end": 122,
+          "source": "customer_report_not_verified"
+        },
+        {
+          "quote": "The invoice for DEMO-P5083 is also missing the bedside table. Please cover all three.",
+          "field": "body",
+          "start": 123,
+          "end": 208,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "抽屉滑出碰撞",
+        "旧床取件爽约",
+        "发票漏项"
+      ],
+      "emotion": {
+        "primary": "frustrated",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "柜子型号、取件预约编号、现有发票信息",
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "risk": "minor"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "保留抽屉、取件、发票三项诉求，业务顺序不是客户同等重要声明；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "柜子型号、取件预约编号、现有发票信息"
+      ],
+      "internal_questions": [
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "frustrated",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "分别核对产品支持、取件履约和发票明细"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "I am sorry all three remain unresolved. Keep the walkway clear of the drawer; the cabinet model will help identify support. The collection reference is needed to check the missed booking, while the existing invoice can be compared with DEMO-P5083 for the missing table. A person needs to coordinate these separate checks and confirm the next steps.",
+    "issue_specs": [
+      {
+        "object_name": "抽屉滑出碰撞",
+        "category": "Furniture",
+        "reason": "health or safety issue",
+        "business_process": "product issue",
+        "customer_requests": [
+          "排查抽屉滑出"
+        ],
+        "risk_level": "minor",
+        "risk_rationale": "狭窄走道普通磕碰风险，未陈述承重失效",
+        "quote": "The drawer slides out and I bump into it in the narrow walkway."
+      },
+      {
+        "object_name": "旧床取件爽约",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "after-sales service",
+        "business_process": "store service issue",
+        "routing_team": "store_operations",
+        "customer_requests": [
+          "核实取件安排"
+        ],
+        "quote": "The old-bed collection booked for Saturday did not happen."
+      },
+      {
+        "object_name": "发票漏项",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "billing/invoice issue",
+        "business_process": "billing/invoice issue",
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "核对漏开商品"
+        ],
+        "quote": "The invoice for DEMO-P5083 is also missing the bedside table. Please cover all three."
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F09-M01-1",
+    "scenario_family": "F09-M01",
+    "parent_family": "F09",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "安装预约又取消了",
+    "body": "安装预约取消了两次，上周请半天假，今天又等到临时通知。每次都说等消息，我真的受够了。能不能有人把能来的时间确认好？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据",
+      "customer_goal": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据",
+      "known_facts": [
+        {
+          "quote": "安装预约取消了两次，上周请半天假，今天又等到临时通知。每次都说等消息，我真的受够了。能不能有人把能来的时间确认好？",
+          "field": "body",
+          "start": 0,
+          "end": 57,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "安装预约连续取消"
+      ],
+      "emotion": {
+        "primary": "愤怒",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "预约编号",
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "预约编号"
+      ],
+      "internal_questions": [
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "愤怒",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "很抱歉两次取消让您请假后仍然白等。接下来需要人工核对取消记录与真正可履行的时段，不能再给一个未经确认的时间。请提供预约编号，以便定位这次服务记录。",
+    "issue_specs": [
+      {
+        "object_name": "安装预约连续取消",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "after-sales service",
+        "business_process": "store service issue",
+        "routing_team": "store_operations",
+        "customer_requests": [
+          "解释重复取消并核实可行时段"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F09-M01-2",
+    "scenario_family": "F09-M01",
+    "parent_family": "F09",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "安装预约又取消了",
+    "body": "家里安装预约两次都被取消。我不是想吵架，只想下次别再白等。DEMO-S5092这个预约麻烦找负责的人看一下。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据",
+      "customer_goal": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据",
+      "known_facts": [
+        {
+          "quote": "家里安装预约两次都被取消。我不是想吵架，只想下次别再白等。DEMO-S5092这个预约麻烦找负责的人看一下。",
+          "field": "body",
+          "start": 0,
+          "end": 54,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "安装预约连续取消"
+      ],
+      "emotion": {
+        "primary": "克制",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "预约编号",
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "预约编号"
+      ],
+      "internal_questions": [
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "克制",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "两次白等打乱了您的安排。DEMO-S5092 需要由负责排期的人员核对取消记录和可履行时段，确认后再决定下一次安排；当前不能保证一个尚未核实的时间。",
+    "issue_specs": [
+      {
+        "object_name": "安装预约连续取消",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "after-sales service",
+        "business_process": "store service issue",
+        "routing_team": "store_operations",
+        "customer_requests": [
+          "解释重复取消并核实可行时段"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F09-M01-3",
+    "scenario_family": "F09-M01",
+    "parent_family": "F09",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "安装预约又取消了",
+    "body": "My installation booking has been cancelled twice. I took time off for the second visit. Please have someone take responsibility for a workable appointment instead of another vague message.",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据",
+      "customer_goal": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据",
+      "known_facts": [
+        {
+          "quote": "My installation booking has been cancelled twice. I took time off for the second visit. Please have someone take responsibility for a workable appointment instead of another vague message.",
+          "field": "body",
+          "start": 0,
+          "end": 188,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "安装预约连续取消"
+      ],
+      "emotion": {
+        "primary": "angry",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "预约编号",
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "反复履约失败需人工核实可履行安排；生气本身不是唯一转交依据；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "预约编号"
+      ],
+      "internal_questions": [
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "angry",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "两次取消记录、可确认的排期及负责人员"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "I am sorry the repeated cancellations wasted your time off. A person responsible for scheduling needs to check both cancellations and a slot that can actually be fulfilled. Please share the booking reference; another unverified appointment would not be helpful.",
+    "issue_specs": [
+      {
+        "object_name": "安装预约连续取消",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "after-sales service",
+        "business_process": "store service issue",
+        "routing_team": "store_operations",
+        "customer_requests": [
+          "解释重复取消并核实可行时段"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F10-M01-1",
+    "scenario_family": "F10-M01",
+    "parent_family": "F10",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "请人工看一下",
+    "body": "麻烦转人工客服，我想有人把前面那几封邮件看完，再告诉我还缺什么。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "尊重明确人工请求，本地待办不冒充已接通真人",
+      "customer_goal": "尊重明确人工请求，本地待办不冒充已接通真人",
+      "known_facts": [
+        {
+          "quote": "麻烦转人工客服，我想有人把前面那几封邮件看完，再告诉我还缺什么。",
+          "field": "body",
+          "start": 0,
+          "end": 32,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "人工客服请求"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "尊重明确人工请求，本地待办不冒充已接通真人；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "可以由人工接着核对前面的沟通和仍缺的资料，避免再让您从头整理。当前需要客服人员接管处理。",
+    "issue_specs": [
+      {
+        "object_name": "人工客服请求",
+        "object_type": "service",
+        "category": "Service/Other",
+        "complaint": false,
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "由人工阅读已有沟通"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F10-M01-2",
+    "scenario_family": "F10-M01",
+    "parent_family": "F10",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "请人工看一下",
+    "body": "别再给我自动回复了，我要人工客服。前面已经说得很清楚，还是没人看。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "尊重明确人工请求，本地待办不冒充已接通真人",
+      "customer_goal": "尊重明确人工请求，本地待办不冒充已接通真人",
+      "known_facts": [
+        {
+          "quote": "别再给我自动回复了，我要人工客服。前面已经说得很清楚，还是没人看。",
+          "field": "body",
+          "start": 0,
+          "end": 33,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "人工客服请求"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "尊重明确人工请求，本地待办不冒充已接通真人；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "抱歉之前的回复没有帮到您。您希望人工阅读原有沟通，这次应先由客服人员接管，再核对未解决的问题。",
+    "issue_specs": [
+      {
+        "object_name": "人工客服请求",
+        "object_type": "service",
+        "category": "Service/Other",
+        "complaint": false,
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "由人工阅读已有沟通"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F10-M01-3",
+    "scenario_family": "F10-M01",
+    "parent_family": "F10",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "请人工看一下",
+    "body": "Please let me speak with a human agent. I need someone to read the previous messages rather than send the same automated explanation.",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "尊重明确人工请求，本地待办不冒充已接通真人",
+      "customer_goal": "尊重明确人工请求，本地待办不冒充已接通真人",
+      "known_facts": [
+        {
+          "quote": "Please let me speak with a human agent. I need someone to read the previous messages rather than send the same automated explanation.",
+          "field": "body",
+          "start": 0,
+          "end": 133,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "人工客服请求"
+      ],
+      "emotion": {
+        "primary": "frustrated",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "HANDOFF",
+      "reason": "尊重明确人工请求，本地待办不冒充已接通真人；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "frustrated",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "HANDOFF",
+        "当前线程及已有服务记录由操作者接管阅读"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "I am sorry the repeated explanation has not helped. A person needs to take over and review the existing conversation before deciding what is still required.",
+    "issue_specs": [
+      {
+        "object_name": "人工客服请求",
+        "object_type": "service",
+        "category": "Service/Other",
+        "complaint": false,
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "由人工阅读已有沟通"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F10-M02-1",
+    "scenario_family": "F10-M02",
+    "parent_family": "F10",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "先不用转人工",
+    "body": "先不用转人工客服，我只是想知道C200接电脑开会走哪个接口。你能解释清楚就行。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "明确否定转人工不触发接管，规格不足只请求内部知识核实",
+      "customer_goal": "明确否定转人工不触发接管，规格不足只请求内部知识核实",
+      "known_facts": [
+        {
+          "quote": "先不用转人工客服，我只是想知道C200接电脑开会走哪个接口。你能解释清楚就行。",
+          "field": "body",
+          "start": 0,
+          "end": 39,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "明确否定转人工不触发接管，规格不足只请求内部知识核实；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "C200 的会议连接接口需要对照有效规格确认，不能仅从接口名称判断。该问题应先由商品资料人员核实协议与配件要求，再给出准确解释。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F10-M02-2",
+    "scenario_family": "F10-M02",
+    "parent_family": "F10",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "先不用转人工",
+    "body": "不要转人工，我现在在路上不方便等。C200到底能不能一根线连电脑？先把你们知道的说清楚。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "明确否定转人工不触发接管，规格不足只请求内部知识核实",
+      "customer_goal": "明确否定转人工不触发接管，规格不足只请求内部知识核实",
+      "known_facts": [
+        {
+          "quote": "不要转人工，我现在在路上不方便等。C200到底能不能一根线连电脑？先把你们知道的说清楚。",
+          "field": "body",
+          "start": 0,
+          "end": 44,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "急切",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "明确否定转人工不触发接管，规格不足只请求内部知识核实；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "急切",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "目前还缺少可核实的 C200 连接规格，一根线能否用于电脑会议不能确定。商品资料中的接口协议和所需设备需要内部核实，确认之前建议暂缓购买转接配件。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F10-M02-3",
+    "scenario_family": "F10-M02",
+    "parent_family": "F10",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "先不用转人工",
+    "body": "我不需要人工客服，只想分清C200的USB是传照片还是开会用。页面看不明白。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "明确否定转人工不触发接管，规格不足只请求内部知识核实",
+      "customer_goal": "明确否定转人工不触发接管，规格不足只请求内部知识核实",
+      "known_facts": [
+        {
+          "quote": "我不需要人工客服，只想分清C200的USB是传照片还是开会用。页面看不明白。",
+          "field": "body",
+          "start": 0,
+          "end": 38,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "困惑",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "明确否定转人工不触发接管，规格不足只请求内部知识核实；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "困惑",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "商品资料核实C200会议连接方式；不因否定句自动接管"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "传照片和会议摄像头是不同功能，不能由“USB接口”推断两者都支持。C200 的具体协议需要商品资料核实后才能说明，您不用为了这个问题另找商家手册。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F11-M01-1",
+    "scenario_family": "F11-M01",
+    "parent_family": "F11",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "补充相机型号",
+    "body": "补充一下上一封，盒子上写的是DemoCam C200。想接电脑视频会议就是这台，不是别的型号。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "第二轮型号已补充，保留上下文但不循环索要型号",
+      "customer_goal": "第二轮型号已补充，保留上下文但不循环索要型号",
+      "known_facts": [
+        {
+          "quote": "补充一下上一封，盒子上写的是DemoCam C200。想接电脑视频会议就是这台，不是别的型号。",
+          "field": "body",
+          "start": 0,
+          "end": 47,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "平静",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "第二轮型号已补充，保留上下文但不循环索要型号；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "平静",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "DemoCam C200 能否直接用于电脑视频会议，仍需商家核对该型号的连接协议和配件要求。下一步是核实规格，您暂时不用购买转接设备。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F11-M01-2",
+    "scenario_family": "F11-M01",
+    "parent_family": "F11",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "补充相机型号",
+    "body": "刚才让我看型号，我找到了，就是C200。现在总能说清楚怎么接了吧？",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "第二轮型号已补充，保留上下文但不循环索要型号",
+      "customer_goal": "第二轮型号已补充，保留上下文但不循环索要型号",
+      "known_facts": [
+        {
+          "quote": "刚才让我看型号，我找到了，就是C200。现在总能说清楚怎么接了吧？",
+          "field": "body",
+          "start": 0,
+          "end": 33,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "不耐烦",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "第二轮型号已补充，保留上下文但不循环索要型号；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不耐烦",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "谢谢您补充型号。C200 的具体连接协议还需要商品资料核实，不能只根据型号保证能当会议摄像头。确认接口与所需设备后，才能给出可靠的接法建议。",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F11-M01-3",
+    "scenario_family": "F11-M01",
+    "parent_family": "F11",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "补充相机型号",
+    "body": "Following up: the label says DemoCam C200. That is the camera I want to connect to my computer for meetings. What is the next step?",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [
+      "PRD-01@DRAFT-v1"
+    ],
+    "understanding": {
+      "summary": "第二轮型号已补充，保留上下文但不循环索要型号",
+      "customer_goal": "第二轮型号已补充，保留上下文但不循环索要型号",
+      "known_facts": [
+        {
+          "quote": "Following up: the label says DemoCam C200. That is the camera I want to connect to my computer for meetings. What is the next step?",
+          "field": "body",
+          "start": 0,
+          "end": 131,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "DemoCam C200"
+      ],
+      "emotion": {
+        "primary": "practical",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "第二轮型号已补充，保留上下文但不循环索要型号；知识与处理权限须独立核实。",
+      "customer_questions": [],
+      "internal_questions": [
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "practical",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "C200连接规格与电脑会议适用方式"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "The next step is for the product team to verify the C200 connection protocol and any equipment needed for computer meetings. The model name identifies the right specification to check, but does not by itself establish webcam support.",
+    "issue_specs": [
+      {
+        "object_name": "DemoCam C200",
+        "complaint": false,
+        "customer_requests": [
+          "核实有线视频会议连接方式"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F12-M02-1",
+    "scenario_family": "F12-M02",
+    "parent_family": "F12",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "机器没坏，收费不明白",
+    "body": "机器没坏，我说的是安装费。下单时没看到这笔，上门又收了一次，收据上也没写清楚，麻烦解释一下。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "否认商品坏不抹除收费投诉，不转成维修预约",
+      "customer_goal": "否认商品坏不抹除收费投诉，不转成维修预约",
+      "known_facts": [
+        {
+          "quote": "机器没坏，我说的是安装费。下单时没看到这笔，上门又收了一次，收据上也没写清楚，麻烦解释一下。",
+          "field": "body",
+          "start": 0,
+          "end": 46,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "安装收费争议"
+      ],
+      "emotion": {
+        "primary": "不满",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号及收费凭证或项目名称",
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "否认商品坏不抹除收费投诉，不转成维修预约；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号及收费凭证或项目名称"
+      ],
+      "internal_questions": [
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "不满",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "您要核对的是安装收费。请提供订单号及现有收费凭证或项目名称，便于与下单报价、上门项目对应；这笔费用的依据需要负责收费的人员核实说明。",
+    "issue_specs": [
+      {
+        "object_name": "安装收费争议",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "billing/invoice issue",
+        "business_process": "billing/invoice issue",
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "核实安装收费项目与依据"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F12-M02-2",
+    "scenario_family": "F12-M02",
+    "parent_family": "F12",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "zh",
+    "subject": "机器没坏，收费不明白",
+    "body": "产品正常，别又给我安排维修。我只是想知道为什么安装时多收了钱，页面价格和收据对不上。",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "否认商品坏不抹除收费投诉，不转成维修预约",
+      "customer_goal": "否认商品坏不抹除收费投诉，不转成维修预约",
+      "known_facts": [
+        {
+          "quote": "产品正常，别又给我安排维修。我只是想知道为什么安装时多收了钱，页面价格和收据对不上。",
+          "field": "body",
+          "start": 0,
+          "end": 42,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "安装收费争议"
+      ],
+      "emotion": {
+        "primary": "生气",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号及收费凭证或项目名称",
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "否认商品坏不抹除收费投诉，不转成维修预约；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号及收费凭证或项目名称"
+      ],
+      "internal_questions": [
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "生气",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "zh"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "这次应核对价格和安装收费，不需要按故障去安排维修。订单号及页面价格、现有收据可用于比对具体差额，收费项目和依据需要内部核实。",
+    "issue_specs": [
+      {
+        "object_name": "安装收费争议",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "billing/invoice issue",
+        "business_process": "billing/invoice issue",
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "核实安装收费项目与依据"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  },
+  {
+    "case_id": "P5A-F12-M02-3",
+    "scenario_family": "F12-M02",
+    "parent_family": "F12",
+    "split": "DEV",
+    "stage": "DEVELOPMENT_CANDIDATE",
+    "source_kind": "CODEX_ORIGINAL_SYNTHETIC_DEV",
+    "author": "development_agent",
+    "generation_run": null,
+    "model_call_count": 0,
+    "language": "en",
+    "subject": "机器没坏，收费不明白",
+    "body": "The machine is working. My complaint is the extra installation charge, which does not match the amount on the order page. Please explain that charge.",
+    "knowledge_snapshot_id": "p5a-knowledge-owner-pending-v1",
+    "knowledge_refs": [],
+    "understanding": {
+      "summary": "否认商品坏不抹除收费投诉，不转成维修预约",
+      "customer_goal": "否认商品坏不抹除收费投诉，不转成维修预约",
+      "known_facts": [
+        {
+          "quote": "The machine is working. My complaint is the extra installation charge, which does not match the amount on the order page. Please explain that charge.",
+          "field": "body",
+          "start": 0,
+          "end": 149,
+          "source": "customer_report_not_verified"
+        }
+      ],
+      "issues": [
+        "安装收费争议"
+      ],
+      "emotion": {
+        "primary": "firm",
+        "intensity": "unknown",
+        "source": "developer_intended_variant_not_independent_annotation"
+      },
+      "unknowns": [
+        "订单号及收费凭证或项目名称",
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "risk": "none"
+    },
+    "policy_decision": {
+      "action": "ASK_HUMAN_INPUT",
+      "reason": "否认商品坏不抹除收费投诉，不转成维修预约；知识与处理权限须独立核实。",
+      "customer_questions": [
+        "订单号及收费凭证或项目名称"
+      ],
+      "internal_questions": [
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "allowed_actions": [
+        "draft",
+        "local_review",
+        "local_handoff_request",
+        "local_knowledge_task"
+      ],
+      "forbidden_actions": [
+        "real_send",
+        "refund_execution",
+        "ship_execution",
+        "promise_deadline"
+      ],
+      "merchant_approval": "OWNER_PENDING",
+      "external_execution": false
+    },
+    "reply_plan": {
+      "tone_plan": {
+        "observed": "firm",
+        "intent": "直接回应目标，具体说明下一步；不朗读内部去重规则；情绪不改变安全和权限。",
+        "language": "en"
+      },
+      "next_actions": [
+        "ASK_HUMAN_INPUT",
+        "约定报价、实际收费项目及解释权限"
+      ],
+      "customer_information_owner": "客户只补自己掌握的事实",
+      "merchant_information_owner": "商家核实规格、履约、规则和权限"
+    },
+    "customer_reply": "The issue to review is the installation charge. Please share the order reference and the existing receipt or charge description so it can be compared with the quoted amount. The billing team needs to verify the basis for the difference.",
+    "issue_specs": [
+      {
+        "object_name": "安装收费争议",
+        "object_type": "service",
+        "category": "Service/Other",
+        "reason": "billing/invoice issue",
+        "business_process": "billing/invoice issue",
+        "routing_team": "customer_support",
+        "customer_requests": [
+          "核实安装收费项目与依据"
+        ]
+      }
+    ],
+    "evaluation": {
+      "identity": "DEV_DIAGNOSTIC_ONLY",
+      "naturalness_human": null,
+      "usefulness_human": null,
+      "independent_gold": null,
+      "owner_signoff": null,
+      "quality_improvement_claim": false
+    }
+  }
+]

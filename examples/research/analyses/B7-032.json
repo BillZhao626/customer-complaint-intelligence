@@ -1,0 +1,71 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "Can you let me know what I can do about getting the right size?",
+      "Thanks."
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "the person there told me they couldn't help me that day",
+      "Can you let me know what I can do about getting the right size?"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "Wenzhou Lucheng store",
+    "issues": [
+      {
+        "issue_id": "B7-032-1",
+        "object_type": "product",
+        "object_name": "linen shirt",
+        "category": "Clothing",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Get the right size shirt"
+        ],
+        "evidence": [
+          "when I got home I saw it's the wrong size",
+          "I checked the label against the hanger and it doesn't match what I asked for"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-032-2",
+        "object_type": "service",
+        "object_name": "Wenzhou Lucheng store staff",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "Assistance with exchanging for the correct size"
+        ],
+        "evidence": [
+          "I went back to the store once already but the person there told me they couldn't help me that day"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the customer seeks exchange or refund is not explicitly stated",
+      "Whether the store's inability to help was a one-day limitation or refusal is unclear"
+    ]
+  },
+  "call": {
+    "run_id": "96763b1e-ece5-49a9-aec1-b4be77f11e0f",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:06:49.024424+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

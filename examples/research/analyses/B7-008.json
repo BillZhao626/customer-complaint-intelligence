@@ -1,0 +1,49 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "我想表扬一下朝阳门店的会员服务",
+      "店员特别耐心",
+      "回复也很快",
+      "整体感觉挺舒服的",
+      "谢谢你们，希望继续保持"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "朝阳门店",
+    "issues": [
+      {
+        "issue_id": "B7-008-1",
+        "object_type": "service",
+        "object_name": "朝阳门店会员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [],
+        "evidence": [
+          "我想表扬一下朝阳门店的会员服务",
+          "店员特别耐心，帮我对比了好几种方案，也没有硬推贵的",
+          "后来我有点问题在微信上问，回复也很快",
+          "整体感觉挺舒服的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "f384ea3f-371a-4b9c-8335-41c8aec55cc5",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:44.330447+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

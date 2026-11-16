@@ -1,0 +1,441 @@
+{
+  "B7-009": {
+    "email": {
+      "email_id": "B7-009",
+      "subject": "Thanks for the help with my headphones",
+      "body": "Hi there,\n\nI just wanted to write in about the service I got at your West Lake store last weekend. I'd been having trouble with a pair of wireless headphones I bought a few months back — they kept cutting out on one side — and honestly I went in expecting a hassle.\n\nThe person who helped me (I'm sorry, I didn't catch his name, but he was working the electronics counter on Saturday afternoon) took the time to actually listen to what was going wrong. He tried them himself, asked a couple of questions about when it happened, and then walked me through what my options were without any pressure. He even showed me how to reset them properly, which I hadn't known about.\n\nIt's a small thing, but it made a difference to me. I've been back to using them all week and so far so good. Please pass along my thanks if you can.\n\nBest,\nDaniel"
+    },
+    "analysis": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "positive",
+      "expressed_evidence": [
+        "It's a small thing, but it made a difference to me.",
+        "Please pass along my thanks if you can."
+      ],
+      "experience_polarity": "positive",
+      "complaint_intent": "no",
+      "complaint_evidence": [],
+      "urgency": "low",
+      "urgency_evidence": [],
+      "mentioned_store": "West Lake store",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "wireless headphones",
+          "category": "Electronics",
+          "sentiment": "neutral",
+          "experience_polarity": "negative",
+          "issue_kind": "complaint",
+          "business_process": "product issue",
+          "customer_requests": [],
+          "evidence": [
+            "they kept cutting out on one side"
+          ],
+          "risk": "minor",
+          "urgency": "low",
+          "resolution": "resolved"
+        },
+        {
+          "issue_id": "I2",
+          "object_type": "service",
+          "object_name": "electronics counter service at West Lake store",
+          "category": "Service/Other",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "store service issue",
+          "customer_requests": [
+            "Please pass along my thanks if you can."
+          ],
+          "evidence": [
+            "took the time to actually listen to what was going wrong",
+            "walked me through what my options were without any pressure",
+            "showed me how to reset them properly"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "resolved"
+        }
+      ],
+      "uncertainty": [
+        "The customer did not name the employee, so the specific staff member cannot be identified.",
+        "It is unclear whether the reset fully resolved the headphone fault or only appeared to so far."
+      ]
+    },
+    "input_hash": "ac9c287d20e15068b9828e5e6b9ff935b5c980947759bd20feffa2038adf4635",
+    "source": ".local\\p5b8r6-20261104\\traces\\DEV-v2-B7-009",
+    "identity": "HISTORICAL_SYNTHETIC_DEV_FIXTURE_NOT_GOLD"
+  },
+  "B7-035": {
+    "email": {
+      "email_id": "B7-035",
+      "subject": "Order arrived damaged - tea gift box",
+      "body": "Hi, I ordered a tea gift box from your Beijing Chaoyang store last week and it arrived today. The outer box was fine but when I opened it, the gift box inside was crushed on one corner and a couple of the tea tins were dented. This was supposed to be a gift for a friend's birthday this weekend, so I'm pretty disappointed. I already called the store earlier and the person I spoke to said to email with photos, so I've attached a few. I'd really like to get this sorted before Saturday if possible. Thanks."
+    },
+    "analysis": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "negative",
+      "expressed_evidence": [
+        "I'm pretty disappointed"
+      ],
+      "experience_polarity": "negative",
+      "complaint_intent": "yes",
+      "complaint_evidence": [
+        "the gift box inside was crushed on one corner and a couple of the tea tins were dented",
+        "I'm pretty disappointed",
+        "I'd really like to get this sorted before Saturday if possible"
+      ],
+      "urgency": "high",
+      "urgency_evidence": [
+        "supposed to be a gift for a friend's birthday this weekend",
+        "before Saturday if possible"
+      ],
+      "mentioned_store": "Beijing Chaoyang store",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "tea gift box",
+          "category": "Food/Beverage",
+          "sentiment": "negative",
+          "experience_polarity": "negative",
+          "issue_kind": "complaint",
+          "business_process": "product issue",
+          "customer_requests": [
+            "sort out the damaged gift box before Saturday",
+            "review the attached photos"
+          ],
+          "evidence": [
+            "the gift box inside was crushed on one corner and a couple of the tea tins were dented",
+            "I've attached a few"
+          ],
+          "risk": "minor",
+          "urgency": "high",
+          "resolution": "unresolved"
+        }
+      ],
+      "uncertainty": [
+        "Cause of the damage (packaging vs. transit) is not established; only the reported outcome is known.",
+        "Whether the store's phone instruction to email photos constitutes a resolution is unclear."
+      ]
+    },
+    "input_hash": "bf0ddc7d6d161dad1e87a8ca6c3f075b7ae201c49ba0c178d47eec607feeffc6",
+    "source": ".local\\p5b8r6-20261104\\traces\\DEV-v2-B7-035",
+    "identity": "HISTORICAL_SYNTHETIC_DEV_FIXTURE_NOT_GOLD"
+  },
+  "B7-036": {
+    "email": {
+      "email_id": "B7-036",
+      "subject": "咖啡机送到时外箱破损，机器也有磕碰",
+      "body": "你好，\n\n我上周在宁波天一店订了一台咖啡机，今天上午收到的。快递员送来的时候外箱侧面有一道挺长的裂口，当时我急着出门就签收了，没让他等。\n\n下午拆开看，机器右下角有一块明显的磕痕，漆面掉了一点。我拍了照片，需要的话可以发给你们。\n\n这台是打算放家里用的，现在这样我不太放心直接通电试。想问问这种情况一般怎么处理，是换一台还是怎么弄？麻烦回复一下，谢谢。\n\n另外提一句，外箱裂口的位置正好在机器那一侧，感觉运输途中可能被压过。"
+    },
+    "analysis": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "neutral",
+      "expressed_evidence": [
+        "想问问这种情况一般怎么处理",
+        "麻烦回复一下，谢谢"
+      ],
+      "experience_polarity": "negative",
+      "complaint_intent": "uncertain",
+      "complaint_evidence": [
+        "外箱侧面有一道挺长的裂口",
+        "机器右下角有一块明显的磕痕，漆面掉了一点",
+        "现在这样我不太放心直接通电试"
+      ],
+      "urgency": "medium",
+      "urgency_evidence": [
+        "今天上午收到的",
+        "下午拆开看",
+        "现在这样我不太放心直接通电试"
+      ],
+      "mentioned_store": "宁波天一店",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "咖啡机",
+          "category": "Home Appliances",
+          "sentiment": "neutral",
+          "experience_polarity": "negative",
+          "issue_kind": "complaint",
+          "business_process": "product issue",
+          "customer_requests": [
+            "询问这种情况一般怎么处理，是换一台还是怎么弄",
+            "麻烦回复一下"
+          ],
+          "evidence": [
+            "外箱侧面有一道挺长的裂口",
+            "机器右下角有一块明显的磕痕，漆面掉了一点",
+            "现在这样我不太放心直接通电试",
+            "是换一台还是怎么弄"
+          ],
+          "risk": "minor",
+          "urgency": "medium",
+          "resolution": "unresolved"
+        }
+      ],
+      "uncertainty": [
+        "无法确认磕碰是否由运输造成，客户仅为推测",
+        "未说明具体希望换货还是其他处理方式，仅询问一般处理流程"
+      ]
+    },
+    "input_hash": "b69bde52b51318549cb61dcf3adc1e15d4ecc2ae7eb6bedd4b8221dc76538a6d",
+    "source": ".local\\p5b8r6-20261104\\traces\\DEV-v2-B7-036",
+    "identity": "HISTORICAL_SYNTHETIC_DEV_FIXTURE_NOT_GOLD"
+  },
+  "B7-084": {
+    "email": {
+      "email_id": "B7-084",
+      "subject": "咖啡机使用感受及一点疑问",
+      "body": "您好，\n\n上个月在宁波天一店买了一台咖啡机，整体用下来挺满意的，出咖啡的速度和口感都不错，家里人都觉得买得值。店员当时介绍得也很耐心，这点想特别说声谢谢。\n\n不过有个小问题一直没解决：机器用了一段时间后，水箱那里偶尔会渗一点水出来，量不大，但每次都要擦一下。我按照说明书重新装过水箱，也清洗过密封的位置，情况好了一些，但还是偶尔会出现。\n\n想问问这种情况一般是什么原因，需不需要拿过去看一下？不着急，方便的时候回复我就行。\n\n谢谢！"
+    },
+    "analysis": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "mixed",
+      "expressed_evidence": [
+        "整体用下来挺满意的",
+        "出咖啡的速度和口感都不错",
+        "店员当时介绍得也很耐心，这点想特别说声谢谢",
+        "不过有个小问题一直没解决"
+      ],
+      "experience_polarity": "mixed",
+      "complaint_intent": "uncertain",
+      "complaint_evidence": [
+        "有个小问题一直没解决",
+        "水箱那里偶尔会渗一点水出来"
+      ],
+      "urgency": "low",
+      "urgency_evidence": [
+        "不着急，方便的时候回复我就行"
+      ],
+      "mentioned_store": "宁波天一店",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "咖啡机",
+          "category": "Home Appliances",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "product issue",
+          "customer_requests": [],
+          "evidence": [
+            "整体用下来挺满意的",
+            "出咖啡的速度和口感都不错"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "not_applicable"
+        },
+        {
+          "issue_id": "I2",
+          "object_type": "service",
+          "object_name": "店员介绍服务",
+          "category": "Service/Other",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "store service issue",
+          "customer_requests": [],
+          "evidence": [
+            "店员当时介绍得也很耐心，这点想特别说声谢谢"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "not_applicable"
+        },
+        {
+          "issue_id": "I3",
+          "object_type": "product",
+          "object_name": "咖啡机水箱",
+          "category": "Home Appliances",
+          "sentiment": "neutral",
+          "experience_polarity": "negative",
+          "issue_kind": "inquiry",
+          "business_process": "product issue",
+          "customer_requests": [
+            "询问水箱渗水的一般原因",
+            "询问是否需要拿过去检查"
+          ],
+          "evidence": [
+            "水箱那里偶尔会渗一点水出来",
+            "想问问这种情况一般是什么原因，需不需要拿过去看一下？"
+          ],
+          "risk": "minor",
+          "urgency": "low",
+          "resolution": "unresolved"
+        }
+      ],
+      "uncertainty": [
+        "The cause of the water seepage is not stated; only the customer's observation is reported.",
+        "Whether the issue requires inspection or repair is unclear from the email."
+      ]
+    },
+    "input_hash": "46d16ed93aeb5436271ed31065c384d5bffa1e2647cfcade5967d99b51261483",
+    "source": ".local\\p5b8r6-20261104\\traces\\DEV-v2-B7-084",
+    "identity": "HISTORICAL_SYNTHETIC_DEV_FIXTURE_NOT_GOLD"
+  },
+  "B7-085": {
+    "email": {
+      "email_id": "B7-085",
+      "subject": "Question about my receipt from the Nanshan store",
+      "body": "Hi there,\n\nI stopped by the Shenzhen Nanshan store last weekend and picked up a jar of face cream. The staff member who helped me was genuinely lovely — she took the time to walk me through the different options and didn't rush me at all, which I appreciated.\n\nWhen I looked at my receipt afterwards, though, I noticed a line for a service charge that I hadn't expected. It's not a huge amount, but I honestly don't remember anyone mentioning it at the counter, so I wanted to ask what it's for. Was it something I agreed to without realizing?\n\nI'm not trying to make a fuss — the cream itself has been great so far — I'd just like to understand the charge before I come back.\n\nThanks,\nJamie"
+    },
+    "analysis": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "mixed",
+      "expressed_evidence": [
+        "The staff member who helped me was genuinely lovely",
+        "which I appreciated",
+        "the cream itself has been great so far",
+        "I honestly don't remember anyone mentioning it at the counter"
+      ],
+      "experience_polarity": "mixed",
+      "complaint_intent": "uncertain",
+      "complaint_evidence": [
+        "I noticed a line for a service charge that I hadn't expected",
+        "I wanted to ask what it's for",
+        "I'm not trying to make a fuss"
+      ],
+      "urgency": "low",
+      "urgency_evidence": [
+        "I'd just like to understand the charge before I come back"
+      ],
+      "mentioned_store": "Shenzhen Nanshan store",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "service",
+          "object_name": "service charge on receipt",
+          "category": "Beauty/Personal Care",
+          "sentiment": "negative",
+          "experience_polarity": "negative",
+          "issue_kind": "inquiry",
+          "business_process": "billing/invoice issue",
+          "customer_requests": [
+            "Explain what the service charge is for",
+            "Clarify whether the charge was agreed to at the counter"
+          ],
+          "evidence": [
+            "I noticed a line for a service charge that I hadn't expected",
+            "I wanted to ask what it's for",
+            "I honestly don't remember anyone mentioning it at the counter"
+          ],
+          "risk": "minor",
+          "urgency": "low",
+          "resolution": "unresolved"
+        },
+        {
+          "issue_id": "I2",
+          "object_type": "service",
+          "object_name": "in-store staff assistance",
+          "category": "Beauty/Personal Care",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "store service issue",
+          "customer_requests": [],
+          "evidence": [
+            "The staff member who helped me was genuinely lovely",
+            "she took the time to walk me through the different options and didn't rush me at all"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "not_applicable"
+        },
+        {
+          "issue_id": "I3",
+          "object_type": "product",
+          "object_name": "face cream",
+          "category": "Beauty/Personal Care",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "none",
+          "customer_requests": [],
+          "evidence": [
+            "the cream itself has been great so far"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "not_applicable"
+        }
+      ],
+      "uncertainty": [
+        "The nature and legitimacy of the service charge is unclear from the email; it may be a standard fee or an error.",
+        "It is uncertain whether the customer agreed to the charge at the counter."
+      ]
+    },
+    "input_hash": "c326d3313eb5bfa6c660ce3fa6f1a59734c213f98fb19f98b92ed7e2d2db5ca0",
+    "source": ".local\\p5b8r6-20261104\\traces\\DEV-v2-B7-085",
+    "identity": "HISTORICAL_SYNTHETIC_DEV_FIXTURE_NOT_GOLD"
+  },
+  "B7-010": {
+    "email": {
+      "email_id": "B7-010",
+      "subject": "表扬浦东店员工",
+      "body": "上周在浦东店买了一把办公椅，当时一位店员帮我试了好几款，还耐心解释了不同靠背的区别。回家用了几天，坐着确实舒服。麻烦转告一下我的谢意。"
+    },
+    "analysis": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "positive",
+      "expressed_evidence": [
+        "当时一位店员帮我试了好几款，还耐心解释了不同靠背的区别",
+        "坐着确实舒服",
+        "麻烦转告一下我的谢意"
+      ],
+      "experience_polarity": "positive",
+      "complaint_intent": "no",
+      "complaint_evidence": [],
+      "urgency": "low",
+      "urgency_evidence": [],
+      "mentioned_store": "浦东店",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "service",
+          "object_name": "浦东店店员服务",
+          "category": "Service/Other",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "store service issue",
+          "customer_requests": [
+            "转告对店员的谢意"
+          ],
+          "evidence": [
+            "一位店员帮我试了好几款，还耐心解释了不同靠背的区别",
+            "麻烦转告一下我的谢意"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "not_applicable"
+        },
+        {
+          "issue_id": "I2",
+          "object_type": "product",
+          "object_name": "办公椅",
+          "category": "Furniture",
+          "sentiment": "positive",
+          "experience_polarity": "positive",
+          "issue_kind": "praise",
+          "business_process": "product issue",
+          "customer_requests": [],
+          "evidence": [
+            "回家用了几天，坐着确实舒服"
+          ],
+          "risk": "none",
+          "urgency": "low",
+          "resolution": "not_applicable"
+        }
+      ],
+      "uncertainty": []
+    },
+    "input_hash": "f0031eab3a50b00c5f2c1b6afe6415eb0b7e615295a913f65a900aa3e63ce487",
+    "source": ".local/p5b8r6-20261104/traces/DEV-v2-B7-010",
+    "identity": "HISTORICAL_SYNTHETIC_DEV_FIXTURE_NOT_GOLD"
+  }
+}

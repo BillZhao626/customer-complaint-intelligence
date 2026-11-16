@@ -1,0 +1,52 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "因为跑了一趟没办成事，心里有点不太舒服"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "因为跑了一趟没办成事，心里有点不太舒服"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "南山店",
+    "issues": [
+      {
+        "issue_id": "B7-083-1",
+        "object_type": "service",
+        "object_name": "南山店",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "确认南山店是否还在营业",
+          "告知南山店的具体位置/怎么走"
+        ],
+        "evidence": [
+          "好像没找到，不知道是不是搬了还是我记错了位置",
+          "因为跑了一趟没办成事，心里有点不太舒服",
+          "想跟你们确认一下这家店现在还在不在、具体怎么走"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "门店是否搬迁或关闭未确认，仅为客户推测",
+      "客户对会员卡在南山店的可用性未明确询问，仅提及办卡时称可在门店使用"
+    ]
+  },
+  "call": {
+    "run_id": "616d0283-126d-490b-ba70-b6f79aaba8c3",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:13:24.791502+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

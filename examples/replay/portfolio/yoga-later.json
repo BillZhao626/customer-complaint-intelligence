@@ -1,0 +1,1196 @@
+{
+  "email": {
+    "email_id": "R7H-047",
+    "subject": "Request for help",
+    "body": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+  },
+  "analysis": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "has a strong smell and made the room uncomfortable"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "has a strong smell and made the room uncomfortable",
+      "I stopped using it"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "I1",
+        "object_type": "product",
+        "object_name": "yoga mat",
+        "category": "Sports/Outdoor",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "check material and care information",
+          "a way to assess the concern, not a diagnosis"
+        ],
+        "evidence": [
+          "The new yoga mat has a strong smell and made the room uncomfortable.",
+          "I stopped using it.",
+          "Can you check material and care information?"
+        ],
+        "risk": "unknown",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "No store or order details are provided, so the purchase channel is unknown.",
+      "The customer asks for material and care information but does not explicitly request a return, exchange, or refund."
+    ]
+  },
+  "analysis_call": {
+    "identity": "R11-0681",
+    "run_id": "126bc663-eee9-4ace-a758-9ad582b54041",
+    "request_hash": "b44182e5a1bfadc48bc3cd8869bcb7c19ddb52301daf4324e63d74be8eca00a3",
+    "raw": "{\"version\": \"p5b8-calibration-1\", \"uncertainty\": [\"No store or order details are provided, so the purchase channel is unknown.\", \"The customer asks for material and care information but does not explicitly request a return, exchange, or refund.\"], \"expressed_sentiment\": \"negative\", \"expressed_evidence\": [\"has a strong smell and made the room uncomfortable\"], \"experience_polarity\": \"negative\", \"complaint_intent\": \"yes\", \"complaint_evidence\": [\"has a strong smell and made the room uncomfortable\", \"I stopped using it\"], \"urgency\": \"low\", \"urgency_evidence\": [], \"mentioned_store\": null, \"issues\": [{\"issue_id\": \"I1\", \"object_type\": \"product\", \"object_name\": \"yoga mat\", \"category\": \"Sports/Outdoor\", \"sentiment\": \"negative\", \"experience_polarity\": \"negative\", \"issue_kind\": \"complaint\", \"business_process\": \"product issue\", \"customer_requests\": [\"check material and care information\", \"a way to assess the concern, not a diagnosis\"], \"evidence\": [\"The new yoga mat has a strong smell and made the room uncomfortable.\", \"I stopped using it.\", \"Can you check material and care information?\"], \"risk\": \"unknown\", \"urgency\": \"low\", \"resolution\": \"unresolved\"}]}",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "model_snapshot": "unavailable",
+      "provider_response_id": "f8e34404-59f2-4de2-aa55-5a7044469dcc",
+      "response_id": "lc_run--01a1bffb-10c3-7890-99af-e8bdc012c870-0",
+      "finish_reason": "stop",
+      "input_tokens": 1921,
+      "output_tokens": 291,
+      "total_tokens": 2212,
+      "usage": {
+        "input_tokens": 1921,
+        "output_tokens": 291,
+        "total_tokens": 2212,
+        "input_token_details": {
+          "cache_read": 1787
+        },
+        "output_token_details": {}
+      },
+      "token_usage": {
+        "completion_tokens": 291,
+        "prompt_tokens": 1921,
+        "total_tokens": 2212,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1787
+        },
+        "prompt_cache_hit_tokens": 1787,
+        "prompt_cache_miss_tokens": 134
+      },
+      "payload_sha256": "287e0151165744759a1fafd80d730b0475b0807ea7c1a9005dbeb6816c47ee51",
+      "dispatch_at": "2026-11-09T11:04:24.522163+00:00"
+    },
+    "elapsed_ms": 5265.050999994855,
+    "mode": "LIVE"
+  },
+  "analysis_parse": {
+    "status": "accepted",
+    "value": {
+      "version": "p5b8-calibration-1",
+      "expressed_sentiment": "negative",
+      "expressed_evidence": [
+        "has a strong smell and made the room uncomfortable"
+      ],
+      "experience_polarity": "negative",
+      "complaint_intent": "yes",
+      "complaint_evidence": [
+        "has a strong smell and made the room uncomfortable",
+        "I stopped using it"
+      ],
+      "urgency": "low",
+      "urgency_evidence": [],
+      "mentioned_store": null,
+      "issues": [
+        {
+          "issue_id": "I1",
+          "object_type": "product",
+          "object_name": "yoga mat",
+          "category": "Sports/Outdoor",
+          "sentiment": "negative",
+          "experience_polarity": "negative",
+          "issue_kind": "complaint",
+          "business_process": "product issue",
+          "customer_requests": [
+            "check material and care information",
+            "a way to assess the concern, not a diagnosis"
+          ],
+          "evidence": [
+            "The new yoga mat has a strong smell and made the room uncomfortable.",
+            "I stopped using it.",
+            "Can you check material and care information?"
+          ],
+          "risk": "unknown",
+          "urgency": "low",
+          "resolution": "unresolved"
+        }
+      ],
+      "uncertainty": [
+        "No store or order details are provided, so the purchase channel is unknown.",
+        "The customer asks for material and care information but does not explicitly request a return, exchange, or refund."
+      ]
+    },
+    "error": null,
+    "semantic_eligible": true
+  },
+  "call": {
+    "identity": "R11-0689",
+    "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+    "request_hash": "2e7f33678f4cafe0c7117f80dec09dfaf88c2afa3f09424e9684cc5e8727e752",
+    "raw": "{\"reply\": \"Dear Customer,\\n\\nI'm sorry the new yoga mat's strong smell made your room uncomfortable and that you had to stop using it. That's an unpleasant experience with a new purchase, and I understand wanting to understand the material before deciding what to do next.\\n\\nTo give you accurate material and care information, I need to identify the exact mat you purchased. Could you reply with your order number, or the model name or SKU if you have it? With that, I can pull the official product record for the material composition and care instructions rather than guessing.\\n\\nIn the meantime, a practical way to assess the smell yourself is to air the mat in a well-ventilated space for a period and note whether the smell diminishes over time. This is general guidance only, not a diagnosis or a safety determination — a change in smell doesn't by itself confirm anything about the material. Continuing to keep it out of use for now, as you have been doing, is reasonable while you assess.\\n\\nWhether a return, exchange or refund is available depends on the applicable policy for this product and your purchase channel, including any time window, fees or conditions, and none of that is confirmed yet. Once I have your order reference, I can check those terms for you.\\n\\nI've created an internal verification request to retrieve the official material and care information and to check the return, exchange and refund conditions; it is pending. Please send the order number or model/SKU when you can, and I'll take it from there.\\n\\nKind regards,\\nCustomer Service\"}",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "model_snapshot": "unavailable",
+      "provider_response_id": "540ef42e-fa6d-4d4e-ad1c-705509561c9c",
+      "finish_reason": "tool_calls",
+      "input_tokens": 2582,
+      "output_tokens": 340,
+      "total_tokens": 2922,
+      "usage": {
+        "input_tokens": 2582,
+        "output_tokens": 340,
+        "total_tokens": 2922,
+        "input_token_details": {
+          "cache_read": 768
+        },
+        "output_token_details": {}
+      },
+      "contract": "STRICT_TOOL_ARGUMENTS_NOT_CONTENT_JSON",
+      "payload_sha256": "4d11ce769bf4a7b19002199bf009665b63736efb5e7666106fd8bf57c7b446e2",
+      "dispatch_at": "2026-11-09T11:04:49.479319+00:00"
+    },
+    "elapsed_ms": 7335.953500005417,
+    "mode": "LIVE"
+  },
+  "parse": {
+    "status": "accepted",
+    "value": {
+      "reply": "Dear Customer,\n\nI'm sorry the new yoga mat's strong smell made your room uncomfortable and that you had to stop using it. That's an unpleasant experience with a new purchase, and I understand wanting to understand the material before deciding what to do next.\n\nTo give you accurate material and care information, I need to identify the exact mat you purchased. Could you reply with your order number, or the model name or SKU if you have it? With that, I can pull the official product record for the material composition and care instructions rather than guessing.\n\nIn the meantime, a practical way to assess the smell yourself is to air the mat in a well-ventilated space for a period and note whether the smell diminishes over time. This is general guidance only, not a diagnosis or a safety determination — a change in smell doesn't by itself confirm anything about the material. Continuing to keep it out of use for now, as you have been doing, is reasonable while you assess.\n\nWhether a return, exchange or refund is available depends on the applicable policy for this product and your purchase channel, including any time window, fees or conditions, and none of that is confirmed yet. Once I have your order reference, I can check those terms for you.\n\nI've created an internal verification request to retrieve the official material and care information and to check the return, exchange and refund conditions; it is pending. Please send the order number or model/SKU when you can, and I'll take it from there.\n\nKind regards,\nCustomer Service"
+    },
+    "error": null,
+    "semantic_eligible": true
+  },
+  "slot": {
+    "case_id": "R7H-047",
+    "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+    "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+    "arm": "GUIDED",
+    "parse_ok": true,
+    "reply": "Dear Customer,\n\nI'm sorry the new yoga mat's strong smell made your room uncomfortable and that you had to stop using it. That's an unpleasant experience with a new purchase, and I understand wanting to understand the material before deciding what to do next.\n\nTo give you accurate material and care information, I need to identify the exact mat you purchased. Could you reply with your order number, or the model name or SKU if you have it? With that, I can pull the official product record for the material composition and care instructions rather than guessing.\n\nIn the meantime, a practical way to assess the smell yourself is to air the mat in a well-ventilated space for a period and note whether the smell diminishes over time. This is general guidance only, not a diagnosis or a safety determination — a change in smell doesn't by itself confirm anything about the material. Continuing to keep it out of use for now, as you have been doing, is reasonable while you assess.\n\nWhether a return, exchange or refund is available depends on the applicable policy for this product and your purchase channel, including any time window, fees or conditions, and none of that is confirmed yet. Once I have your order reference, I can check those terms for you.\n\nI've created an internal verification request to retrieve the official material and care information and to check the return, exchange and refund conditions; it is pending. Please send the order number or model/SKU when you can, and I'll take it from there.\n\nKind regards,\nCustomer Service",
+    "facts": {
+      "status": "UNKNOWN",
+      "source": "SCOPED_LOCAL_FACTS_QUERY",
+      "external_query": false
+    },
+    "attachment_manifest": [],
+    "events": [
+      {
+        "event_id": "7b4b563d-dae3-4b11-a1be-a20e63f0fb07",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "5ffb8e71b2854c34a5865b51ed5013c40b61c462c6c30c30caeaddf7cc33e16f",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.952597+00:00",
+        "_binding": {
+          "case_id": "R7H-047",
+          "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+          "arm": "GUIDED",
+          "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+          "tool_event_id": "7b4b563d-dae3-4b11-a1be-a20e63f0fb07",
+          "event_state": "requested",
+          "event_hash": "c95efb5114628ed8f176d58fb2473c0bcdb28d9f94e6d8bf8894eecba8fc5e0c"
+        }
+      },
+      {
+        "event_id": "4260b2c7-e1ec-4dc5-9e64-1d27748bb797",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "5ffb8e71b2854c34a5865b51ed5013c40b61c462c6c30c30caeaddf7cc33e16f",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.953611+00:00",
+        "_binding": {
+          "case_id": "R7H-047",
+          "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+          "arm": "GUIDED",
+          "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+          "tool_event_id": "4260b2c7-e1ec-4dc5-9e64-1d27748bb797",
+          "event_state": "executed",
+          "event_hash": "afd04f44e19582b565b399f1b18e068a94736c8aa756eaaef7438a95966eaf8f"
+        }
+      },
+      {
+        "event_id": "6bf6e297-584c-4b10-9f7c-692887ec6975",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "b76285bd5c6f6d2e0815818853262668ac9ebc6b57c86508b3649d4851172f44",
+        "kind": "support_followup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "support_followup",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+            "evidence": [
+              "Can you check material and care information?",
+              "I need a way to assess the concern, not a diagnosis."
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.953611+00:00",
+        "_binding": {
+          "case_id": "R7H-047",
+          "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+          "arm": "GUIDED",
+          "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+          "tool_event_id": "6bf6e297-584c-4b10-9f7c-692887ec6975",
+          "event_state": "requested",
+          "event_hash": "58d7087d3c4ca5fa0081badf92f7b2c9598de2ba6441c76400c0b009431dfbe5"
+        }
+      },
+      {
+        "event_id": "6320a69b-94e5-4f5b-94fd-8864d81a68ae",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "b76285bd5c6f6d2e0815818853262668ac9ebc6b57c86508b3649d4851172f44",
+        "kind": "support_followup",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "support_followup",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+            "evidence": [
+              "Can you check material and care information?",
+              "I need a way to assess the concern, not a diagnosis."
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.954612+00:00",
+        "_binding": {
+          "case_id": "R7H-047",
+          "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+          "arm": "GUIDED",
+          "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+          "tool_event_id": "6320a69b-94e5-4f5b-94fd-8864d81a68ae",
+          "event_state": "created",
+          "event_hash": "bafea00de2ef52d8353cfbf10cadfbf06ae7f6f311f2a7d2b80fe7b860741df4"
+        }
+      },
+      {
+        "event_id": "9845eadf-080e-48c1-add6-abb64ce424ae",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "a0533c0e84929b29c6f4783f27e302d06f7a44d764d408c9ace9605e08d7740d",
+        "kind": "aftersales_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "goal": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+            "issue_ids": [],
+            "evidence": [
+              "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+            ],
+            "priority": "normal",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.954612+00:00",
+        "_binding": {
+          "case_id": "R7H-047",
+          "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+          "arm": "GUIDED",
+          "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+          "tool_event_id": "9845eadf-080e-48c1-add6-abb64ce424ae",
+          "event_state": "requested",
+          "event_hash": "c84855c579c7ea5bba62359b6a2ea3e74ce60466096804f2d36fb578bac22e2c"
+        }
+      },
+      {
+        "event_id": "dde72d0c-416d-49e4-b532-a83b2052a5c9",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "a0533c0e84929b29c6f4783f27e302d06f7a44d764d408c9ace9605e08d7740d",
+        "kind": "aftersales_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "goal": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+            "issue_ids": [],
+            "evidence": [
+              "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+            ],
+            "priority": "normal",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.954612+00:00",
+        "_binding": {
+          "case_id": "R7H-047",
+          "run_id": "daafa0b7-dce0-4b0f-be2c-db160f4ba899",
+          "arm": "GUIDED",
+          "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+          "tool_event_id": "dde72d0c-416d-49e4-b532-a83b2052a5c9",
+          "event_state": "created",
+          "event_hash": "c7ab505abc76033b881ec4b326fc182f59d14f621e9726be26851ad6f848dd0a"
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "events": [
+      {
+        "event_id": "7b4b563d-dae3-4b11-a1be-a20e63f0fb07",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "5ffb8e71b2854c34a5865b51ed5013c40b61c462c6c30c30caeaddf7cc33e16f",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.952597+00:00"
+      },
+      {
+        "event_id": "4260b2c7-e1ec-4dc5-9e64-1d27748bb797",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "5ffb8e71b2854c34a5865b51ed5013c40b61c462c6c30c30caeaddf7cc33e16f",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.953611+00:00"
+      },
+      {
+        "event_id": "6bf6e297-584c-4b10-9f7c-692887ec6975",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "b76285bd5c6f6d2e0815818853262668ac9ebc6b57c86508b3649d4851172f44",
+        "kind": "support_followup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "support_followup",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+            "evidence": [
+              "Can you check material and care information?",
+              "I need a way to assess the concern, not a diagnosis."
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.953611+00:00"
+      },
+      {
+        "event_id": "6320a69b-94e5-4f5b-94fd-8864d81a68ae",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "b76285bd5c6f6d2e0815818853262668ac9ebc6b57c86508b3649d4851172f44",
+        "kind": "support_followup",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "support_followup",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+            "evidence": [
+              "Can you check material and care information?",
+              "I need a way to assess the concern, not a diagnosis."
+            ],
+            "priority": "normal",
+            "owner": "customer_support",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.954612+00:00"
+      },
+      {
+        "event_id": "9845eadf-080e-48c1-add6-abb64ce424ae",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "a0533c0e84929b29c6f4783f27e302d06f7a44d764d408c9ace9605e08d7740d",
+        "kind": "aftersales_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "goal": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+            "issue_ids": [],
+            "evidence": [
+              "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+            ],
+            "priority": "normal",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.954612+00:00"
+      },
+      {
+        "event_id": "dde72d0c-416d-49e4-b532-a83b2052a5c9",
+        "input_hash": "9a462cd3ee2b2c378b23ea5e11f8447ea4c7765b661d26b3589dab9afd7b1862",
+        "conversation_id": "R7H-047",
+        "operation_id": "a0533c0e84929b29c6f4783f27e302d06f7a44d764d408c9ace9605e08d7740d",
+        "kind": "aftersales_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "aftersales_request",
+            "goal": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+            "issue_ids": [],
+            "evidence": [
+              "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+            ],
+            "priority": "normal",
+            "owner": "aftersales",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-047",
+            "revision": "fixed-v6",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-09T11:04:41.954612+00:00"
+      }
+    ],
+    "facts": {
+      "status": "UNKNOWN",
+      "source": "SCOPED_LOCAL_FACTS_QUERY",
+      "external_query": false
+    },
+    "context": {
+      "issues": [],
+      "latest_request": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+      "identifiers": [],
+      "preferred_outcome": null,
+      "availability": null,
+      "refuses_handoff": false,
+      "wants_human": false,
+      "service_complaint": false,
+      "urgent": false,
+      "installation_cancelled": false,
+      "deadline_negated": false,
+      "source_messages": [
+        {
+          "role": "customer",
+          "text": "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information? I need a way to assess the concern, not a diagnosis."
+        }
+      ]
+    },
+    "external_actions": 0,
+    "service_plan": {
+      "goals": [
+        {
+          "goal": "Provide the customer with the yoga mat's material and care information and a practical way to assess the strong-smell concern, without offering a diagnosis.",
+          "source_quote": "Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+          "response_points": [
+            "Acknowledge that the new yoga mat has a strong smell that made the room uncomfortable and that the customer stopped using it.",
+            "Share the mat's material and care information from the official product record once identified.",
+            "Offer a practical self-assessment approach (e.g., airing the mat in a ventilated space for a period and noting whether the smell diminishes) framed as general guidance, not a diagnosis.",
+            "Note that any return, exchange or refund option depends on the applicable return policy and the purchase channel, which are not yet confirmed."
+          ],
+          "preserve_constraints": [
+            "Do not provide a diagnosis or health conclusion about the smell.",
+            "Do not assume a return, exchange or refund is requested or available."
+          ],
+          "minimum_lookup": [
+            "Official product record for the yoga mat: material composition and care instructions",
+            "Applicable return/exchange policy terms for this product category"
+          ],
+          "interim_options": [
+            "Suggest airing the mat in a well-ventilated area and discontinuing use in the meantime, as the customer already has."
+          ],
+          "decision_dependencies": {
+            "scope": [
+              "Which yoga mat model/SKU the customer purchased, to pull the correct material and care record"
+            ],
+            "timing": [
+              "Any return/exchange window under the applicable policy"
+            ],
+            "cost": [
+              "Any fees or conditions attached to return/exchange under the policy"
+            ],
+            "authorization": [
+              "Per-item authorization required before initiating any return or exchange"
+            ],
+            "source": [
+              "Material and care information must come from the official product record, not inferred"
+            ]
+          }
+        }
+      ],
+      "customer_reported_facts": [
+        "The new yoga mat has a strong smell and made the room uncomfortable.",
+        "I stopped using it."
+      ],
+      "internal_constraints": [
+        "Do not treat the customer's request as a diagnosis request; provide assessment guidance only.",
+        "No store or order details are provided; purchase channel is unknown.",
+        "Do not create repair work; the customer has not requested repair.",
+        "Do not promise an external contact or future completion."
+      ],
+      "actions": [
+        {
+          "kind": "support_followup",
+          "issue_ids": [
+            "I1"
+          ],
+          "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+          "evidence": [
+            "Can you check material and care information?",
+            "I need a way to assess the concern, not a diagnosis."
+          ],
+          "priority": "normal"
+        }
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "support_followup",
+      "issue_ids": [
+        "I1"
+      ],
+      "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+      "evidence": [
+        "Can you check material and care information?",
+        "I need a way to assess the concern, not a diagnosis."
+      ],
+      "priority": "normal"
+    },
+    {
+      "kind": "aftersales_request",
+      "goal": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+      "issue_ids": [],
+      "evidence": [
+        "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+      ],
+      "priority": "normal"
+    }
+  ],
+  "plan_error": null,
+  "service_plan_call": {
+    "identity": "R11-0685",
+    "run_id": "b8ecd9ee-bb20-4ee0-9b85-6e39c47e881f",
+    "request_hash": "9e83afff0b3f1a5b761d1f028177853b1fac3055ab8c5f70237fef4c5d278430",
+    "raw": "{\"goals\":[{\"goal\":\"Provide the customer with the yoga mat's material and care information and a practical way to assess the strong-smell concern, without offering a diagnosis.\",\"source_quote\":\"Can you check material and care information? I need a way to assess the concern, not a diagnosis.\",\"response_points\":[\"Acknowledge that the new yoga mat has a strong smell that made the room uncomfortable and that the customer stopped using it.\",\"Share the mat's material and care information from the official product record once identified.\",\"Offer a practical self-assessment approach (e.g., airing the mat in a ventilated space for a period and noting whether the smell diminishes) framed as general guidance, not a diagnosis.\",\"Note that any return, exchange or refund option depends on the applicable return policy and the purchase channel, which are not yet confirmed.\"],\"preserve_constraints\":[\"Do not provide a diagnosis or health conclusion about the smell.\",\"Do not assume a return, exchange or refund is requested or available.\"],\"minimum_lookup\":[\"Official product record for the yoga mat: material composition and care instructions\",\"Applicable return/exchange policy terms for this product category\"],\"interim_options\":[\"Suggest airing the mat in a well-ventilated area and discontinuing use in the meantime, as the customer already has.\"],\"decision_dependencies\":{\"scope\":[\"Which yoga mat model/SKU the customer purchased, to pull the correct material and care record\"],\"timing\":[\"Any return/exchange window under the applicable policy\"],\"cost\":[\"Any fees or conditions attached to return/exchange under the policy\"],\"authorization\":[\"Per-item authorization required before initiating any return or exchange\"],\"source\":[\"Material and care information must come from the official product record, not inferred\"]}}],\"customer_reported_facts\":[\"The new yoga mat has a strong smell and made the room uncomfortable.\",\"I stopped using it.\"],\"internal_constraints\":[\"Do not treat the customer's request as a diagnosis request; provide assessment guidance only.\",\"No store or order details are provided; purchase channel is unknown.\",\"Do not create repair work; the customer has not requested repair.\",\"Do not promise an external contact or future completion.\"],\"actions\":[{\"kind\":\"support_followup\",\"issue_ids\":[\"I1\"],\"goal\":\"Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.\",\"evidence\":[\"Can you check material and care information?\",\"I need a way to assess the concern, not a diagnosis.\"],\"priority\":\"normal\"}]}",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "model_snapshot": "unavailable",
+      "provider_response_id": "e97cdf1c-b8f3-406c-8aa0-79593c05a5cd",
+      "response_id": "lc_run--01a1bffb-3ad5-7f31-81db-f68e5569440a-0",
+      "finish_reason": "stop",
+      "input_tokens": 1680,
+      "output_tokens": 538,
+      "total_tokens": 2218,
+      "usage": {
+        "input_tokens": 1680,
+        "output_tokens": 538,
+        "total_tokens": 2218,
+        "input_token_details": {
+          "cache_read": 1152
+        },
+        "output_token_details": {}
+      },
+      "token_usage": {
+        "completion_tokens": 538,
+        "prompt_tokens": 1680,
+        "total_tokens": 2218,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 528
+      },
+      "payload_sha256": "25b9a38bb946badbf4bc74b6fd6afe05572ee84868a46f27ab77a129dd8927bc",
+      "dispatch_at": "2026-11-09T11:04:35.293242+00:00"
+    },
+    "elapsed_ms": 7922.838500002399,
+    "mode": "LIVE"
+  },
+  "guard": {
+    "version": "r11-scoped-action-evidence-4-record-predicates",
+    "assessments": [
+      {
+        "state": "INTERNAL_CREATED",
+        "quote": "I've created an internal verification request",
+        "supported": true,
+        "event_ids": [
+          "6320a69b-94e5-4f5b-94fd-8864d81a68ae",
+          "dde72d0c-416d-49e4-b532-a83b2052a5c9"
+        ],
+        "reason": "Current-input created task required; plans and UNKNOWN lookups do not establish creation.",
+        "claim_type": "INTERNAL_CREATED",
+        "business_object": [
+          "product"
+        ],
+        "object_mentions": [],
+        "target": null,
+        "asserted_status": "created",
+        "span": {
+          "start": 1259,
+          "end": 1304,
+          "text": "I've created an internal verification request"
+        },
+        "support_status": "supported",
+        "negative_event_ids": [],
+        "reasons": [
+          "kind_mismatch",
+          "status_mismatch"
+        ],
+        "unavailable_identity_fields": [],
+        "evidence_identity": "STRICT_BOUND"
+      }
+    ],
+    "findings": [],
+    "external_executors_available": false,
+    "source_report_exclusions": [],
+    "attachment_evidence": {
+      "source_mentions": [],
+      "received_files": [],
+      "viewed_files": [],
+      "absent": true,
+      "instruction": "Use only stated source levels. Offers, taken, reported sent, system received and viewed are distinct. No mention means no photo history. Ask conditionally when useful. Historical sending is unverified now. Ambiguous mentions do not establish taking or sending."
+    },
+    "inherited_non_action_reviews": [],
+    "service_review": {
+      "findings": [],
+      "customer_informed_of_actions": [],
+      "intended_action_grounded": null
+    }
+  },
+  "service_brief": {
+    "version": "service-response-20261109-r11-v4-evidence-composer",
+    "current_objectives": [
+      "Provide the customer with the yoga mat's material and care information and a practical way to assess the strong-smell concern, without offering a diagnosis."
+    ],
+    "resolved_matters": [],
+    "acknowledgements": [
+      {
+        "kind": "apology_for_current_inconvenience",
+        "source_quotes": [
+          "The new yoga mat has a strong smell and made the room uncomfortable.",
+          "I stopped using it.",
+          "Can you check material and care information?",
+          "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+        ],
+        "instruction": "Offer a brief proportionate apology for the current reported inconvenience, even if expression is neutral; do not infer anger or confirmed liability."
+      }
+    ],
+    "completed_steps": [],
+    "reply_focus": "Only current objectives. If product issue is resolved, thank and wish pleasant use; omit recurrence advice. No promise to reply/contact later. Give customer-controlled next steps instead.",
+    "paragraph_topics": [
+      "acknowledgement",
+      "current questions and useful advice",
+      "supported pending progress and customer next step"
+    ],
+    "paragraph_rule": "Combine naturally for simple cases; keep independent questions and their pending checks distinct. No fixed paragraph count.",
+    "pending_progress": [
+      {
+        "event_id": "6320a69b-94e5-4f5b-94fd-8864d81a68ae",
+        "kind": "support_followup",
+        "state": "created",
+        "goal": "Retrieve the official material and care information for the yoga mat and prepare general self-assessment guidance for the strong-smell concern.",
+        "may_say_zh": "已创建内部核实请求，待处理。",
+        "may_say_en": "An internal internal verification request has been created and is pending.",
+        "unverified_outcomes": [
+          "staff acceptance or start",
+          "external recipient/delivery",
+          "investigation result",
+          "callback schedule",
+          "completion"
+        ],
+        "instruction": "This is one pending internal receipt. Conditions in its goal do not create additional requests."
+      },
+      {
+        "event_id": "dde72d0c-416d-49e4-b532-a83b2052a5c9",
+        "kind": "aftersales_request",
+        "state": "created",
+        "goal": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+        "may_say_zh": "已创建售后核实请求，待处理。",
+        "may_say_en": "An internal aftersales verification request has been created and is pending.",
+        "unverified_outcomes": [
+          "staff acceptance or start",
+          "external recipient/delivery",
+          "investigation result",
+          "callback schedule",
+          "completion"
+        ],
+        "instruction": "This is one pending internal receipt. Conditions in its goal do not create additional requests."
+      }
+    ],
+    "evidence_intake": {
+      "order_reference": "Ask for one missing lookup reference only if the current verification needs it.",
+      "photos": "Use attachment_evidence source states. Ask conditionally for useful missing evidence; never ask again for reported sent files.",
+      "permission": "Customer may reply with relevant details; no guaranteed visit availability."
+    },
+    "knowledge": [],
+    "service_checks": {
+      "topics": [
+        {
+          "topic": "uncomfortable_odor",
+          "source_quotes": [
+            "The new yoga mat has a strong smell and made the room uncomfortable. I stopped using it. Can you check material and care information"
+          ],
+          "required_check": "核实材质、护理及退换退款适用条件 / check material, care and return, exchange or refund options",
+          "possible_solutions": "Acknowledge discomfort and support pausing use. Verify the actual material and care label and offer to check applicable return, exchange or refund options. Ventilation or a change in smell does not establish safety. Do not diagnose, direct continued use, or promise eligibility."
+        }
+      ],
+      "customer_reported_references": [],
+      "verified_facts": [],
+      "intake_rule": "Use available authorized records and source references first. Ask only for the smallest missing identifier. An order mentioned by the customer is not a verified order record.",
+      "catalog_rule": "Use an actual verified order to identify the product, then verify specification and stock before naming a specific available replacement. Otherwise explain the needed fit or feature conditionally."
+    },
+    "attachment_manifest": [],
+    "unknown_merchant_facts": [
+      "payment obligations/fee waivers",
+      "refund or exchange entitlement",
+      "inspection availability",
+      "staff acceptance",
+      "callback schedule"
+    ],
+    "permitted_closing": "Thank customer; wish pleasant use where appropriate. Invite customer to provide missing information or ask for progress. Do not commit staff to future contact.",
+    "execution_scope": "LOCAL_SIMULATION_PENDING; no external action",
+    "attitude": "Apologize proportionately for actual harm even with neutral expression; thank praise; no unsolicited warnings about resolved faults.",
+    "service_goals": [
+      {
+        "goal": "Provide the customer with the yoga mat's material and care information and a practical way to assess the strong-smell concern, without offering a diagnosis.",
+        "source_quote": "Can you check material and care information? I need a way to assess the concern, not a diagnosis.",
+        "response_points": [
+          "Acknowledge that the new yoga mat has a strong smell that made the room uncomfortable and that the customer stopped using it.",
+          "Share the mat's material and care information from the official product record once identified.",
+          "Offer a practical self-assessment approach (e.g., airing the mat in a ventilated space for a period and noting whether the smell diminishes) framed as general guidance, not a diagnosis.",
+          "Note that any return, exchange or refund option depends on the applicable return policy and the purchase channel, which are not yet confirmed."
+        ],
+        "minimum_lookup": [
+          "Official product record for the yoga mat: material composition and care instructions",
+          "Applicable return/exchange policy terms for this product category"
+        ],
+        "interim_options": [
+          "Suggest airing the mat in a well-ventilated area and discontinuing use in the meantime, as the customer already has."
+        ],
+        "decision_dependencies": {
+          "scope": [
+            "Which yoga mat model/SKU the customer purchased, to pull the correct material and care record"
+          ],
+          "timing": [
+            "Any return/exchange window under the applicable policy"
+          ],
+          "cost": [
+            "Any fees or conditions attached to return/exchange under the policy"
+          ],
+          "authorization": [
+            "Per-item authorization required before initiating any return or exchange"
+          ],
+          "source": [
+            "Material and care information must come from the official product record, not inferred"
+          ]
+        }
+      }
+    ],
+    "customer_reported_facts": [
+      "The new yoga mat has a strong smell and made the room uncomfortable.",
+      "I stopped using it."
+    ],
+    "response_priority": "Address each supplied service goal and its applicable response points. State concrete checks, not only pending work. Do not narrate internal classification or record-handling instructions. Keep interim options conditional on unresolved timing, cost and authorization dependencies; never turn a proposed time into an assurance of on-time return or no fee. Ask only the missing minimum lookup key."
+  },
+  "composer": {
+    "version": "service-response-20261109-r11-v4-evidence-composer",
+    "system_hash": "5bb60a7f0c3ad613338d3b0769fc701138df1e2c000a7d95e955f397108839db",
+    "planner_hash": "881df60dc79909e5464488fa211bbf2e1df69e18ba4c1931d275b839110c6580"
+  },
+  "dataset_role": "EXPOSED_DEV"
+}

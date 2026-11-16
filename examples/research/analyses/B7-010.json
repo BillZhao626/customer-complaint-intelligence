@@ -1,0 +1,64 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "麻烦转告一下我的谢意",
+      "还耐心解释了不同靠背的区别",
+      "坐着确实舒服"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "浦东店",
+    "issues": [
+      {
+        "issue_id": "B7-010-1",
+        "object_type": "service",
+        "object_name": "浦东店员工服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "转告对店员的谢意"
+        ],
+        "evidence": [
+          "当时一位店员帮我试了好几款，还耐心解释了不同靠背的区别",
+          "麻烦转告一下我的谢意"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-010-2",
+        "object_type": "product",
+        "object_name": "办公椅",
+        "category": "Furniture",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "回家用了几天，坐着确实舒服"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "01fc8147-1300-4a4a-ad0c-3117325c86a7",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:03:57.143534+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

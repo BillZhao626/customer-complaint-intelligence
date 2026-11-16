@@ -1,0 +1,70 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "I'm pretty disappointed, especially since it wasn't cheap"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "I'm pretty disappointed",
+      "Can you let me know what I can do about this?"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "Suzhou Industrial Park store",
+    "issues": [
+      {
+        "issue_id": "B7-015-1",
+        "object_type": "product",
+        "object_name": "linen shirt",
+        "category": "Clothing",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Let me know what I can do about this"
+        ],
+        "evidence": [
+          "there's a problem with it too",
+          "I'm pretty disappointed"
+        ],
+        "risk": "unknown",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-015-2",
+        "object_type": "product",
+        "object_name": "packaging/box",
+        "category": "unknown",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Let me know what I can do about this"
+        ],
+        "evidence": [
+          "The box was already squashed and partly torn when I got it home"
+        ],
+        "risk": "unknown",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "The exact nature of the shirt problem is not specified.",
+      "Whether the squashed/torn box is considered part of the product or delivery packaging is unclear."
+    ]
+  },
+  "call": {
+    "run_id": "8630256e-cda7-44ee-a651-0488cddfbfcd",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:04:33.026101+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "麻烦帮我处理一下"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "外包装是破的",
+      "衣服袖口也开线了",
+      "麻烦帮我处理一下"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "麻烦帮我处理一下"
+    ],
+    "mentioned_store": "南京新街口店",
+    "issues": [
+      {
+        "issue_id": "B7-020-1",
+        "object_type": "product",
+        "object_name": "亚麻衬衫",
+        "category": "Clothing",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "product issue",
+        "customer_requests": [
+          "处理破损外包装和开线袖口问题"
+        ],
+        "evidence": [
+          "外包装是破的",
+          "衣服袖口也开线了"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-020-2",
+        "object_type": "service",
+        "object_name": "南京新街口店",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "处理破损外包装和开线袖口问题"
+        ],
+        "evidence": [
+          "麻烦帮我处理一下"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "外包装破损与袖口开线的具体原因未说明",
+      "客户未明确要求退换货或维修，仅请求处理"
+    ]
+  },
+  "call": {
+    "run_id": "de7e7a5c-4aeb-4685-b2d1-964894564a65",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:05:16.131613+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

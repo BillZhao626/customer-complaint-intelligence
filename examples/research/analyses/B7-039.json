@@ -1,0 +1,73 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "No one showed up and I didn't get any call or message.",
+      "I took the afternoon off work for this.",
+      "I haven't heard back since"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "No one showed up and I didn't get any call or message.",
+      "I haven't heard back since",
+      "Can someone please tell me where my chair is and when I'll actually get it?"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "I really need it for my home office."
+    ],
+    "mentioned_store": "West Lake store",
+    "issues": [
+      {
+        "issue_id": "B7-039-1",
+        "object_type": "service",
+        "object_name": "office chair delivery",
+        "category": "Furniture",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "delivery/logistics issue",
+        "customer_requests": [
+          "Tell me where my chair is and when I'll actually get it"
+        ],
+        "evidence": [
+          "it was supposed to arrive on Tuesday. No one showed up and I didn't get any call or message"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-039-2",
+        "object_type": "service",
+        "object_name": "store customer service response",
+        "category": "Service/Other",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "Follow up on the delivery investigation"
+        ],
+        "evidence": [
+          "the person I spoke to said they'd look into it but I haven't heard back since"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the missed delivery was caused by the store or a carrier is not established."
+    ]
+  },
+  "call": {
+    "run_id": "990e4690-1b8b-4459-8d10-8076de40c591",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:07:43.880193+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

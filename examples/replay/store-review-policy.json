@@ -1,0 +1,10 @@
+[
+  {
+    "input_hash": "511bda98cc3a7bd38abfb578ba4e4db6a082f8dec2d8ab43b40397507daebd50",
+    "source_identity": "OWNER_EXPLICIT",
+    "source": "P5-B8-R6_Codex_完整执行Prompt.md §1 B7-020 / user 2026-11-04",
+    "exclude_store_target_issue_ids": [
+      "B7-020-2"
+    ]
+  }
+]

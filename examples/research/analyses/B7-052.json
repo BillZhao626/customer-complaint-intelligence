@@ -1,0 +1,74 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "negative",
+    "expressed_evidence": [
+      "it feels off to lose money on something I'm already disappointed about",
+      "I'd appreciate a straight answer before I decide what to do next"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "yes",
+    "complaint_evidence": [
+      "I was told there would be some kind of fee taken off the refund, and honestly I don't remember anyone mentioning that when I bought it",
+      "it feels off to lose money on something I'm already disappointed about",
+      "Could someone explain what that charge is actually for?"
+    ],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "Shenzhen Nanshan store",
+    "issues": [
+      {
+        "issue_id": "B7-052-1",
+        "object_type": "service",
+        "object_name": "refund fee deduction",
+        "category": "Home Appliances",
+        "sentiment": "negative",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "Explain what the refund charge is for",
+          "Provide a straight answer before deciding next steps"
+        ],
+        "evidence": [
+          "I was told there would be some kind of fee taken off the refund",
+          "I don't remember anyone mentioning that when I bought it",
+          "it feels off to lose money on something I'm already disappointed about"
+        ],
+        "risk": "minor",
+        "urgency": "low",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-052-2",
+        "object_type": "product",
+        "object_name": "coffee machine",
+        "category": "Home Appliances",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "other",
+        "business_process": "product issue",
+        "customer_requests": [
+          "Return the coffee machine"
+        ],
+        "evidence": [
+          "The machine itself is fine, but it's just not working out for me"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "Whether the fee was disclosed at purchase is unclear; only the customer's recollection is reported",
+      "The exact nature and amount of the refund fee are not specified"
+    ]
+  },
+  "call": {
+    "run_id": "7820697b-1add-46b3-aacf-86eb1614bef9",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:09:25.740185+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

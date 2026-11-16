@@ -1,0 +1,562 @@
+{
+  "email": {
+    "email_id": "R7H-015",
+    "subject": "请核实当前情况",
+    "body": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+  },
+  "analysis": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "请先核对激活和消费记录，不要直接认定送礼的人用过。"
+    ],
+    "urgency": "unknown",
+    "urgency_evidence": [],
+    "mentioned_store": null,
+    "issues": [
+      {
+        "issue_id": "I1",
+        "object_type": "service",
+        "object_name": "实体礼品卡",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "billing/invoice issue",
+        "customer_requests": [
+          "核对激活和消费记录",
+          "不要直接认定送礼的人用过"
+        ],
+        "evidence": [
+          "实体礼品卡刮开后提示已使用，但我是今天第一次输入。",
+          "请先核对激活和消费记录，不要直接认定送礼的人用过。"
+        ],
+        "risk": "unknown",
+        "urgency": "unknown",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "The customer does not state the card value, purchase date, or store location, so the exact card and transaction cannot be identified.",
+      "It is unclear whether the card was activated at purchase; the customer only asks for verification."
+    ]
+  },
+  "slot": {
+    "case_id": "R7H-015",
+    "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+    "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+    "arm": "GUIDED",
+    "parse_ok": true,
+    "reply": "您好，很抱歉这张实体礼品卡在您首次输入时提示已使用，给您带来不便。我们理解您希望先查清激活和消费记录，而不是直接怀疑送礼的人，这一核查方向已包含在待处理的内部核查请求中。\n\n为便于核对，请提供卡号（可只提供部分号码）或小票上的交易参考号，以及小票显示的购买时间和金额；请勿通过普通邮件发送完整卡背信息或密码。如您希望提供更敏感的信息，请先通过官方订单/网站上的联系方式确认安全渠道后再提供。\n\n目前内部核查请求已创建，尚待处理，核查结果和完成时间尚未确定。您可先保留卡和小票原件，并回复上述任一可用参考信息，以便后续核对激活与消费记录。",
+    "facts": {
+      "status": "UNKNOWN",
+      "source": "SCOPED_LOCAL_FACTS_QUERY",
+      "external_query": false
+    },
+    "attachment_manifest": [],
+    "events": [
+      {
+        "event_id": "fe6fc24a-ccb7-43fe-a897-81ac5e501590",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "8a3ad6c24a9ccee4727b73e12a9a582e8a7bee1bffb24991f76d3ec7b3513ff0",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.744032+00:00",
+        "_binding": {
+          "case_id": "R7H-015",
+          "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+          "arm": "GUIDED",
+          "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+          "tool_event_id": "fe6fc24a-ccb7-43fe-a897-81ac5e501590",
+          "event_state": "requested",
+          "event_hash": "ac2a3956716cefc7a19850d99c297fbc4544498e6f5d1502554c6cbd97b6d8f7"
+        }
+      },
+      {
+        "event_id": "767f1025-5317-4a3f-bb2d-fe92964b2a1a",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "8a3ad6c24a9ccee4727b73e12a9a582e8a7bee1bffb24991f76d3ec7b3513ff0",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.746030+00:00",
+        "_binding": {
+          "case_id": "R7H-015",
+          "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+          "arm": "GUIDED",
+          "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+          "tool_event_id": "767f1025-5317-4a3f-bb2d-fe92964b2a1a",
+          "event_state": "executed",
+          "event_hash": "d55e45364df9df96195da1a1d74d6fad1cbeeaaf8418eddd3742bfda7622128c"
+        }
+      },
+      {
+        "event_id": "42c23f5d-9890-40e9-8d8e-72f35b6c9d3e",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "a4679bdadcc4ae43f5e285a62328b4902cf1a34b6a91024a4cb8c3831c460634",
+        "kind": "billing_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "billing_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "核对激活和消费记录; 不要直接认定送礼的人用过",
+            "evidence": [
+              "实体礼品卡刮开后提示已使用，但我是今天第一次输入。",
+              "请先核对激活和消费记录，不要直接认定送礼的人用过。"
+            ],
+            "priority": "normal",
+            "owner": "billing",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.746360+00:00",
+        "_binding": {
+          "case_id": "R7H-015",
+          "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+          "arm": "GUIDED",
+          "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+          "tool_event_id": "42c23f5d-9890-40e9-8d8e-72f35b6c9d3e",
+          "event_state": "requested",
+          "event_hash": "841a3362a0d971a406de899e503d35e69fede062155d78d1f5b095b545372d52"
+        }
+      },
+      {
+        "event_id": "91eac281-5811-48f2-aa94-0e6d7be00fbe",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "a4679bdadcc4ae43f5e285a62328b4902cf1a34b6a91024a4cb8c3831c460634",
+        "kind": "billing_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "billing_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "核对激活和消费记录; 不要直接认定送礼的人用过",
+            "evidence": [
+              "实体礼品卡刮开后提示已使用，但我是今天第一次输入。",
+              "请先核对激活和消费记录，不要直接认定送礼的人用过。"
+            ],
+            "priority": "normal",
+            "owner": "billing",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.746360+00:00",
+        "_binding": {
+          "case_id": "R7H-015",
+          "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+          "arm": "GUIDED",
+          "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+          "tool_event_id": "91eac281-5811-48f2-aa94-0e6d7be00fbe",
+          "event_state": "created",
+          "event_hash": "74d27d5149115bf073fe12462b7e551f93cab5151e310d4ba12f5c566825541b"
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "events": [
+      {
+        "event_id": "fe6fc24a-ccb7-43fe-a897-81ac5e501590",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "8a3ad6c24a9ccee4727b73e12a9a582e8a7bee1bffb24991f76d3ec7b3513ff0",
+        "kind": "knowledge_lookup",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.744032+00:00"
+      },
+      {
+        "event_id": "767f1025-5317-4a3f-bb2d-fe92964b2a1a",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "8a3ad6c24a9ccee4727b73e12a9a582e8a7bee1bffb24991f76d3ec7b3513ff0",
+        "kind": "knowledge_lookup",
+        "status": "executed",
+        "payload": {
+          "action": {
+            "kind": "knowledge_lookup",
+            "owner": "product_support",
+            "question": "Check scoped authorized local facts",
+            "issue_ids": [],
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          },
+          "result": {
+            "status": "UNKNOWN",
+            "facts": [],
+            "source_kind": "LOCAL_FIXTURE_LOOKUP",
+            "external_query": false
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.746030+00:00"
+      },
+      {
+        "event_id": "42c23f5d-9890-40e9-8d8e-72f35b6c9d3e",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "a4679bdadcc4ae43f5e285a62328b4902cf1a34b6a91024a4cb8c3831c460634",
+        "kind": "billing_request",
+        "status": "requested",
+        "payload": {
+          "action": {
+            "kind": "billing_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "核对激活和消费记录; 不要直接认定送礼的人用过",
+            "evidence": [
+              "实体礼品卡刮开后提示已使用，但我是今天第一次输入。",
+              "请先核对激活和消费记录，不要直接认定送礼的人用过。"
+            ],
+            "priority": "normal",
+            "owner": "billing",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.746360+00:00"
+      },
+      {
+        "event_id": "91eac281-5811-48f2-aa94-0e6d7be00fbe",
+        "input_hash": "2ab44276fd1d8188d6e67d8f7cb0bd5f46b74bcff19114939057963b49be3fe3",
+        "conversation_id": "R7H-015",
+        "operation_id": "a4679bdadcc4ae43f5e285a62328b4902cf1a34b6a91024a4cb8c3831c460634",
+        "kind": "billing_request",
+        "status": "created",
+        "payload": {
+          "action": {
+            "kind": "billing_request",
+            "issue_ids": [
+              "I1"
+            ],
+            "goal": "核对激活和消费记录; 不要直接认定送礼的人用过",
+            "evidence": [
+              "实体礼品卡刮开后提示已使用，但我是今天第一次输入。",
+              "请先核对激活和消费记录，不要直接认定送礼的人用过。"
+            ],
+            "priority": "normal",
+            "owner": "billing",
+            "order_identifiers": []
+          },
+          "context": {
+            "issues": [],
+            "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+            "identifiers": [],
+            "preferred_outcome": null,
+            "availability": null,
+            "refuses_handoff": false,
+            "wants_human": false,
+            "service_complaint": false,
+            "urgent": false,
+            "installation_cancelled": false,
+            "deadline_negated": false,
+            "source_messages": [
+              {
+                "role": "customer",
+                "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+              }
+            ]
+          },
+          "local_only": true,
+          "external_execution": false,
+          "execution_scope": {
+            "case_id": "R7H-015",
+            "revision": "fixed-final-v25b",
+            "arm": "GUIDED"
+          }
+        },
+        "created_at": "2026-11-10T11:29:50.746360+00:00"
+      }
+    ],
+    "facts": {
+      "status": "UNKNOWN",
+      "source": "SCOPED_LOCAL_FACTS_QUERY",
+      "external_query": false
+    },
+    "context": {
+      "issues": [],
+      "latest_request": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。",
+      "identifiers": [],
+      "preferred_outcome": null,
+      "availability": null,
+      "refuses_handoff": false,
+      "wants_human": false,
+      "service_complaint": false,
+      "urgent": false,
+      "installation_cancelled": false,
+      "deadline_negated": false,
+      "source_messages": [
+        {
+          "role": "customer",
+          "text": "实体礼品卡刮开后提示已使用，但我是今天第一次输入。卡和小票还在。请先核对激活和消费记录，不要直接认定送礼的人用过。"
+        }
+      ]
+    },
+    "external_actions": 0
+  },
+  "composer": {
+    "version": "service-response-r11-scoped-service-v25b",
+    "system_hash": "cfd50380680d0bd71d9aaac784cb5977dc5ca41e52b07d01961c33d109d10eb0",
+    "planner_hash": "881df60dc79909e5464488fa211bbf2e1df69e18ba4c1931d275b839110c6580"
+  },
+  "dataset_role": "EXPOSED_DEV",
+  "plan_error": null,
+  "analysis_call": {
+    "run_id": "6f0c0b77-2300-409d-a6c4-22cbe4de7cbc",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "dispatch_at": "2026-11-10T11:29:47.582365+00:00"
+    }
+  },
+  "call": {
+    "run_id": "2b5908da-439b-4066-8ffc-1d3c821309ed",
+    "metadata": {
+      "resolved_model": "deepseek-flash",
+      "dispatch_at": "2026-11-10T11:29:53.813241+00:00"
+    },
+    "raw": "{\"reply\": \"您好，很抱歉这张实体礼品卡在您首次输入时提示已使用，给您带来不便。我们理解您希望先查清激活和消费记录，而不是直接怀疑送礼的人，这一核查方向已包含在待处理的内部核查请求中。\\n\\n为便于核对，请提供卡号（可只提供部分号码）或小票上的交易参考号，以及小票显示的购买时间和金额；请勿通过普通邮件发送完整卡背信息或密码。如您希望提供更敏感的信息，请先通过官方订单/网站上的联系方式确认安全渠道后再提供。\\n\\n目前内部核查请求已创建，尚待处理，核查结果和完成时间尚未确定。您可先保留卡和小票原件，并回复上述任一可用参考信息，以便后续核对激活与消费记录。\"}",
+    "elapsed_ms": 3238.7404999753926
+  },
+  "analysis_parse": {
+    "error": null
+  },
+  "parse": {
+    "error": null
+  },
+  "historical_grade": "UNKNOWN"
+}

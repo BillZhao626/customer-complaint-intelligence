@@ -1,0 +1,66 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "positive",
+    "expressed_evidence": [
+      "我想借这封邮件说一声谢谢",
+      "她没有一点不耐烦",
+      "整个过程让我觉得挺受尊重的",
+      "这次购物体验挺好的"
+    ],
+    "experience_polarity": "positive",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [],
+    "mentioned_store": "苏州工业园区店",
+    "issues": [
+      {
+        "issue_id": "B7-013-1",
+        "object_type": "service",
+        "object_name": "店员服务",
+        "category": "Service/Other",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "store service issue",
+        "customer_requests": [
+          "希望店里能知道有这么一位用心的员工"
+        ],
+        "evidence": [
+          "她没有一点不耐烦，反而蹲下来帮我看鞋子的包裹感",
+          "整个过程让我觉得挺受尊重的"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      },
+      {
+        "issue_id": "B7-013-2",
+        "object_type": "product",
+        "object_name": "跑鞋",
+        "category": "Sports/Outdoor",
+        "sentiment": "positive",
+        "experience_polarity": "positive",
+        "issue_kind": "praise",
+        "business_process": "product issue",
+        "customer_requests": [],
+        "evidence": [
+          "最后推荐的那双穿起来确实舒服很多",
+          "鞋子我已经穿了几次，感觉不错"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "not_applicable"
+      }
+    ],
+    "uncertainty": []
+  },
+  "call": {
+    "run_id": "174dfe21-fc16-4d77-ab75-a05ab4af0254",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:04:17.267000+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

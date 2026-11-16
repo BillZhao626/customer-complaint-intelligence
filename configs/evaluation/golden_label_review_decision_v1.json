@@ -1,0 +1,48 @@
+{
+  "stage": "I-3.6.1",
+  "original_golden_file": "data/golden/golden_labels_pilot_v1.csv",
+  "candidate_patch_file": "data/golden/golden_labels_pilot_v1_candidate_patch.csv",
+  "reviewed_golden_file": "data/golden/golden_labels_pilot_v2_reviewed.csv",
+  "accepted_patch_rows": [
+    {
+      "email_id": "P015",
+      "field": "urgency",
+      "original_golden_value": "high",
+      "reviewed_golden_value": "medium",
+      "evidence_source": "i351_remaining_mismatch_analysis",
+      "decision_status": "accepted_by_project_owner_for_v2_reviewed"
+    },
+    {
+      "email_id": "P028",
+      "field": "source_attribution",
+      "original_golden_value": "customer service response issue",
+      "reviewed_golden_value": "store service issue",
+      "evidence_source": "manual_review_summary",
+      "decision_status": "accepted_by_project_owner_for_v2_reviewed"
+    },
+    {
+      "email_id": "P046",
+      "field": "complaint_reason",
+      "original_golden_value": "other",
+      "reviewed_golden_value": "delivery delay",
+      "evidence_source": "manual_review_summary",
+      "decision_status": "accepted_by_project_owner_for_v2_reviewed"
+    },
+    {
+      "email_id": "P046",
+      "field": "source_attribution",
+      "original_golden_value": "unclear",
+      "reviewed_golden_value": "delivery/logistics issue",
+      "evidence_source": "manual_review_summary",
+      "decision_status": "accepted_by_project_owner_for_v2_reviewed"
+    }
+  ],
+  "original_sha256": "6eea79b6b342f87ba5048248720729ca2e5926188793da0682cf47f2eb917861",
+  "reviewed_sha256": "97a3040d9493ba74f32af11f21cbcc1aceab8b44a65419443a381d04010433f1",
+  "policy": {
+    "preserve_v1": true,
+    "create_versioned_reviewed_labels": true,
+    "do_not_overwrite_original": true,
+    "use_for_future_reviewed_metrics": true
+  }
+}

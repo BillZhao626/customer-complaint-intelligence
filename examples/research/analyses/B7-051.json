@@ -1,0 +1,53 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "想问问这种情况能不能退，具体需要怎么操作？",
+      "麻烦您帮忙看一下，谢谢。"
+    ],
+    "experience_polarity": "neutral",
+    "complaint_intent": "no",
+    "complaint_evidence": [],
+    "urgency": "low",
+    "urgency_evidence": [
+      "现在还没拆封",
+      "当时的小票我好像还留着，但不太确定放哪了"
+    ],
+    "mentioned_store": "朝阳门店",
+    "issues": [
+      {
+        "issue_id": "B7-051-1",
+        "object_type": "product",
+        "object_name": "茶叶礼盒",
+        "category": "Food/Beverage",
+        "sentiment": "neutral",
+        "experience_polarity": "neutral",
+        "issue_kind": "inquiry",
+        "business_process": "refund/exchange process issue",
+        "customer_requests": [
+          "咨询未拆封茶叶礼盒能否退货",
+          "了解退货的具体操作流程"
+        ],
+        "evidence": [
+          "本来是想送人的，但后来发现不太合适，现在还没拆封",
+          "想问问这种情况能不能退，具体需要怎么操作？"
+        ],
+        "risk": "none",
+        "urgency": "low",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "小票是否保留不确定，可能影响退货办理",
+      "未说明购买具体日期，退换时限不明"
+    ]
+  },
+  "call": {
+    "run_id": "f1a3334d-1cbc-42ce-8e79-39bb9d5dad31",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:09:19.012039+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}

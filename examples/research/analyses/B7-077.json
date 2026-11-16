@@ -1,0 +1,74 @@
+{
+  "data": {
+    "version": "p5b8-calibration-1",
+    "expressed_sentiment": "neutral",
+    "expressed_evidence": [
+      "麻烦确认一下到底还有没有货，没有的话直接告诉我，我好去别处买"
+    ],
+    "experience_polarity": "negative",
+    "complaint_intent": "uncertain",
+    "complaint_evidence": [
+      "到现在没有任何消息，我发过两次客服消息也没人回"
+    ],
+    "urgency": "medium",
+    "urgency_evidence": [
+      "我上周在苏州工业园店想买一款户外装备",
+      "到现在没有任何消息"
+    ],
+    "mentioned_store": "苏州工业园店",
+    "issues": [
+      {
+        "issue_id": "B7-077-1",
+        "object_type": "product",
+        "object_name": "户外装备",
+        "category": "Sports/Outdoor",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "inquiry",
+        "business_process": "product issue",
+        "customer_requests": [
+          "确认是否还有货"
+        ],
+        "evidence": [
+          "想买一款户外装备，店员说缺货",
+          "麻烦确认一下到底还有没有货"
+        ],
+        "risk": "none",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      },
+      {
+        "issue_id": "B7-077-2",
+        "object_type": "service",
+        "object_name": "缺货通知与客服消息回复",
+        "category": "Service/Other",
+        "sentiment": "neutral",
+        "experience_polarity": "negative",
+        "issue_kind": "complaint",
+        "business_process": "customer service response issue",
+        "customer_requests": [
+          "回复客服消息",
+          "告知缺货商品是否有货"
+        ],
+        "evidence": [
+          "让我留了联系方式，说会通知我。到现在没有任何消息",
+          "我发过两次客服消息也没人回"
+        ],
+        "risk": "minor",
+        "urgency": "medium",
+        "resolution": "unresolved"
+      }
+    ],
+    "uncertainty": [
+      "客户未明确表达不满情绪，投诉意图不确定",
+      "缺货商品具体名称未提供"
+    ]
+  },
+  "call": {
+    "run_id": "ba93bd91-6d4a-48a9-b96c-94d04b96ef47",
+    "metadata": {
+      "dispatch_at": "2026-10-31T03:12:36.773829+00:00",
+      "resolved_model": "deepseek-flash"
+    }
+  }
+}
