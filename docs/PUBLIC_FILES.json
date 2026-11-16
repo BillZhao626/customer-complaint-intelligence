@@ -310,8 +310,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8545,
-      "sha256": "dd4aa7acbf99208d9a36f65224c620dc9f816341041d3facb8afe1f919e6d60d"
+      "bytes": 8539,
+      "sha256": "d8479567d64ddeffa5b8d6e1bda2eec90d2471619af15e69a937ee860d55f0b2"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -421,7 +421,7 @@
     {
       "path": "docs/PUBLIC_SCOPE.md",
       "bytes": 2463,
-      "sha256": "3b8d696a9aee7fd15da7164608cec3305a2ae6c34da1ad2eeb489721376bf83b"
+      "sha256": "b7b68131653fbf632347a342a073048606f4672b7d9acefbabbdbb3977f6851f"
     },
     {
       "path": "docs/RELEASE.md",
@@ -431,7 +431,7 @@
     {
       "path": "docs/SECURITY_REVIEW.md",
       "bytes": 3031,
-      "sha256": "18e468319838c273d4fc56ef9b8239ed0b70449d1e8a125acb73ff74f72cd6f8"
+      "sha256": "1117ef0c187b3117fc33f0bbe6483875e2fd8987660e5a0490b7e1ad0896a928"
     },
     {
       "path": "docs/VALIDATION.md",

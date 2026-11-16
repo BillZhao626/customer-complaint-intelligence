@@ -128,6 +128,6 @@ npm run build
 
 ## 版本关系
 
-早期 Streamlit 原型保留在 Git 历史中，可查看 [原 main 快照](https://github.com/BillZhao626/customer-complaint-intelligence/tree/f0a5eb71e7a46c036700f1d406cc3b34b680ff07)。本次完整工程候选承接该历史，新增当前 React / FastAPI 应用与可复核样本，不重写旧提交。
+早期 Streamlit 原型保留在 Git 历史中，可查看 [原 main 快照](https://github.com/BillZhao626/customer-complaint-intelligence/tree/f0a5eb71e7a46c036700f1d406cc3b34b680ff07)。本次完整工程承接该历史，新增当前 React / FastAPI 应用与可复核样本，不重写旧提交。
 
-当前候选的发布状态、提交和实测记录见 [发布说明](docs/RELEASE.md)。
+当前工程的发布状态、提交和实测记录见 [发布说明](docs/RELEASE.md)。
