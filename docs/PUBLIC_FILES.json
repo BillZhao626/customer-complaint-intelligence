@@ -425,8 +425,8 @@
     },
     {
       "path": "docs/RELEASE.md",
-      "bytes": 1235,
-      "sha256": "37c1c7b4abe03e2398c8bbd9f8b407568eeb67c7da9b4db7b53d28067479ea21"
+      "bytes": 1450,
+      "sha256": "28bbf843259a1abfc84ad809e7a351ad8c00b93c7062f0d7e1c6d2743a392db2"
     },
     {
       "path": "docs/SECURITY_REVIEW.md",
@@ -435,8 +435,8 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 2476,
-      "sha256": "c9a0bc5bd91f46d48e45cd04aa48501f47fa238dd62074412e725c9aca83d567"
+      "bytes": 3107,
+      "sha256": "3903b0062660378352fd7856d48ca5dcfc7c02bf14a232acb80a1e0344377109"
     },
     {
       "path": "docs/media/inbox.png",

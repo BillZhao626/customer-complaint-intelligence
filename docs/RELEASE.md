@@ -1,8 +1,8 @@
-# 完整工程发布候选
+# 完整工程与版本关系
 
 候选分支为 `codex/full-product-public-20261115`，基于原公开 main 的 `f0a5eb71e7a46c036700f1d406cc3b34b680ff07`。原型提交历史保留，完整工程与新运行入口在其后继续。
 
-本文件描述本地发布候选，不表示远端 main 已更新或 Release 已发布。发布前需要完成精确文件树和提交祖先的审查、从提交重新克隆的安装验证及最终公开审查。
+工程经过精确文件树与提交祖先审查、从提交重新克隆的安装与离线验收。正式下载入口为 [GitHub Releases](https://github.com/BillZhao626/customer-complaint-intelligence/releases)，当前主线为 [main](https://github.com/BillZhao626/customer-complaint-intelligence/tree/main)。分支、main、Release 和 CI 的实际状态分别以对应远端记录为准。
 
 ## 主要变化
 
@@ -13,4 +13,4 @@
 - 更新命中安全公告的依赖，并重新执行安装与回归。
 - 增加精确发布树审计及 Windows/Linux CI 定义。远端 CI 的实际状态以运行结果为准。
 
-正式发布后，作品集源码入口拟指向仓库主页，显示为「GitHub · 完整源码与运行说明」。冻结作品集 v11 在正式版本发布成功前保留原文件。
+作品集源码入口在正式发布后同步至仓库主页，显示为「GitHub · 完整源码与运行说明」。冻结作品集 v11 原文件继续保留；同步版本另行导出，不改写已冻结成稿。
